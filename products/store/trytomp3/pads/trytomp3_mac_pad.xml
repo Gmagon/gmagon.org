@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML_DIZ_INFO>
+  <MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>4.0</MASTER_PAD_VERSION>
+    <MASTER_PAD_EDITOR>RoboSoft 4.0.797</MASTER_PAD_EDITOR>
+    <MASTER_PAD_EDITOR_URL>http://robosoft.rudenko.com</MASTER_PAD_EDITOR_URL>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+  </MASTER_PAD_VERSION_INFO>
+  <RoboSoft>
+    <Company_UIN>CMP-011518792F7</Company_UIN>
+    <Company_Description>Gmagon aims to provide amazing simple and powerful solutions for you.</Company_Description>
+    <Product_UIN>APP-01151886376</Product_UIN>
+    <Search_String>TryToMP3</Search_String>
+    <Publish_on_CD>FALSE</Publish_on_CD>
+    <Press_Release_Search_String>TryToMP3</Press_Release_Search_String>
+    <NewsFeed_Search_String>TryToMP3</NewsFeed_Search_String>
+    <Search_Engine_Search_String>TryToMP3</Search_Engine_Search_String>
+    <Web_Directories_Search_String>TryToMP3</Web_Directories_Search_String>
+    <Search_String_Unique>TryToMP3</Search_String_Unique>
+    <RSProductType></RSProductType>
+    <Comments_For_Reviewer></Comments_For_Reviewer>
+    <Backlink></Backlink>
+  </RoboSoft>
+  <Company_Info>
+    <Company_Name>Gmagon</Company_Name>
+    <Address_1>No.501, Zhujiang South Road</Address_1>
+    <Address_2></Address_2>
+    <City_Town>Yushan town, Kunshan, Suzhou</City_Town>
+    <State_Province>Jiangsu</State_Province>
+    <Zip_Postal_Code>215300</Zip_Postal_Code>
+    <Country>China</Country>
+    <Company_WebSite_URL>https://gmagon.com/</Company_WebSite_URL>
+    <Contact_Info>
+      <Contact_First_Name>Ian</Contact_First_Name>
+      <Contact_Last_Name>Sun</Contact_Last_Name>
+      <Contact_Email>support@gmagon.com</Contact_Email>
+      <Author_First_Name>Ian</Author_First_Name>
+      <Author_Last_Name>Sun</Author_Last_Name>
+      <Author_Email>support@gmagon.com</Author_Email>
+    </Contact_Info>
+    <Support_Info>
+      <Sales_Email>support@gmagon.com</Sales_Email>
+      <Support_Email>support@gmagon.com</Support_Email>
+      <General_Email>support@gmagon.com</General_Email>
+      <Sales_Phone></Sales_Phone>
+      <Support_Phone></Support_Phone>
+      <General_Phone></General_Phone>
+      <Fax_Phone></Fax_Phone>
+    </Support_Info>
+    <GooglePlusPage></GooglePlusPage>
+    <LinkedinPage></LinkedinPage>
+    <TwitterCompanyPage>https://twitter.com/gmagonshare</TwitterCompanyPage>
+    <FacebookCompanyPage>https://www.facebook.com/gmagonshare</FacebookCompanyPage>
+    <CompanyStorePage>https://gmagon.com/</CompanyStorePage>
+  </Company_Info>
+  <NewsFeed>
+    <NewsFeed_FORM>Y</NewsFeed_FORM>
+    <NewsFeed_VERSION>1.0</NewsFeed_VERSION>
+    <NewsFeed_URL>http://Submit-Everywhere.com/extensions/NewsFeed.htm</NewsFeed_URL>
+    <NewsFeed_DESCRIPTION>This PAD extension allows you to add your RSS and Atom news feeds info into your PAD file. This info can be used by RSS feed submission software or by feed directories themselves.</NewsFeed_DESCRIPTION>
+    <NewsFeed_Type>RSS 0.90</NewsFeed_Type>
+    <NewsFeed_Language>English</NewsFeed_Language>
+    <NewsFeed_Purpose>News</NewsFeed_Purpose>
+    <NewsFeed_Author_Email>support@gmagon.com</NewsFeed_Author_Email>
+    <NewsFeed_Author_First_Name>Ian</NewsFeed_Author_First_Name>
+    <NewsFeed_Author_Last_Name>Sun</NewsFeed_Author_Last_Name>
+    <NewsFeed_Feed_URL></NewsFeed_Feed_URL>
+    <NewsFeed_Site_Name></NewsFeed_Site_Name>
+    <NewsFeed_Site_URL></NewsFeed_Site_URL>
+    <NewsFeed_Title></NewsFeed_Title>
+    <NewsFeed_Description_70></NewsFeed_Description_70>
+    <NewsFeed_Description_250></NewsFeed_Description_250>
+  </NewsFeed>
+  <Site>
+    <Site_FORM>Y</Site_FORM>
+    <Site_VERSION>1.0</Site_VERSION>
+    <Site_URL>http://Submit-Everywhere.com/extensions/Site.htm</Site_URL>
+    <Site_DESCRIPTION>This PAD extension allows you to add your site info into your PAD file. This info can be used by site submission software or by web directories themselves.</Site_DESCRIPTION>
+    <Site_Contact_Email>support@gmagon.com</Site_Contact_Email>
+    <Site_Contact_First_Name>Ian</Site_Contact_First_Name>
+    <Site_Contact_Last_Name>Sun</Site_Contact_Last_Name>
+    <Site_Description_100>TryToMP3 is an audio converter which runs on Mac OS X/ macOS. It aims to convert</Site_Description_100>
+    <Site_Site_URL>http://gmagon.com/products/store/trytomp3/index.html</Site_Site_URL>
+    <Site_Site_Title>TryToMP3</Site_Site_Title>
+    <Site_Description_250>TryToMP3 is an audio converter which runs on Mac OS X/ macOS. It aims to convert various audio formats to MP3 for users. The software can intelligently recognize most audio formats and transfer it to MP3 quickly. Without landing or registration, or a</Site_Description_250>
+    <Site_Description_450>TryToMP3 delivers high-quality MP3 format designed for every kind of Mac users. Users for MP3-players are able to keep their devices without concerns. Avid movie goers get a well-content tool to aftertaste memorable movie lines. As a voice fetish, you can easily get your favorite voice from TryToMP3. Listening is a key to learn foreign languages, TryToMP3 will be a good helper for you to learn a new language.</Site_Description_450>
+    <Site_Keywords>MP3 ,MP3 converter, Audio converter , MP3 player</Site_Keywords>
+  </Site>
+  <PAD_Certification_Promotion>
+    <Apply_For_Certification>N</Apply_For_Certification>
+  </PAD_Certification_Promotion>
+  <Dynamic_PAD>
+    <Dynamic_Distributive>N</Dynamic_Distributive>
+    <General>
+      <DP_Pad_Mask>TryToMP3_pad.xml</DP_Pad_Mask>
+      <DP_Script_Base_URL>http://hosted.dynamicpad.org/</DP_Script_Base_URL>
+      <DP_Pad_Enabled>TRUE</DP_Pad_Enabled>
+      <DP_Distributive_Enabled>FALSE</DP_Distributive_Enabled>
+      <DP_AtFormFill_Enabled>TRUE</DP_AtFormFill_Enabled>
+      <DP_ControlPanel_Hosted>8AF891695DAE29A55355C8A74BF3C7C1</DP_ControlPanel_Hosted>
+    </General>
+  </Dynamic_PAD>
+  <Program_Info>
+    <File_Info>
+      <Automatically_Detect_File_Size>Y</Automatically_Detect_File_Size>
+      <File_Size_Bytes>16674308</File_Size_Bytes>
+      <File_Size_K>16283</File_Size_K>
+      <File_Size_MB>15.90</File_Size_MB>
+      <Filename_Versioned></Filename_Versioned>
+      <Filename_Previous></Filename_Previous>
+      <Filename_Generic></Filename_Generic>
+      <Filename_Long></Filename_Long>
+    </File_Info>
+    <Program_Target_Platform>OS X</Program_Target_Platform>
+    <Program_Name>TryToMP3</Program_Name>
+    <Program_Version>4.0</Program_Version>
+    <Program_Release_Month>05</Program_Release_Month>
+    <Program_Release_Day>24</Program_Release_Day>
+    <Program_Release_Year>2017</Program_Release_Year>
+    <Program_Cost_Dollars>9.99</Program_Cost_Dollars>
+    <Program_Type>Shareware</Program_Type>
+    <Program_Release_Status>Major Update</Program_Release_Status>
+    <Program_Install_Support>Install and Uninstall</Program_Install_Support>
+    <Program_OS_Support>Mac OS X,Mac OS X 10.1,Mac OS X 10.2,Mac OS X 10.3,Mac OS X 10.4,Mac OS X 10.5,Mac OS X 10.6,Mac OS X 10.7,Mac OS X 10.8,Mac OS X 10.9</Program_OS_Support>
+    <Program_Language>English</Program_Language>
+    <Program_Change_Info>Fixed
+
+Fixed the multiple conversion problem.
+Update
+
+UI update and code rewriting.</Program_Change_Info>
+    <Program_System_Requirements>1.MacOSX 10.7 mac OS (64-bit) or newer is required. 2.Admin privileges for the Installation</Program_System_Requirements>
+    <Program_Category_Class>Audio &amp; Multimedia::Rippers &amp; Converters</Program_Category_Class>
+    <Expire_Info>
+      <Has_Expire_Info>N</Has_Expire_Info>
+      <Expire_Based_On>Days</Expire_Based_On>
+      <Expire_Count></Expire_Count>
+      <Expire_Other_Info></Expire_Other_Info>
+      <Expire_Month></Expire_Month>
+      <Expire_Day></Expire_Day>
+      <Expire_Year></Expire_Year>
+    </Expire_Info>
+    <Program_Categories>MP3 Rippers &amp; Converters,Rippers,Converters,Audio,Multimedia</Program_Categories>
+    <Limitations>1.MacOSX 10.7 mac OS (64-bit) or newer is required. 2.Admin privileges for the Installation</Limitations>
+    <Program_Cost_Other_Code></Program_Cost_Other_Code>
+    <Program_Cost_Other></Program_Cost_Other>
+    <Awards></Awards>
+    <Program_Specific_Category></Program_Specific_Category>
+    <Includes_JAVA_VM></Includes_JAVA_VM>
+    <Includes_VB_Runtime></Includes_VB_Runtime>
+    <Includes_DirectX></Includes_DirectX>
+    <FacebookProductPage></FacebookProductPage>
+    <GooglePlusProductPage></GooglePlusProductPage>
+  </Program_Info>
+  <Allmyapps>
+    <Allmyapps_Terms_And_Conditions>N</Allmyapps_Terms_And_Conditions>
+  </Allmyapps>
+  <Web_Info>
+    <Application_URLs>
+      <Application_Info_URL>https://gmagon.com/products/store/trytomp3/index.html</Application_Info_URL>
+      <Application_Order_URL>https://gmagon.com/products/store/trytomp3/buy.html</Application_Order_URL>
+      <Application_Screenshot_URL>https://gmagon.com/products/store/trytomp3/images/screens/trytomp3_screen_1_800x500.png</Application_Screenshot_URL>
+      <Application_Icon_URL>https://gmagon.com/products/store/trytomp3/images/logo/logo_32x32.png</Application_Icon_URL>
+      <Application_XML_File_URL>https://gmagon.com/products/store/trytomp3/pads/trytomp3_mac_pad.xml</Application_XML_File_URL>
+    </Application_URLs>
+    <Download_URLs>
+      <Primary_Download_URL>https://www.filefactory.com/file/34if5zmfkj2d/TryToMP3-4.0.zip</Primary_Download_URL>
+      <Secondary_Download_URL>https://www.filefactory.com/file/3qwu6u3p09mz/TryToMP3-4.0.dmg</Secondary_Download_URL>
+      <Additional_Download_URL_1>https://www.filefactory.com/file/5qmrduv0im5r/TryToMP3-4.0.pkg.zip</Additional_Download_URL_1>
+      <Additional_Download_URL_2>https://www.filefactory.com/file/34if5zmfkj2d/TryToMP3-4.0.zip</Additional_Download_URL_2>
+    </Download_URLs>
+  </Web_Info>
+  <Permissions>
+    <Distribution_Permissions>https://www.filefactory.com/file/3qwu6u3p09mz/TryToMP3-4.0.dmg</Distribution_Permissions>
+    <EULA>http://gmagon.com/end-user-license-agreement.html</EULA>
+  </Permissions>
+  <AppStore>
+    <AppStore_AppID></AppStore_AppID>
+    <AppStore_Category></AppStore_Category>
+    <AppStore_Info_URL></AppStore_Info_URL>
+    <AppStore_Download_URL></AppStore_Download_URL>
+    <AppStore_Promo_Code_1></AppStore_Promo_Code_1>
+    <AppStore_Promo_Code_2></AppStore_Promo_Code_2>
+    <AppStore_Promo_Code_3></AppStore_Promo_Code_3>
+    <AppStore_Supported_Devices></AppStore_Supported_Devices>
+    <AppStore_Other_Applications></AppStore_Other_Applications>
+    <AppStore_Advantages_And_Unique_Features></AppStore_Advantages_And_Unique_Features>
+    <AppStore_Awards_And_Ratings></AppStore_Awards_And_Ratings>
+  </AppStore>
+  <Program_Descriptions>
+    <English>
+      <Keywords>MP3 ,MP3 converter, Audio converter , MP3 player</Keywords>
+      <Char_Desc_45>TryToMP3 is an audio converter</Char_Desc_45>
+      <Char_Desc_80>TryToMP3 is an audio converter which runs on Mac OS X/ macOS. It aims to convert</Char_Desc_80>
+      <Char_Desc_250>TryToMP3 is an audio converter which runs on Mac OS X/ macOS. It aims to convert various audio formats to MP3 for users. The software can intelligently recognize most audio formats and transfer it to MP3 quickly. Without landing or registration, or a</Char_Desc_250>
+      <Char_Desc_450>TryToMP3 delivers high-quality MP3 format designed for every kind of Mac users. Users for MP3-players are able to keep their devices without concerns. Avid movie goers get a well-content tool to aftertaste memorable movie lines. As a voice fetish, you can easily get your favorite voice from TryToMP3. Listening is a key to learn foreign languages, TryToMP3 will be a good helper for you to learn a new language.</Char_Desc_450>
+      <Char_Desc_2000>TryToMP3 is an audio converter which runs on Mac OS X/ macOS. It aims to convert various audio formats to MP3 for users. The software can intelligently recognize most audio formats and transfer it to MP3 quickly. Without landing or registration, or any plug-in, you can enjoy simple, swift and free listening experience anytime and everywhere.
+TryToMP3 delivers high-quality MP3 format designed for every kind of Mac users. Users for MP3-players are able to keep their devices without concerns. Avid movie goers get a well-content tool to aftertaste memorable movie lines. As a voice fetish, you can easily get your favorite voice from TryToMP3. Listening is a key to learn foreign languages, TryToMP3 will be a good helper for you to learn a new language.
+1.MP3-player Users: Heard the recent stories that MP3 has been killed? Wondered whether throw away the MP3-player you just bought last month or not? Please show mercy! Maybe it's time for you to try this software to save MP3. At least, your MP3-player is not dead at all.2.Avid Movie Goers: Can't help to hear wonderful music in movies again? The dialogue is so interesting or profound that revolves in your hand? Why not try to convert such videos to MP3 format, so that you can listen freely your favorite part whenever you want.3.Voice Fetish: Deep and low-pitched voices are always attracting, especially for girls. Do you feel a chill up and down your spine when you hear the voice of Benedict Cumberbatch? If yes, our product is definitely designed for you. 4.Foreign Language Learners: Recited a large amount of vocabularies, but still cannot understand a word when foreigners talking to you. You need to change the way of study. Keep on listening is crucial for learning a language. TryToMP3 may help you save a lot of money from language institutions.</Char_Desc_2000>
+    </English>
+  </Program_Descriptions>
+</XML_DIZ_INFO>

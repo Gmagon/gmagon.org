@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title> Face Recognition in R  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Copy from Apple.com website source code -->
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og.keywords" content="" />
+  <meta property="og.description" content="" />
+  <meta property="analytics-track" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone. - Index/Tab" />
+  <meta property="analytics-s-channel" content="homepage" />
+  <meta property="og:title" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+	<meta property="og:description" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone and more. Visit the site to learn, buy, and get support." />
+	<meta property="og:url" content="https://gmagon.com" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201703170823" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+  <!-- End Copy from Apple.com website source code -->
+
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/06/23/face-recognition-in-r/index.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-9f6143947f.css">
+
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+
+
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+
+  <!-- ForPostLayout -->
+  
+    <script src="/jssocials-1.4.0/jssocials.min.js"></script>
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+    
+    
+
+  
+  <!-- endForPostLayout -->
+
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
+  <!-- Open Graph -->
+  <meta name="description" content="(This article was first published onR-Projects – Stoltzmaniac, and kindly contributed toR-bloggers) Face Recognition in ROpenCV is an incredibly powerful tool to have in your toolbox. I have had a lo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Face Recognition in R">
+<meta property="og:url" content="https://gmagon.com/blog/2017/06/23/face-recognition-in-r/index.html">
+<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple &amp; powerful solutions for everyone.">
+<meta property="og:description" content="(This article was first published onR-Projects – Stoltzmaniac, and kindly contributed toR-bloggers) Face Recognition in ROpenCV is an incredibly powerful tool to have in your toolbox. I have had a lo">
+<meta property="og:image" content="http://img2.tuicool.com/vayqquF.png!web">
+<meta property="og:updated_time" content="2017-06-23T15:14:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Face Recognition in R">
+<meta name="twitter:description" content="(This article was first published onR-Projects – Stoltzmaniac, and kindly contributed toR-bloggers) Face Recognition in ROpenCV is an incredibly powerful tool to have in your toolbox. I have had a lo">
+<meta name="twitter:image" content="http://img2.tuicool.com/vayqquF.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/products/" class="main-nav-link">Products</a><a href="/support/" class="main-nav-link">Support</a><a href="/blog/" class="main-nav-link">Blog</a>
+      
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Face Recognition in R</h1>
+    
+    <a href="/blog/2017/06/23/face-recognition-in-r/" class="article-date"><time datetime="2017-06-23T00:00:00.000Z">2017-06-23</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <script src="/assets/js/APlayer.min.js"> </script><p>(This article was first published on<a href="https://www.stoltzmaniac.com/facial-recognition-in-r/" target="_blank" rel="external"><strong>R-Projects – Stoltzmaniac</strong></a>, and kindly contributed toR-bloggers)</p>
+<h3 id="Face-Recognition-in-R"><a href="#Face-Recognition-in-R" class="headerlink" title="Face Recognition in R"></a>Face Recognition in R</h3><p>OpenCV is an incredibly powerful tool to have in your toolbox. I have had a lot of success using it in Python but very little success in R. I haven’t done too much other than searching Google but it seems as if “imager” and “videoplayR” provide a lot of the functionality but not all of it.</p>
+<p>I have never actually called Python functions from R before. Initially, I tried the “rPython” library – that has a lot of advantages, but was completely unnecessary for me so system() worked absolutely fine. While this example is extremely simple, it should help to illustrate how easy it is to utilize the power of Python from within R. I need to give credit to Harrison Kinsley for all of his efforts and work at<a href="https://www.pythonprogramming.net/" target="_blank" rel="external">PythonProgramming.net</a>– I used a lot of his code and ideas for this post (especially the Python portion).</p>
+<p>Using videoplayR I created a function which would take a picture with my webcam and save it as “originalWebcamShot.png”</p>
+<p>Note:saving images and then loading them isn’t very efficient but works in this case and is extremely easy to implement. It saves us from passing variables, functions, objects, and/or methods between R and Python in this case.</p>
+<p><img src="http://img2.tuicool.com/vayqquF.png!web" alt=""></p>
+<p>I’ll trace my steps backward through this post (I think it’s easier to understand what’s going on in this case).</p>
+<h4 id="The-main-R-file"><a href="#The-main-R-file" class="headerlink" title="The main.R file:"></a>The main.R file:</h4><ol>
+<li>Calls my user-defined function<ul>
+<li>Turns on the camera</li>
+<li>Takes a picture</li>
+<li>Saves it as “originalWebcamShot.png”</li>
+</ul>
+</li>
+<li>Runs the Python script<ul>
+<li>Loads the previously saved image</li>
+<li>Loads the Haar Cascade algorithms</li>
+<li>Detects faces and eyes</li>
+<li>Draws colored rectangles around them</li>
+<li>Saves the new image as “modifiedWebcamShot.png”</li>
+</ul>
+</li>
+<li>Reads new image into R</li>
+<li>Displays both images</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">source</div><div class="line">(</div><div class="line">&apos;imageFunctions.R&apos;</div><div class="line">)</div><div class="line"></div><div class="line">library</div><div class="line">(</div><div class="line">&quot;videoplayR&quot;</div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"># Take a picture and save it</div><div class="line"></div><div class="line">img = webcamImage(rollFrames = </div><div class="line">10</div><div class="line">, </div><div class="line">                  showImage = </div><div class="line">FALSE</div><div class="line">,</div><div class="line">                  saveImageToWD = </div><div class="line">&apos;originalWebcamShot.png&apos;</div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"># Run Python script to detect faces, draw rectangles, return new image</div><div class="line"></div><div class="line">system(</div><div class="line">&apos;python3 facialRecognition.py&apos;</div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"># Read in new image</div><div class="line"></div><div class="line">img.face = readImg(</div><div class="line">&quot;modifiedWebcamShot.png&quot;</div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"># Display images</div><div class="line"></div><div class="line">imshow(img)</div><div class="line">imshow(img.face)</div></pre></td></tr></table></figure>
+<p>The user-defined function:</p>
+<ol>
+<li>Function inputs<ul>
+<li>rollFrames is the number of pictures to take (allows the camera to adjust)</li>
+<li>showImage gives the option to display the image</li>
+<li>saveImageToWD saves the image generated to the current working directory</li>
+</ul>
+</li>
+<li>Turns the webcam on</li>
+<li>Takes pictures (number of rollFrames)</li>
+<li>Uses basic logic to determine to show images and/or save them</li>
+<li>Returns the image</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">library(</div><div class="line">&quot;videoplayR&quot;</div><div class="line">)</div><div class="line"></div><div class="line">webcamImage = function(rollFrames = </div><div class="line">4</div><div class="line">, showImage = FALSE, saveImageToWD = NA)&#123;</div><div class="line"></div><div class="line">  </div><div class="line"># rollFrames runs through multiple pictures - allows camera to adjust</div><div class="line"># showImage allows opportunity to display image within function</div><div class="line"># Turn on webcam</div><div class="line"></div><div class="line">  stream = readStream(</div><div class="line">0</div><div class="line">)</div><div class="line"></div><div class="line">  </div><div class="line"># Take pictures</div><div class="line">print</div><div class="line">(</div><div class="line">&quot;Video stream initiated.&quot;</div><div class="line">)</div><div class="line">  </div><div class="line">for</div><div class="line">(i in se</div><div class="line">q(rollFrames)</div><div class="line">)&#123;</div><div class="line">    img = nextFrame(stream)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  </div><div class="line"># Turn off camera</div><div class="line"></div><div class="line">  release(stream)</div><div class="line"></div><div class="line">  </div><div class="line"># Display image if requested</div><div class="line">if</div><div class="line">(showImage == TRUE)&#123;</div><div class="line">    imshow(img)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  </div><div class="line">if</div><div class="line">(!is.na(saveImageToWD))&#123;</div><div class="line">    fileName = paste(getwd(),</div><div class="line">&quot;/&quot;</div><div class="line">,saveImageToWD,sep=</div><div class="line">&apos;&apos;</div><div class="line">)</div><div class="line">    </div><div class="line">print</div><div class="line">(paste(</div><div class="line">&quot;Saving Image To: &quot;</div><div class="line">,fileName, sep=</div><div class="line">&apos;&apos;</div><div class="line">))</div><div class="line">    writeImg(fileName,img)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  </div><div class="line">return</div><div class="line">(img)</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The Python script:</p>
+<ol>
+<li>Loads the algorithms from xml files</li>
+<li>Loads the image from “originalWebcamShot.png”</li>
+<li>Converts the image to grayscale</li>
+<li>Runs the facial detection algorithm</li>
+<li>Runs the eye detection algorithm (within the face)</li>
+<li>Draws rectangles around the face and eyes (different colors)</li>
+<li>Saves the new image as “modifiedWebcamShot.png”</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line">import</div><div class="line"> numpy </div><div class="line">as</div><div class="line"> np</div><div class="line"></div><div class="line">import</div><div class="line"> cv2</div><div class="line"></div><div class="line"></div><div class="line">def</div><div class="line">main</div><div class="line">()</div><div class="line">:</div><div class="line"># I followed Harrison Kingsley&apos;s work for this</div><div class="line"># Much of the source code is found https://pythonprogramming.net/haar-cascade-face-eye-detection-python-opencv-tutorial/</div><div class="line"></div><div class="line"></div><div class="line">    face_cascade = cv2.CascadeClassifier(</div><div class="line">&apos;haarcascade_frontalface_default.xml&apos;</div><div class="line">)</div><div class="line">    eye_cascade = cv2.CascadeClassifier(</div><div class="line">&apos;haarcascade_eye.xml&apos;</div><div class="line">)</div><div class="line"></div><div class="line">    img = cv2.imread(</div><div class="line">&apos;originalWebcamShot.png&apos;</div><div class="line">)</div><div class="line"></div><div class="line">    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</div><div class="line">    faces = face_cascade.detectMultiScale(gray, </div><div class="line">1.3</div><div class="line">, </div><div class="line">5</div><div class="line">)</div><div class="line"></div><div class="line">    </div><div class="line">for</div><div class="line"> (x,y,w,h) </div><div class="line">in</div><div class="line"> faces:</div><div class="line">        cv2.rectangle(img,(x,y),(x+w,y+h),(</div><div class="line">0</div><div class="line">,</div><div class="line">0</div><div class="line">,</div><div class="line">255</div><div class="line">),</div><div class="line">2</div><div class="line">)</div><div class="line">        roi_gray = gray[y:y+h, x:x+w]</div><div class="line">        roi_color = img[y:y+h, x:x+w]</div><div class="line"></div><div class="line">        eyes = eye_cascade.detectMultiScale(roi_gray)</div><div class="line">        </div><div class="line">for</div><div class="line"> (ex,ey,ew,eh) </div><div class="line">in</div><div class="line"> eyes:</div><div class="line">            cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(</div><div class="line">0</div><div class="line">,</div><div class="line">255</div><div class="line">,</div><div class="line">0</div><div class="line">),</div><div class="line">2</div><div class="line">)</div><div class="line"></div><div class="line">    cv2.imwrite(</div><div class="line">&apos;modifiedWebcamShot.png&apos;</div><div class="line">,img)</div><div class="line"></div><div class="line"></div><div class="line">if</div><div class="line"> __name__ == </div><div class="line">&apos;__main__&apos;</div><div class="line">:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<p>The Python code was entirely based off of Harrison Kinsley’s work:</p>
+<ul>
+<li>@sentdex<br><a href="https://twitter.com/Sentdex" target="_blank" rel="external">Twitter</a><br>|<br><a href="https://www.youtube.com/sentdex" target="_blank" rel="external">YouTube</a></li>
+<li>Website:<br><a href="https://pythonprogramming.net/haar-cascade-face-eye-detection-python-opencv-tutorial/" target="_blank" rel="external">PythonProgramming.net</a></li>
+</ul>
+<p>Thanks for reading. As always, the code is on my<a href="https://github.com/stoltzmaniac/ML-Image-Processing-R" target="_blank" rel="external">GitHub</a></p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/6VZ3MzF" target="_blank" rel="external">https://www.r-bloggers.com/face-recognition-in-r/</a></p>
+
+  </div>
+  
+
+<div class="socials-share-btn">></div>
+<script>
+  if ($) {
+    $(".socials-share-btn").jsSocials({
+                shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+            });
+  }
+</script>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/06/23/face-recognition-in-r/index.html';
+  var disqus_title = "Face Recognition in R";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</article>
+
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/audios.js"></script>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/products/" class="mobile-nav-link">Products</a><a href="/support/" class="mobile-nav-link">Support</a><a href="/blog/" class="mobile-nav-link">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-f58a74eba0.js"></script>
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+
+
+
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+try{
+  return;
+  document.getElementById('search-input-wrap').classList.add('on');
+  docsearch({
+    apiKey: '7a75d3ee07f1e82ea4271e0c58c114c3',
+    indexName: 'gmagon',
+    inputSelector: '#search-input'
+  });
+}catch(e){
+}
+
+</script>
+
+
+</body>
+</html>

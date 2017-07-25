@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title> PowerShell Tool Time: The Tool Framework  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Copy from Apple.com website source code -->
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og.keywords" content="" />
+  <meta property="og.description" content="" />
+  <meta property="analytics-track" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone. - Index/Tab" />
+  <meta property="analytics-s-channel" content="homepage" />
+  <meta property="og:title" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+	<meta property="og:description" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone and more. Visit the site to learn, buy, and get support." />
+	<meta property="og:url" content="https://gmagon.com" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201703170823" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+  <!-- End Copy from Apple.com website source code -->
+
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/07/07/powershell-tool-time-the-tool-framework/index.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-9f6143947f.css">
+
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+
+
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+
+  <!-- ForPostLayout -->
+  
+    <script src="/jssocials-1.4.0/jssocials.min.js"></script>
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+    
+    
+
+  
+  <!-- endForPostLayout -->
+
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
+  <!-- Open Graph -->
+  <meta name="description" content="Welcome to a new blog series here on SQL Server Central, Powershell Tool Time. Over the next few articles I will serve a SQL Server/Powershell blend here, helping readers make more effective use of P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PowerShell Tool Time: The Tool Framework">
+<meta property="og:url" content="https://gmagon.com/blog/2017/07/07/powershell-tool-time-the-tool-framework/index.html">
+<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple &amp; powerful solutions for everyone.">
+<meta property="og:description" content="Welcome to a new blog series here on SQL Server Central, Powershell Tool Time. Over the next few articles I will serve a SQL Server/Powershell blend here, helping readers make more effective use of P">
+<meta property="og:image" content="http://img2.tuicool.com/QnA77fU.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/JvqAfe.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/IJvuMnf.png!web">
+<meta property="og:updated_time" content="2017-07-11T09:37:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PowerShell Tool Time: The Tool Framework">
+<meta name="twitter:description" content="Welcome to a new blog series here on SQL Server Central, Powershell Tool Time. Over the next few articles I will serve a SQL Server/Powershell blend here, helping readers make more effective use of P">
+<meta name="twitter:image" content="http://img2.tuicool.com/QnA77fU.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/products/" class="main-nav-link">Products</a><a href="/support/" class="main-nav-link">Support</a><a href="/blog/" class="main-nav-link">Blog</a>
+      
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">PowerShell Tool Time: The Tool Framework</h1>
+    
+    <a href="/blog/2017/07/07/powershell-tool-time-the-tool-framework/" class="article-date"><time datetime="2017-07-07T00:00:00.000Z">2017-07-07</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <script src="/assets/js/APlayer.min.js"> </script><p>Welcome to a new blog series here on SQL Server Central, Powershell Tool Time. Over the next few articles I will serve a SQL Server/Powershell blend here, helping readers make more effective use of Powershell. This series will focus on helping you build a Powershell Toolbox that you can use to ease the administration of your SQL Server environment.</p>
+<p>This series is intended for an audience that already has some familiarity with Powershell and its syntax. If you are brand new to the language, I do not want to chase you away, but you could easily become intimidated without some knowledge of the basics. If this is your first exposure to Powershell, I highly recommend<a href="http://www.amazon.com/Learn-Windows-PowerShell-Month-Lunches/dp/1617291080" target="_blank" rel="external">Powershell in a Month of Lunches</a>along with<a href="https://www.microsoftvirtualacademy.com/en-us/training-courses/getting-started-with-powershell-3-0-jump-start-8276" target="_blank" rel="external">Powershell Courses from the Microsoft Virtual Academy</a>. These two resources will give you a solid foundation for using and writing Powershell.</p>
+<h2 id="How-to-build-a-tool"><a href="#How-to-build-a-tool" class="headerlink" title="How to build a tool"></a>How to build a tool</h2><p>Before we start talking about specific tools we can build, we first need to set the table by covering how we actually build a tool. In T-SQL, you are probably used to writing scripts that eventually become stored procedures. In Powershell, we have the same approach, but instead of using stored procedures we use functions.</p>
+<p>To define a function in Powershell, use the function keyword and encapsulate your code within { and }.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function</div><div class="line"> Invoke-Message&#123;</div><div class="line">    Write-Host -ForegroundColor Yellow </div><div class="line">&quot;Hello World!&quot;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Run the function by calling the name you give it:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Invoke-</div><div class="line">Message</div></pre></td></tr></table></figure>
+<p><img src="http://img2.tuicool.com/QnA77fU.png!web" alt=""></p>
+<p>With just a few lines, we can create repeatable code that is easy to call, the foundation of a tool. In addition, we can start to parameterize our functions with the<strong>param</strong>keyword, extending our function:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function</div><div class="line"> Invoke-</div><div class="line">Message</div><div class="line">&#123;</div><div class="line">      param([</div><div class="line">string</div><div class="line">] $</div><div class="line">message</div><div class="line">)</div><div class="line">      Write-Host -ForegroundColor Yellow $</div><div class="line">message</div><div class="line"></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  Invoke-</div><div class="line">Message</div><div class="line"> &apos;Hello World!&apos;</div></pre></td></tr></table></figure>
+<p><img src="http://img1.tuicool.com/JvqAfe.png!web" alt=""></p>
+<p>What’s useful about Powershell is the amount of information baked directly into the language. The Powershell team has worked very hard into adding as much<a href="http://www.mikefal.net/2015/05/05/exploring-powershell/" target="_blank" rel="external">self discovery into the language</a>as possible. If you want the full detail on functions and how to write them, you can start by looking at<a href="https://technet.microsoft.com/en-us/library/hh847829.aspx" target="_blank" rel="external">Get-Help about_Functions</a>.</p>
+<h2 id="Our-First-Tool"><a href="#Our-First-Tool" class="headerlink" title="Our First Tool"></a>Our First Tool</h2><p>One thing that administrators always have to struggle with is managing disk utilization. Logging directly into servers to check free space becomes laborious. A common Powershell task that you’ll find many examples for is<a href="https://www.google.com/search?&amp;q=get%20disk%20usage%20powershell" target="_blank" rel="external">getting disk usage</a>. While many of the scripts are useful, we need to make this task as repeatable as possible, so let’s use this task for our first function:</p>
+<pre><code>function
+ Get-FreeSpace{
+
+param
+([string] 
+$HostName
+ = (
+$env:COMPUTERNAME
+))
+
+
+Get-WmiObject
+ win32_volume -computername 
+$hostname
+  | `
+
+Where-Object
+ {
+$_
+.drivetype 
+-eq
+3
+} | `
+
+Sort-Object
+ name | `
+
+Format-Table
+ name,@{l=
+&quot;Size(GB)&quot;
+;e={(
+$_
+.capacity/
+1
+gb).ToString(
+&quot;F2&quot;
+)}},`
+                              @{l=
+&quot;Free Space(GB)&quot;
+;e={(
+$_
+.freespace/
+1
+gb).ToString(
+&quot;F2&quot;
+)}},`
+                              @{l=
+&quot;% Free&quot;
+;e={((
+$_
+.Freespace/
+$_
+.Capacity)*
+100
+).ToString(
+&quot;F2&quot;
+)}}
+
+}
+</code></pre><p>There’s a lot going on here, so let’s focus on a couple basic elements. The first item to notice is our function accepts a simple parameter, $HostName, which defaults to the local computer name. This allows us to run this function for a remote computer if we want to, but by default look at the machine it’s installed to. One strength of PowerShell is the ability to access remote machines, and we want to leverage that with this first function.</p>
+<p>The second element to understand is the core function we’re using, Get-WmiObject. The<a href="https://msdn.microsoft.com/en-us/library/aa394582%28v=vs.85%29.aspx" target="_blank" rel="external">Windows Management Instrumentation</a>(WMI) framework is a key element of the Windows OS. With WMI, you can review many different parts of the stack. By using the <a href="https://msdn.microsoft.com/en-us/library/aa394515%28v=vs.85%29.aspx" target="_blank" rel="external">win32_volume class</a>to poll our disk and mount point information, we can get detailed information about the disk volumes attached to the host we are querying.</p>
+<p>The third element is that of the pipeline (|). The pipeline is a fundamental concept in shell scripting languages and you can learn more about it by using<a href="https://technet.microsoft.com/en-us/library/hh847902.aspx" target="_blank" rel="external">Get-Help about_Pipelines</a>. The use here is to filter, sort, and format the output of our function, giving us a nice report on with only the elements that are important to us. There are actually three pipelines here as the output is passed from the WMI call to the Where-Object, to Sort-Object, to Format-Table. </p>
+<p>Running the function on my local computer is easy:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Get</div><div class="line">-FreeSpace -HostName localhost</div></pre></td></tr></table></figure>
+<p><img src="http://img0.tuicool.com/IJvuMnf.png!web" alt=""></p>
+<h2 id="If-I-Had-a-Hammer"><a href="#If-I-Had-a-Hammer" class="headerlink" title="If I Had a Hammer"></a>If I Had a Hammer</h2><p>With this function, we now have the first tool for our toolbox. I use this function almost every day in my environment and it saves me a lot of time and effort. By calling this function, I can quickly analyze my disk utilization if we have a shortage. Furthermore, I can include this in other code to build out disk space reports for my team, allowing us to be more proactive in managing our environments. Building tools not only can help me, but help the folks I work with by creating consistency for managing our environments.</p>
+<p>Thank you for reading and I hope you will return for the next article in this series. I’ve created a GitHub repository for all the code in this series. Please feel free to download and make use of this code as well as provide feedback. You can find the repository at<a href="https://github.com/MikeFal/PowershellToolbox-SSC" target="_blank" rel="external">https://github.com/MikeFal/PowershellToolbox-SSC</a>.</p>
+<p>Thanks to Steve Jones (<a href="https://twitter.com/way0utwest" target="_blank" rel="external">@way0utwest</a>) for giving me an opportunity to share with you more about how Powershell can be used to effectively manage SQL Server.</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/QjIbYjm" target="_blank" rel="external">http://www.sqlservercentral.com/articles/PowerShell/129889/</a></p>
+
+  </div>
+  
+
+<div class="socials-share-btn">></div>
+<script>
+  if ($) {
+    $(".socials-share-btn").jsSocials({
+                shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+            });
+  }
+</script>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/07/07/powershell-tool-time-the-tool-framework/index.html';
+  var disqus_title = "PowerShell Tool Time: The Tool Framework";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</article>
+
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/audios.js"></script>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/products/" class="mobile-nav-link">Products</a><a href="/support/" class="mobile-nav-link">Support</a><a href="/blog/" class="mobile-nav-link">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-f58a74eba0.js"></script>
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+
+
+
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+try{
+  return;
+  document.getElementById('search-input-wrap').classList.add('on');
+  docsearch({
+    apiKey: '7a75d3ee07f1e82ea4271e0c58c114c3',
+    indexName: 'gmagon',
+    inputSelector: '#search-input'
+  });
+}catch(e){
+}
+
+</script>
+
+
+</body>
+</html>

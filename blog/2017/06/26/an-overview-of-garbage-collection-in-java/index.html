@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title> An Overview of Garbage Collection in Java  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Copy from Apple.com website source code -->
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og.keywords" content="" />
+  <meta property="og.description" content="" />
+  <meta property="analytics-track" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone. - Index/Tab" />
+  <meta property="analytics-s-channel" content="homepage" />
+  <meta property="og:title" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+	<meta property="og:description" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone and more. Visit the site to learn, buy, and get support." />
+	<meta property="og:url" content="https://gmagon.com" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201703170823" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+  <!-- End Copy from Apple.com website source code -->
+
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/06/26/an-overview-of-garbage-collection-in-java/index.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-9f6143947f.css">
+
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+
+
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+
+  <!-- ForPostLayout -->
+  
+    <script src="/jssocials-1.4.0/jssocials.min.js"></script>
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+    
+    
+
+  
+  <!-- endForPostLayout -->
+
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
+  <!-- Open Graph -->
+  <meta name="description" content="An Overview of Garbage Collection in JavaDZone’s Guide to Here we examine the importance of proper garbage collection for Java apps, the components of GC, and the various patterns at your disposal. J">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An Overview of Garbage Collection in Java">
+<meta property="og:url" content="https://gmagon.com/blog/2017/06/26/an-overview-of-garbage-collection-in-java/index.html">
+<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple &amp; powerful solutions for everyone.">
+<meta property="og:description" content="An Overview of Garbage Collection in JavaDZone’s Guide to Here we examine the importance of proper garbage collection for Java apps, the components of GC, and the various patterns at your disposal. J">
+<meta property="og:updated_time" content="2017-06-27T02:17:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="An Overview of Garbage Collection in Java">
+<meta name="twitter:description" content="An Overview of Garbage Collection in JavaDZone’s Guide to Here we examine the importance of proper garbage collection for Java apps, the components of GC, and the various patterns at your disposal. J">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/products/" class="main-nav-link">Products</a><a href="/support/" class="main-nav-link">Support</a><a href="/blog/" class="main-nav-link">Blog</a>
+      
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">An Overview of Garbage Collection in Java</h1>
+    
+    <a href="/blog/2017/06/26/an-overview-of-garbage-collection-in-java/" class="article-date"><time datetime="2017-06-26T00:00:00.000Z">2017-06-26</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <script src="/assets/js/APlayer.min.js"> </script><h2 id="An-Overview-of-Garbage-Collection-in-Java"><a href="#An-Overview-of-Garbage-Collection-in-Java" class="headerlink" title="An Overview of Garbage Collection in Java"></a>An Overview of Garbage Collection in Java</h2><p>DZone’s Guide to</p>
+<p>Here we examine the importance of proper garbage collection for Java apps, the components of GC, and the various patterns at your disposal.</p>
+<p><a href="https://dzone.com/users/2746645/guideinfoways.html" target="_blank" rel="external">Johnny Morgan</a></p>
+<p>Jun. 26, 17</p>
+<p>·</p>
+<p><a href="https://dzone.com/java-jdk-development-tutorials-tools-news" target="_blank" rel="external">Java Zone</a></p>
+<p>Free Resource</p>
+<p>Join the DZone community and get the full member experience.</p>
+<p>What every Java engineer should know about microservices:<a href="https://info.lightbend.com/COLL-20XX-Reactive-Microservices-Architecture-RES-LP.html?utm_source=dzone&amp;utm_medium=pre-roll-text&amp;utm_campaign=COLL-20XX-Reactive-Microservices-Architecture&amp;utm_term=none&amp;utm_content=java-zone" target="_blank" rel="external">Reactive Microservices Architecture</a>.  Brought to you in partnership with<a href="https://info.lightbend.com/COLL-20XX-Reactive-Microservices-Architecture-RES-LP.html?utm_source=dzone&amp;utm_medium=pre-roll-text&amp;utm_campaign=COLL-20XX-Reactive-Microservices-Architecture&amp;utm_term=none&amp;utm_content=java-zone" target="_blank" rel="external">Lightbend</a>.</p>
+<p>The Java garbage collector poses a great impact on the overall working and performance of an application. As the size of the garbage grows, the runtime of an application decreases. Hence, it is essential that you clear this garbage off of your application every now and then to enhance its productivity and user performance.</p>
+<p>Garbage collection can be quite a daunting task. After all, choosing a wrong garbage collector type or settings can hamper the functionality of your app. There are typically seven types of garbage collectors known to us. These are classically bifurcated between the ‘mostly’ and ‘most concurrent’ category. With the ‘mostly’ types, they sometimes do not operate as expected and a fallback mechanism takes place. On the other hand, the ‘most concurrent’ collectors function concurrently with the application’s execution and rarely stop the world.</p>
+<h2 id="Steps-Involved-in-Garbage-Collection"><a href="#Steps-Involved-in-Garbage-Collection" class="headerlink" title="Steps Involved in Garbage Collection"></a>Steps Involved in Garbage Collection</h2><p>Before implementing the garbage cleaning step, it is essential to note whether your application has touched the GC safe point. That is the range where the collector can quickly recognize the thread execution references and complete the process. If your application has to wait for the safe point, it could very well run out of memory and collapse.</p>
+<ul>
+<li><p>Mark: Otherwise known as trace, this step involves finding all the live and dead objects in the expansive heap. The collector paints all the reachable live objects, and those left are tagged as dead.</p>
+</li>
+<li><p>Sweep: Here, the garbage collector looks for dead objects and tracks their location. The bigger the heap, the more time will it take in the sweep to complete the task.</p>
+</li>
+<li><p>Compact: In this step, the garbage collector rearranges the live objects in order to make the space congestion free. As the process commences, remapping takes place, which means your application’s overall runtime should be significantly enhanced.</p>
+</li>
+</ul>
+<h2 id="Types-of-Collectors"><a href="#Types-of-Collectors" class="headerlink" title="Types of Collectors"></a>Types of Collectors</h2><ul>
+<li><p>Mark/sweep/compact collector: Performs the function in three phases.</p>
+</li>
+<li><p>Mark/Compact Collector: Performs the task in two steps, skipping the sweep phase.</p>
+</li>
+<li><p>Copying Collector: Performs all the three phases in one go. It’s quite aggressive in nature and makes use of ‘from’ and ‘to’ space to move all the live objects. It then fixes the bugs and removes the garbage.</p>
+</li>
+<li><p>Generation Collector: This works on the principle that most objects die young. The software creates new objects but at the same time, sooner rather later, it discards them, too. Through a generator collector, a developer can filter the creation, reduce the rate at which the Young Generation is pushed to the Old Generation, and keep pace with contemporary CPU throughput.</p>
+</li>
+<li><p>Remembered Set: In this set, marks are used. These record the exact location of the Young Generation. Write banners are put to use to track the references from these generations into the Old Generation and keep these ‘remembered sets’ up-to-date.</p>
+</li>
+</ul>
+<p>Note on commercial implementations: There are two basic commercially available and proven approaches for the garbage collection implementation. The first one being a parallel approach and the other being the concurrent approach. </p>
+<h2 id="Role-of-Developers-and-Architects"><a href="#Role-of-Developers-and-Architects" class="headerlink" title="Role of Developers and Architects"></a>Role of Developers and Architects</h2><p>The first and the foremost thing is to understand the nature of the application and the core functionality of the garbage collector.</p>
+<ul>
+<li><p>Garbage Collection Metrics: A plethora of application features affect the workings of the garbage collector. These include the allocation time of objects in memory, their life, and the need to save some for a long time. The mutation rate is the next thing that matters. And lastly, there are the metrics that help track the live set and the heap shape of these objects.</p>
+</li>
+<li><p>The compaction time and the mark time make for the most important metrics for tracking the time of the garbage collection cycle. While the latter measures the time taken for identification of live objects, the former maps time taken to free up the memory and do the necessary allocation.</p>
+</li>
+<li><p>Empty Memory for Clean-up Process: Each of these above-listed garbage collectors needs some amount of space to perform the task efficiently. More space practically halves the collector’s work and CPU consumption required for the job. The opposite applies to when there’s a shortage of empty memory.</p>
+</li>
+<li><p>Implementing the GC Strategy: While the process of compaction is unavoidable, what many GCs do is delay the process to a possible point and free the easy empty space as soon as possible. Another technique is the focusing on concurrent markings and sweeping while at the same time skipping compaction. This proves helpful, too.</p>
+</li>
+</ul>
+<p>Bottom line, garbage collection is an integral part of an application’s performance over the Java platform. As Java devs, we need to implement strategies in order to build an application that speaks of excellent performance, scalability, and reliability.</p>
+<p>Microservices for Java, explained. Revitalize your legacy systems (and your career) with<a href="https://info.lightbend.com/COLL-20XX-Reactive-Microservices-Architecture-RES-LP.html?utm_source=dzone&amp;utm_medium=post-roll-text&amp;utm_campaign=COLL-20XX-Reactive-Microservices-Architecture&amp;utm_term=none&amp;utm_content=java-zone" target="_blank" rel="external">Reactive Microservices Architecture</a>, a free O’Reilly book. Brought to you in partnership with<a href="https://info.lightbend.com/COLL-20XX-Reactive-Microservices-Architecture-RES-LP.html?utm_source=dzone&amp;utm_medium=post-roll-text&amp;utm_campaign=COLL-20XX-Reactive-Microservices-Architecture&amp;utm_term=none&amp;utm_content=java-zone" target="_blank" rel="external">Lightbend</a>.</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/rmQJJzJ" target="_blank" rel="external">https://dzone.com/articles/an-overview-of-garbage-collection-in-java</a></p>
+
+  </div>
+  
+
+<div class="socials-share-btn">></div>
+<script>
+  if ($) {
+    $(".socials-share-btn").jsSocials({
+                shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+            });
+  }
+</script>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/06/26/an-overview-of-garbage-collection-in-java/index.html';
+  var disqus_title = "An Overview of Garbage Collection in Java";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</article>
+
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/audios.js"></script>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/products/" class="mobile-nav-link">Products</a><a href="/support/" class="mobile-nav-link">Support</a><a href="/blog/" class="mobile-nav-link">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-f58a74eba0.js"></script>
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+
+
+
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+try{
+  return;
+  document.getElementById('search-input-wrap').classList.add('on');
+  docsearch({
+    apiKey: '7a75d3ee07f1e82ea4271e0c58c114c3',
+    indexName: 'gmagon',
+    inputSelector: '#search-input'
+  });
+}catch(e){
+}
+
+</script>
+
+
+</body>
+</html>

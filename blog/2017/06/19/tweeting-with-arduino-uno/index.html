@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title> Tweeting with Arduino Uno  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Copy from Apple.com website source code -->
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og.keywords" content="" />
+  <meta property="og.description" content="" />
+  <meta property="analytics-track" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone. - Index/Tab" />
+  <meta property="analytics-s-channel" content="homepage" />
+  <meta property="og:title" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+	<meta property="og:description" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone and more. Visit the site to learn, buy, and get support." />
+	<meta property="og:url" content="https://gmagon.com" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201703170823" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+  <!-- End Copy from Apple.com website source code -->
+
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/06/19/tweeting-with-arduino-uno/index.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-9f6143947f.css">
+
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+
+
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+
+  <!-- ForPostLayout -->
+  
+    <script src="/jssocials-1.4.0/jssocials.min.js"></script>
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+    
+    
+
+  
+  <!-- endForPostLayout -->
+
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
+  <!-- Open Graph -->
+  <meta name="description" content="A long time ago I bought an Ethernet ENC28J60 but I just recently tested it and, although I enjoy Java and I’ve used it in all of my previous projects to develop the interface between Arduino and ser">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tweeting with Arduino Uno">
+<meta property="og:url" content="https://gmagon.com/blog/2017/06/19/tweeting-with-arduino-uno/index.html">
+<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple &amp; powerful solutions for everyone.">
+<meta property="og:description" content="A long time ago I bought an Ethernet ENC28J60 but I just recently tested it and, although I enjoy Java and I’ve used it in all of my previous projects to develop the interface between Arduino and ser">
+<meta property="og:image" content="http://img0.tuicool.com/Fb6ZZrq.gif">
+<meta property="og:image" content="http://img0.tuicool.com/2uuAne6.jpg!web">
+<meta property="og:image" content="http://img2.tuicool.com/nQnam2y.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/QneIFnB.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/YZV3YvV.png!web">
+<meta property="og:updated_time" content="2017-06-22T08:56:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tweeting with Arduino Uno">
+<meta name="twitter:description" content="A long time ago I bought an Ethernet ENC28J60 but I just recently tested it and, although I enjoy Java and I’ve used it in all of my previous projects to develop the interface between Arduino and ser">
+<meta name="twitter:image" content="http://img0.tuicool.com/Fb6ZZrq.gif">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/products/" class="main-nav-link">Products</a><a href="/support/" class="main-nav-link">Support</a><a href="/blog/" class="main-nav-link">Blog</a>
+      
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Tweeting with Arduino Uno</h1>
+    
+    <a href="/blog/2017/06/19/tweeting-with-arduino-uno/" class="article-date"><time datetime="2017-06-19T00:00:00.000Z">2017-06-19</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <script src="/assets/js/APlayer.min.js"> </script><p>A long time ago I bought an Ethernet ENC28J60 but I just recently tested it and, although I enjoy Java and I’ve used it in all of my previous projects to develop the interface between Arduino and server, it was clear to me that Python would be a much better choice in this case.</p>
+<p>In 2014, I decided to use<a href="https://panamahitek.com/" target="_blank" rel="external">Panama Hitek Arduino SDK</a>and then I sent them an email sharing my experience with their new SDK version. In 2016, I randomly met the guys from the Panama Hitek at the Fedora Latin America Meeting in IRC. Sharing your experience as a developer and be engaging in communities is very important, maybe you will meet the developers of your favorite framework in these spaces or even work with them. For me, it’s one more example of the importance of sharing knowledge and ideas through articles, talks, meetings etc. So, don’t be shy or scared of sharing what you know.</p>
+<h2 id="IoT-is-about-being-connected"><a href="#IoT-is-about-being-connected" class="headerlink" title="IoT is about being connected"></a>IoT is about being connected</h2><p>IoT, embedded systems and smart devices are different concepts and there’s a constant confusion when using these terms.</p>
+<p>If your device is disconnected from Internet, it probably isn’t generating the value of an IoT device. Being connected is more than reading commands remotely from an app, it’s a possibility to interact in different ways with your client and other systems like Twitter and also to collect useful information that can be used to make it even smarter.</p>
+<h2 id="First-step"><a href="#First-step" class="headerlink" title="First step"></a>First step</h2><p>Register your app in Twitter to consume their API. Access<a href="https://apps.twitter.com/app/new" target="_blank" rel="external">Twitter Dev</a>to create your Twitter application and generate an access token to enable tweeting from your account (“Keys and Access Tokens” &gt; “Create my access token”)</p>
+<h2 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h2><h3 id="The-Chuck-Norris-way"><a href="#The-Chuck-Norris-way" class="headerlink" title="The Chuck Norris way"></a>The Chuck Norris way</h3><p>You can develop your own C program to connect with Arduino and send HTTPS requests to the Twitter API. There’s a<a href="https://arduino-tweet.appspot.com/" target="_blank" rel="external">Tweet Library for Arduino</a>available but it’s deprecated and needs refactoring to work with Arduino versions higher than 1.6.4.</p>
+<p><img src="http://img0.tuicool.com/Fb6ZZrq.gif" alt=""></p>
+<h3 id="The-easy-way"><a href="#The-easy-way" class="headerlink" title="The easy way"></a>The easy way</h3><p>Working with pointers and in a low level can be complicated if you don’t have experience with C and micro-controller, registers, digital systems etc. Use a python script and it will be much easier to code and maintain the software. Python will be responsible for exposing a web server which will then be consumed by your Arduino and send the content (e.g, sensor values, commands to turn on or off the lights etc) to Twitter. Note that Arduino UNO has limitations when building HTTP requests (it was necessary to use GET method instead of POST to create a tweet) and for this reason Python<strong>doesn’t expose an API</strong>.</p>
+<h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul>
+<li>UIPEthernet</li>
+<li>Python 2.7</li>
+<li>pip</li>
+<li>twython</li>
+<li>flask</li>
+</ul>
+<p>EtherShield and ETHER_28J60 are common libraries used in most of tutorials, but UIPEthernet is compatible with the original Ethernet which allows you to use the examples avaiable in the Arduino IDE (File &gt; Examples &gt; Ethernet) just by replacing:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#</div><div class="line">include</div><div class="line">&lt;</div><div class="line">SPI.h</div><div class="line">&gt;</div><div class="line">#</div><div class="line">include</div><div class="line">&lt;</div><div class="line">Ethernet.h</div><div class="line">&gt;</div><div class="line">//Replace here with </div><div class="line">&lt;</div><div class="line">UIPEthernet.h</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>Download UIPEthernet and install Flask and Twython:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$ </div><div class="line">cd ~/</div><div class="line">Arduino</div><div class="line">/libraries/</div><div class="line"></div><div class="line">$ </div><div class="line">git clone https://github.com</div><div class="line">truchsess/arduino_uip </div><div class="line">UIPEthernet</div><div class="line">$ </div><div class="line">sudo pip install flask</div><div class="line"></div><div class="line">$ </div><div class="line">sudo pip install twython</div></pre></td></tr></table></figure>
+<p>Create a configuration file, insert information generated by Twitter for you:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># api_config </div><div class="line">APP_KEY</div><div class="line"> = </div><div class="line">&apos;your_api_key&apos;</div><div class="line">APP_SECRET</div><div class="line"> = </div><div class="line">&apos;your_api_secret&apos;</div><div class="line">OAUTH_TOKEN</div><div class="line"> = </div><div class="line">&apos;your_access_token&apos;</div><div class="line">OAUTH_TOKEN_SECRET</div><div class="line"> = </div><div class="line">&apos;your_token_secret&apos;</div></pre></td></tr></table></figure>
+<p>In the same folder, create tweet.py:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">from</div><div class="line"> twython </div><div class="line">import</div><div class="line"> Twython  </div><div class="line"></div><div class="line">from</div><div class="line"> flask </div><div class="line">import</div><div class="line"> Flask  </div><div class="line"></div><div class="line">import</div><div class="line"> api_config</div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line">APP_KEY = api_config.APP_KEY  </div><div class="line">APP_SECRET = api_config.APP_SECRET  </div><div class="line">OAUTH_TOKEN = api_config.OAUTH_TOKEN  </div><div class="line">OAUTH_TOKEN_SECRET = api_config.OAUTH_TOKEN_SECRET </div><div class="line"></div><div class="line">twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)</div><div class="line"></div><div class="line"></div><div class="line">@app.route(&quot;/&quot;)</div><div class="line">def</div><div class="line">index</div><div class="line">()</div><div class="line">:</div><div class="line">return</div><div class="line">&quot;Hello world, I&apos;m running!&quot;</div><div class="line">@app.route(&quot;/tweet/</div><div class="line">&lt;</div><div class="line">message</div><div class="line">&gt;</div><div class="line">&quot;)</div><div class="line">def</div><div class="line">sendTweet</div><div class="line">(message)</div><div class="line">:</div><div class="line">  </div><div class="line">    twitter.update_status(status=message); </div><div class="line">    </div><div class="line">return</div><div class="line">&quot;Done.&quot;</div><div class="line">if</div><div class="line"> __name__ == </div><div class="line">&apos;__main__&apos;</div><div class="line">:  </div><div class="line">    </div><div class="line">#Fix here</div><div class="line"></div><div class="line">    app.run(host=</div><div class="line">&quot;your_ip&quot;</div><div class="line">, port=</div><div class="line">8080</div><div class="line">, debug=</div><div class="line">True</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Upload to Arduino:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div></pre></td><td class="code"><pre><div class="line">#</div><div class="line">include</div><div class="line">&lt;</div><div class="line">SPI.h</div><div class="line">&gt;</div><div class="line"></div><div class="line">#</div><div class="line">include</div><div class="line">&lt;</div><div class="line">UIPEthernet.h</div><div class="line">&gt;</div><div class="line">byte</div><div class="line"> mac[] = &#123;</div><div class="line">0</div><div class="line">xDE, </div><div class="line">0</div><div class="line">xAD, </div><div class="line">0</div><div class="line">xBE, </div><div class="line">0</div><div class="line">xEF, </div><div class="line">0</div><div class="line">xFE, </div><div class="line">0</div><div class="line">xED&#125;;  </div><div class="line"></div><div class="line">char</div><div class="line"> server[] = </div><div class="line">&quot;ip_server&quot;</div><div class="line">; </div><div class="line">//fix here  </div><div class="line"></div><div class="line">IPAddress ip(</div><div class="line">192</div><div class="line">, </div><div class="line">168</div><div class="line">, </div><div class="line">1</div><div class="line">, </div><div class="line">177</div><div class="line">); </div><div class="line">//fix here</div><div class="line"></div><div class="line">EthernetClient client;</div><div class="line"></div><div class="line"></div><div class="line">void</div><div class="line"> setup() &#123;  </div><div class="line">  Serial.begin(</div><div class="line">9600</div><div class="line">);</div><div class="line">  </div><div class="line">if</div><div class="line"> (Ethernet.begin(mac) == </div><div class="line">0</div><div class="line">) &#123;</div><div class="line">    Serial.</div><div class="line">println</div><div class="line">(</div><div class="line">&quot;Failed to configure Ethernet using DHCP&quot;</div><div class="line">);</div><div class="line">    Ethernet.begin(mac, ip);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">void</div><div class="line"> loop() &#123;  </div><div class="line">  </div><div class="line">if</div><div class="line"> (client.connect(server, </div><div class="line">8080</div><div class="line">)) &#123;</div><div class="line">    Serial.</div><div class="line">println</div><div class="line">(</div><div class="line">&quot;connected&quot;</div><div class="line">);</div><div class="line">    </div><div class="line">// Make a HTTP request:</div><div class="line"></div><div class="line">    client.</div><div class="line">println</div><div class="line">(</div><div class="line">&quot;GET /sendTweet/Hello%20world%20by%20Arduino HTTP/1.1&quot;</div><div class="line">);</div><div class="line">    client.</div><div class="line">println</div><div class="line">(</div><div class="line">&quot;Host: ip_server_with_port&quot;</div><div class="line">); </div><div class="line">//fix here</div><div class="line"></div><div class="line">    client.</div><div class="line">println</div><div class="line">(</div><div class="line">&quot;Connection: close&quot;</div><div class="line">);</div><div class="line">    client.</div><div class="line">println</div><div class="line">();</div><div class="line">    client.stop();  </div><div class="line">  &#125; </div><div class="line">else</div><div class="line"> &#123;</div><div class="line">    Serial.</div><div class="line">println</div><div class="line">(</div><div class="line">&quot;connection failed&quot;</div><div class="line">);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  delay(</div><div class="line">5000</div><div class="line">);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Give the script permission to execute:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ chmod </div><div class="line">a</div><div class="line">+</div><div class="line">x</div><div class="line"> tweet.</div><div class="line">py</div><div class="line"></div><div class="line">$ </div><div class="line">python</div><div class="line"> tweet.</div><div class="line">py</div></pre></td></tr></table></figure>
+<p>And magic…..</p>
+<p><img src="http://img0.tuicool.com/2uuAne6.jpg!web" alt=""></p>
+<p>Daniela Morais</p>
+<p>@danielammorais</p>
+<p><img src="http://img2.tuicool.com/nQnam2y.png!web" alt=""></p>
+<p>Hello world by Arduino</p>
+<p>06:45 AM - 17 Jul 2016</p>
+<p><img src="http://img0.tuicool.com/QneIFnB.png!web" alt=""><img src="http://img1.tuicool.com/YZV3YvV.png!web" alt=""></p>
+<h2 id="Observations"><a href="#Observations" class="headerlink" title="Observations"></a>Observations</h2><p>For some reason, I can’t make requests to local servers and it was necessary to host the Python script on Digital Ocean. The server doesn’t support HTTPS and some times an error about this was received.</p>
+<p>Note that this Python script<strong>doesn’t expose an API</strong>and you must always use URL Encoder/Decoder to send messages in the path param. Special characters can be a problem, try to use curl or wget if you get any errors.</p>
+<h2 id="Cool-things"><a href="#Cool-things" class="headerlink" title="Cool things"></a>Cool things</h2><p>Source: <a href="http://www.tuicool.com/articles/hit/ZVnEnqm" target="_blank" rel="external">https://dev.to/danielammorais/tweeting-with-arduino-uno</a></p>
+
+  </div>
+  
+
+<div class="socials-share-btn">></div>
+<script>
+  if ($) {
+    $(".socials-share-btn").jsSocials({
+                shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+            });
+  }
+</script>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/06/19/tweeting-with-arduino-uno/index.html';
+  var disqus_title = "Tweeting with Arduino Uno";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</article>
+
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/audios.js"></script>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/products/" class="mobile-nav-link">Products</a><a href="/support/" class="mobile-nav-link">Support</a><a href="/blog/" class="mobile-nav-link">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-f58a74eba0.js"></script>
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+
+
+
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+try{
+  return;
+  document.getElementById('search-input-wrap').classList.add('on');
+  docsearch({
+    apiKey: '7a75d3ee07f1e82ea4271e0c58c114c3',
+    indexName: 'gmagon',
+    inputSelector: '#search-input'
+  });
+}catch(e){
+}
+
+</script>
+
+
+</body>
+</html>

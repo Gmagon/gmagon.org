@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title> Creating a Suggestion Dropdown  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Copy from Apple.com website source code -->
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og.keywords" content="" />
+  <meta property="og.description" content="" />
+  <meta property="analytics-track" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone. - Index/Tab" />
+  <meta property="analytics-s-channel" content="homepage" />
+  <meta property="og:title" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+	<meta property="og:description" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone and more. Visit the site to learn, buy, and get support." />
+	<meta property="og:url" content="https://gmagon.com" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201703170823" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+  <!-- End Copy from Apple.com website source code -->
+
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/06/19/creating-a-suggestion-dropdown/index.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-9f6143947f.css">
+
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+
+
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+
+  <!-- ForPostLayout -->
+  
+    <script src="/jssocials-1.4.0/jssocials.min.js"></script>
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+    
+    
+
+  
+  <!-- endForPostLayout -->
+
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
+  <!-- Open Graph -->
+  <meta name="description" content="The Ultimate Guide to Dropdowns in ASP.NET MVC Series Introduction Basics of ASP.NET MVC DropdownLists Dropdowns in WebGrids Cascading Dropdowns Creating a Suggestion Dropdown  As far as dropdowns g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creating a Suggestion Dropdown">
+<meta property="og:url" content="https://gmagon.com/blog/2017/06/19/creating-a-suggestion-dropdown/index.html">
+<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple &amp; powerful solutions for everyone.">
+<meta property="og:description" content="The Ultimate Guide to Dropdowns in ASP.NET MVC Series Introduction Basics of ASP.NET MVC DropdownLists Dropdowns in WebGrids Cascading Dropdowns Creating a Suggestion Dropdown  As far as dropdowns g">
+<meta property="og:image" content="http://img2.tuicool.com/jUFrIjb.jpg!web">
+<meta property="og:updated_time" content="2017-06-22T08:56:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Creating a Suggestion Dropdown">
+<meta name="twitter:description" content="The Ultimate Guide to Dropdowns in ASP.NET MVC Series Introduction Basics of ASP.NET MVC DropdownLists Dropdowns in WebGrids Cascading Dropdowns Creating a Suggestion Dropdown  As far as dropdowns g">
+<meta name="twitter:image" content="http://img2.tuicool.com/jUFrIjb.jpg!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/products/" class="main-nav-link">Products</a><a href="/support/" class="main-nav-link">Support</a><a href="/blog/" class="main-nav-link">Blog</a>
+      
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Creating a Suggestion Dropdown</h1>
+    
+    <a href="/blog/2017/06/19/creating-a-suggestion-dropdown/" class="article-date"><time datetime="2017-06-19T00:00:00.000Z">2017-06-19</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <script src="/assets/js/APlayer.min.js"> </script><p><img src="http://img2.tuicool.com/jUFrIjb.jpg!web" alt=""></p>
+<h4 id="The-Ultimate-Guide-to-Dropdowns-in-ASP-NET-MVC-Series"><a href="#The-Ultimate-Guide-to-Dropdowns-in-ASP-NET-MVC-Series" class="headerlink" title="The Ultimate Guide to Dropdowns in ASP.NET MVC Series"></a>The Ultimate Guide to Dropdowns in ASP.NET MVC Series</h4><ul>
+<li><a href="https://www.danylkoweb.com/Blog/the-ultimate-guide-to-aspnet-mvc-dropdowns-JO" target="_blank" rel="external">Introduction</a></li>
+<li><a href="https://www.danylkoweb.com/Blog/basics-of-aspnet-mvc-dropdowns-J7" target="_blank" rel="external">Basics of ASP.NET MVC DropdownLists</a></li>
+<li><a href="https://www.danylkoweb.com/Blog/using-dropdowns-in-grids-JX" target="_blank" rel="external">Dropdowns in WebGrids</a></li>
+<li><a href="https://www.danylkoweb.com/Blog/cascading-dropdowns-in-aspnet-mvc-JY" target="_blank" rel="external">Cascading Dropdowns</a></li>
+<li>Creating a Suggestion Dropdown</li>
+</ul>
+<p>As far as dropdowns go, the most popular one on the Internet is Google’s AutoSuggest.</p>
+<p>As you start to type, Google tries to guess what the user is looking for and provides a dropdown with suggestions so the user doesn’t have to type everything.</p>
+<p>In the last post of this [link]series, we’ll discuss how to create a autosuggest dropdown control for your own UI.</p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Throughout this series, you already know by now that we need to write JavaScript for our control.</p>
+<p>For our autosuggest dropdown, we’ll use a standard Text Box along with a custom DIV that displays below it.</p>
+<p>As the user types in the text box, we’ll take their input and send it back to the server using a Web API.</p>
+<p>This is probably the only post in the series without a ViewModel since everything is done through JavaScript.</p>
+<h2 id="Our-WebAPI"><a href="#Our-WebAPI" class="headerlink" title="Our WebAPI"></a>Our WebAPI</h2><p>For our autosuggest to work, we need a Web API similar to our<a href="https://www.danylkoweb.com/Blog/cascading-dropdowns-in-aspnet-mvc-JY" target="_blank" rel="external">Cascading Dropdown WebAPI</a>.</p>
+<p>It’s similar, but instead we want distinct make and models of cars and we only want 10 of them displayed in the dropdown.</p>
+<h4 id="SearchController-cs"><a href="#SearchController-cs" class="headerlink" title="/SearchController.cs"></a>/SearchController.cs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">public</div><div class="line">class</div><div class="line">SearchController</div><div class="line"> : </div><div class="line">ApiController</div><div class="line"></div><div class="line">&#123;</div><div class="line">    [HttpGet]</div><div class="line">    </div><div class="line">public</div><div class="line"> Vehicle[] </div><div class="line">For</div><div class="line">(</div><div class="line">string</div><div class="line"> id</div><div class="line">)</div><div class="line">    </div><div class="line">&#123;</div><div class="line">        </div><div class="line">var</div><div class="line"> connection = ConfigurationManager.ConnectionStrings[</div><div class="line">&quot;DropdownDatabase&quot;</div><div class="line">].ToString();</div><div class="line">        </div><div class="line">var</div><div class="line"> repository = </div><div class="line">new</div><div class="line"> VehicleRepository(connection);</div><div class="line">        </div><div class="line">var</div><div class="line"> records = repository.Search(id);</div><div class="line">        </div><div class="line">return</div><div class="line"> records</div><div class="line">            .Distinct(</div><div class="line">new</div><div class="line"> VehicleMakeModelComparer())</div><div class="line">            .Select(e =</div><div class="line">&gt;</div><div class="line">new</div><div class="line"> Vehicle &#123; Make = e.Make, Model = e.Model &#125;)</div><div class="line">            .OrderBy(e=</div><div class="line">&gt;</div><div class="line"> e.Make)</div><div class="line">            .ThenBy(e=</div><div class="line">&gt;</div><div class="line"> e.Model)</div><div class="line">            .Take(</div><div class="line">10</div><div class="line">)</div><div class="line">            .ToArray();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="ViewModels-VehicleMakeModelComparer-cs"><a href="#ViewModels-VehicleMakeModelComparer-cs" class="headerlink" title="ViewModels/VehicleMakeModelComparer.cs"></a>ViewModels/VehicleMakeModelComparer.cs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">public</div><div class="line">class</div><div class="line">VehicleMakeModelComparer</div><div class="line"> : </div><div class="line">IEqualityComparer</div><div class="line">&lt;</div><div class="line">Vehicle</div><div class="line">&gt;</div><div class="line"></div><div class="line">&#123;</div><div class="line">    </div><div class="line">public</div><div class="line"> bool Equals(Vehicle x, Vehicle y)</div><div class="line">    &#123;</div><div class="line">        </div><div class="line">var</div><div class="line"> xKey = x.Make + </div><div class="line">&quot; &quot;</div><div class="line"> + x.Model;</div><div class="line">        </div><div class="line">var</div><div class="line"> yKey = y.Make + </div><div class="line">&quot; &quot;</div><div class="line"> + y.Model;</div><div class="line">        </div><div class="line">return</div><div class="line"> xKey.Equals(yKey);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">public</div><div class="line"> int GetHashCode(Vehicle obj)</div><div class="line">    &#123;</div><div class="line">        </div><div class="line">var</div><div class="line"> key = obj.Make + </div><div class="line">&quot; &quot;</div><div class="line"> + obj.Model;</div><div class="line">        </div><div class="line">return</div><div class="line"> key.GetHashCode();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Now, when we call our API, it looks like this:</p>
+<p><code>/api/search/for/&lt;query&gt;</code></p>
+<p>and will return specific JSON to the UI.</p>
+<h2 id="Setting-up-the-UI"><a href="#Setting-up-the-UI" class="headerlink" title="Setting up the UI"></a>Setting up the UI</h2><p>As mentioned, our UI only has one TextBox and a DIV.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">&lt;</div><div class="line">div </div><div class="line">class</div><div class="line">=</div><div class="line">&quot;form-group&quot;</div><div class="line">&gt;</div><div class="line"></div><div class="line">    @Html.Label(</div><div class="line">&quot;SearchLabel&quot;</div><div class="line">, </div><div class="line">&quot;Search&quot;</div><div class="line">, </div><div class="line">new</div><div class="line"> &#123; @</div><div class="line">class</div><div class="line"> = </div><div class="line">&quot;col-sm-1 control-label&quot;</div><div class="line"> &#125;)</div><div class="line">    </div><div class="line">&lt;</div><div class="line">div </div><div class="line">class</div><div class="line">=</div><div class="line">&quot;col-sm-2&quot;</div><div class="line">&gt;</div><div class="line"></div><div class="line">        @Html.TextBox(</div><div class="line">&quot;SearchTerm&quot;</div><div class="line">, </div><div class="line">string</div><div class="line">.Empty, </div><div class="line">new</div><div class="line"> &#123; @</div><div class="line">class</div><div class="line"> = </div><div class="line">&quot;search-term form-control&quot;</div><div class="line"> &#125;)</div><div class="line">        </div><div class="line">&lt;</div><div class="line">div </div><div class="line">class</div><div class="line">=</div><div class="line">&quot;suggestions hidden&quot;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">ul </div><div class="line">class</div><div class="line">=</div><div class="line">&quot;suggest-list list-unstyled&quot;</div><div class="line"> /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>We don’t have anything in our “.suggestions” until we make our call to our Web API.</p>
+<h2 id="Time-For-Scripting"><a href="#Time-For-Scripting" class="headerlink" title="Time For Scripting"></a>Time For Scripting</h2><p>JavaScript is what powers the autosuggest. It’s simple to understand and easy enough to enhance.</p>
+<p>Our list is contained in a unordered list named “.suggest-list”.</p>
+<p>Our script requires the SearchTerm text box to have an onKeyUp event attached to it. Once they press the key, we call the API.</p>
+<p>Views/Home/SuggestionDropdown.cshtml(&lt;script&gt; section)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div></pre></td><td class="code"><pre><div class="line">$(</div><div class="line">function</div><div class="line">(</div><div class="line">) </div><div class="line">&#123;</div><div class="line">    $(</div><div class="line">&quot;#SearchTerm&quot;</div><div class="line">).on(</div><div class="line">&quot;keyup keypress&quot;</div><div class="line">,</div><div class="line">        </div><div class="line">function</div><div class="line">(</div><div class="line">e</div><div class="line">) </div><div class="line">&#123;</div><div class="line">            </div><div class="line">var</div><div class="line"> active = $(</div><div class="line">&quot;li.active&quot;</div><div class="line">, </div><div class="line">&quot;.suggest-list&quot;</div><div class="line">);</div><div class="line">            </div><div class="line">if</div><div class="line"> (e.which === </div><div class="line">27</div><div class="line">) &#123;</div><div class="line">                $(</div><div class="line">&quot;.suggestions&quot;</div><div class="line">).addClass(</div><div class="line">&quot;hidden&quot;</div><div class="line">);</div><div class="line">            &#125; </div><div class="line">else</div><div class="line">if</div><div class="line"> (e.which === </div><div class="line">40</div><div class="line">) &#123;</div><div class="line">                </div><div class="line">if</div><div class="line"> (active.length </div><div class="line">&gt;</div><div class="line">0</div><div class="line">) &#123;</div><div class="line">                    </div><div class="line">var</div><div class="line"> next = $(active).next();</div><div class="line">                    $(active).removeClass(</div><div class="line">&quot;active&quot;</div><div class="line">);</div><div class="line">                    $(next).addClass(</div><div class="line">&quot;active&quot;</div><div class="line">);</div><div class="line">                &#125; </div><div class="line">else</div><div class="line"> &#123;</div><div class="line">                    $(</div><div class="line">&quot;li:first&quot;</div><div class="line">, </div><div class="line">&quot;.suggest-list&quot;</div><div class="line">).addClass(</div><div class="line">&quot;active&quot;</div><div class="line">);</div><div class="line">                &#125;</div><div class="line">            &#125; </div><div class="line">else</div><div class="line">if</div><div class="line"> (e.which === </div><div class="line">38</div><div class="line">) &#123;</div><div class="line">                </div><div class="line">if</div><div class="line"> (active.length </div><div class="line">&gt;</div><div class="line">0</div><div class="line">) &#123;</div><div class="line">                    </div><div class="line">var</div><div class="line"> previous = $(active).prev();</div><div class="line">                    $(active).removeClass(</div><div class="line">&quot;active&quot;</div><div class="line">);</div><div class="line">                    $(previous).addClass(</div><div class="line">&quot;active&quot;</div><div class="line">);</div><div class="line">                &#125; </div><div class="line">else</div><div class="line"> &#123;</div><div class="line">                    $(</div><div class="line">&quot;li:last&quot;</div><div class="line">, </div><div class="line">&quot;.suggest-list&quot;</div><div class="line">).addClass(</div><div class="line">&quot;active&quot;</div><div class="line">);</div><div class="line">                &#125;</div><div class="line">            &#125; </div><div class="line">else</div><div class="line">if</div><div class="line"> (e.which === </div><div class="line">13</div><div class="line">) &#123;</div><div class="line">                e.preventDefault();</div><div class="line">                $(</div><div class="line">this</div><div class="line">).val($(active).text());</div><div class="line">                $(</div><div class="line">&quot;.suggestions&quot;</div><div class="line">).addClass(</div><div class="line">&quot;hidden&quot;</div><div class="line">);</div><div class="line">                </div><div class="line">return</div><div class="line">false</div><div class="line">;</div><div class="line">            &#125; </div><div class="line">else</div><div class="line"> &#123;</div><div class="line">                </div><div class="line">// We have a good value w/ no special keys.</div><div class="line">var</div><div class="line"> value = $(</div><div class="line">&quot;#SearchTerm&quot;</div><div class="line">).val();</div><div class="line">                </div><div class="line">if</div><div class="line"> (value === </div><div class="line">&quot;&quot;</div><div class="line">) &#123;</div><div class="line">                    $(</div><div class="line">&quot;.suggestions&quot;</div><div class="line">).addClass(</div><div class="line">&quot;hidden&quot;</div><div class="line">);</div><div class="line">                &#125; </div><div class="line">else</div><div class="line"> &#123;</div><div class="line">                    </div><div class="line">var</div><div class="line"> uri = </div><div class="line">&quot;/api/search/for/&quot;</div><div class="line"> + value;</div><div class="line">                    $(</div><div class="line">&quot;.suggestions&quot;</div><div class="line">).removeClass(</div><div class="line">&quot;hidden&quot;</div><div class="line">);</div><div class="line">                    $.getJSON(uri)</div><div class="line">                        .done(</div><div class="line">function</div><div class="line"> (</div><div class="line">data</div><div class="line">) </div><div class="line">&#123;</div><div class="line">                            </div><div class="line">var</div><div class="line"> list = $(</div><div class="line">&quot;.suggest-list&quot;</div><div class="line">);</div><div class="line">                            $(list).empty();</div><div class="line">                            $.each(data,</div><div class="line">                                </div><div class="line">function</div><div class="line"> (</div><div class="line">key, value</div><div class="line">) </div><div class="line">&#123;</div><div class="line">                                    </div><div class="line">var</div><div class="line"> anchor = </div><div class="line">&quot;</div><div class="line">&lt;</div><div class="line">a href=&apos;#&apos;</div><div class="line">&gt;</div><div class="line">&quot;</div><div class="line"> +</div><div class="line">                                        value.Make +</div><div class="line">                                        </div><div class="line">&quot; &quot;</div><div class="line"> +</div><div class="line">                                        value.Model +</div><div class="line">                                        </div><div class="line">&quot;</div><div class="line">&lt;</div><div class="line">/a</div><div class="line">&gt;</div><div class="line">&quot;</div><div class="line">;</div><div class="line">                                    $(list).append($(</div><div class="line">&quot;</div><div class="line">&lt;</div><div class="line">li</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/li</div><div class="line">&gt;</div><div class="line">&quot;</div><div class="line">)</div><div class="line">                                        .html(anchor));</div><div class="line">                                    </div><div class="line">// On mouse click, set the value.</div><div class="line"></div><div class="line">                                    $(</div><div class="line">&quot;a&quot;</div><div class="line">, list).on(</div><div class="line">&quot;click&quot;</div><div class="line">,</div><div class="line">                                        </div><div class="line">function</div><div class="line"> (</div><div class="line">e</div><div class="line">) </div><div class="line">&#123;</div><div class="line">                                            e.preventDefault();</div><div class="line">                                            </div><div class="line">var</div><div class="line"> selected = $(</div><div class="line">this</div><div class="line">).text();</div><div class="line">                                            $(</div><div class="line">&quot;.search-term&quot;</div><div class="line">).val(selected);</div><div class="line">                                            $(</div><div class="line">&quot;.suggestions&quot;</div><div class="line">).addClass(</div><div class="line">&quot;hidden&quot;</div><div class="line">);</div><div class="line">                                        &#125;);</div><div class="line">                                &#125;);</div><div class="line">                        &#125;);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>When the user presses a key, we check to see the following codes:</p>
+<ul>
+<li>ESC (27) - Close the dropdown when it’s visible.</li>
+<li>Down Arrow (40) - Move to the next option in the dropdown.</li>
+<li>Up Arrow (38) - Move to the previous option in the dropdown.</li>
+<li>Enter (13) - Select the highlighted item in the dropdown.</li>
+</ul>
+<p>In the end, when none of our keys are caught, we assume the user is entering their search criteria.</p>
+<p>We show the “dropdown” by removing the hidden CSS class and make our call to the Web API.</p>
+<p>Once retrieved, we add the items to our list and attach click events to our anchors in the list.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>In this final post to our dropdown series, I wanted to show how easy it is to create an autosuggest dropdown. Not only did we make our dropdown list clickable, we also added keyboard events for those keyboard-jockeys who avoid the mouse.</p>
+<p>This dropdown series explained thebasics of dropdowns, how to use<a href="https://www.danylkoweb.com/Blog/using-dropdowns-in-grids-JX" target="_blank" rel="external">dropdowns inside and outside of webgrids</a>, mutiple ways to<a href="https://www.danylkoweb.com/Blog/cascading-dropdowns-in-aspnet-mvc-JY" target="_blank" rel="external">implement cascading dropdowns</a>, and, of course, how to create an autosuggest dropdown.</p>
+<p>I hope this series has shown a detailed and easy way to implement dropdowns in ASP.NET MVC.</p>
+<p>Was this autosuggest easy to implement? Is there a better way to do this? Post your comments below and let’s discuss.</p>
+<h4 id="The-Ultimate-Guide-to-Dropdowns-in-ASP-NET-MVC-Series-1"><a href="#The-Ultimate-Guide-to-Dropdowns-in-ASP-NET-MVC-Series-1" class="headerlink" title="The Ultimate Guide to Dropdowns in ASP.NET MVC Series"></a>The Ultimate Guide to Dropdowns in ASP.NET MVC Series</h4><ul>
+<li><a href="https://www.danylkoweb.com/Blog/the-ultimate-guide-to-aspnet-mvc-dropdowns-JO" target="_blank" rel="external">Introduction</a></li>
+<li><a href="https://www.danylkoweb.com/Blog/basics-of-aspnet-mvc-dropdowns-J7" target="_blank" rel="external">Basics of ASP.NET MVC DropdownLists</a></li>
+<li><a href="https://www.danylkoweb.com/Blog/using-dropdowns-in-grids-JX" target="_blank" rel="external">Dropdowns in WebGrids</a></li>
+<li><a href="https://www.danylkoweb.com/Blog/cascading-dropdowns-in-aspnet-mvc-JY" target="_blank" rel="external">Cascading Dropdowns</a></li>
+<li>Creating a Suggestion Dropdown</li>
+</ul>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/ZvmMri2" target="_blank" rel="external">https://www.danylkoweb.com/Blog/creating-a-suggestion-dropdown-K1</a></p>
+
+  </div>
+  
+
+<div class="socials-share-btn">></div>
+<script>
+  if ($) {
+    $(".socials-share-btn").jsSocials({
+                shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+            });
+  }
+</script>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/06/19/creating-a-suggestion-dropdown/index.html';
+  var disqus_title = "Creating a Suggestion Dropdown";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</article>
+
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/audios.js"></script>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/products/" class="mobile-nav-link">Products</a><a href="/support/" class="mobile-nav-link">Support</a><a href="/blog/" class="mobile-nav-link">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-f58a74eba0.js"></script>
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+
+
+
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+try{
+  return;
+  document.getElementById('search-input-wrap').classList.add('on');
+  docsearch({
+    apiKey: '7a75d3ee07f1e82ea4271e0c58c114c3',
+    indexName: 'gmagon',
+    inputSelector: '#search-input'
+  });
+}catch(e){
+}
+
+</script>
+
+
+</body>
+</html>

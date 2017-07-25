@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title> What’s new in JPA 2.2 – Java 8 Date and Time Types  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Copy from Apple.com website source code -->
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og.keywords" content="" />
+  <meta property="og.description" content="" />
+  <meta property="analytics-track" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone. - Index/Tab" />
+  <meta property="analytics-s-channel" content="homepage" />
+  <meta property="og:title" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+	<meta property="og:description" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone and more. Visit the site to learn, buy, and get support." />
+	<meta property="og:url" content="https://gmagon.com" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201703170823" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+  <!-- End Copy from Apple.com website source code -->
+
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/06/26/whats-new-in-jpa-22-java-8-date-and-time-types/index.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-9f6143947f.css">
+
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+
+
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+
+  <!-- ForPostLayout -->
+  
+    <script src="/jssocials-1.4.0/jssocials.min.js"></script>
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+    
+    
+
+  
+  <!-- endForPostLayout -->
+
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
+  <!-- Open Graph -->
+  <meta name="description" content="Follow @vlad_mihalcea IntroductionNow that theJPA 2.2 Review Ballot was approved, let’s start analyzing some of the new additions to the standard which have been supported by Hibernate for quite some">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What’s new in JPA 2.2 – Java 8 Date and Time Types">
+<meta property="og:url" content="https://gmagon.com/blog/2017/06/26/whats-new-in-jpa-22-java-8-date-and-time-types/index.html">
+<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple &amp; powerful solutions for everyone.">
+<meta property="og:description" content="Follow @vlad_mihalcea IntroductionNow that theJPA 2.2 Review Ballot was approved, let’s start analyzing some of the new additions to the standard which have been supported by Hibernate for quite some">
+<meta property="og:image" content="http://img0.tuicool.com/yEBFvmm.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/YbQ7ziI.jpg!web">
+<meta property="og:updated_time" content="2017-06-27T02:17:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What’s new in JPA 2.2 – Java 8 Date and Time Types">
+<meta name="twitter:description" content="Follow @vlad_mihalcea IntroductionNow that theJPA 2.2 Review Ballot was approved, let’s start analyzing some of the new additions to the standard which have been supported by Hibernate for quite some">
+<meta name="twitter:image" content="http://img0.tuicool.com/yEBFvmm.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/products/" class="main-nav-link">Products</a><a href="/support/" class="main-nav-link">Support</a><a href="/blog/" class="main-nav-link">Blog</a>
+      
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">What’s new in JPA 2.2 – Java 8 Date and Time Types</h1>
+    
+    <a href="/blog/2017/06/26/whats-new-in-jpa-22-java-8-date-and-time-types/" class="article-date"><time datetime="2017-06-26T00:00:00.000Z">2017-06-26</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <script src="/assets/js/APlayer.min.js"> </script><p><a href="https://twitter.com/vlad_mihalcea" target="_blank" rel="external">Follow @vlad_mihalcea</a></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Now that the<a href="https://www.jcp.org/en/jsr/results?id=6002" target="_blank" rel="external">JPA 2.2 Review Ballot was approved</a>, let’s start analyzing some of the new additions to the standard which have been supported by Hibernate for quite some time already.</p>
+<p>In this article, we are going to see how Java 8 Date/Time API is supported and which types you need to use depending on your business case requirements.</p>
+<h2 id="Java-8-Date-Time-support"><a href="#Java-8-Date-Time-support" class="headerlink" title="Java 8 Date/Time support"></a>Java 8 Date/Time support</h2><p>The<a href="https://jcp.org/aboutJava/communityprocess/maintenance/jsr338/ChangeLog-JPA-2.2-MR.txt" target="_blank" rel="external">JPA 2.2 change log</a>says that only<a href="https://github.com/javaee/jpa-spec/issues/63" target="_blank" rel="external">the following types are going to be supported</a>:</p>
+<ul>
+<li><code>java.time.LocalDate</code></li>
+<li><code>java.time.LocalTime</code></li>
+<li><code>java.time.LocalDateTime</code></li>
+<li><code>java.time.OffsetTime</code></li>
+<li><code>java.time.OffsetDateTime</code></li>
+</ul>
+<p>While<code>LocalDateTime</code>is rather straightforward since it only captures a point in time, similar to<code>java.util.Date</code>,<a href="https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html" target="_blank" rel="external"><code>OffsetDateTime</code></a>is more problematic because it only captures the offset, but not the time zone rules such as DST (Daylight Saving Time) or other rules defined by ZoneId and typically supported by<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" target="_blank" rel="external"><code>ZonedDateTime</code></a>.</p>
+<p>It’s also curious that the standard does not support the<a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" target="_blank" rel="external"><code>java.time.Duration</code></a>type which can come in handy in many business use cases.</p>
+<h2 id="Domain-Model"><a href="#Domain-Model" class="headerlink" title="Domain Model"></a>Domain Model</h2><p>Considering we have following entities in our system:</p>
+<p><img src="http://img0.tuicool.com/yEBFvmm.png!web" alt=""></p>
+<p>The<code>Employee</code>entity contains the following Java 8 Date Time attributes:</p>
+<ul>
+<li><code>birthday</code><br>attribute is a<br><code>LocalDate</code><br>since we are only interested in the Date part</li>
+<li><code>updatedOn</code><br>is a<br><code>LocalDateTime</code><br>since this attribute needs to store both Date and Time information</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">@Entity</div><div class="line">(name = </div><div class="line">&quot;Employee&quot;</div><div class="line">)</div><div class="line">public class Employee &#123;</div><div class="line"></div><div class="line">    </div><div class="line">@Id</div><div class="line">@GeneratedValue</div><div class="line"></div><div class="line">    private Long id;</div><div class="line"></div><div class="line">    </div><div class="line">@NaturalId</div><div class="line"></div><div class="line">    private String name;</div><div class="line"></div><div class="line">    </div><div class="line">private</div><div class="line">LocalDate</div><div class="line">birthday</div><div class="line">;</div><div class="line"></div><div class="line">    @</div><div class="line">Column</div><div class="line">(name = </div><div class="line">&quot;updated_on&quot;</div><div class="line">)</div><div class="line">    </div><div class="line">private</div><div class="line">LocalDateTime</div><div class="line">updatedOn</div><div class="line">;</div><div class="line"></div><div class="line">    </div><div class="line">//Getters are setters omitted for brevity</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The<code>Meeting</code>entity features the following Java 8 Date Time attributes:</p>
+<ul>
+<li><code>startsAt</code><br>is a<br><code>ZoneDateTime</code><br>which, even if not supported by JPA 2.2, is probably a more suitable version of<br><code>OffsetDateTime</code></li>
+<li>the<br><code>duration</code><br>attribute might not be supported by JPA 2.2, but we will use it since Hibernate supports all these types</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">@Entity</div><div class="line">(name = </div><div class="line">&quot;Meeting&quot;</div><div class="line">)</div><div class="line">public class Meeting &#123;</div><div class="line"></div><div class="line">    </div><div class="line">@Id</div><div class="line"></div><div class="line">    private Long id;</div><div class="line"></div><div class="line">    </div><div class="line">@ManyToOne</div><div class="line">(fetch = FetchType.LAZY)</div><div class="line">    </div><div class="line">@JoinColumn</div><div class="line">(name = </div><div class="line">&quot;employee_id&quot;</div><div class="line">)</div><div class="line">    private Employee createdBy;</div><div class="line"></div><div class="line">    </div><div class="line">@Column</div><div class="line">(name = </div><div class="line">&quot;starts_at&quot;</div><div class="line">)</div><div class="line">    private ZonedDateTime startsAt;</div><div class="line"></div><div class="line">    </div><div class="line">private</div><div class="line">Duration</div><div class="line">duration</div><div class="line">;</div><div class="line">    </div><div class="line">    </div><div class="line">//Getters are setters omitted for brevity</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Testing-time"><a href="#Testing-time" class="headerlink" title="Testing time"></a>Testing time</h2><p>Assuming we persist the following entities:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">Employee employee = </div><div class="line">new</div><div class="line"> Employee();</div><div class="line">employee.setName( </div><div class="line">&quot;Vlad Mihalcea&quot;</div><div class="line"> );</div><div class="line">employee.setBirthday(</div><div class="line">    LocalDate.</div><div class="line">of</div><div class="line">(</div><div class="line">        </div><div class="line">1981</div><div class="line">, </div><div class="line">12</div><div class="line">, </div><div class="line">10</div><div class="line"></div><div class="line">    )</div><div class="line">);</div><div class="line">employee.setUpdatedOn(</div><div class="line">    LocalDateTime.</div><div class="line">of</div><div class="line">(</div><div class="line">        </div><div class="line">2015</div><div class="line">, </div><div class="line">12</div><div class="line">, </div><div class="line">1</div><div class="line">,</div><div class="line">        </div><div class="line">8</div><div class="line">, </div><div class="line">0</div><div class="line">, </div><div class="line">0</div><div class="line"></div><div class="line">    )</div><div class="line">);</div><div class="line"></div><div class="line">entityManager.persist( employee );</div><div class="line"></div><div class="line">Meeting meeting = </div><div class="line">new</div><div class="line"> Meeting();</div><div class="line">meeting.setId( </div><div class="line">1</div><div class="line">L );</div><div class="line">meeting.setCreatedBy( employee );</div><div class="line">meeting.setStartsAt(</div><div class="line">    ZonedDateTime.</div><div class="line">of</div><div class="line">(</div><div class="line">        </div><div class="line">2017</div><div class="line">, </div><div class="line">6</div><div class="line">, </div><div class="line">25</div><div class="line">,</div><div class="line">        </div><div class="line">11</div><div class="line">, </div><div class="line">30</div><div class="line">, </div><div class="line">0</div><div class="line">, </div><div class="line">0</div><div class="line">,</div><div class="line">        ZoneId.systemDefault()</div><div class="line">    )</div><div class="line">);</div><div class="line">meeting.setDuration(</div><div class="line">    Duration.</div><div class="line">of</div><div class="line">( </div><div class="line">45</div><div class="line">, ChronoUnit.MINUTES )</div><div class="line">);</div><div class="line"></div><div class="line">entityManager.persist( meeting );</div></pre></td></tr></table></figure>
+<p>Hibernate is going to generate the following SQL statements:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">INSERT</div><div class="line">INTO</div><div class="line"> Employee (</div><div class="line">    birthday, </div><div class="line">    </div><div class="line">name</div><div class="line">, </div><div class="line">    updated_on, </div><div class="line">    </div><div class="line">id</div><div class="line"></div><div class="line">) </div><div class="line"></div><div class="line">VALUES</div><div class="line"> (</div><div class="line">    </div><div class="line">&apos;1981-12-10&apos;</div><div class="line">, </div><div class="line">    </div><div class="line">&apos;Vlad Mihalcea&apos;</div><div class="line">, </div><div class="line">    </div><div class="line">&apos;2015-12-01 08:00:00.0&apos;</div><div class="line">, </div><div class="line">    </div><div class="line">1</div><div class="line"></div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line">INSERT</div><div class="line">INTO</div><div class="line"> Meeting (</div><div class="line">    employee_id, </div><div class="line">    </div><div class="line">duration</div><div class="line">, </div><div class="line">    starts_at, </div><div class="line">    </div><div class="line">id</div><div class="line"></div><div class="line">) </div><div class="line"></div><div class="line">VALUES</div><div class="line"> (</div><div class="line">    </div><div class="line">1</div><div class="line">, </div><div class="line">    </div><div class="line">2700000000000</div><div class="line">, </div><div class="line">    </div><div class="line">&apos;2017-06-25 11:30:00.0&apos;</div><div class="line">, </div><div class="line">    </div><div class="line">1</div><div class="line"></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Both<code>LocalDateTime</code>and<code>ZonedDateTime</code>share the<code>org.hibernate.type.descriptor.sql.TimestampTypeDescriptor</code>, meaning that they are going to be persisted as<code>java.sql.Timestamp</code>.</p>
+<p>While for<code>LocalDateTime</code>it makes no difference since, just like<code>java.sql.Timestamp</code>, it only captures a time snapshot, the<code>ZonedDateTime</code>is going to lose the zone information.</p>
+<p>When loading back our entities:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line">Employee employee = entityManager</div><div class="line">.unwrap( Session.</div><div class="line">class</div><div class="line"> )</div><div class="line">.bySimpleNaturalId( Employee.</div><div class="line">class</div><div class="line"> )</div><div class="line">.load( </div><div class="line">&quot;Vlad Mihalcea&quot;</div><div class="line"> );</div><div class="line"></div><div class="line">assertEquals(</div><div class="line">    LocalDate.</div><div class="line">of</div><div class="line">(</div><div class="line">        </div><div class="line">1981</div><div class="line">, </div><div class="line">12</div><div class="line">, </div><div class="line">10</div><div class="line"></div><div class="line">    ),</div><div class="line">    employee.getBirthday()</div><div class="line">);</div><div class="line">assertEquals(</div><div class="line">    LocalDateTime.</div><div class="line">of</div><div class="line">(</div><div class="line">        </div><div class="line">2015</div><div class="line">, </div><div class="line">12</div><div class="line">, </div><div class="line">1</div><div class="line">,</div><div class="line">        </div><div class="line">8</div><div class="line">, </div><div class="line">0</div><div class="line">, </div><div class="line">0</div><div class="line"></div><div class="line">    ),</div><div class="line">    employee.getUpdatedOn()</div><div class="line">);</div><div class="line"></div><div class="line">Meeting meeting = entityManager.find( Meeting.</div><div class="line">class</div><div class="line">, </div><div class="line">1</div><div class="line">L );</div><div class="line">assertSame(</div><div class="line">    employee, meeting.getCreatedBy()</div><div class="line">);</div><div class="line">assertEquals(</div><div class="line">    ZonedDateTime.</div><div class="line">of</div><div class="line">(</div><div class="line">        </div><div class="line">2017</div><div class="line">, </div><div class="line">6</div><div class="line">, </div><div class="line">25</div><div class="line">,</div><div class="line">        </div><div class="line">11</div><div class="line">, </div><div class="line">30</div><div class="line">, </div><div class="line">0</div><div class="line">, </div><div class="line">0</div><div class="line">,</div><div class="line">        ZoneId.systemDefault()</div><div class="line">    ),</div><div class="line">    meeting.getStartsAt()</div><div class="line">);</div><div class="line">assertEquals(</div><div class="line">    Duration.</div><div class="line">of</div><div class="line">( </div><div class="line">45</div><div class="line">, ChronoUnit.MINUTES ),</div><div class="line">    meeting.getDuration()</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>The original Java 8 Data Time objects match the ones being persisted.</p>
+<p>If you enjoyed this article, I bet you are going to love<a href="https://leanpub.com/high-performance-java-persistence?utm_source=blog&amp;utm_medium=banner&amp;utm_campaign=article" target="_blank" rel="external">my book</a>as well.</p>
+<p><img src="http://img0.tuicool.com/YbQ7ziI.jpg!web" alt=""></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>The reason why<code>ZonedDateTime</code>equals the one we previously saved is because the undnerlying<code>TIMESTAMP</code>value was transposed in the current System Time Zone.</p>
+<p>Until all JDBC Drivers will support<code>TIMESTAMP WITH TIMEZONE</code>at the<code>java.sql.Statement</code>paraeter value binding level which is a requirement for<a href="http://hibernate%20https//hibernate.atlassian.net/browse/HHH-11773" target="_blank" rel="external">HHH-11773</a>, it’s doubtful that you really need to use<code>ZonedDateTime</code>or<code>OffsetDateTime</code>.</p>
+<p>Currently, it’s much wiser to save all<code>TIMESTAMP</code>values inUTC, meaning that<code>LocalDateTime</code>is a much better fit for your JPA entities.</p>
+<p>If you liked this article, you might want to subscribe to<a href="http://eepurl.com/bg3d3n" target="_blank" rel="external">my newsletter</a> too.</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/UVF3Mzy" target="_blank" rel="external">https://vladmihalcea.com/2017/06/26/whats-new-in-jpa-2-2-java-8-date-and-time-types/</a></p>
+
+  </div>
+  
+
+<div class="socials-share-btn">></div>
+<script>
+  if ($) {
+    $(".socials-share-btn").jsSocials({
+                shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+            });
+  }
+</script>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/06/26/whats-new-in-jpa-22-java-8-date-and-time-types/index.html';
+  var disqus_title = "What’s new in JPA 2.2 – Java 8 Date and Time Types";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</article>
+
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/audios.js"></script>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/products/" class="mobile-nav-link">Products</a><a href="/support/" class="mobile-nav-link">Support</a><a href="/blog/" class="mobile-nav-link">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-f58a74eba0.js"></script>
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+
+
+
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+try{
+  return;
+  document.getElementById('search-input-wrap').classList.add('on');
+  docsearch({
+    apiKey: '7a75d3ee07f1e82ea4271e0c58c114c3',
+    indexName: 'gmagon',
+    inputSelector: '#search-input'
+  });
+}catch(e){
+}
+
+</script>
+
+
+</body>
+</html>

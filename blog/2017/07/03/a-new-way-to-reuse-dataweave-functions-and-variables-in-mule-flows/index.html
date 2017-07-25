@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title> A New Way to Reuse DataWeave Functions and Variables in Mule Flows  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Copy from Apple.com website source code -->
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og.keywords" content="" />
+  <meta property="og.description" content="" />
+  <meta property="analytics-track" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone. - Index/Tab" />
+  <meta property="analytics-s-channel" content="homepage" />
+  <meta property="og:title" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+	<meta property="og:description" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone and more. Visit the site to learn, buy, and get support." />
+	<meta property="og:url" content="https://gmagon.com" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201703170823" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone." />
+  <!-- End Copy from Apple.com website source code -->
+
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/07/03/a-new-way-to-reuse-dataweave-functions-and-variables-in-mule-flows/index.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-9f6143947f.css">
+
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+
+
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+
+  <!-- ForPostLayout -->
+  
+    <script src="/jssocials-1.4.0/jssocials.min.js"></script>
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+    <link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+    
+    
+
+  
+  <!-- endForPostLayout -->
+
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
+  <!-- Open Graph -->
+  <meta name="description" content="A New Dataweave Function Makes It Easier for You to Store, Reuse, and Share Dataweave Functions Between Flows and Mule Applications. Reusing Dataweave CodeMuleSoft’sDataWeavetechnology is a powerful">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A New Way to Reuse DataWeave Functions and Variables in Mule Flows">
+<meta property="og:url" content="https://gmagon.com/blog/2017/07/03/a-new-way-to-reuse-dataweave-functions-and-variables-in-mule-flows/index.html">
+<meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple &amp; powerful solutions for everyone.">
+<meta property="og:description" content="A New Dataweave Function Makes It Easier for You to Store, Reuse, and Share Dataweave Functions Between Flows and Mule Applications. Reusing Dataweave CodeMuleSoft’sDataWeavetechnology is a powerful">
+<meta property="og:image" content="http://img0.tuicool.com/niUVRva.jpg!web">
+<meta property="og:image" content="http://img1.tuicool.com/bUNrIrV.jpg!web">
+<meta property="og:image" content="http://img1.tuicool.com/E73UZrU.jpg!web">
+<meta property="og:image" content="http://img1.tuicool.com/YBJFRvF.jpg!web">
+<meta property="og:image" content="http://img2.tuicool.com/iiyY7rj.jpg!web">
+<meta property="og:updated_time" content="2017-07-11T09:37:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A New Way to Reuse DataWeave Functions and Variables in Mule Flows">
+<meta name="twitter:description" content="A New Dataweave Function Makes It Easier for You to Store, Reuse, and Share Dataweave Functions Between Flows and Mule Applications. Reusing Dataweave CodeMuleSoft’sDataWeavetechnology is a powerful">
+<meta name="twitter:image" content="http://img0.tuicool.com/niUVRva.jpg!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/products/" class="main-nav-link">Products</a><a href="/support/" class="main-nav-link">Support</a><a href="/blog/" class="main-nav-link">Blog</a>
+      
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">A New Way to Reuse DataWeave Functions and Variables in Mule Flows</h1>
+    
+    <a href="/blog/2017/07/03/a-new-way-to-reuse-dataweave-functions-and-variables-in-mule-flows/" class="article-date"><time datetime="2017-07-03T00:00:00.000Z">2017-07-03</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <script src="/assets/js/APlayer.min.js"> </script><p>A New Dataweave Function Makes It Easier for You to Store, Reuse, and Share Dataweave Functions Between Flows and Mule Applications.</p>
+<h2 id="Reusing-Dataweave-Code"><a href="#Reusing-Dataweave-Code" class="headerlink" title="Reusing Dataweave Code"></a>Reusing Dataweave Code</h2><p><a href="http://www.mulesoft.com/" target="_blank" rel="external">MuleSoft’s</a><a href="https://docs.mulesoft.com/mule-user-guide/v/3.8/dataweave" target="_blank" rel="external">DataWeave</a>technology is a powerful and efficient way to transform complex structured data between popular data formats, including JSON, XML, CSV, and Java objects.</p>
+<p>I’m a courseware developer and trainer at<a href="http://www.mulesoft.com/" target="_blank" rel="external">MuleSoft</a>, and recently I’ve been spending a lot of time learning about DataWeave.</p>
+<p>In the<a href="https://docs.mulesoft.com/mule-user-guide/v/3.8/dataweave" target="_blank" rel="external">DataWeave</a>1.x version included in the Mule runtime v3.8, there has been limited support for reusing DataWeave functions and variables between Transform Message components (the component that applies DataWeave code). In particular, there is currently no direct support for importing modules or libraries of DataWeave code. But starting with Mule Runtime v3.8.4 there is a new<code>readUrl</code>function you can now use to start reusing DataWeave code across applications and even across deployments.</p>
+<p>In this post, you’ll learn how to use the new<code>readUrl</code>function to separate out reusable DataWeave code, and then reuse that code between multiple Transform Message components and flows, including flows in separate applications and MUnit flows. This is a nice new tool to add to your DataWeave tool box.</p>
+<h2 id="Creating-a-Mule-Project-With-Reusable-Dataweave-Library-Files"><a href="#Creating-a-Mule-Project-With-Reusable-Dataweave-Library-Files" class="headerlink" title="Creating a Mule Project With Reusable Dataweave Library Files"></a>Creating a Mule Project With Reusable Dataweave Library Files</h2><p>An example Mule project is available in this<a href="https://github.com/ethanport/dataweave-reuse" target="_blank" rel="external">GitHub repository</a>. You can import this project into the latest Anypoint Studio to follow along with this post. Alternatively, you can create a new Mule project in Anypoint Studio and copy the examples from this blog post.</p>
+<p>This project has added a folder named<code>dw</code>to<code>src/main/resources</code>, and then created a file named<code>myLib.wev</code>inside the<code>dw</code>folder. When this Mule project is exported as a deployable archive file, all the files in<code>src/main/resources</code>will be automatically added to the project’s classes folder, so will be in the classpath when the Mule application is deployed to a Mule runtime. In this sample project, the HTTP listener is listening for requests on port 8081.</p>
+<p><img src="http://img0.tuicool.com/niUVRva.jpg!web" alt=""></p>
+<h2 id="Coding-the-Reusable-Dataweave-File"><a href="#Coding-the-Reusable-Dataweave-File" class="headerlink" title="Coding the Reusable Dataweave File"></a>Coding the Reusable Dataweave File</h2><p>The myLib.wev file contains some reusable variables and functions.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">%dw 1.0</div><div class="line"></div><div class="line">//Reusable constant</div><div class="line">%var exchangeRateFromUSDToBritishPounds = 1.35</div><div class="line"></div><div class="line">%function convertPriceFromUSDToBritishPounds ( input )</div><div class="line">//Can </div><div class="line">use</div><div class="line"> the getIntroString() </div><div class="line">function</div><div class="line"> which </div><div class="line">is</div><div class="line"> defined further down</div><div class="line"></div><div class="line">&quot;$(getIntroString()) :  $(input * exchangeRateFromUSDToBritishPounds)&quot;</div><div class="line"></div><div class="line"></div><div class="line">%</div><div class="line">function</div><div class="line"> getIntroString()</div><div class="line"></div><div class="line">&quot;The price converted to British Pounds is&quot;</div><div class="line">---</div><div class="line"></div><div class="line">//Provide </div><div class="line">external</div><div class="line">names</div><div class="line">for</div><div class="line">variables</div><div class="line">and</div><div class="line"> functions defined </div><div class="line">in</div><div class="line"> the header</div><div class="line">&#123;</div><div class="line">  exchangeRate : exchangeRateFromUSDToBritishPounds,</div><div class="line"></div><div class="line">  convertPrice : convertPriceFromUSDToBritishPounds,</div><div class="line"></div><div class="line">  //</div><div class="line">Use</div><div class="line"> an anonymous lambda </div><div class="line">to</div><div class="line">define</div><div class="line"> the </div><div class="line">function</div><div class="line"></div><div class="line">  formatString : (aString, formatter) -</div><div class="line">&gt;</div><div class="line"> formatter(aString)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The body expression creates key names for the variables and functions. The<code>exchangeRate</code>key has as value the variable<code>exchangeRateFromUSDToBritishPounds</code>. This variable acts as a constant in other DataWeave functions.</p>
+<p>The<code>convertPrice</code>key references the more lengthy function name<code>convertPriceFromUSDToBritishPounds</code>. This function requires a parameter, which is used in the function’s expression to print out the String returned from the later<code>getIntroString()</code>function, plus the result of multiplying the<code>input</code>value by the<code>exchangeRateFromUSDToBritishPounds</code>variable.</p>
+<p>The<code>formatString</code>key is different from the other two keys in the body expression. The<code>formatString</code>key has a value which is an anonymous function implementation. These types of unnamed functions are also called lambdas. The lambda requires two input parameters. The first parameter labeled<code>aString</code>is supplied to the<code>formatString</code>function with any string value, which then has the<code>formatter</code>function applied to<code>aString</code>.</p>
+<p>Next, you will see how to use these functions, including<code>formatString</code>, in a DataWeave flow.</p>
+<h2 id="Reading-in-and-Using-an-External-Dataweave-File"><a href="#Reading-in-and-Using-an-External-Dataweave-File" class="headerlink" title="Reading in and Using an External Dataweave File"></a>Reading in and Using an External Dataweave File</h2><p>The next step is to read in this external DataWeave file and use it in a Transform Message component. The first step is to use the new readUrl function to read in the DataWeave function from the classpath. Define a variable<code>myLib</code>as a reference to the DataWeave file<code>myLib.wev</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">%dw</div><div class="line">1.0</div><div class="line">%output</div><div class="line"> application/json</div><div class="line"></div><div class="line"></div><div class="line">%var</div><div class="line"> myLib = readUrl(</div><div class="line">&quot;classpath://dw/myLib.wev&quot;</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>In this example, we are embedding the DataWeave library file inside the project, so we give the URL relative to the classpath<code>dw/myLib.wev</code>. If you are deploying into a customer-hosted on-prem Mule runtime, you could also store your DataWeave libraries in a common external location that you add to the Mule runtime’s classpath.</p>
+<p>Note: This is a similar technique to the way you can store Mule application properties files in an external location. You can learn more about this technique in the Anypoint<a href="https://docs.mulesoft.com/mule-user-guide/v/3.8/configuring-properties" target="_blank" rel="external">product documentation</a>, or<a href="https://wrapper.tanukisoftware.com/doc/english/props-envvars.html#definition" target="_blank" rel="external">Tanuki Java Service Wrapper</a>documentation.</p>
+<p>Like the related read() function, readUrl() can also include a second parameter to specify the mime type, such as<code>application/java</code>,<code>application/json</code>,<code>application/csv</code>, or<code>application/xml</code>. When not specified, the default mime type is<code>application/dw</code>. So in this example, we could also have written:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">%dw</div><div class="line">1.0</div><div class="line">%output</div><div class="line"> application/json</div><div class="line"></div><div class="line"></div><div class="line">%var</div><div class="line"> myLib = readUrl(</div><div class="line">&quot;classpath://dw/myLib.wev&quot;</div><div class="line">, </div><div class="line">&quot;application/dw&quot;</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>In Anypoint Studio, the file is stored in<code>src/main/resources</code>, but in the deployable archive, all the files from the<code>src/main/resources</code>folder are moved into the<code>classes</code>folder.</p>
+<p>Here is a complete Transform Message component in the convertPrice flow:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">%dw </div><div class="line">1.0</div><div class="line"></div><div class="line"></div><div class="line">%output application/json</div><div class="line"></div><div class="line">%</div><div class="line">var</div><div class="line"> myLib = readUrl(</div><div class="line">&quot;classpath://dw/myLib.wev&quot;</div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line">//Access functions in the myLib reference</div><div class="line"></div><div class="line">%</div><div class="line">function</div><div class="line">printPrice</div><div class="line">(priceInUSD)</div><div class="line">myLib</div><div class="line">.</div><div class="line">formatString</div><div class="line">( myLib.convertPrice</div><div class="line">(priceInUSD)</div><div class="line">, </div><div class="line">(price)</div><div class="line"> -</div><div class="line">&gt;</div><div class="line"> upper price )</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">&#123; </div><div class="line">  </div><div class="line">//Format the key</div><div class="line"></div><div class="line">  ( </div><div class="line">    myLib.formatString( </div><div class="line">&quot;result&quot;</div><div class="line">, (aString) -</div><div class="line">&gt;</div><div class="line"> capitalize aString ) </div><div class="line">  ) : </div><div class="line"></div><div class="line">  </div><div class="line">//Format the value - read in the input price as an HTTP query param</div><div class="line"></div><div class="line">  printPrice( inboundProperties.</div><div class="line">&apos;http.query.params&apos;</div><div class="line">.price )</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Previewing-and-Testing-Dataweave-Code-That-Uses-External-Dataweave-Library-Files"><a href="#Previewing-and-Testing-Dataweave-Code-That-Uses-External-Dataweave-Library-Files" class="headerlink" title="Previewing and Testing Dataweave Code That Uses External Dataweave Library Files"></a>Previewing and Testing Dataweave Code That Uses External Dataweave Library Files</h2><p>You can preview example data transformations using the Preview pane in the Transform Message component editor. In the Transform Message component, in the left-side Input pane, right click on Inbound Properties &gt; http.query.params.</p>
+<p><img src="http://img1.tuicool.com/bUNrIrV.jpg!web" alt=""></p>
+<p>Set an example price:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">%dw </div><div class="line">1.0</div><div class="line"></div><div class="line">%output application/java</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">price:</div><div class="line">600</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>In the right-side Output pane, select the Preview button, which opens the Preview pane. In the Preview pane, you should see the result of the body expression.</p>
+<p><img src="http://img1.tuicool.com/E73UZrU.jpg!web" alt=""></p>
+<p>Change the price from 600 to 500 and verify the output in the Preview pane also changes. This shows you that you can preview live changes to DataWeave code, even when you are reading in external DataWeave files.</p>
+<p>Here is the entire<strong>reuseDataWeaveCode.</strong>xmlfile<strong>:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div></pre></td><td class="code"><pre><div class="line">&lt;</div><div class="line">?</div><div class="line">xml version=</div><div class="line">&quot;1.0&quot;</div><div class="line"> encoding=</div><div class="line">&quot;UTF-8&quot;</div><div class="line">?</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">mule</div><div class="line">xmlns:tracking</div><div class="line">=</div><div class="line">&quot;http://www.mulesoft.org/schema/mule/ee/tracking&quot;</div><div class="line">xmlns:dw</div><div class="line">=</div><div class="line">&quot;http://www.mulesoft.org/schema/mule/ee/dw&quot;</div><div class="line">xmlns:http</div><div class="line">=</div><div class="line">&quot;http://www.mulesoft.org/schema/mule/http&quot;</div><div class="line">xmlns</div><div class="line">=</div><div class="line">&quot;http://www.mulesoft.org/schema/mule/core&quot;</div><div class="line">xmlns:doc</div><div class="line">=</div><div class="line">&quot;http://www.mulesoft.org/schema/mule/documentation&quot;</div><div class="line">xmlns:spring</div><div class="line">=</div><div class="line">&quot;http://www.springframework.org/schema/beans&quot;</div><div class="line">xmlns:xsi</div><div class="line">=</div><div class="line">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">xsi:schemaLocation</div><div class="line">=</div><div class="line">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd</div><div class="line">http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd</div><div class="line">http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd</div><div class="line">http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd</div><div class="line">http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd&quot;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">http:listener-config</div><div class="line">name</div><div class="line">=</div><div class="line">&quot;HTTP_Listener_Configuration&quot;</div><div class="line">host</div><div class="line">=</div><div class="line">&quot;0.0.0.0&quot;</div><div class="line">port</div><div class="line">=</div><div class="line">&quot;8081&quot;</div><div class="line">doc:name</div><div class="line">=</div><div class="line">&quot;HTTP Listener Configuration&quot;</div><div class="line"> /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">flow</div><div class="line">name</div><div class="line">=</div><div class="line">&quot;convertPrice&quot;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">http:listener</div><div class="line">config-ref</div><div class="line">=</div><div class="line">&quot;HTTP_Listener_Configuration&quot;</div><div class="line">path</div><div class="line">=</div><div class="line">&quot;/&quot;</div><div class="line">doc:name</div><div class="line">=</div><div class="line">&quot;HTTP&quot;</div><div class="line"> /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">dw:transform-message</div><div class="line">doc:name</div><div class="line">=</div><div class="line">&quot;Transform Message&quot;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">dw:input-inbound-property</div><div class="line">doc:sample</div><div class="line">=</div><div class="line">&quot;sample_data/map_string_string.dwl&quot;</div><div class="line">propertyName</div><div class="line">=</div><div class="line">&quot;http.query.params&quot;</div><div class="line"> /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">dw:set-payload</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">![CDATA[%dw 1.0</div><div class="line">%var myLib = readUrl(&quot;classpath://dw/myLib.wev&quot;)</div><div class="line"></div><div class="line">%output application/json</div><div class="line"></div><div class="line">%function printPrice(priceInUSD)</div><div class="line">myLib.formatString( myLib.convertPrice(priceInUSD), (price) -</div><div class="line">&gt;</div><div class="line"> upper price )</div><div class="line"></div><div class="line">%function headerString ()</div><div class="line">&quot;the price2&quot;</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line"></div><div class="line">&#123; </div><div class="line">  //format the key</div><div class="line">  (myLib.formatString( &quot;result&quot;, (aString) -</div><div class="line">&gt;</div><div class="line"> capitalize aString )) : </div><div class="line"></div><div class="line">  //Read in the input price as an HTTP query param</div><div class="line">  printPrice(inboundProperties.&apos;http.query.params&apos;.price)</div><div class="line">&#125;</div><div class="line">]]</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/</div><div class="line">dw:set-payload</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/</div><div class="line">dw:transform-message</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">logger</div><div class="line">level</div><div class="line">=</div><div class="line">&quot;INFO&quot;</div><div class="line">doc:name</div><div class="line">=</div><div class="line">&quot;Logger&quot;</div><div class="line">message</div><div class="line">=</div><div class="line">&quot;#[message.payload]&quot;</div><div class="line"> /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/</div><div class="line">flow</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/</div><div class="line">mule</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<h2 id="Deploying-and-Testing-the-Application"><a href="#Deploying-and-Testing-the-Application" class="headerlink" title="Deploying and Testing the Application"></a>Deploying and Testing the Application</h2><p>Deploy the reuseDataWeaveCode project to a Mule runtime. For example, here I am deploying the project to an Anypoint Platform account from Anypoint Studio.</p>
+<p><img src="http://img1.tuicool.com/YBJFRvF.jpg!web" alt=""></p>
+<p>In this example, I deployed the application to a public Anypoint Platform URL<a href="http://reuse-dataweave-code.cloudhub.io/" target="_blank" rel="external">http://reuse-dataweave-code.cloudhub.io</a>.</p>
+<p>After the application deploys, open a web client (you can use a web browser), and make a GET request to the HTTP listener. If you deployed to a Mule runtime on your local machine, the URL is<code>http://localhost:8081?price=300</code>. For my CloudHub deployment, I’ll make requests from a web client to<code>http://reuse-dataweave-code.cloudhub.io/?price=700</code>. You can click this URL now to try it out.</p>
+<p>My web browser has a JSON parser extension and shows this response:</p>
+<p><img src="http://img2.tuicool.com/iiyY7rj.jpg!web" alt=""></p>
+<p>As you build up more complex DataWeave transformation for your projects, you’ll want to reuse some of your transformation logic. Today, you can do this using the readUrl() function. Please let us know what you think of this feature, and also let us know what additional modularity you’d like to see in future releases.</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/bYBzUbZ" target="_blank" rel="external">https://dzone.com/articles/reusing-dataweave-functions-and-variable-in-mule-f</a></p>
+
+  </div>
+  
+
+<div class="socials-share-btn">></div>
+<script>
+  if ($) {
+    $(".socials-share-btn").jsSocials({
+                shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+            });
+  }
+</script>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/07/03/a-new-way-to-reuse-dataweave-functions-and-variables-in-mule-flows/index.html';
+  var disqus_title = "A New Way to Reuse DataWeave Functions and Variables in Mule Flows";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+</article>
+
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/audios.js"></script>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/products/" class="mobile-nav-link">Products</a><a href="/support/" class="mobile-nav-link">Support</a><a href="/blog/" class="mobile-nav-link">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-f58a74eba0.js"></script>
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+
+
+
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+try{
+  return;
+  document.getElementById('search-input-wrap').classList.add('on');
+  docsearch({
+    apiKey: '7a75d3ee07f1e82ea4271e0c58c114c3',
+    indexName: 'gmagon',
+    inputSelector: '#search-input'
+  });
+}catch(e){
+}
+
+</script>
+
+
+</body>
+</html>
