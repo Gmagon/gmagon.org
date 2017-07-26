@@ -71,16 +71,16 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
   <!-- Open Graph -->
-  <meta name="description" content="My first encounter with the gdb commandduelwas on some old IRIX about 15 years ago. I immediately loved how convenient it was for displaying various data structures during MySQL debugging, and I wish">
+  <meta name="description" content="My first encounter with the gdb commandduelwas on some old IRIX about 15 years ago. I immediately loved how convenient it was for displaying various data structures during MySQL debugging, and I wishe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Duel: gdb vs. linked lists, trees, and hash tables">
 <meta property="og:url" content="https://gmagon.com/blog/2017/06/19/duel-gdb-vs-linked-lists-trees-and-hash-tables/index.html">
 <meta property="og:site_name" content="Gmagon Software Official Website - Fast, simple &amp; powerful solutions for everyone.">
-<meta property="og:description" content="My first encounter with the gdb commandduelwas on some old IRIX about 15 years ago. I immediately loved how convenient it was for displaying various data structures during MySQL debugging, and I wish">
-<meta property="og:updated_time" content="2017-06-22T08:56:45.000Z">
+<meta property="og:description" content="My first encounter with the gdb commandduelwas on some old IRIX about 15 years ago. I immediately loved how convenient it was for displaying various data structures during MySQL debugging, and I wishe">
+<meta property="og:updated_time" content="2017-06-22T08:38:48.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Duel: gdb vs. linked lists, trees, and hash tables">
-<meta name="twitter:description" content="My first encounter with the gdb commandduelwas on some old IRIX about 15 years ago. I immediately loved how convenient it was for displaying various data structures during MySQL debugging, and I wish">
+<meta name="twitter:description" content="My first encounter with the gdb commandduelwas on some old IRIX about 15 years ago. I immediately loved how convenient it was for displaying various data structures during MySQL debugging, and I wishe">
 <meta name="twitter:site" content="gmagonshare">
 <meta property="fb:admins" content="432634277117208">
   <!-- Google Analytics -->
@@ -143,7 +143,7 @@
     <a href="/blog/2017/06/19/duel-gdb-vs-linked-lists-trees-and-hash-tables/" class="article-date"><time datetime="2017-06-19T00:00:00.000Z">2017-06-19</time></a>
   </header>
   <div class="article-content" itemprop="articleBody">
-    <script src="/assets/js/APlayer.min.js"> </script><p>My first encounter with the gdb command<code>duel</code>was on some old IRIX about 15 years ago. I immediately loved how convenient it was for displaying various data structures during MySQL debugging, and I wished Linux had something similar. Later I found out that Duel was not something IRIX specific, but a public domain patch for gdb 4.6 written in ’93 by Michael Golan. Unfortunately, it never got into gdb (for licensing reasons, so I’ve heard). Now the gdb 8 is out, and the patch, obviously doesn’t apply. Instead of fixing the patch, I’ve re-implemented Duel in Python, using<a href="https://sourceware.org/gdb/onlinedocs/gdb/Python-API.html" target="_blank" rel="external">gdb Python API</a>and the<a href="https://github.com/igordejanovic/Arpeggio" target="_blank" rel="external">Arpeggio</a>parser. Now it can be loaded run-time into your gdb, no patching or compilation is needed. And, hopefully, it will work over many gdb versions, as it no longer relies on undocumented gdb internals. So, allow me to introduce…<strong>Duel.py</strong>for gdb!</p>
+    <p>My first encounter with the gdb command<code>duel</code>was on some old IRIX about 15 years ago. I immediately loved how convenient it was for displaying various data structures during MySQL debugging, and I wished Linux had something similar. Later I found out that Duel was not something IRIX specific, but a public domain patch for gdb 4.6 written in ’93 by Michael Golan. Unfortunately, it never got into gdb (for licensing reasons, so I’ve heard). Now the gdb 8 is out, and the patch, obviously doesn’t apply. Instead of fixing the patch, I’ve re-implemented Duel in Python, using<a href="https://sourceware.org/gdb/onlinedocs/gdb/Python-API.html" target="_blank" rel="external">gdb Python API</a>and the<a href="https://github.com/igordejanovic/Arpeggio" target="_blank" rel="external">Arpeggio</a>parser. Now it can be loaded run-time into your gdb, no patching or compilation is needed. And, hopefully, it will work over many gdb versions, as it no longer relies on undocumented gdb internals. So, allow me to introduce…<strong>Duel.py</strong>for gdb!</p>
 <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Let’s start with a few examples, to get the taste of it. Michael Golan managed to create a concise but very naturally-looking language. For example, while<code>a-&gt;b</code>means the element<code>b</code>of the structure pointer<code>a</code>, in Duel<code>a--&gt;b</code>means to walk the linked list, producing the sequence of values<code>a</code>,<code>a-&gt;b</code>,<code>a-&gt;b-&gt;b</code>, and so on. In MariaDB, all tables of a query are stored in a linked list, and it can be printed with just one command:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">(gdb) dl table_list--</div><div class="line">&gt;</div><div class="line">next_local-</div><div class="line">&gt;</div><div class="line">table_name</div><div class="line">tables-</div><div class="line">&gt;</div><div class="line">table_name = </div><div class="line">0x7fffc40126b8</div><div class="line">&quot;t2&quot;</div><div class="line"></div><div class="line">tables-</div><div class="line">&gt;</div><div class="line">next_local-</div><div class="line">&gt;</div><div class="line">table_name = </div><div class="line">0x7fffc4012d18</div><div class="line">&quot;t1&quot;</div><div class="line"></div><div class="line">tables--</div><div class="line">&gt;</div><div class="line">next_local[[</div><div class="line">2</div><div class="line">]]-</div><div class="line">&gt;</div><div class="line">table_name = </div><div class="line">0x7fffc4013388</div><div class="line">&quot;t1&quot;</div></pre></td></tr></table></figure>
 <p>Also, quite naturally, instead of a number, you can specify a range, great for printing arrays:</p>
@@ -276,6 +276,12 @@
   <!-- Scripts -->
 <script src="/build/js/main-f58a74eba0.js"></script>
 <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
 
 
 
