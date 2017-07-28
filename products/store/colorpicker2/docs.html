@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://gmagon.com/products/store/colorpicker2/images/screens/colorpicker_buyonline_1440x900.png">
 <meta property="og:image" content="https://gmagon.com/products/store/colorpicker2/images/screens/colorpicker_onlinestore_1440x900.png">
 <meta property="og:image" content="https://gmagon.com/products/store/colorpicker2/images/screens/colorpicker_licensekey_1440x900.png">
-<meta property="og:updated_time" content="2017-07-27T03:01:51.666Z">
+<meta property="og:updated_time" content="2017-07-24T11:03:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Manual | ColorPicker2">
 <meta name="twitter:description" content="MANUALColorPicker2A color picking tool for macOS Version 4.18.0  Preface: Design isn’t just a necessity for a select few industries anymore, either. It doesn’t matter if you’re a web design company yo">
@@ -61,7 +61,7 @@
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/navy-a1cfc9a8a8.css">
+  <link rel="stylesheet" href="/build/css/navy-46431507d6.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
@@ -82,7 +82,7 @@
   <link rel="alternate" href="/atom.xml" title="Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.">
 
   <!-- algolia_search -->
-  
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
 
   <!-- Github Button -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -94,9 +94,10 @@
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
       <a href="/" id="logo">Gmagon Software Official Website - Fast, simple & powerful solutions for everyone.</a>
+      <span>gmagon </span>
     </h1>
     <nav id="main-nav">
-      <a href="/products/" class="main-nav-link">Products</a><a href="/guide/" class="main-nav-link">Guide</a><a href="/support/" class="main-nav-link">Support</a><a href="/blog/" class="main-nav-link">Blog</a>
+      <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -122,7 +123,7 @@
 
     <div class="class-content-wrap">
   <div class="inner">
-    <div class="inner-wrap">
+    <div class="inner-wrap fill-bunting font-white ">
       <img class="app-logo" src="./images/logo/logo_128x128.png">
       <h2 id="banner-app-title">Documentation</h2>
       
@@ -178,7 +179,7 @@
 
                 </div>
                 <footer class="article-footer">
-                  <time class="article-footer-updated" datetime="2017-07-27T03:01:51.666Z" itemprop="dateModified">Last updated: 2017-07-27</time>
+                  <time class="article-footer-updated" datetime="2017-07-24T11:03:22.000Z" itemprop="dateModified">Last updated: 2017-07-24</time>
                   
                 </footer>
                 
@@ -188,7 +189,7 @@
 <link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
 <link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
 
-<div class="socials-share-btn">></div>
+<div class="socials-share-btn"></div>
 <script>
   if ($) {
     $(document).ready(function(){
@@ -219,7 +220,16 @@
     </div>
 </div>
 
-    <footer id="footer" class="wrapper">
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="landing-bunting font-white">
   <div class="inner">
     <div id="footer-some-docs">
         <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
@@ -245,7 +255,7 @@
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/products/" class="mobile-nav-link">Products</a><a href="/guide/" class="mobile-nav-link">Guide</a><a href="/support/" class="mobile-nav-link">Support</a><a href="/blog/" class="mobile-nav-link">Blog</a>
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
       
     </ul>
     
@@ -276,35 +286,18 @@
 
 <!-- Algolia -->
 
-<script src="/js/autocomplete/autocomplete.min.js"></script>
-<script src="/js/autocomplete/autocomplete.jquery.min.js"></script>
-<link rel="stylesheet" href="/js/docsearch/docsearch.css">
-<script src="/js/docsearch/docsearch.js"></script>
-
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
 
 <script type="text/javascript">
   $(document).ready(function(){
     document.getElementById('search-input-wrap').classList.add('on');
 
-    docsearch({
-        appId: 'YFVFXQYV4P',
-        apiKey: 'ede94096e56eee547284bc9562eb740e',
-        indexName: 'gmagon_index',
-        inputSelector: '#search-input',
-        debug: true,
-        autocompleteOptions: {
-          debug: false
-        },
-        algoliaOptions:{
-            hitsPerPage: 10
-        }
-    });
-    
     // add autocomplete
     // see: https://github.com/algolia/autocomplete.js
-    var enableAutoComplete = false;
+    var enableAutoComplete = true;
     if (enableAutoComplete) {
-        var algolia_client = __algolia.algoliasearch('YFVFXQYV4P', 'ede94096e56eee547284bc9562eb740e');
+        var algolia_client = algoliasearch('YFVFXQYV4P', 'ede94096e56eee547284bc9562eb740e');
         var index = algolia_client.initIndex('gmagon_index');
         $('#search-input').autocomplete({ hint: false }, [
             {
@@ -318,6 +311,7 @@
             }
         ]).on('autocomplete:selected', function(event, suggestion, dataset) {
             console.log(suggestion, dataset);
+            window.open(suggestion.permalink)
         });
     }
 
