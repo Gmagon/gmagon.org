@@ -29,7 +29,7 @@ var hitTemplate =
       '<a href={{ permalink }} target="_blank" rel="nofollow me noopener noreferrer" >' +
       '<h4 class="media-heading">{{{_highlightResult.title.value}}} {{#stars}}<span class="ais-star-rating--star{{^.}}__empty{{/.}}"></span>{{/stars}}</h4>' +
       '<p class="year">{{year}}</p><p class="genre">{{#genre}}<span class="badge">{{.}}</span> {{/genre}}</p>' +
-      '</a>'
+      '</a>' +
     '</div>' +
   '</div>';
 
