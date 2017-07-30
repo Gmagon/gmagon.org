@@ -2,9 +2,9 @@
 
 (function(){
 var search = instantsearch({
-  appId: window.AlgoliaConfig.appId,
-  apiKey: window.AlgoliaConfig.apiKey,
-  indexName: window.AlgoliaConfig.indexName,
+  appId: 'YFVFXQYV4P' || window.AlgoliaConfig.appId,
+  apiKey:'ede94096e56eee547284bc9562eb740e' || window.AlgoliaConfig.apiKey,
+  indexName: 'gmagon_index' || window.AlgoliaConfig.indexName,
   urlSync: {}
 });
 
