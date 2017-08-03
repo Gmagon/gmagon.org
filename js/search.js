@@ -47,9 +47,11 @@ search.addWidget(
     transformData: function(hit) {
       console.dir(hit)
       hit.stars = [];
+      /** remove stars
       for (var i = 1; i <= 5; ++i) {
         hit.stars.push(i <= hit.rating);
       }
+      **/
       return hit;
     }
   })
