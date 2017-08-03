@@ -149,7 +149,7 @@
   </header>
   <div class="article-content" itemprop="articleBody">
     <p><img src="http://img0.tuicool.com/7BFRBrz.png!web" alt=""></p>
-<p>For web apps, the front end is becoming bigger and bigger, and the back end is getting less important. Our web app at<a href="https://www.weld.io/?utm_source=medium.com&amp;utm_content=micro-frontends" target="_blank" rel="external"><strong>Weld</strong>(web/app creation tool)</a>is 90% front-end code, with a very thin back end. I can imagine that a majority of new web apps being built today are dealing with a similar situation.</p>
+<p>For web apps, the front end is becoming bigger and bigger, and the back end is getting less important. Our web app at<a href="https://www.weld.io/?utm_source=medium.com&amp;utm_content=micro-frontends"><strong>Weld</strong>(web/app creation tool)</a>is 90% front-end code, with a very thin back end. I can imagine that a majority of new web apps being built today are dealing with a similar situation.</p>
 <p>Web apps also change over time, as do development techniques and frameworks. This requires support for allowing different front-end frameworks to co-exist, e.g. older modules built in JQuery or AngularJS 1.x, combined with newer modules built in React or Vue.</p>
 <h3 id="The-monolithic-approach-doesn’t-work-for-larger-web-apps"><a href="#The-monolithic-approach-doesn’t-work-for-larger-web-apps" class="headerlink" title="The monolithic approach doesn’t work for larger web apps"></a>The monolithic approach doesn’t work for larger web apps</h3><p>Having a monolithic approach to a large front-end app becomes unwieldly. There needs to be a way of breaking it up into smaller modules that can act independently.</p>
 <p>Example:</p>
@@ -174,21 +174,21 @@
 <li>A deployment system that<br><strong>bundles all the modules together</strong><br>from different repositories and deploys to a server, whenever a module is updated.</li>
 </ol>
 <h3 id="The-solution-“micro-frontends”"><a href="#The-solution-“micro-frontends”" class="headerlink" title="The solution: “micro frontends”"></a>The solution: “micro frontends”</h3><p>But as it turns out, a lot of other people is thinking about the same ideas. The common term is<em>“micro frontends”</em>.</p>
-<p>Companies like<a href="https://news.ycombinator.com/item?id=13009285" target="_blank" rel="external">Spotify</a>,<a href="https://news.ycombinator.com/item?id=13012916" target="_blank" rel="external">Klarna</a>,<a href="https://www.mosaic9.org/" target="_blank" rel="external">Zalando</a>,<a href="https://www.upwork.com/blog/2017/05/modernizing-upwork-micro-frontends/" target="_blank" rel="external">Upwork</a>, and<a href="http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html" target="_blank" rel="external">Allegro</a>are using the micro frontends approach to build their web apps.</p>
+<p>Companies like<a href="https://news.ycombinator.com/item?id=13009285">Spotify</a>,<a href="https://news.ycombinator.com/item?id=13012916">Klarna</a>,<a href="https://www.mosaic9.org/">Zalando</a>,<a href="https://www.upwork.com/blog/2017/05/modernizing-upwork-micro-frontends/">Upwork</a>, and<a href="http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html">Allegro</a>are using the micro frontends approach to build their web apps.</p>
 <h3 id="Implementing-micro-frontends"><a href="#Implementing-micro-frontends" class="headerlink" title="Implementing micro frontends"></a>Implementing micro frontends</h3><p>Here’s a few different approaches to implementing micro frontends:</p>
 <ol>
-<li>Isolating micro-apps into<br><a href="https://news.ycombinator.com/item?id=13009285" target="_blank" rel="external"><strong>IFrames</strong>using libraries and Window.postMessage APIs</a><br>to coordinate. IFrames share APIs exposed by their parent window.</li>
-<li><a href="https://news.ycombinator.com/item?id=13011795" target="_blank" rel="external">Multiple single-page apps that live at different URLs</a><br>. The apps use NPM/Bower components for shared functionality.</li>
-<li>Using<br><a href="http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html" target="_blank" rel="external"><strong>Varnish Cache</strong>to integrate different modules</a><br>.</li>
-<li><a href="https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/" target="_blank" rel="external"><strong>Web Components</strong>as the integration layer</a><br>.</li>
-<li><a href="https://news.ycombinator.com/item?id=13012916" target="_blank" rel="external">“Blackbox”<strong>React</strong>components</a><br>.</li>
+<li>Isolating micro-apps into<br><a href="https://news.ycombinator.com/item?id=13009285"><strong>IFrames</strong>using libraries and Window.postMessage APIs</a><br>to coordinate. IFrames share APIs exposed by their parent window.</li>
+<li><a href="https://news.ycombinator.com/item?id=13011795">Multiple single-page apps that live at different URLs</a><br>. The apps use NPM/Bower components for shared functionality.</li>
+<li>Using<br><a href="http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html"><strong>Varnish Cache</strong>to integrate different modules</a><br>.</li>
+<li><a href="https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/"><strong>Web Components</strong>as the integration layer</a><br>.</li>
+<li><a href="https://news.ycombinator.com/item?id=13012916">“Blackbox”<strong>React</strong>components</a><br>.</li>
 </ol>
 <h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><ul>
-<li><a href="https://news.ycombinator.com/item?id=13009285" target="_blank" rel="external">Ask Hacker News: “What do you use to build micro-front ends?”</a></li>
-<li><a href="https://www.mosaic9.org/" target="_blank" rel="external">Project Mosaic</a><br>by Zalando, a set of libraries to support a microservice style architecture for large scale websites. See also<br><a href="https://www.microservices.com/talks/mosaic-microservices-zalando-tech/" target="_blank" rel="external">this presentation from Zalando Tech</a><br>.</li>
-<li><a href="https://github.com/neuland/micro-frontends" target="_blank" rel="external">Micro Frontends (GitHub)</a><br>— will contain techniques, strategies and recipes for building a modern web app with multiple independent teams.</li>
+<li><a href="https://news.ycombinator.com/item?id=13009285">Ask Hacker News: “What do you use to build micro-front ends?”</a></li>
+<li><a href="https://www.mosaic9.org/">Project Mosaic</a><br>by Zalando, a set of libraries to support a microservice style architecture for large scale websites. See also<br><a href="https://www.microservices.com/talks/mosaic-microservices-zalando-tech/">this presentation from Zalando Tech</a><br>.</li>
+<li><a href="https://github.com/neuland/micro-frontends">Micro Frontends (GitHub)</a><br>— will contain techniques, strategies and recipes for building a modern web app with multiple independent teams.</li>
 </ul>
-<p>Source: <a href="http://www.tuicool.com/articles/hit/aeM3Ybf" target="_blank" rel="external">https://medium.com/@tomsoderlund/micro-frontends-a-microservice-approach-to-front-end-web-development-f325ebdadc16</a></p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/aeM3Ybf">https://medium.com/@tomsoderlund/micro-frontends-a-microservice-approach-to-front-end-web-development-f325ebdadc16</a></p>
 
   </div>
   

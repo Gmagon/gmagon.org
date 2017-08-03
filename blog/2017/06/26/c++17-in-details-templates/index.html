@@ -165,8 +165,8 @@
 <h2 id="The-Series"><a href="#The-Series" class="headerlink" title="The Series"></a>The Series</h2><p>This post is the third one in the series about C++17 features details.</p>
 <p>The plan for the series</p>
 <ol>
-<li><a href="http://www.bfilipek.com/2017/05/cpp17-details-fixes-deprecation.html" target="_blank" rel="external">Fixes and deprecation</a></li>
-<li><a href="http://www.bfilipek.com/2017/06/cpp17-details-clarifications.html" target="_blank" rel="external">Language clarification</a></li>
+<li><a href="http://www.bfilipek.com/2017/05/cpp17-details-fixes-deprecation.html">Fixes and deprecation</a></li>
+<li><a href="http://www.bfilipek.com/2017/06/cpp17-details-clarifications.html">Language clarification</a></li>
 <li>Templates (<br><strong>today</strong><br>)</li>
 <li>Attributes (soon)</li>
 <li>Simplification (soon + 1)</li>
@@ -175,13 +175,13 @@
 </ol>
 <h2 id="Documents-amp-Links"><a href="#Documents-amp-Links" class="headerlink" title="Documents &amp; Links"></a>Documents &amp; Links</h2><p>Just to recall:</p>
 <p>First of all, if you want to dig into the standard on your own, you can read the latest draft here:</p>
-<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf" target="_blank" rel="external">N4659, 2017-03-21,Working Draft, Standard for Programming Language C++</a>- the link also appears on the<a href="https://isocpp.org/" target="_blank" rel="external">isocpp.org</a>.</p>
-<p>WG21 P0636r0:<a href="https://isocpp.org/files/papers/p0636r0.html" target="_blank" rel="external">Changes between C++14 and C++17</a></p>
-<p>Compiler support:<a href="http://en.cppreference.com/w/cpp/compiler_support" target="_blank" rel="external">C++ compiler support</a></p>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf">N4659, 2017-03-21,Working Draft, Standard for Programming Language C++</a>- the link also appears on the<a href="https://isocpp.org/">isocpp.org</a>.</p>
+<p>WG21 P0636r0:<a href="https://isocpp.org/files/papers/p0636r0.html">Changes between C++14 and C++17</a></p>
+<p>Compiler support:<a href="http://en.cppreference.com/w/cpp/compiler_support">C++ compiler support</a></p>
 <p>Moreover, I’ve prepared a list of concise descriptions of all of the C++17 language features:</p>
-<p><a href="http://eepurl.com/cyycFz" target="_blank" rel="external">Download a free copy of my C++17 Cheat Sheet!</a></p>
+<p><a href="http://eepurl.com/cyycFz">Download a free copy of my C++17 Cheat Sheet!</a></p>
 <p>It’s a one-page reference card, PDF.</p>
-<p>There’s also a talk from Bryce Lelbach:<a href="https://www.youtube.com/watch?v=LvwXJjRQfHk" target="_blank" rel="external">C++Now 2017: C++17 Features</a></p>
+<p>There’s also a talk from Bryce Lelbach:<a href="https://www.youtube.com/watch?v=LvwXJjRQfHk">C++Now 2017: C++17 Features</a></p>
 <p>And have a look at my master C++17 features post:C++17 Features</p>
 <h2 id="Template-argument-deduction-for-class-templates"><a href="#Template-argument-deduction-for-class-templates" class="headerlink" title="Template argument deduction for class templates"></a>Template argument deduction for class templates</h2><p>I have good and bad news for you :)</p>
 <p>Do you often use<code>make&lt;T&gt;</code>functions to construct a templated object (like<code>std::make_pair</code>)?</p>
@@ -198,20 +198,20 @@
 <p>But now we can do that so that the above code will compile under C++17 conformant compiler.</p>
 <p>What about creating local variables like tuples or pairs?</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">std</div><div class="line">::pair</div><div class="line">&lt;</div><div class="line">int</div><div class="line">, </div><div class="line">double</div><div class="line">&gt;</div><div class="line"> p(</div><div class="line">10</div><div class="line">, </div><div class="line">0.0</div><div class="line">);</div><div class="line"></div><div class="line">// same as</div><div class="line">std</div><div class="line">::</div><div class="line">pair </div><div class="line">p</div><div class="line">(</div><div class="line">10</div><div class="line">, </div><div class="line">0.0</div><div class="line">)</div><div class="line">; </div><div class="line">// deduced automatically!</div></pre></td></tr></table></figure>
-<p>Try in Compiler Explorer:<a href="https://godbolt.org/g/z62jwK" target="_blank" rel="external">example, GCC 7.1</a>.</p>
+<p>Try in Compiler Explorer:<a href="https://godbolt.org/g/z62jwK">example, GCC 7.1</a>.</p>
 <p>This can substantially reduce complex constructions like</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">std:</div><div class="line">:lock_guard</div><div class="line">&lt;</div><div class="line">std</div><div class="line">:</div><div class="line">:shared_timed_mutex</div><div class="line">, </div><div class="line">        </div><div class="line">std:</div><div class="line">:shared_lock</div><div class="line">&lt;</div><div class="line">std</div><div class="line">:</div><div class="line">:shared_timed_mutex</div><div class="line">&gt;</div><div class="line">&gt;</div><div class="line"> lck(mut</div><div class="line">_</div><div class="line">, r1);</div></pre></td></tr></table></figure>
 <p>Can now become:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">std</div><div class="line">::</div><div class="line">lock_guard </div><div class="line">lck</div><div class="line">(mut_, r1)</div><div class="line">;</div></pre></td></tr></table></figure>
 <p>Note, that partial deduction cannot happen, you have to specify all the template parameters or none:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">std</div><div class="line">::</div><div class="line">tuple </div><div class="line">t</div><div class="line">(</div><div class="line">1</div><div class="line">, </div><div class="line">2</div><div class="line">, </div><div class="line">3</div><div class="line">)</div><div class="line">;              </div><div class="line">// OK: deduction</div><div class="line">std</div><div class="line">::tuple</div><div class="line">&lt;</div><div class="line">int</div><div class="line">,</div><div class="line">int</div><div class="line">,</div><div class="line">int</div><div class="line">&gt;</div><div class="line"> t(</div><div class="line">1</div><div class="line">, </div><div class="line">2</div><div class="line">, </div><div class="line">3</div><div class="line">); </div><div class="line">// OK: all arguments are provided</div><div class="line">std</div><div class="line">::tuple</div><div class="line">&lt;</div><div class="line">int</div><div class="line">&gt;</div><div class="line"> t(</div><div class="line">1</div><div class="line">, </div><div class="line">2</div><div class="line">, </div><div class="line">3</div><div class="line">);         </div><div class="line">// Error: partial deduction</div></pre></td></tr></table></figure>
-<p>Also if you’re adventurous you can create your custom class template deduction guides: see here for more information: recent post: Arne Mertz:<a href="https://arne-mertz.de/2017/06/class-template-argument-deduction/#User-defined_deduction_guides" target="_blank" rel="external">Modern C++ Features - Class Template Argument Deduction</a>.</p>
+<p>Also if you’re adventurous you can create your custom class template deduction guides: see here for more information: recent post: Arne Mertz:<a href="https://arne-mertz.de/2017/06/class-template-argument-deduction/#User-defined_deduction_guides">Modern C++ Features - Class Template Argument Deduction</a>.</p>
 <p>BTW: why not all<code>make</code>functions can be removed? For example, consider<code>make_unique</code>or<code>make_shared</code>are they only for ‘syntactic sugar’ ? I’ll leave this as an open question for now.</p>
 <p>More details in</p>
 <ul>
-<li><a href="http://wg21.link/p0091r3" target="_blank" rel="external">P0091R3</a></li>
-<li>Simon Brand:<br><a href="https://blog.tartanllama.xyz/c++/2017/01/11/deduction-for-class-templates/" target="_blank" rel="external">Template argument deduction for class template constructors</a></li>
-<li><a href="http://en.cppreference.com/w/cpp/language/class_template_deduction" target="_blank" rel="external">Class template deduction(since C++17) - cppreference</a><br>.</li>
+<li><a href="http://wg21.link/p0091r3">P0091R3</a></li>
+<li>Simon Brand:<br><a href="https://blog.tartanllama.xyz/c++/2017/01/11/deduction-for-class-templates/">Template argument deduction for class template constructors</a></li>
+<li><a href="http://en.cppreference.com/w/cpp/language/class_template_deduction">Class template deduction(since C++17) - cppreference</a><br>.</li>
 </ul>
 <p>MSVC<strong>not yet</strong>, GCC: 7.0, Clang:<strong>not yet</strong>.</p>
 <h2 id="Declaring-non-type-template-parameters-with-auto"><a href="#Declaring-non-type-template-parameters-with-auto" class="headerlink" title="Declaring non-type template parameters with auto"></a>Declaring non-type template parameters with auto</h2><p>This is another part of the strategy to use<code>auto</code>everywhere. With C++11 and C++14 you can use it to automatically deduce variables or even return types, plus there are also generic lambdas. Now you can also use it for deducing non-type template parameters.</p>
@@ -227,13 +227,13 @@
 <p>Before C++17 it was not possible to declare such list directly, some wrapper class would have to be provided first.</p>
 <p>More details in</p>
 <ul>
-<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html" target="_blank" rel="external">P0127R2 - Declaring non-type template parameters with auto</a></li>
-<li><a href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0127r1.html" target="_blank" rel="external">P0127R1 - Declaring non-type template arguments with auto</a><ul>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html">P0127R2 - Declaring non-type template parameters with auto</a></li>
+<li><a href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0127r1.html">P0127R1 - Declaring non-type template arguments with auto</a><ul>
 <li>motivation, examples, discussion.</li>
 </ul>
 </li>
-<li><a href="https://stackoverflow.com/questions/38026884/advantages-of-auto-in-template-parameters-in-c17" target="_blank" rel="external">c++ - Advantages of auto in template parameters in C++17 - Stack Overflow</a></li>
-<li><a href="https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/" target="_blank" rel="external">Trip report: Summer ISO C++ standards meeting (Oulu) | Sutter’s Mill</a></li>
+<li><a href="https://stackoverflow.com/questions/38026884/advantages-of-auto-in-template-parameters-in-c17">c++ - Advantages of auto in template parameters in C++17 - Stack Overflow</a></li>
+<li><a href="https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/">Trip report: Summer ISO C++ standards meeting (Oulu) | Sutter’s Mill</a></li>
 </ul>
 <p>MSVC<strong>not yet</strong>, GCC: 7.0, Clang: 4.0.</p>
 <h2 id="Fold-expressions"><a href="#Fold-expressions" class="headerlink" title="Fold expressions"></a>Fold expressions</h2><p>With C++11 we got variadic templates which is a great feature, especially if you want to work with a variable number of input parameters to a function. For example, previously (pre C++11) you had to write several different versions of a function (like one for one parameter, another for two parameters, another for three params… ).</p>
@@ -242,7 +242,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">auto</div><div class="line">SumCpp11</div><div class="line">()</div><div class="line">&#123;</div><div class="line">    </div><div class="line">return</div><div class="line">0</div><div class="line">;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">template</div><div class="line">&lt;</div><div class="line">typename</div><div class="line"> T1, </div><div class="line">typename</div><div class="line">... T</div><div class="line">&gt;</div><div class="line">auto</div><div class="line">SumCpp11</div><div class="line">(T1 s, T... ts)</div><div class="line">&#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> s + SumCpp11(ts...);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>And with C++17 we can write much simpler code:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">template</div><div class="line">&lt;</div><div class="line">typename</div><div class="line"> ...Args</div><div class="line">&gt;</div><div class="line">auto</div><div class="line">sum</div><div class="line">(Args ...args)</div><div class="line">&#123; </div><div class="line">    </div><div class="line">return</div><div class="line"> (args + ... + </div><div class="line">0</div><div class="line">); </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">// or even:</div><div class="line">template</div><div class="line">&lt;</div><div class="line">typename</div><div class="line"> ...Args</div><div class="line">&gt;</div><div class="line">auto</div><div class="line">sum2</div><div class="line">(Args ...args)</div><div class="line">&#123; </div><div class="line">    </div><div class="line">return</div><div class="line"> (args + ...);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Fold expressions over a<a href="http://en.cppreference.com/w/cpp/language/parameter_pack" target="_blank" rel="external">parameter pack</a>.</p>
+<p>Fold expressions over a<a href="http://en.cppreference.com/w/cpp/language/parameter_pack">parameter pack</a>.</p>
 <table>
 <thead>
 <tr>
@@ -318,11 +318,11 @@
 <p>In general, fold expression allows writing cleaner, shorter and probably easier to read code.</p>
 <p>More details in:</p>
 <ul>
-<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html" target="_blank" rel="external">N4295</a><br>and<br><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html" target="_blank" rel="external">N4295</a></li>
-<li>“Using fold expressions to simplify variadic function templates” in<br><a href="http://amzn.to/2t62io9" target="_blank" rel="external">Modern C++ Programming Cookbook</a><br>.</li>
-<li><a href="https://tartanllama.github.io/c++/2016/11/10/exploding-tuples-fold-expressions/" target="_blank" rel="external">Simon Brand: Exploding tuples with fold expressions</a></li>
-<li><a href="http://baptiste-wicht.com/posts/2015/05/cpp17-fold-expressions.html" target="_blank" rel="external">Baptiste Wicht: C++17 Fold Expressions</a></li>
-<li><a href="http://www.modernescpp.com/index.php/fold-expressions" target="_blank" rel="external">Fold Expressions - ModernesCpp.com</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html">N4295</a><br>and<br><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html">N4295</a></li>
+<li>“Using fold expressions to simplify variadic function templates” in<br><a href="http://amzn.to/2t62io9">Modern C++ Programming Cookbook</a><br>.</li>
+<li><a href="https://tartanllama.github.io/c++/2016/11/10/exploding-tuples-fold-expressions/">Simon Brand: Exploding tuples with fold expressions</a></li>
+<li><a href="http://baptiste-wicht.com/posts/2015/05/cpp17-fold-expressions.html">Baptiste Wicht: C++17 Fold Expressions</a></li>
+<li><a href="http://www.modernescpp.com/index.php/fold-expressions">Fold Expressions - ModernesCpp.com</a></li>
 </ul>
 <p>MSVC<strong>not yet</strong>, GCC: 6.0, Clang: 3.6 (N4295)/3.9 (N4295).</p>
 <h2 id="constexpr-if"><a href="#constexpr-if" class="headerlink" title="constexpr if"></a><code>constexpr if</code></h2><p>This is a big one!</p>
@@ -335,28 +335,28 @@
 <p>I’d like to return to this feature when we are discussing features of C++17 that simplify the language. I hope to come back with more examples of<code>constexpr if</code>.</p>
 <p>More details in:</p>
 <ul>
-<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0292r2.html" target="_blank" rel="external">P0292R2</a></li>
-<li>Simon Brand:<br><a href="https://blog.tartanllama.xyz/c++/2016/12/12/if-constexpr/" target="_blank" rel="external">Simplifying templates and #ifdefs with if constexpr</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0292r2.html">P0292R2</a></li>
+<li>Simon Brand:<br><a href="https://blog.tartanllama.xyz/c++/2016/12/12/if-constexpr/">Simplifying templates and #ifdefs with if constexpr</a></li>
 </ul>
 <p>MSVC<strong>not yet</strong>, GCC: 7.0, Clang: 3.9.</p>
 <h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><p>In C++17 there are also other language features related to templates. In this post, I wanted to focus on biggest enhancements, so I’ll just mention the other briefly:</p>
 <ul>
-<li><p>Allow<code>typename</code>in a template template parameters:<a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html" target="_blank" rel="external">N4051</a>.</p>
+<li><p>Allow<code>typename</code>in a template template parameters:<a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html">N4051</a>.</p>
 <ul>
 <li>Allows you to use<br><code>typename</code><br>instead of<br><code>class</code><br>when declaring a template template parameter. Normal type parameters can use them interchangeably, but template template parameters were restricted to<br><code>class</code><br>.</li>
 </ul>
 </li>
-<li><p>DR: Matching of template template-arguments excludes compatible templates:<a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html" target="_blank" rel="external">P0522R0</a>.</p>
+<li><p>DR: Matching of template template-arguments excludes compatible templates:<a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html">P0522R0</a>.</p>
 <ul>
-<li>Improves matching of template template arguments. Resolves<br><a href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4457.html#150" target="_blank" rel="external">Core issue CWG 150</a><br>.</li>
+<li>Improves matching of template template arguments. Resolves<br><a href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4457.html#150">Core issue CWG 150</a><br>.</li>
 </ul>
 </li>
-<li><p>Allow constant evaluation for all non-type template arguments:<a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html" target="_blank" rel="external">N4268</a></p>
+<li><p>Allow constant evaluation for all non-type template arguments:<a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html">N4268</a></p>
 <ul>
 <li>Remove syntactic restrictions for pointers, references, and pointers to members that appear as non-type template parameters:</li>
 </ul>
 </li>
-<li><p><code>constexpr</code>lambdas:<a href="http://wg21.link/p0170r1" target="_blank" rel="external">P0170R1</a></p>
+<li><p><code>constexpr</code>lambdas:<a href="http://wg21.link/p0170r1">P0170R1</a></p>
 <ul>
 <li>Lambda expressions may now be constant expressions.</li>
 </ul>
@@ -367,8 +367,8 @@
 <p>Still, for me, the most powerful features, that might have a significant impact on the code is<code>constexpr if</code>and folds. They greatly clean up the code and make it more readable.</p>
 <p>What are your favorite parts regarding templates?</p>
 <p>Next time we’ll address attributes like<code>[[fallthrough]]</code>or<code>[[nodiscard]]</code>, and I’d like to recall other, already existing attributes. Stay tuned!</p>
-<p>Once again, remember to grab my<a href="http://eepurl.com/cyycFz" target="_blank" rel="external"><strong>C++17 Language Ref Card</strong></a>.</p>
-<p>Source: <a href="http://www.tuicool.com/articles/hit/rauARne" target="_blank" rel="external">http://www.bfilipek.com/2017/06/cpp17-details-templates.html</a></p>
+<p>Once again, remember to grab my<a href="http://eepurl.com/cyycFz"><strong>C++17 Language Ref Card</strong></a>.</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/rauARne">http://www.bfilipek.com/2017/06/cpp17-details-templates.html</a></p>
 
   </div>
   
