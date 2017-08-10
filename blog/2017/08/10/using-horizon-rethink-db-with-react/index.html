@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title> Using Horizon/RethinkDB with React - Gmagon Software - handy and professional Mac apps.   </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Using Horizon/RethinkDB with React" />
+  <meta name="description" content="Using Horizon/RethinkDB with React" />
+
+
+  <!-- Custom config og:image -->
+  
+
+  <!-- Open Graph -->
+  <meta name="description" content="Using Horizon/RethinkDB with React - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Using Horizon&#x2F;RethinkDB with React - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/08/10/using-horizon-rethink-db-with-react/index.html">
+<meta property="og:site_name" content="Using Horizon&#x2F;RethinkDB with React - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Using Horizon/RethinkDB with React - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://img0.tuicool.com/Y73URju.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/naQRvaJ.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/6jmA7rF.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/iqeUf2Z.png!web">
+<meta property="og:updated_time" content="2017-08-10T11:17:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Using Horizon&#x2F;RethinkDB with React - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Using Horizon/RethinkDB with React - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="http://img0.tuicool.com/Y73URju.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/08/10/using-horizon-rethink-db-with-react/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-683c82b3ab.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Using Horizon/RethinkDB with React </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Using Horizon/RethinkDB with React</h1>
+    
+    <a href="/blog/2017/08/10/using-horizon-rethink-db-with-react/" class="article-date"><time datetime="2017-08-10T00:00:00.000Z">2017-08-10</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p>Horizon is an open source<a href="https://en.wikipedia.org/wiki/Mobile_backend_as_a_service">Backend as a Service</a>(BaaS) that allows developers to easily build data-driven web and mobile applications. Horizon,<a href="http://horizon.io/faq/">which is built on RethinkDB</a>and by the RethinkDB team, facilitates common application development tasks like backend setup, real-time data transfer, security and scalability. Horizon can be run locally, on a private server or in the cloud.</p>
+<p>This tutorial will give you an introduction to Horizon and RethinkDB while also showing you how to build a simple app with Horizon and React. This will give you a simple and scalable architecture for building your own much more complex apps.</p>
+<h4 id="A-Quick-Note-About-the-State-of-Horizon-RethinkDB"><a href="#A-Quick-Note-About-the-State-of-Horizon-RethinkDB" class="headerlink" title="A Quick Note About the State of Horizon/RethinkDB"></a>A Quick Note About the State of Horizon/RethinkDB</h4><p>On October 5th 2016, the company behind RethinkDB<a href="https://rethinkdb.com/blog/rethinkdb-shutdown/">announced it would be shut down</a>. This left many users believing the entire project was being cancelled and shuttered. In actuality, RethinkDb and Horizon became fully open source and community driven. On February 6th 2017, the<a href="https://www.cncf.io/">Cloud Native Computing Foundation</a>(CNCF) purchased the rights to the RethinkDB source code and<a href="https://rethinkdb.com/blog/rethinkdb-joins-linux-foundation/">contributed it to the Linux Foundation</a>. This gave the project the necessary support to keep the project alive and facilitate its continuous development.</p>
+<h4 id="Horizon-React-Awesome-Combo"><a href="#Horizon-React-Awesome-Combo" class="headerlink" title="Horizon + React = Awesome Combo"></a>Horizon + React = Awesome Combo</h4><p>Horizon and React is a pair made in heaven for developers. Horizon takes charge of all the backend complexities and React facilitates building a modular, reactive frontend. Horizon handles the distribution of data in real-time while React keeps the clients updated. Everything scales and everything has high performance and low latency.</p>
+<p>When there is a change in the app’s state, ReactJS will efficiently redraw the necessary components by diffing between the virtual DOM and the existing DOM (and making only the required changes). Horizon notifies all subscribed clients when there is a data update, so they can either download the data again or simply apply the change into its local copy when the original data is too large to fully reload on each change. Together, Horizon and React allow for a simple way to build real-time data-driven applications.</p>
+<h4 id="Building-a-‘ToBring’-App"><a href="#Building-a-‘ToBring’-App" class="headerlink" title="Building a ‘ToBring’ App"></a>Building a ‘ToBring’ App</h4><p>To demonstrate how they work together, we’ll build a ‘ToBring’ app (not another another ToDo!). This application will track a list of items we need for a party. This app will allow users to add items in a section that we will call_“We need list”<em>or move them to another list called</em>“We have list”_and add the name of the user who will bring the item.</p>
+<p>To see all the code for this demo,<a href="https://github.com/reicek/react-horizon-intro">check out this repo</a>.</p>
+<p><img src="http://img0.tuicool.com/Y73URju.png!web" alt=""></p>
+<p>To keep the setup simple, we’ll use<a href="https://github.com/facebookincubator/create-react-app">create-react-app</a>. To start the React part of the application, first install create-react-app with the command</p>
+<p><code>npm install -g create-react-app</code></p>
+<p>Then you’ll need to initialize a new app with the commands</p>
+<p>_<code>create-react-appparty_checklist</code>_</p>
+<p>and</p>
+<p><em><code>an npm install/start</code></em></p>
+<p>Once ready, it should launch on your browser with the address<a href="http://localhost:3000/"><strong>http://localhost:3000/</strong></a>and will auto-reload every time you change the source code.</p>
+<p>React is all about components. The main component of our app will have three sub-components: one to add a new item, one to hold the “we need list” and another to hold the “we have list”. Here’s a quick visual of how these components will fit together.</p>
+<p><img src="http://img0.tuicool.com/naQRvaJ.png!web" alt=""></p>
+<p>We will need to know the user’s name for keeping track of what they bring. Let’s put a simple input to get the name of the active user into the main component.</p>
+<p>If you are wondering, Horizon does include<a href="http://horizon.io/docs/auth/">options to authenticate</a>, add permissions and even Transport Layer Security to our app, but that is beyond the scope of this tutorial.</p>
+<p>Here’s how we’ll code up the name input:</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">import</div><div class="line">React</div><div class="line">, &#123; </div><div class="line">Component</div><div class="line"> &#125; from </div><div class="line">&apos;reac</div><div class="line">t&apos;;</div><div class="line"> </div><div class="line"></div><div class="line">class</div><div class="line">App</div><div class="line">extends</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    </div><div class="line">super</div><div class="line">(props);</div><div class="line">    </div><div class="line">this</div><div class="line">.state = &#123;</div><div class="line">      </div><div class="line">// A holder for the user name</div><div class="line"></div><div class="line">      user : &apos;&apos;,</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">// A binding to call updateUser without the () suffix</div><div class="line">this</div><div class="line">.updateUser = </div><div class="line">this</div><div class="line">.updateUser.bind(</div><div class="line">this</div><div class="line">);</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">        className= </div><div class="line">&apos;ap</div><div class="line">p&apos;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">h1</div><div class="line">&gt;</div><div class="line">Party</div><div class="line">Checklist</div><div class="line">&lt;</div><div class="line">/h1</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">p</div><div class="line">&gt;</div><div class="line">I</div><div class="line"> am:</div><div class="line">&lt;</div><div class="line">/p</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">input</div><div class="line">          value = &#123;</div><div class="line">this</div><div class="line">.state.user&#125;</div><div class="line">          onChange = &#123;</div><div class="line">this</div><div class="line">.updateUser&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  </div><div class="line">// A method to update the state in response to a synthetic event</div><div class="line"></div><div class="line">  updateUser(e) &#123;</div><div class="line">    </div><div class="line">this</div><div class="line">.setState(&#123;user: e.target.value&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>It is important to remember how we use the constructor to hold the state and also to create bindings to expose methods, without it “<em>this</em>” will return “<em>undefined</em>” when the method is actually called. This is how<a href="https://facebook.github.io/react/docs/handling-events.html">React handles events</a>, also notice how “updateUser” has a parameter called “e”, this is called a<a href="https://facebook.github.io/react/docs/events.html">synthetic event</a>.</p>
+<p>Now let’s add the<strong>NewItem</strong>component:</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">App</div><div class="line">extends</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    </div><div class="line">super</div><div class="line">(props);</div><div class="line">    </div><div class="line">this</div><div class="line">.state = &#123;</div><div class="line">      user : &apos;&apos;,</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">this</div><div class="line">.updateUser = </div><div class="line">this</div><div class="line">.updateUser.bind(</div><div class="line">this</div><div class="line">);</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">        className= </div><div class="line">&apos;ap</div><div class="line">p&apos;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">h1</div><div class="line">&gt;</div><div class="line">Party</div><div class="line">Checklist</div><div class="line">&lt;</div><div class="line">/h1</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">p</div><div class="line">&gt;</div><div class="line">I</div><div class="line"> am:</div><div class="line">&lt;</div><div class="line">/p</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">input</div><div class="line">          value = &#123;</div><div class="line">this</div><div class="line">.state.user&#125;</div><div class="line">          onChange = &#123;</div><div class="line">this</div><div class="line">.updateUser&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">NewItem</div><div class="line"> /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  updateUser(e) &#123;</div><div class="line">    </div><div class="line">this</div><div class="line">.setState(&#123;user: e.target.value&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"></div><div class="line">class</div><div class="line">NewItem</div><div class="line">extends</div><div class="line">React</div><div class="line">.</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    </div><div class="line">super</div><div class="line">(props);</div><div class="line">    </div><div class="line">this</div><div class="line">.state = &#123;</div><div class="line">      item  : &apos;&apos;,</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">this</div><div class="line">.updateItem = </div><div class="line">this</div><div class="line">.updateItem.bind(</div><div class="line">this</div><div class="line">);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">p</div><div class="line">&gt;</div><div class="line">Add</div><div class="line"> to need list:</div><div class="line">&lt;</div><div class="line">/p</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">form</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">input</div><div class="line">            value = &#123;</div><div class="line">this</div><div class="line">.state.item&#125;</div><div class="line">            onChange = &#123;</div><div class="line">this</div><div class="line">.updateItem&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/form</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  updateItem(e) &#123;</div><div class="line">    </div><div class="line">this</div><div class="line">.setState(&#123;item: e.target.value&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>JSX allows you import the “NewItem” component into “App” similar to<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements">custom web components</a>on HTML.</p>
+<p>Now let’s make a component for the<strong>WeNeedList</strong>, notice how it was an “items” list in its properties, this means the value will be passed when it is declared inside another component. When dealing with lists in React, you can use a simple<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map method</a>.</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">WeNeedList</div><div class="line">extends</div><div class="line">React</div><div class="line">.</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">h2</div><div class="line">&gt;</div><div class="line">We need...</div><div class="line">&lt;</div><div class="line">/</div><div class="line">h2</div><div class="line">&gt;</div><div class="line"></div><div class="line">        &#123;this.props.items.map(item =</div><div class="line">&gt;</div><div class="line"> (</div><div class="line">          </div><div class="line">&lt;</div><div class="line">div</div><div class="line">className</div><div class="line">= </div><div class="line">&apos;row&apos;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">button</div><div class="line">className</div><div class="line">= </div><div class="line">&apos;remove&apos;</div><div class="line">&gt;</div><div class="line"></div><div class="line">              x</div><div class="line">            </div><div class="line">&lt;</div><div class="line">/</div><div class="line">button</div><div class="line">&gt;</div><div class="line"></div><div class="line">            &#123;item.description&#125;</div><div class="line">            </div><div class="line">&lt;</div><div class="line">button</div><div class="line">className</div><div class="line">= </div><div class="line">&apos;add&apos;</div><div class="line">&gt;</div><div class="line"></div><div class="line">              +</div><div class="line">            </div><div class="line">&lt;</div><div class="line">/</div><div class="line">button</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/</div><div class="line">div</div><div class="line">&gt;</div><div class="line"></div><div class="line">        ))&#125;</div><div class="line">      </div><div class="line">&lt;</div><div class="line">/</div><div class="line">div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Now lets add “WeNeedList” to “App”.</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">App</div><div class="line">extends</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  </div><div class="line">constructor</div><div class="line">(props) &#123;</div><div class="line">    </div><div class="line">super</div><div class="line">(props);</div><div class="line">    </div><div class="line">this</div><div class="line">.state = &#123;</div><div class="line">      weNeedList : [],</div><div class="line">      user : </div><div class="line">&apos;&apos;</div><div class="line">,</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">this</div><div class="line">.updateUser = </div><div class="line">this</div><div class="line">.updateUser.bind(</div><div class="line">this</div><div class="line">);</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">        className= </div><div class="line">&apos;app&apos;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">h1</div><div class="line">&gt;</div><div class="line">Party Checklist</div><div class="line">&lt;</div><div class="line">/h1</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">p</div><div class="line">&gt;</div><div class="line">I am:</div><div class="line">&lt;</div><div class="line">/p</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">input</div><div class="line">          value = &#123;</div><div class="line">this</div><div class="line">.state.user&#125;</div><div class="line">          onChange = &#123;</div><div class="line">this</div><div class="line">.updateUser&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">NewItem /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">WeNeedList</div><div class="line">          items = &#123;</div><div class="line">this</div><div class="line">.state.weNeedList&#125;</div><div class="line">          user = &#123;</div><div class="line">this</div><div class="line">.state.user&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  updateUser(e) &#123;</div><div class="line">    </div><div class="line">this</div><div class="line">.setState(&#123;user: e.target.value&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>See how “App”will hold the<a href="https://facebook.github.io/react-native/docs/state.html"><strong>state</strong></a>of the list and will pass it to “WeNeedList” as parameters. Inside “WeNeedList” we can read this values from<a href="https://facebook.github.io/react-native/docs/props.html"><strong>props</strong></a>.</p>
+<p>And finally we need to make a<strong>WeHaveList</strong>component:</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">WeHaveList</div><div class="line">extends</div><div class="line">React</div><div class="line">.</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">h2</div><div class="line">&gt;</div><div class="line">We</div><div class="line"> have...</div><div class="line">&lt;</div><div class="line">/h2</div><div class="line">&gt;</div><div class="line"></div><div class="line">        &#123;</div><div class="line">this</div><div class="line">.props.items.map(item =</div><div class="line">&gt;</div><div class="line"> (</div><div class="line">          </div><div class="line">&lt;</div><div class="line">div</div><div class="line">            className= </div><div class="line">&apos;ro</div><div class="line">w&apos;</div><div class="line">            key = &#123;item.id&#125;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">button</div><div class="line">              className= </div><div class="line">&apos;cance</div><div class="line">l&apos;</div><div class="line">&gt;</div><div class="line"></div><div class="line">              x</div><div class="line">            </div><div class="line">&lt;</div><div class="line">/button</div><div class="line">&gt;</div><div class="line"></div><div class="line">            &#123;item.description&#125; from &#123;item.user&#125;</div><div class="line">          </div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">        ))&#125;</div><div class="line">      </div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>And also add it to the “App” component:</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">App</div><div class="line">extends</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  </div><div class="line">constructor</div><div class="line">(props) &#123;</div><div class="line">    </div><div class="line">super</div><div class="line">(props);</div><div class="line">    </div><div class="line">this</div><div class="line">.state = &#123;</div><div class="line">      weNeedList : [],</div><div class="line">      weHaveList : [],</div><div class="line">      user : </div><div class="line">&apos;&apos;</div><div class="line">,</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">this</div><div class="line">.updateUser = </div><div class="line">this</div><div class="line">.updateUser.bind(</div><div class="line">this</div><div class="line">);</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">        className= </div><div class="line">&apos;app&apos;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">h1</div><div class="line">&gt;</div><div class="line">Party Checklist</div><div class="line">&lt;</div><div class="line">/h1</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">p</div><div class="line">&gt;</div><div class="line">I am:</div><div class="line">&lt;</div><div class="line">/p</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">input</div><div class="line">          value = &#123;</div><div class="line">this</div><div class="line">.state.user&#125;</div><div class="line">          onChange = &#123;</div><div class="line">this</div><div class="line">.updateUser&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">NewItem /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">WeNeedList</div><div class="line">          items = &#123;</div><div class="line">this</div><div class="line">.state.weNeedList&#125;</div><div class="line">          user = &#123;</div><div class="line">this</div><div class="line">.state.user&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">WeHaveList</div><div class="line">          items = &#123;</div><div class="line">this</div><div class="line">.state.weHaveList&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  updateUser(e) &#123;</div><div class="line">    </div><div class="line">this</div><div class="line">.setState(&#123;user: e.target.value&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://img2.tuicool.com/6jmA7rF.png!web" alt=""></p>
+<p>Now the core of our app is complete! But it doesn’t do anything yet, for that, we need to add Horizon and create a few methods inside our components.</p>
+<p>To install Horizon in your machine, simply run the command<strong>npm install -g horizon</strong>.</p>
+<p>Horizon, like create-react-app, automatically initializes everything. You only need to provide the name of the app you want to create with the command<strong>hz init</strong>_<strong>party_checklist</strong>_; it is important that you run this from the same place from where you created the app, so it will just add new files to the project instead of creating a new one. You must always start with React and then add Horizon.</p>
+<p>Horizon needs RethinkDB to work. Before launching your Horizon server, make sure you have RethinkDB running on your machine. Refer to the<a href="https://www.rethinkdb.com/install">official documentation</a>for detailed instructions on how to run it on your system. The simplest way for Mac users is to<a href="https://www.rethinkdb.com/docs/install/osx/">use Homebrew to install it</a>.</p>
+<p>Now let’s configure Horizon to look for RethinkDB in your local machine. To do so, go to_<strong>.hz =&gt; config.toml</strong>_and replace it with the following:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">bind</div><div class="line"> = [ </div><div class="line">&quot;localhost&quot;</div><div class="line"> ]</div><div class="line"></div><div class="line">port</div><div class="line"> = </div><div class="line">8181</div><div class="line">connect</div><div class="line"> = </div><div class="line">&quot;localhost:28015&quot;</div><div class="line">start_rethinkdb</div><div class="line"> = </div><div class="line">false</div></pre></td></tr></table></figure>
+<p>To launch your Horizon server locally, go the folder with your project and run<strong>hz serve –dev</strong>, this will start your local Horizon server on<strong>port 8181</strong>. Note that you always need to keep one instance running React and another running Horizon while you are developing.</p>
+<p>Before hitting the code, let’s learn a few basic Horizon concepts:</p>
+<p>Horizon groups data into<a href="http://horizon.io/api/collection/">horizon collections</a>and each collection is backed by a RethinkDB table. All documents inside a collection are identified by a<strong>unique key</strong>stored in the<strong>id</strong>field.</p>
+<p>Horizon provides a very simple yet powerful API that helps you handle the following aspects:</p>
+<ul>
+<li><a href="http://horizon.io/api/horizon/#connect">DB conn</a><br><a href="http://horizon.io/api/horizon/#connect">ection</a></li>
+<li><a href="http://horizon.io/api/collection">Data collections</a></li>
+<li><a href="http://horizon.io/docs/auth/">Authentication</a></li>
+<li><a href="http://horizon.io/docs/users/">Users and groups</a></li>
+<li><a href="http://horizon.io/docs/permissions/">Permissions</a></li>
+</ul>
+<p>In this tutorial, we will be focusing on the first two, DB connection and data collections.</p>
+<p>ReactJS is designed to use an unidirectional data flow, so the data always flow from the DB into the parts of the UI that represents it. You can stream data right into its specific component or stream many into the parent and then your pass it down via component props.</p>
+<p>Here’s a visual to help you make sense of the data flow in this app:</p>
+<p><img src="http://img2.tuicool.com/iqeUf2Z.png!web" alt=""></p>
+<p>Note that any change in the data is sent from<strong>one</strong>React client into Horizon and Horizon sends it back to<strong>all</strong>React apps so they can update their view, this flow makes sure that all clients are always watching the same without inconsistencies. Also note that the data always flows in one direction between Horizon and React.</p>
+<p>Let’s add the<a href="https://www.npmjs.com/package/@horizon/client">Horizon client library</a>into our app. First run<strong>npm install @horizon/client</strong>to get the horizon client installed locally and make an instance of the client holding a connection to our local server in app.js.</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">import</div><div class="line"> Horizon </div><div class="line">from</div><div class="line">&apos;@horizon/client&apos;</div><div class="line">;</div><div class="line"></div><div class="line">const</div><div class="line"> horizon = </div><div class="line">new</div><div class="line"> Horizon(&#123;</div><div class="line">host</div><div class="line">: </div><div class="line">&apos;localhost:8181&apos;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Now let’s configure React to open a connection with the Horizon server right after everything has loaded correctly using the<strong>componentDidMount()</strong>lifecycle method. We will include some watchers to log when the connection to Horizon is ready and when it gets disconnected.</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">App</div><div class="line">extends</div><div class="line">Component</div><div class="line">&#123;</div><div class="line"> </div><div class="line">  </div><div class="line">// ...</div><div class="line"></div><div class="line"> </div><div class="line">  componentDidMount()&#123;</div><div class="line">    horizon.connect();</div><div class="line"> </div><div class="line">    horizon</div><div class="line">      .onReady()</div><div class="line">        .subscribe(() =</div><div class="line">&gt;</div><div class="line"></div><div class="line">          console.info(</div><div class="line">&apos;Connected</div><div class="line"> to </div><div class="line">Horizon</div><div class="line"> server&apos;));</div><div class="line"> </div><div class="line">    horizon</div><div class="line">      .onDisconnected()</div><div class="line">        .subscribe(() =</div><div class="line">&gt;</div><div class="line"></div><div class="line">          console.info(</div><div class="line">&apos;Disconnected</div><div class="line"> from </div><div class="line">Horizon</div><div class="line"> server&apos;));</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Remember how we talked about collections in Horizon? Our app will use two Horizon collections, one for the “we need list” and other for the “we have list”. Let’s store a reference to them at the top of app.js.</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">import</div><div class="line"> Horizon </div><div class="line">from</div><div class="line">&apos;@horizon/client&apos;</div><div class="line">;</div><div class="line"> </div><div class="line"></div><div class="line">const</div><div class="line"> horizon = </div><div class="line">new</div><div class="line"> Horizon(&#123;</div><div class="line">host</div><div class="line">: </div><div class="line">&apos;localhost:8181&apos;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">const</div><div class="line"> weNeedList_collection = horizon(</div><div class="line">&apos;weNeedList&apos;</div><div class="line">);</div><div class="line"></div><div class="line">const</div><div class="line"> weHaveList_collection = horizon(</div><div class="line">&apos;weHaveList&apos;</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>Horizon makes it very easy to watch and apply for changes in real time, you can even add custom logic and subscribe to a feed of changes. A common practice is to use the timestamp of each object as its ID and request the collection sorted by the ID, so they will always come in chronological order. Let’s do that for both collections.</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">App</div><div class="line">extends</div><div class="line">Component</div><div class="line">&#123;</div><div class="line"> </div><div class="line">  </div><div class="line">// ...</div><div class="line"></div><div class="line"> </div><div class="line">  componentDidMount()&#123;</div><div class="line">    horizon.connect();</div><div class="line"> </div><div class="line">    </div><div class="line">// ...</div><div class="line"></div><div class="line"> </div><div class="line">    weNeedList_collection</div><div class="line">      .order(</div><div class="line">&apos;i</div><div class="line">d&apos;)</div><div class="line">        .watch()</div><div class="line">          .subscribe(allItems =</div><div class="line">&gt;</div><div class="line">this</div><div class="line">.setState(&#123;weNeedList: allItems&#125;),</div><div class="line">            error =</div><div class="line">&gt;</div><div class="line"> console.error(error));</div><div class="line"> </div><div class="line">    weHaveList_collection</div><div class="line">      .order(</div><div class="line">&apos;i</div><div class="line">d&apos;)</div><div class="line">        .watch()</div><div class="line">          .subscribe(allItems =</div><div class="line">&gt;</div><div class="line">this</div><div class="line">.setState(&#123;weHaveList: allItems&#125;),</div><div class="line">            error =</div><div class="line">&gt;</div><div class="line"> console.error(error));</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>Now it’s time to add data manipulation methods, for this app we will use insert and remove; in both cases we only need to pass the item we wish to insert or remove as the parameter.</p>
+<p>Let’s start by updating NewItem</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">NewItem</div><div class="line">extends</div><div class="line">React</div><div class="line">.</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  </div><div class="line">constructor</div><div class="line">(props) &#123;</div><div class="line">    </div><div class="line">super</div><div class="line">(props);</div><div class="line">    </div><div class="line">this</div><div class="line">.state = &#123;</div><div class="line">      item  : </div><div class="line">&apos;&apos;</div><div class="line">,</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">this</div><div class="line">.updateItem = </div><div class="line">this</div><div class="line">.updateItem.bind(</div><div class="line">this</div><div class="line">);</div><div class="line">    </div><div class="line">this</div><div class="line">.insertItem = </div><div class="line">this</div><div class="line">.insertItem.bind(</div><div class="line">this</div><div class="line">);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">p</div><div class="line">&gt;</div><div class="line">Add to need list:</div><div class="line">&lt;</div><div class="line">/p</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">form</div><div class="line">          onSubmit = &#123;</div><div class="line">this</div><div class="line">.insertItem&#125;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">input</div><div class="line">            value = &#123;</div><div class="line">this</div><div class="line">.state.item&#125;</div><div class="line">            onChange = &#123;</div><div class="line">this</div><div class="line">.updateItem&#125; /</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/form</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  updateItem(e) &#123;</div><div class="line">    </div><div class="line">this</div><div class="line">.setState(&#123;item: e.target.value&#125;);</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  insertItem(e) &#123;</div><div class="line">    e.preventDefault();</div><div class="line">    const newItem = &#123;</div><div class="line">      description: </div><div class="line">this</div><div class="line">.state.item,</div><div class="line">      id: Date.now()</div><div class="line">    &#125;;</div><div class="line"> </div><div class="line">    weNeedList_collection.insert(newItem);</div><div class="line">    </div><div class="line">this</div><div class="line">.setState(&#123;item: </div><div class="line">&apos;&apos;</div><div class="line">&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Now let’s do the same for WeNeedList.</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">WeNeedList</div><div class="line">extends</div><div class="line">React</div><div class="line">.</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">h2</div><div class="line">&gt;</div><div class="line">We need...</div><div class="line">&lt;</div><div class="line">/</div><div class="line">h2</div><div class="line">&gt;</div><div class="line"></div><div class="line">        &#123;this.props.items.map(item =</div><div class="line">&gt;</div><div class="line"> (</div><div class="line">          </div><div class="line">&lt;</div><div class="line">div</div><div class="line">className</div><div class="line">= </div><div class="line">&apos;row&apos;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">button</div><div class="line">className</div><div class="line">= </div><div class="line">&apos;remove&apos;</div><div class="line">onClick</div><div class="line">= </div><div class="line">&#123;()</div><div class="line"> =</div><div class="line">&gt;</div><div class="line"> this.remove(item)&#125;</div><div class="line">&gt;</div><div class="line"></div><div class="line">              x</div><div class="line">            </div><div class="line">&lt;</div><div class="line">/</div><div class="line">button</div><div class="line">&gt;</div><div class="line"></div><div class="line">            &#123;item.description&#125;</div><div class="line">            </div><div class="line">&lt;</div><div class="line">button</div><div class="line">className</div><div class="line">= </div><div class="line">&apos;add&apos;</div><div class="line">onClick</div><div class="line">= </div><div class="line">&#123;()</div><div class="line"> =</div><div class="line">&gt;</div><div class="line"> this.moveToHave(item)&#125;</div><div class="line">&gt;</div><div class="line"></div><div class="line">              +</div><div class="line">            </div><div class="line">&lt;</div><div class="line">/</div><div class="line">button</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">/</div><div class="line">div</div><div class="line">&gt;</div><div class="line"></div><div class="line">        ))&#125;</div><div class="line">      </div><div class="line">&lt;</div><div class="line">/</div><div class="line">div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  remove(item) &#123;</div><div class="line">    weNeedList_collection.remove(item);</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  moveToHave(item) &#123;</div><div class="line">    weNeedList_collection.remove(item);</div><div class="line">    item.user = </div><div class="line">this</div><div class="line">.props.user;</div><div class="line">    weHaveList_collection.insert(item);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>And finally for WeHaveList.</p>
+<p>app.js</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class</div><div class="line">WeHaveList</div><div class="line">extends</div><div class="line">React</div><div class="line">.</div><div class="line">Component</div><div class="line">&#123;</div><div class="line">  render() &#123;</div><div class="line">    </div><div class="line">return</div><div class="line"> (</div><div class="line">      </div><div class="line">&lt;</div><div class="line">div</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">h2</div><div class="line">&gt;</div><div class="line">We</div><div class="line"> have...</div><div class="line">&lt;</div><div class="line">/h2</div><div class="line">&gt;</div><div class="line"></div><div class="line">        &#123;</div><div class="line">this</div><div class="line">.props.items.map(item =</div><div class="line">&gt;</div><div class="line"> (</div><div class="line">          </div><div class="line">&lt;</div><div class="line">div</div><div class="line">            className= </div><div class="line">&apos;ro</div><div class="line">w&apos;</div><div class="line">            key = &#123;item.id&#125;</div><div class="line">&gt;</div><div class="line">&lt;</div><div class="line">button</div><div class="line">              className= </div><div class="line">&apos;cance</div><div class="line">l&apos;</div><div class="line">              onClick= &#123;() =</div><div class="line">&gt;</div><div class="line">this</div><div class="line">.returnToNeed(item)&#125;</div><div class="line">&gt;</div><div class="line"></div><div class="line">              x</div><div class="line">            </div><div class="line">&lt;</div><div class="line">/button</div><div class="line">&gt;</div><div class="line"></div><div class="line">            &#123;item.description&#125; from &#123;item.user&#125;</div><div class="line">          </div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">        ))&#125;</div><div class="line">      </div><div class="line">&lt;</div><div class="line">/div</div><div class="line">&gt;</div><div class="line"></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  returnToNeed(item) &#123;</div><div class="line">    weHaveList_collection.remove(item);</div><div class="line">    weNeedList_collection.insert(item);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>And we are finished! Now you know all the basics to start building amazing real time apps using ReactJS and Horizon.</p>
+<p>The Horizon-React combo greatly simplifies development, allowing you and your team to develop applications and prototypes in a very short time while also making it easy to scale, maintain and debug those apps in the future, this greatly reduces costs and makes you and your team more competitive in the global market.</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/UJ7JjiQ">https://appendto.com/2017/08/using-horizonrethinkdb-react/</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/08/10/using-horizon-rethink-db-with-react/index.html';
+  var disqus_title = "Using Horizon/RethinkDB with React";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Quick-Note-About-the-State-of-Horizon-RethinkDB"><span class="toc-text">A Quick Note About the State of Horizon/RethinkDB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Horizon-React-Awesome-Combo"><span class="toc-text">Horizon + React = Awesome Combo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Building-a-‘ToBring’-App"><span class="toc-text">Building a ‘ToBring’ App</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
