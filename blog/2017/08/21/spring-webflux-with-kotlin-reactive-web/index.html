@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Spring WebFlux with Kotlin – Reactive Web - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Spring WebFlux with Kotlin – Reactive Web" />
+  <meta name="description" content="Spring WebFlux with Kotlin – Reactive Web" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Spring WebFlux with Kotlin – Reactive Web - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Spring WebFlux with Kotlin – Reactive Web - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/08/21/spring-webflux-with-kotlin-reactive-web/index.html">
+<meta property="og:site_name" content="Spring WebFlux with Kotlin – Reactive Web - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Spring WebFlux with Kotlin – Reactive Web - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://img1.tuicool.com/MziaEr2.png!web">
+<meta property="og:updated_time" content="2017-08-21T02:59:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring WebFlux with Kotlin – Reactive Web - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Spring WebFlux with Kotlin – Reactive Web - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="http://img1.tuicool.com/MziaEr2.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/08/21/spring-webflux-with-kotlin-reactive-web/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/08/21/spring-webflux-with-kotlin-reactive-web/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-6ac2b4c9e5.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Spring WebFlux with Kotlin – Reactive Web </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Spring WebFlux with Kotlin – Reactive Web</h1>
+    
+    <a href="/blog/2017/08/21/spring-webflux-with-kotlin-reactive-web/" class="article-date"><time datetime="2017-08-21T00:00:00.000Z">2017-08-21</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <h2 id="Spring-–-even-more-fancy"><a href="#Spring-–-even-more-fancy" class="headerlink" title="Spring – even more fancy"></a>Spring – even more fancy</h2><p>As you might most certainly know, I’m one of these<strong>Kotlin</strong>“hipsters”, who’s really loving the language and wouldn’t write any more Java, if it was that easy. If you’re not familiar with my articles, have a look at the other Kotlin related postshere.</p>
+<p>Besides Kotlin, I’ve always been into<a href="https://spring.io/"><strong>Spring</strong></a>ever since I started with Java back in 2011. I still like the framework although it’s getting bigger and bigger and you often don’t quite know which feature to choose amongst all the alternatives. As the framework itself is growing, the<a href="http://docs.spring.io/spring/docs/5.0.0.RC3/spring-framework-reference/">documentation</a>, which is one of best you’ll ever get to see, also is.</p>
+<p>The thing I like most about Spring is, that you can focus on your business logic from day one and don’t have much technical, infrastructural stuff to set up before kicking of. Spring does that by encapsulating a lot of boilerplate that’s necessary for certain tasks and provides simple annotations we can apply in order to make use of these features. One of the most famous modules certainly is<a href="http://docs.spring.io/spring/docs/5.0.0.RC3/spring-framework-reference/web.html#mvc">Spring Web MVC</a>, which is widely used when ever it comes to web services on the JVM.</p>
+<h3 id="Reactive-Programming-–-The-non-blocking-way"><a href="#Reactive-Programming-–-The-non-blocking-way" class="headerlink" title="Reactive Programming – The non-blocking way"></a>Reactive Programming – The non-blocking way</h3><p>You might have noticed, that<a href="https://www.reactivemanifesto.org/">Reactive Programming</a>is getting more attention recently. There are many frameworks emerging that want to encourage this style of programming, namely<a href="https://github.com/ReactiveX/RxJava">RxJava</a>,<a href="http://vertx.io/">Vert.X</a>or<a href="http://akka.io/">Akka</a>for example. If you’ve never come across these, you can read my post onKotlin with Vert.X as a first step.</p>
+<h3 id="Spring-reactive"><a href="#Spring-reactive" class="headerlink" title="Spring reactive"></a>Spring reactive</h3><p>What does this have to do with Spring though? Well, of course, there’s yet another library for building reactive systems, which in fact is powered by Spring:<a href="https://projectreactor.io/">Project Reactor</a>. Reactor will be used in the upcoming Spring Release 5.0, coming as stable in September hopefully, which is going to introduce a<strong>reactive web framework</strong>called<a href="http://docs.spring.io/spring/docs/5.0.0.RC3/spring-framework-reference/web.html#web-reactive"><strong>WebFlux</strong></a>.</p>
+<p>This fact on it’s own is a good reason for me to dive into it as it sounds fairly fantastic knowing Web MVC as Spring’s outstanding module already. But, there’s yet another great reason to take this expansion into account: Spring is greatly supporting<strong>Kotlin</strong>and will even introduce_Kotlin dedicated_features with the upcoming major release ��</p>
+<p>This is going to be achieved by making use of extension functions in order to extend existing APIs and also by introducing Kotlin DSLs, also a topic I’m really interested in, as you can read in my post on<a href="https://blog.simon-wirtz.de/creating-dsl-with-kotlin-introducing-a-tlslibrary/">creating a DSL with Kotlin</a>. One of these new DSLs goes hand in hand with Spring<strong>WebFlux</strong>: a functional DSL for describing the WebFlux-backed web service. With that we want to create a Spring WebFlux with Kotlin app.</p>
+<p>This in fact is what I am going to present to you in a very short example up next…​</p>
+<h2 id="Spring-WebFlux-with-Kotlin-in-Action"><a href="#Spring-WebFlux-with-Kotlin-in-Action" class="headerlink" title="Spring WebFlux with Kotlin in Action"></a>Spring WebFlux with Kotlin in Action</h2><p>Let’s have a look at a very basic application using_Spring WebFlux_in a_Kotlin_application. The initial setup can easily be downloaded as a<strong>SpringBoot</strong>application from<a href="https://start.spring.io/">Spring Initializr</a>, if you choose Kotlin as the programming language and also enable the “Reactive Web” dependency, which is available since SpringBoot 2.0.0.</p>
+<p><img src="http://img1.tuicool.com/MziaEr2.png!web" alt=""></p>
+<p>As soon as we’ve imported this project into our IDE, we can start with creating a reactive web service.</p>
+<p>For the sake of brevity, I chose a very simple, not very useful, example: An internally managed repository of simple<code>String</code>s, that is populated through the web interface and also is searchable from it.</p>
+<p>Thanks to Kotlin, and also Spring, this is not much code to write:</p>
+<p><em>Repo and Handler</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@Component</div><div class="line">class</div><div class="line">ReactiveHandler</div><div class="line">(</div><div class="line">val</div><div class="line"> repo: StringRepo) &#123;</div><div class="line">    </div><div class="line">fun</div><div class="line">getText</div><div class="line">(search: </div><div class="line">String</div><div class="line">)</div><div class="line">: Mono</div><div class="line">&lt;</div><div class="line">String</div><div class="line">&gt;</div><div class="line"> =</div><div class="line">        repo.</div><div class="line">get</div><div class="line">(search).toMono().map &#123; </div><div class="line">&quot;Result: </div><div class="line">$it</div><div class="line">!&quot;</div><div class="line"> &#125;</div><div class="line">    </div><div class="line">fun</div><div class="line">addText</div><div class="line">(text: </div><div class="line">String</div><div class="line">)</div><div class="line">: Mono</div><div class="line">&lt;</div><div class="line">String</div><div class="line">&gt;</div><div class="line"> =</div><div class="line">        repo.add(text).toMono().map &#123; </div><div class="line">&quot;Result: </div><div class="line">$it</div><div class="line">!&quot;</div><div class="line"> &#125;</div><div class="line">    </div><div class="line">fun</div><div class="line">getAllTexts</div><div class="line">()</div><div class="line">: Flux</div><div class="line">&lt;</div><div class="line">String</div><div class="line">&gt;</div><div class="line"> =</div><div class="line">        repo.getAll().toFlux().map &#123; </div><div class="line">&quot;Result: </div><div class="line">$it</div><div class="line">&quot;</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">@Component</div><div class="line">class</div><div class="line">StringRepo</div><div class="line">&#123;</div><div class="line">    </div><div class="line">private</div><div class="line">val</div><div class="line"> entities = mutableListOf</div><div class="line">&lt;</div><div class="line">String</div><div class="line">&gt;</div><div class="line">()</div><div class="line">    </div><div class="line">fun</div><div class="line">add</div><div class="line">(s: </div><div class="line">String</div><div class="line">)</div><div class="line"> = entities.add(s)</div><div class="line">    </div><div class="line">fun</div><div class="line">get</div><div class="line">(s: </div><div class="line">String</div><div class="line">)</div><div class="line"> = entities.find &#123; it == s &#125; ?: </div><div class="line">&quot;not found!&quot;</div><div class="line">fun</div><div class="line">getAll</div><div class="line">()</div><div class="line"> = listOf(entities)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>We just create a repository that maintains a list of<code>String</code>s and another class<code>ReactiveHandler</code>, which is responsible for delegating to the repository and providing “reactive types” defined in Reactor and mandatory for WebFlux:<code>Flux</code>and<code>Mono</code>(Read about ’em<a href="https://github.com/reactor/reactor-core">here</a>). Regardless of their intention, have a look at how they are created:<code>toMono()</code>and<code>toFlux()</code>are an example of extension functions added in Spring 5.0, a feature dedicated to Kotlin.</p>
+<h3 id="Using-the-function-DSL"><a href="#Using-the-function-DSL" class="headerlink" title="Using the function DSL"></a>Using the function DSL</h3><p>The much more interesting part though, is where the web routing is defined. This part in particular is where the already mentioned functional DSL comes into play. Let’s observe how it works.</p>
+<p><em>Functional WebFlux DSL</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@Configuration</div><div class="line">class</div><div class="line">RoutingConfiguration</div><div class="line">&#123;</div><div class="line"></div><div class="line">    </div><div class="line">@Bean</div><div class="line">fun</div><div class="line">routerFunction</div><div class="line">(handler: </div><div class="line">ReactiveHandler</div><div class="line">)</div><div class="line">: </div><div class="line">          RouterFunction</div><div class="line">&lt;</div><div class="line">ServerResponse</div><div class="line">&gt;</div><div class="line"> = router &#123;</div><div class="line">        (</div><div class="line">&quot;/reactive&quot;</div><div class="line">).nest &#123;</div><div class="line">            </div><div class="line">val</div><div class="line"> searchPathName = </div><div class="line">&quot;search&quot;</div><div class="line">val</div><div class="line"> savePathName = </div><div class="line">&quot;save&quot;</div><div class="line"></div><div class="line">            GET(</div><div class="line">&quot;/&#123;</div><div class="line">$searchPathName</div><div class="line">&#125;&quot;</div><div class="line">) &#123; req -</div><div class="line">&gt;</div><div class="line">val</div><div class="line"> pathVar = req.pathVariable(searchPathName)</div><div class="line">                ServerResponse.ok().body(</div><div class="line">                        handler.getText(pathVar)</div><div class="line">                )</div><div class="line">            &#125;</div><div class="line">            GET(</div><div class="line">&quot;/&quot;</div><div class="line">) &#123;</div><div class="line">                ServerResponse.ok().body(handler.getAllTexts())</div><div class="line">            &#125;</div><div class="line">            PUT(</div><div class="line">&quot;/&#123;</div><div class="line">$savePathName</div><div class="line">&#125;&quot;</div><div class="line">) &#123; req -</div><div class="line">&gt;</div><div class="line">val</div><div class="line"> pathVar = req.pathVariable(savePathName)</div><div class="line">                ServerResponse.ok().body(</div><div class="line">                        handler.addText(pathVar)</div><div class="line">                )</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The<code>router</code>function is the entry point of the new DSL, whose definition you can observe on<a href="https://github.com/spring-projects/spring-framework/blob/master/spring-webflux/src/main/kotlin/org/springframework/web/reactive/function/server/RouterFunctionDsl.kt">GitHub</a>. The shown solution is just one out of many possible solutions since the DSL provides more ways you can choose from. With my definition, the server starts a web service under “/reactive” and accepts two GET requests and a PUT request, each of which is delegated to the previously shown<code>ReactiveHandler</code>(see method parameter) before the results are put into a<code>ServerResponse</code>. Of course, you’d have to handle errors in a real-world scenario and “ok” wouldn’t be the only response.</p>
+<h3 id="Benefit"><a href="#Benefit" class="headerlink" title="Benefit"></a>Benefit</h3><p>If you ask me, this approach is very clean structured and even provides the opportunity of using any Kotlin code for defining variables, loops, conditions, whatsoever inside the actual DSL code. Given that, you have a very powerful tool which can be utilized in a very natural programmatic way.</p>
+<p>If your like to check this out, the code is available in my<a href="https://github.com/s1monw1/SpringWebFluxKotlin">repository</a>.</p>
+<h2 id="Wrap-up-and-Perspective"><a href="#Wrap-up-and-Perspective" class="headerlink" title="Wrap-up and Perspective"></a>Wrap-up and Perspective</h2><p>I’ve presented a small project that’s making use of Spring 5.0 and its new module WebFlux in combination with Kotlin. I think, the fact, that Spring officially uses and supports Kotlin is a<strong>very</strong>important one, I’d like to emphasize once again.</p>
+<h3 id="Kotlin-–-It’s-not-only-Android"><a href="#Kotlin-–-It’s-not-only-Android" class="headerlink" title="Kotlin – It’s not only Android!"></a>Kotlin – It’s not only Android!</h3><p>We all know, that Kotlin made its way into Android, which was possible because Google announced the official support a few weeks ago. On the server-side though, people and especially companies hesitate when it comes to Kotlin. They tend to have doubts as to whether Kotlin’s really mature enough already.</p>
+<p>When you<a href="https://twitter.com/s1m0nw1/status/895752250144022528">ask me</a>, there’s no good reason for hesitation. Many projects use Kotlin already, frameworks support Kotlin and even extend their libraries with dedicated Kotlin features. Spring, as one of the most common Java frameworks seems to think the same as they quickly adopted Kotlin as an<a href="https://spring.io/blog/2016/02/15/developing-spring-boot-applications-with-kotlin">alternative</a>to Java and Groovy for SpringBoot applications. The most recent developments, which are part of Spring 5.0, are the next step, some of which we’ve observed in this little article.</p>
+<p>If you’re, same as me, interested in spreading Kotlin as an alternative to Java, talk about it and tell your colleagues about Spring’s support and what’s actually happening :wink:</p>
+<h3 id="Special-Thanks"><a href="#Special-Thanks" class="headerlink" title="Special Thanks"></a>Special Thanks</h3><p>As you can read in this<a href="https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0">article</a>, Spring’s introducing quite a few Kotlin features. There’s one guy,<strong>Sébastien Deleuze</strong>, who’s highly responsible for this development in the Spring Framework. He has also been part of<a href="http://talkingkotlin.com/spring-boot-with-sebastian-delueze/">talkingkotlin</a>already, as one of the first discussion partners of Hadi Hariri. It’s really great to have such influencers in the Kotlin community, many thanks to you!<strong>Keep up the great work</strong>��</p>
+<p>If you like to have a look at my examples, the code is available here:<a href="https://github.com/s1monw1/SpringWebFluxKotlin">Git</a>. Feel free, to give any feedback, I’m always happy to help. Also, If you like, have a look at my<a href="https://twitter.com/s1m0nw1">Twitter</a>account and follow if you’re interested in more Kotlin stuff �� Thanks a lot.</p>
+<p>Simon</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/3myYbu3">https://blog.simon-wirtz.de/spring-webflux-with-kotlin-reactive-web/</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/08/21/spring-webflux-with-kotlin-reactive-web/index.html';
+  var disqus_title = "Spring WebFlux with Kotlin – Reactive Web";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-–-even-more-fancy"><span class="toc-text">Spring – even more fancy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Reactive-Programming-–-The-non-blocking-way"><span class="toc-text">Reactive Programming – The non-blocking way</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-reactive"><span class="toc-text">Spring reactive</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-WebFlux-with-Kotlin-in-Action"><span class="toc-text">Spring WebFlux with Kotlin in Action</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-the-function-DSL"><span class="toc-text">Using the function DSL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Benefit"><span class="toc-text">Benefit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Wrap-up-and-Perspective"><span class="toc-text">Wrap-up and Perspective</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Kotlin-–-It’s-not-only-Android"><span class="toc-text">Kotlin – It’s not only Android!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Special-Thanks"><span class="toc-text">Special Thanks</span></a></li></ol></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
