@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>What Is Bitwise and Is It Still Relevant in Modern PHP? - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="What Is Bitwise and Is It Still Relevant in Modern PHP?" />
+  <meta name="description" content="What Is Bitwise and Is It Still Relevant in Modern PHP?" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="What Is Bitwise and Is It Still Relevant in Modern PHP? - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="What Is Bitwise and Is It Still Relevant in Modern PHP? - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/08/22/what-is-bitwise-and-is-it-still-relevant-in-modern-php/index.html">
+<meta property="og:site_name" content="What Is Bitwise and Is It Still Relevant in Modern PHP? - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="What Is Bitwise and Is It Still Relevant in Modern PHP? - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://img2.tuicool.com/ANfaUjA.jpg!web">
+<meta property="og:updated_time" content="2017-08-22T12:00:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Is Bitwise and Is It Still Relevant in Modern PHP? - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="What Is Bitwise and Is It Still Relevant in Modern PHP? - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="http://img2.tuicool.com/ANfaUjA.jpg!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/08/22/what-is-bitwise-and-is-it-still-relevant-in-modern-php/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/08/22/what-is-bitwise-and-is-it-still-relevant-in-modern-php/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-6ac2b4c9e5.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> What Is Bitwise and Is It Still Relevant in Modern PHP? </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">What Is Bitwise and Is It Still Relevant in Modern PHP?</h1>
+    
+    <a href="/blog/2017/08/22/what-is-bitwise-and-is-it-still-relevant-in-modern-php/" class="article-date"><time datetime="2017-08-22T00:00:00.000Z">2017-08-22</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p>Many of you probably scratched your heads reading this title. “Bitwhat?”</p>
+<p>In this article, we’ll look at what bitwise operators are, and whether or not their use is still relevant in this modern age of computing.</p>
+<p><img src="http://img2.tuicool.com/ANfaUjA.jpg!web" alt=""></p>
+<p>–ADVERTISEMENT–</p>
+<h2 id="Example-Use-Case"><a href="#Example-Use-Case" class="headerlink" title="Example Use Case"></a>Example Use Case</h2><p>Bitwise operators are<a href="http://php.net/manual/en/language.operators.bitwise.php">listed here</a>, but to really drive the example home, we’ll focus on just one: the<em>bitwise and</em>(<code>&amp;</code>). An example made it click for me. So that’s what we’ll do – dive straight into an example.</p>
+<p>Imagine you have a website on which a given user can have specific permissions. For example, a magazine like SitePoint:</p>
+<ul>
+<li>a author can CRUD drafts, and and edit their profile.</li>
+<li>an editor can, in addition to the above, CRUD drafts and finished posts, and CRUD author profiles.</li>
+<li>an administrator can, in addition to the above, add administrator permissions.</li>
+</ul>
+<p>Since a user can have multiple permissions, there are several ways of defining permissions in a database and the system using it.</p>
+<h3 id="The-Double-Join"><a href="#The-Double-Join" class="headerlink" title="The Double Join"></a>The Double Join</h3><p>Add roles, add permissions, attach permissions to roles in a join table, then create another join table and bind some roles to some users.</p>
+<p>This approach creates four extra tables:</p>
+<ul>
+<li>permissions</li>
+<li>roles</li>
+<li>permissions&lt;_&gt;roles</li>
+<li>roles&lt;_&gt;users</li>
+</ul>
+<p>Quite a bit of overhead. Imagine having to edit these or list them in the app regularly in some frequently visited lists. Only heavy caching would save this app from collapsing under heavy load.</p>
+<p>One advantage, though, is that by defining roles really well with intricate permissions, you only have to stick users into roles and you’re good – it keeps that join table light and fast.</p>
+<h3 id="The-Single-Join"><a href="#The-Single-Join" class="headerlink" title="The Single Join"></a>The Single Join</h3><p>Add permissions, add a join table, attach some permissions to some users</p>
+<p>This approach creates two extra tables:</p>
+<ul>
+<li>permissions</li>
+<li>permissions&lt;_&gt;users</li>
+</ul>
+<p>Much less overhead than the previous example, but you have many more entries in the join table because a user can have a LOT of permissions (just the CRUD for drafting is 4 permissions on its own). With a lot of users and a lot of permissions, this table can get heavy quickly.</p>
+<h3 id="The-Column-Stampede"><a href="#The-Column-Stampede" class="headerlink" title="The Column Stampede"></a>The Column Stampede</h3><p>Add a column into the users table for each permission, then make its datatype a tinyint(1) (basically a boolean) to check the permission as “on” or “off”.</p>
+<p>Setting permissions for a user would then look something like this:</p>
+<pre><code>UPDATE `users` SET `editProfile` = 1, `deleteProfile` = 0, `createDraft` = 1, `publishDraft` = 0 ... WHERE `id` = 5
+</code></pre><p>This approach adds no extra tables, but needlessly expands the table into gargantuan width, and requires a modification of the database every time a new permission is added. It’s a fine approach for when you know you’ll have at most two or three permissions for the foreseeable future, but shouldn’t be used for anything more than that.</p>
+<p>However, because the list of columns, when looked at from afar, resembles a binary number (1010), this approach is an excellent segway into another…</p>
+<h2 id="The-Bitwise-Approach"><a href="#The-Bitwise-Approach" class="headerlink" title="The Bitwise Approach"></a>The Bitwise Approach</h2><p>Before we dive deeper into this approach, let’s have a crash course in binary.</p>
+<h3 id="Binary-Numbers"><a href="#Binary-Numbers" class="headerlink" title="Binary Numbers"></a>Binary Numbers</h3><p>All computers store data as binary: 0 or 1. So, the number 14 is actually stored as: 1110. How so?</p>
+<p>Binary numbers are evaluated from right to left when calculating their value, just like real numbers. So the number 1337 means:</p>
+<ul>
+<li>1 x 7</li>
+<li><ul>
+<li>3 x 10</li>
+</ul>
+</li>
+<li><ul>
+<li>3 x 100</li>
+</ul>
+</li>
+<li><ul>
+<li>1 x 1000</li>
+</ul>
+</li>
+</ul>
+<p>Because each digit in the decimal system (base 10) gets multiplied by 10. The first one is 1, the next one is 10, the next after that 100, the next 1000, etc.</p>
+<p>In binary, the base is 2, so each digit gets multiplied by 2. The number 1110 is therefore:</p>
+<ul>
+<li>0 x 1</li>
+<li><ul>
+<li>1 x 2</li>
+</ul>
+</li>
+<li><ul>
+<li>1 x 4</li>
+</ul>
+</li>
+<li><ul>
+<li>1 x 8</li>
+</ul>
+</li>
+</ul>
+<p>That’s 2 + 4 + 8, which is 14.</p>
+<p>Yes, it’s that simple to convert binary numbers to decimal.</p>
+<p>So when we look at our columns of permissions from before being 1010, that might as well be seen as the number 10 written in binary form. Hmm, maybe we’re onto something here.</p>
+<p>If we have 1010 as permissions, that means the 2nd and 4th bit are set, whereas the first and third are not (because they are 0).</p>
+<p>In binary parlance, we actually say the 0th and 2nd bit are not set, because they’re counted from 0, just like arrays. This is because their ordinal number (1st, 2nd, 3rd) corresponds to their exponent. The 0th bit is actually 2 to the power of 0 (2^0) which equals 1. The 1st bit is 2 to the power of 1 (2^1) which is 2. The 2nd is 2 squared (2^2) which equals 4, etc. That way it’s all very easy to remember.</p>
+<p>So how does this help us?</p>
+<h3 id="The-Bitwise-Approach-1"><a href="#The-Bitwise-Approach-1" class="headerlink" title="The Bitwise Approach"></a>The Bitwise Approach</h3><p>Well, by looking at permissions from afar, we can represent the state of_all the columns at once_with a single binary number. If we can represent all the columns at once with a single binary number, that means we can also represent it with a single integer when translated into decimal!</p>
+<p>If we had a single<code>permissions</code>column which contained the value<code>14</code>, we would now know that this is actually<code>1110</code>, and we would know that we have three out of four permissions! But which 3 our of 4?</p>
+<p>Imagine the following mapping of permissions:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">CHANGE PERMISSIONS</th>
+<th style="text-align:left">PROFILE CREATE</th>
+<th style="text-align:left">PROFILE EDIT</th>
+<th style="text-align:left">PROFILE DELETE</th>
+<th style="text-align:left">DRAFT CREATE</th>
+<th style="text-align:left">DRAFT EDIT</th>
+<th style="text-align:left">DRAFT DELETE</th>
+<th style="text-align:left">DRAFT PUBLISH</th>
+<th style="text-align:left">FINISHED EDIT</th>
+<th style="text-align:left">FINISHED DELETE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">512</td>
+<td style="text-align:left">256</td>
+<td style="text-align:left">128</td>
+<td style="text-align:left">64</td>
+<td style="text-align:left">32</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1</td>
+</tr>
+</tbody>
+</table>
+<p>The number 14 in binary is 1110, but the number of zeroes on the left doesn’t matter, so we can pad it until we reach the number of the permissions in the table: 0000001110. This is still 14, only representative of the permissions from the table above. For all intents and purposes, 0000001110 === 1110.</p>
+<p>According to this, we see that the account with a permission of<code>14</code>has the permissions:<code>DRAFT_DELETE</code>,<code>DRAFT_PUBLISH</code>, and<code>FINISHED_EDIT</code>. Granted, not exactly representative of a real world permission setup, but it’s just an example through which we can extrapolate that if one were to have 1111111111, they would have ALL the permissions (likely an admin user). In decimal, this is 1023. So, someone with the value<code>1023</code>in the<code>permissions</code>column is someone with all the permissions.</p>
+<p>But how would we check for this in our code? In other words, how can we know if a permission’s bit is set (1) or not (0), especially if a number is stored as decimal, and not binary?</p>
+<p>That’s what bitwise operators are for – particularly the single ampersand<code>&amp;</code>, also known as the<em>bitwise and</em>.</p>
+<p>MySQL supports it like so:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">SELECT * FROM user WHERE id = 5 AND 512 &amp; permissions</div></pre></td></tr></table></figure>
+<p>This translates literally to “select all users with the ID 5 who also have the_512 bit_of the column<code>permissions</code>set to 1″. You would check for other bits by just changing their value: 256, 128, 64, 32, 16, 8, 4, 2, or 1.</p>
+<h3 id="The-optional-“let’s-get-technical”-side-note"><a href="#The-optional-“let’s-get-technical”-side-note" class="headerlink" title="The [optional] “let’s get technical” side-note"></a>The [optional] “let’s get technical” side-note</h3><p>Skip this divided section if you don’t want to know how this operator, or similar operators work, but are just interested in continuing with the example.</p>
+<p>When we say<code>AND 512 &amp; permissions</code>we’re looking for the part after AND to be TRUE, because that’s how SQL queries operate – they evaluate conditions and return those rows which return true in regards to requirements.</p>
+<p>Therefore,<code>512 &amp; permissions</code>has to evaluate to true. We know that any non-zero value, be it an integer, a boolean that says “true”, or a string that is not empty, is actually considered “true”. So 512 is true. 1 is true. 0 is false. 128 is true. Etc.</p>
+<p>512 is a base-10 integer, and<code>permissions</code>is a column which can contain a base-10 integer. The_bitwise and_actually looks at the cross-section of these two numbers, and returns the bits that are set (1) in both of them. So, if the number 512 is 1000000000, and if the permissions value is 1023, when converted into binary that’s 1111111111. The cross section of those returns 1000000000 because only the left-most bit is set in both numbers. When we convert this back into decimal, that’s 512, which is considered<code>true</code>.</p>
+<p>These are actually logical, not arithmetic operators, in that they check for truthiness based on a condition. If we have the numbers 1110 and 1010, here’s what they produce given the different bitwise operators:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">–</th>
+<th style="text-align:left">&amp;</th>
+<th style="text-align:left">\</th>
+<th style="text-align:left"></th>
+<th style="text-align:left">^</th>
+<th>~</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Operand A</td>
+<td style="text-align:left">1110</td>
+<td style="text-align:left">1110</td>
+<td style="text-align:left">1110</td>
+<td style="text-align:left">1110</td>
+</tr>
+<tr>
+<td style="text-align:left">Operand B</td>
+<td style="text-align:left">1010</td>
+<td style="text-align:left">1010</td>
+<td style="text-align:left">1010</td>
+<td style="text-align:left">/</td>
+</tr>
+<tr>
+<td style="text-align:left">Result</td>
+<td style="text-align:left">1010</td>
+<td style="text-align:left">1110</td>
+<td style="text-align:left">0100</td>
+<td style="text-align:left">0001</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>&amp;</code>returns a binary number in which all bits are set that are set in both operands.</li>
+<li><code>|</code>returns a binary number with all bits set that are set in either operand.</li>
+<li><code>^</code>returns a binary number with all bits set that are set in either operand, but not both.</li>
+<li><code>~</code>just returns the opposite – all those not set in the original operand are now set.</li>
+</ul>
+<p>There are also the bitwise shift operators: left shift<code>&lt;&lt;</code>and right shift<code>&gt;&gt;</code>. These dramatically change the values of binary numbers by literally moving all set bits one place to the right or left. Their use in our context is questionable, so we won’t be covering them here.</p>
+<p>And in PHP we can test if a bit is set like so:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">if (1023 &amp; 1) &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>But this is really, really hard to decipher – just looking at raw numbers isn’t really readable or understandable. So, in PHP, it’s better to use constants defining permissions as bits, and fetching the permission’s integer value from the column. Then, you end up with something like this:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">if ($user-&gt;permissions &amp; \MyNamespace\Role::FINISHED_DELETE) &#123;</div><div class="line">  // </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Here we assume we’ve got a<code>\MyNamespace\Role</code>class defined and loaded with constants like these:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">const FINISHED_DELETE = 1;</div><div class="line">const FINISHED_EDIT = 2;</div><div class="line">const DRAFT_PUBLISH = 8;</div><div class="line">...</div><div class="line">const CHANGE_PERMISSIONS = 512;</div></pre></td></tr></table></figure>
+<p>Suddenly, you’ve got a really easy way of storing multiple permissions per user without using extra tables and creating unnecessary overhead.</p>
+<p>So how do we store this in the database when permissions change? Just sum the permissions together, and store them as integer! A person who can<code>FINISHED_DELETE</code>and<code>FINISHED_EDIT</code>has permission 1 and 2, as per the constants above. Therefore, to save their permissions, you simply sum them up (1+2=3) and save 3 into the<code>permissions</code>column. There is_no other way_to get the number 3 with binary combinations – the number 3 cannot be represented in binary in any other way than 0011 – so you can be 100% certain that number 3 always means the user has permission 1 and permission 2, corresponding to their values in constants.</p>
+<p>This seems too simple and practical, right? What’s the catch?</p>
+<h2 id="Watch-Exploring-PHP"><a href="#Watch-Exploring-PHP" class="headerlink" title="Watch Exploring PHP"></a>Watch Exploring PHP</h2><h3 id="Learning-more-about-PHP-one-video-at-a-time"><a href="#Learning-more-about-PHP-one-video-at-a-time" class="headerlink" title="Learning more about PHP, one video at a time"></a>Learning more about PHP, one video at a time</h3><p><a href="https://www.sitepoint.com/premium/courses/exploring-php-2951">Start Watching Now</a><a href="https://www.sitepoint.com/premium/courses/exploring-php-2951">Start Watching Now</a></p>
+<h2 id="Caveats"><a href="#Caveats" class="headerlink" title="Caveats"></a>Caveats</h2><p>There are two major caveats:</p>
+<ol>
+<li>You need to keep in mind to use the power of 2 when calculating the next permission’s bit value. So if you need to add a new permission, you can’t just willy-nilly pick 543 if you already have 512 – it’ll have to be 1024. This gets a little more complex as the numbers get bigger.</li>
+<li>Since our computers are running 64 bit operating systems on 64 bit CPUs (mostly – some are even stuck on 32bit still!), that means a number can have a maximum of 64 bits only. What this means is that you can only store permutations of a maximum of 64 permission on a given user. For small to medium sites this is quite enough, but on enormous websites, this can turn into a problem. The solution there is to use different columns for different permission contexts (<br><code>draft_permissions</code><br>,<br><code>account_permissions</code><br>, etc.). Each of those columns can then contain permutations of 64 permissions on its own, which is enough for even the most demanding websites.</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Bitwise operations definitely still have a place in modern programming. While it may be counterintuitive to use something so seemingly complex (it’s really not – it’s just not nearly as familiar as modern day join tables), this approach brings many benefits – not the least of which is a dramatic boost in performance, both in data size (a lot less information to store in the database, and to subsequently fetch) and speed (a user object can have their permission value pre-fetched – it’s just an int – and thus can be checked for it at all times).</p>
+<p>Packages as those presented<a href="https://laravel-news.com/two-best-roles-permissions-packages">here</a>certainly make things simple, but only if you’re not already aware of even simpler alternatives like the ones demonstrated above.</p>
+<p>How do you feel about using bitwise operators for checking permissions and this approach to storing them? Any obvious pros / cons? Let us know how you do it, and why!</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/6jIJnmu">https://www.sitepoint.com/bitwise-operators-still-relevant-modern-php/</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/08/22/what-is-bitwise-and-is-it-still-relevant-in-modern-php/index.html';
+  var disqus_title = "What Is Bitwise and Is It Still Relevant in Modern PHP?";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Example-Use-Case"><span class="toc-text">Example Use Case</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Double-Join"><span class="toc-text">The Double Join</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Single-Join"><span class="toc-text">The Single Join</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Column-Stampede"><span class="toc-text">The Column Stampede</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Bitwise-Approach"><span class="toc-text">The Bitwise Approach</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Binary-Numbers"><span class="toc-text">Binary Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Bitwise-Approach-1"><span class="toc-text">The Bitwise Approach</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-optional-“let’s-get-technical”-side-note"><span class="toc-text">The [optional] “let’s get technical” side-note</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Watch-Exploring-PHP"><span class="toc-text">Watch Exploring PHP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Learning-more-about-PHP-one-video-at-a-time"><span class="toc-text">Learning more about PHP, one video at a time</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Caveats"><span class="toc-text">Caveats</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
