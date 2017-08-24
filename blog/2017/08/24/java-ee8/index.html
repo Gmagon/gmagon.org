@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>How Java EE began, how it's grown and what's coming in Java EE 8 - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="How Java EE began, how it's grown and what's coming in Java EE 8" />
+  <meta name="description" content="How Java EE began, how it's grown and what's coming in Java EE 8" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="How Java EE began, how it&apos;s grown and what&apos;s coming in Java EE 8 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="How Java EE began, how it&#39;s grown and what&#39;s coming in Java EE 8 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/08/24/java-ee8/index.html">
+<meta property="og:site_name" content="How Java EE began, how it&#39;s grown and what&#39;s coming in Java EE 8 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="How Java EE began, how it&apos;s grown and what&apos;s coming in Java EE 8 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://i1.wp.com/readlearncode.com/wp-content/uploads/2017/02/java-ee-histroy.png">
+<meta property="og:image" content="https://i1.wp.com/readlearncode.com/wp-content/uploads/2017/02/java_ee_8_apis.png">
+<meta property="og:image" content="https://i1.wp.com/readlearncode.com/wp-content/uploads/2017/02/java-ee-7-apis.png?resize=620%2C273&ssl=1">
+<meta property="og:updated_time" content="2017-08-24T05:41:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How Java EE began, how it&#39;s grown and what&#39;s coming in Java EE 8 - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="How Java EE began, how it&apos;s grown and what&apos;s coming in Java EE 8 - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="https://i1.wp.com/readlearncode.com/wp-content/uploads/2017/02/java-ee-histroy.png">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/08/24/java-ee8/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/08/24/java-ee8/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-6ac2b4c9e5.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> How Java EE began, how it's grown and what's coming in Java EE 8 </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">How Java EE began, how it's grown and what's coming in Java EE 8</h1>
+    
+    <a href="/blog/2017/08/24/java-ee8/" class="article-date"><time datetime="2017-08-24T00:00:00.000Z">2017-08-24</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p>In this article, you will find out about the history of the Java EE ecosystem: Where it came from and how it has changed over the last few decades. You will discover the major milestones in its development from J2EE 1.2 to its current incarnation Java EE 7 and we will peek into the future at what Java EE 8 has in store.</p>
+<p>You will discover how to get involved with the development of the platform itself and how to join the <a href="http://jcp.org/">JCP.org</a> to make an even greater contribution. Find out about the <a href="https://javaee-guardians.io/">Java EE Guardians</a> and how you can support the development and growth of the platform.</p>
+<h2 id="What-Is-Java-EE"><a href="#What-Is-Java-EE" class="headerlink" title="What Is Java EE?"></a><strong>What Is Java EE?</strong></h2><p>Java EE consists of a set of over 28 specifications and a runtime environment. It is a <strong>superset of the Java SE platform</strong>. This means that Java EE components can take full advantages of all Java SE APIs.</p>
+<p>This set of APIs build standard component-based multi-tier applications and that deploy in different containers offering a variety of services. Not only is it be used to develop <strong>monolithic</strong> application structures but also <strong>microservices</strong> structured applications too. Learn more about Java EE and microservices by checking out <a href="https://www.infoq.com/news/2016/02/javaee-microservices">Java EE and Microservices in 2016?</a> Are you interested in cutting edge development in the microservices space in relation to Java EE? Then visit the <a href="http://www.microprofile.io/">Eclipse Microprofile</a> project website.</p>
+<p>The <strong>Java EE programming model</strong> relies on annotations to specify configurations rather than XML description files and uses convention over configuration to help you get up and running with as little ceremony as possible.</p>
+<p>It has its own contextually aware dependency injection framework at the heart of it programming model.</p>
+<h2 id="History-of-Enterprise-Java"><a href="#History-of-Enterprise-Java" class="headerlink" title="History of Enterprise Java"></a><strong>History of Enterprise Java</strong></h2><p><strong>1998 saw the release of the</strong> first incarnation of Enterprise Java, but soon after, important technologies soon joined the mix, such as <strong>Servlets</strong>, <strong>Messaging</strong>, and <strong>Enterprise Java Beans</strong>.<img src="https://i1.wp.com/readlearncode.com/wp-content/uploads/2017/02/java-ee-histroy.png" alt="">These technologies still exist in the Enterprise platform today but in a much more advanced and comprehensive form.</p>
+<p>Over the following years, it developed a programming model that was difficult to use and very cumbersome. This all changed in the fifth edition, which saw a radical <strong>shift away from XML </strong>configuration towards annotations and <strong>convention over configuration</strong>.</p>
+<p>The new programming model had <strong>simplified substantially</strong>. Annotations replace XML description files, convention over configuration replaces the tedious manual configuration and dependency injection hides the creation and lookup of resources. <strong>Resources are created and injected</strong> at injection points marked by annotations such as @Inject. So all you need is a POJO that meets the conditions of the managed beans specification, <a href="https://jcp.org/en/jsr/detail?id=299">JSR 299</a>, and depending on the annotation used it will become an <strong>EJB</strong>, <strong>Servlet</strong>, <strong>Singleton</strong> or a <strong>RESTful web service</strong>.</p>
+<p>The platform continued to grow, but at a much slower rate. With each new release, it becomes <strong>more programmer friendly</strong> and the number of <strong>APIs blossomed</strong> to reach 28+, up from just a handful of five APIs in 1999.</p>
+<p>So what’s planned in Java EE 8?</p>
+<h2 id="What’s-Coming-in-Java-EE-8"><a href="#What’s-Coming-in-Java-EE-8" class="headerlink" title="What’s Coming in Java EE 8?"></a><strong>What’s Coming in Java EE 8?</strong></h2><p>Oracle is moving Java EE’s focus to microservices and the cloud, and the next version of Java EE is going to include APIs that complement this new direction.</p>
+<p>So as well as advancements in some already established technologies such as Bean Validation, Context and Dependency Injection, JavaServer Faces, <a href="https://readlearncode.com/java-ee/java-ee-what-is-jax-rs-2-0/"><strong>JAX-RS (RESTful web services)</strong></a>, <a href="http://www.lynda.com/Java-tutorials/JSON-Processing-Java-EE/574695-2.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=&amp;bid=524&amp;subID1=d-zone&amp;aid="><strong>JSON-Processing</strong></a>and Servlets, there will be two new APIs.</p>
+<p>JSON-binding, a dedicated security API and Security API for Java EE, designed to standardize security.<img src="https://i1.wp.com/readlearncode.com/wp-content/uploads/2017/02/java_ee_8_apis.png" alt="">Java EE 9 will see even more APIs designed for the development of microservices and cloud-based applications.</p>
+<h2 id="Java-EE-Guardians"><a href="#Java-EE-Guardians" class="headerlink" title="Java EE Guardians"></a><strong>Java EE Guardians</strong></h2><p>The <a href="https://javaee-guardians.io/">Java EE Guardians</a> are an independent group of Java Enterprise Edition developers and evangelists that are collaborating to move Java EE forward.</p>
+<p><strong>Their purpose is advocacy</strong>, raising awareness, finding solutions, collaboration, and mutual support. Please support their efforts. You can join them by visiting their website <a href="https://javaee-guardians.io/"><strong>javaee-guardians.io</strong></a> and you follow them on the twitter handle <a href="https://twitter.com/javaee_guardian?lang=en">@javaee_gaurdian</a>.</p>
+<h2 id="Java-Community-Process-JCP"><a href="#Java-Community-Process-JCP" class="headerlink" title="Java Community Process (JCP)"></a><strong>Java Community Process (JCP)</strong></h2><p>The Java EE platform development happens through the Java Community Process (JCP), which is <strong>responsible for all Java technologies</strong>.</p>
+<p>The expert group consists of interested parties that have created <strong>Java Specification Requests </strong>(JSRs) to define the various Java EE technologies. All done in cooperation with the international Java developer community.</p>
+<p>The work of the Java Community under the JCP program helps to ensure Java technology’s standards of stability and <strong>cross-platform compatibility</strong>.</p>
+<p>Anyone can review and comment on draft specifications and JSR proposals, as well as read the <a href="https://blogs.oracle.com/jcp/">JCP blog</a>. Anyone can register as a user of the site and can self-nominate as a Contributor or Expert Group member. You can <strong>become a JCP Member yourself</strong> and make an even greater contribution. Go to the link to discover more.</p>
+<h2 id="Java-EE-7"><a href="#Java-EE-7" class="headerlink" title="Java EE 7"></a><strong>Java EE 7</strong></h2><p>Once a JSR is approved and its development finalized, it forms part for the next release of the platform.</p>
+<p>The<strong> Java EE 7 release added four new APIs</strong>.</p>
+<p><img src="https://i1.wp.com/readlearncode.com/wp-content/uploads/2017/02/java-ee-7-apis.png?resize=620%2C273&amp;ssl=1" alt=""></p>
+<p>They were <strong>JSON-Processing</strong>, <strong>WebSocket API</strong>, <strong>Batch Processing</strong> and <strong>Concurrency</strong>. All these APIs started life as a JSR on which the community and JCP members commented, deliberated and discussed until a final specification request was devised and the development could begin.</p>
+<h2 id="What-Next"><a href="#What-Next" class="headerlink" title="What Next?"></a>What Next?</h2><p>Lynda.com offers online video training for a wide range of Java EE technologies. The ideal course for someone just starting out in enterprise Java is the <a href="http://www.lynda.com/Java-tutorials/Java-Enterprise-Edition-Introduction/516591-2.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=&amp;bid=524&amp;subID1=d-zone&amp;aid="><strong>Learning Java Enterprise Edition</strong></a> presented by myself. The course is just over 2hrs and covers all the most important Java EE APIs including JAX-RS for RESTful APIs, JavaServerFaces, Enterprise Java Beans and much more.</p>
+<p>Once you have completed this course you can dive deeper into the Java the Java EE APIs and take a course on how to build a <a href="http://www.lynda.com/Java-tutorials/RESTful-Service-JAX-RS-2-0/574687-2.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=&amp;bid=524&amp;subID1=d-zone&amp;aid="><strong>RESTful API with JAX-RS</strong></a>, build a <a href="http://www.lynda.com/Java-tutorials/WebSocket-Programming-Java-EE/574694-2.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=&amp;bid=524&amp;subID1=d-zone&amp;aid="><strong>chat application with WebSocket API</strong></a> and handle JSON with Java EE’s own <a href="http://www.lynda.com/Java-tutorials/JSON-Processing-Java-EE/574695-2.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=&amp;bid=524&amp;subID1=d-zone&amp;aid="><strong>JSON-Processing API</strong></a>. There are more courses coming so why not take a take a look and get ready to give your Java EE career a boost.</p>
+<h2 id="Further-Reading"><a href="#Further-Reading" class="headerlink" title="Further Reading"></a>Further Reading</h2><p>I write about Java EE on my blog <a href="http://www.readlearncode.com/"><strong>readlearncode.com</strong></a> and have recently published a series of articles focusing on <a href="https://readlearncode.com/tag/jax-rs/"><strong>JAX-RS</strong></a> and discussing <a href="https://readlearncode.com/java-ee/what-is-javax-ws-rs-core-context-httpheaders-and-uriinfo/"><strong>What is javax.ws.rs.core.context?</strong></a>. It is a 5 part series diving deep into the many usages of the @Context annotation.</p>
+<p>If you want to learn more about this technology, my articles on <a href="https://readlearncode.com/java-ee/java-ee-jax-rs-bean-validation-failure-management/"><strong>how to handle bean validation</strong></a>, <a href="https://readlearncode.com/java-ee/java-ee-working-with-jax-rs-consumes-and-produces/"><strong>MediaTypes and JAX-RS</strong></a>, and <a href="https://readlearncode.com/java-ee/java-ee-how-to-create-jax-rs-resource-entities/"><strong>Resource Entities</strong></a>, take you deeper into this essential API.</p>
+<p>Source:<a href="https://dzone.com/articles/java-ee-past-present-and-future">https://dzone.com/articles/java-ee-past-present-and-future</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/08/24/java-ee8/index.html';
+  var disqus_title = "How Java EE began, how it's grown and what's coming in Java EE 8";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Is-Java-EE"><span class="toc-text">What Is Java EE?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#History-of-Enterprise-Java"><span class="toc-text">History of Enterprise Java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What’s-Coming-in-Java-EE-8"><span class="toc-text">What’s Coming in Java EE 8?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-EE-Guardians"><span class="toc-text">Java EE Guardians</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Community-Process-JCP"><span class="toc-text">Java Community Process (JCP)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-EE-7"><span class="toc-text">Java EE 7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Next"><span class="toc-text">What Next?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Further-Reading"><span class="toc-text">Further Reading</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

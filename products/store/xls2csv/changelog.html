@@ -23,10 +23,16 @@
 <meta property="og:site_name" content="XLS2csv Release Notes - Gmagon Software - handy and professional Mac apps.">
 <meta property="og:description" content="XLS2csv Release Notes - Gmagon Software - handy and professional Mac apps.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-11T03:34:45.000Z">
+<meta property="og:image" content="https://gmagon.com/products/store/xls2csv/images/screens/xls2csv5.1-1.png">
+<meta property="og:image" content="https://gmagon.com/products/store/xls2csv/images/screens/xls2csv5.1-3.png">
+<meta property="og:image" content="https://gmagon.com/products/store/xls2csv/images/screens/xls2csv5.1-2.png">
+<meta property="og:image" content="https://gmagon.com/products/store/xls2csv/images/screens/xls2csv5.1-4.png">
+<meta property="og:image" content="https://gmagon.com/products/store/xls2csv/images/screens/xls2csv5.1-5.png">
+<meta property="og:updated_time" content="2017-08-24T13:13:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XLS2csv Release Notes - Gmagon Software - handy and professional Mac apps.">
 <meta name="twitter:description" content="XLS2csv Release Notes - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="https://gmagon.com/products/store/xls2csv/images/screens/xls2csv5.1-1.png">
 <meta name="twitter:site" content="gmagonshare">
 <meta property="fb:admins" content="432634277117208">
 <meat name="twitter:url" content="https://gmagon.com/products/store/xls2csv/changelog.html">
@@ -157,18 +163,76 @@
             <div class="article">
               <div class="inner">
                 <div class="article-content" itemprop="articleBody">
-                  <h2 id="Ver-5-0"><a href="#Ver-5-0" class="headerlink" title="Ver 5.0"></a>Ver 5.0</h2><script> GmagonUtils.$verNote('2017-07-23')</script>
-
-<h3 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h3><ul>
-<li>Upgrade core API.</li>
-<li>Logo redesign</li>
+                  <h2 id="Ver-5-1"><a href="#Ver-5-1" class="headerlink" title="Ver 5.1"></a>Ver 5.1</h2><p><script> GmagonUtils.$verNote(‘2017-08-23’)</script><br><img src="./images/screens/xls2csv5.1-1.png" alt=""></p>
+<p><br></p>
+<h3 id="xls-to-csv-part"><a href="#xls-to-csv-part" class="headerlink" title=".xls to .csv part"></a>.xls to .csv part</h3><blockquote>
+<ul>
+<li>Fix Memory overflow exception</li>
+<li>Fix the size of file parsing and bumper</li>
+<li>Fix the problem of default CSV field separator</li>
+<li>Delete the character of CSV field surrended by “”</li>
+<li>Support converting large .xls files</li>
+<li>Support generating the name of CSV file according to the number of Sheet.<br><img src="./images/screens/xls2csv5.1-3.png" alt=""></li>
 </ul>
-<h3 id="Downloads"><a href="#Downloads" class="headerlink" title="Downloads"></a>Downloads</h3><p><a href="http://www.filefactory.com/file/3gadfe8pnhit/XLS2csv-5.0.dmg">Download XLS2csv-v5.0.dmg</a>    | (~10.2MiB)</p>
-<hr>
-
+</blockquote>
+<p><br></p>
+<h3 id="xlsx-to-csv-part"><a href="#xlsx-to-csv-part" class="headerlink" title=".xlsx to .csv part"></a>.xlsx to .csv part</h3><blockquote>
+<ul>
+<li>Support .xlsx files (Microsoft Excel, Apple Numbers, Open Offices Excel)</li>
+<li>Support parsing section of data format conversion</li>
+<li>Support data format of WPS: <pre><code>1. WPS [176] Fraction expression format [#\ ?/?].  
+2. WPS [177] Common string format [0_ ]
+3. WPS [178] Date time format [yyyy/m/d;@]
+4. WPS [179] Date time format [[$-409]h:mm:ss\ AM/PM;@]
+5. WPS [180] Common format coding [[DBNum1][$-804]General]
+</code></pre></li>
+<li>Support data format of Common built-in format: <pre><code>1. built-in format style of parsing date
+2. built-in format style of variable reference
+3. built-in format style of parsing fraction
+4. built-in format style of parsing scientific counting expression
+5. built-in format style of parsing percentage
+6. built-in format style of parsing time
+7. built-in format style of parsing currency        
+</code></pre></li>
+<li>Support data format of Apple Numbers:<br><img src="./images/screens/xls2csv5.1-2.png" alt=""><pre><code>1. Numbers [59] 0&quot; &quot;
+2. Numbers [60] yyyy/m/d
+3. Numbers [61] &quot;￥&quot;#,##0.00;&quot;￥-&quot;#,##0.00
+4. Numbers [62]  h:mm:ss&quot; &quot;AM/PM
+5. Numbers [63] # #/#
+</code></pre></li>
+<li>Support extraction of table data attributes:  <pre><code>title
+subject
+author
+keywords
+comment
+lastAuthor
+appName
+category
+manager
+company
+</code></pre></li>
+<li>Support table preview and data extraction</li>
+<li>Support large .xlsx files procession</li>
+<li>Generate the name of CSV file according to the number of Sheet.</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h3 id="User-Interface-part"><a href="#User-Interface-part" class="headerlink" title="User Interface part"></a>User Interface part</h3><blockquote>
+<ul>
+<li>Setting-adjust background of language interface<br><img src="./images/screens/xls2csv5.1-4.png" alt=""></li>
+<li>Adjust the Hover status of all buttons</li>
+<li>Accurately locate output path after successfully converting .xls/.xlsx files<br><img src="./images/screens/xls2csv5.1-5.png" alt="">  </li>
+</ul>
+</blockquote>
+<p><br></p>
+<h3 id="Core-Engine-part"><a href="#Core-Engine-part" class="headerlink" title="Core Engine part"></a>Core Engine part</h3><blockquote>
+<p>Upgrade to Ver1.14</p>
+</blockquote>
+<p><br></p>
+<h3 id="Downloads"><a href="#Downloads" class="headerlink" title="Downloads:"></a>Downloads:</h3><h2 id="Download-XLS2csv-v5-1-dmg-10-5MiB"><a href="#Download-XLS2csv-v5-1-dmg-10-5MiB" class="headerlink" title="Download XLS2csv-v5.1.dmg    | (~10.5MiB)"></a><a href="http://www.filefactory.com/file/4bsfcg1ev6hv/XLS2csv-5.1.dmg">Download XLS2csv-v5.1.dmg</a>    | (~10.5MiB)</h2>
                 </div>
                 <footer class="article-footer">
-                  <time class="article-footer-updated" datetime="2017-08-11T03:34:45.000Z" itemprop="dateModified">Last updated: 2017-08-11</time>
+                  <time class="article-footer-updated" datetime="2017-08-24T13:13:14.000Z" itemprop="dateModified">Last updated: 2017-08-24</time>
                   
                 </footer>
                 
@@ -196,7 +260,7 @@
             <aside id="article-toc" role="navigation">
               <div id="article-toc-inner">
                 <strong class="sidebar-title">Contents</strong>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ver-5-0"><span class="toc-text">Ver 5.0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Update"><span class="toc-text">Update</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Downloads"><span class="toc-text">Downloads</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ver-5-1"><span class="toc-text">Ver 5.1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#xls-to-csv-part"><span class="toc-text">.xls to .csv part</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xlsx-to-csv-part"><span class="toc-text">.xlsx to .csv part</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#User-Interface-part"><span class="toc-text">User Interface part</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Core-Engine-part"><span class="toc-text">Core Engine part</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Downloads"><span class="toc-text">Downloads:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Download-XLS2csv-v5-1-dmg-10-5MiB"><span class="toc-text">Download XLS2csv-v5.1.dmg    | (~10.5MiB)</span></a></li></ol>
                 <a href="#" id="article-toc-top">Back to Top</a>
               </div>
             </aside>
