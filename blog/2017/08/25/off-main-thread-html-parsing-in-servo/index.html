@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Off main thread HTML parsing in Servo - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Off main thread HTML parsing in Servo" />
+  <meta name="description" content="Off main thread HTML parsing in Servo" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Off main thread HTML parsing in Servo - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Off main thread HTML parsing in Servo - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/08/25/off-main-thread-html-parsing-in-servo/index.html">
+<meta property="og:site_name" content="Off main thread HTML parsing in Servo - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Off main thread HTML parsing in Servo - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://img2.tuicool.com/AzuuMby.png!web">
+<meta property="og:updated_time" content="2017-08-25T08:28:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Off main thread HTML parsing in Servo - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Off main thread HTML parsing in Servo - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="http://img2.tuicool.com/AzuuMby.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/08/25/off-main-thread-html-parsing-in-servo/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/08/25/off-main-thread-html-parsing-in-servo/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-6ac2b4c9e5.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Off main thread HTML parsing in Servo </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Off main thread HTML parsing in Servo</h1>
+    
+    <a href="/blog/2017/08/25/off-main-thread-html-parsing-in-servo/" class="article-date"><time datetime="2017-08-25T00:00:00.000Z">2017-08-25</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p>Originally published on<a href="https://cynicaldevil.github.io/blog/2017/08/24/async-html-parsing-in-servo.html">Nikhil’s blog</a>.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Traditionally, browsers have been written as single threaded applications, and the html spec certainly seems to validate this statement. This makes it difficult to parallelize any task which a browser carries out, and we generally have to come up with innovative ways to do so.</p>
+<p>One such task is HTML parsing, and I have been working on parallelizing it this summer as part of my GSoC project. Since Servo is written in Rust, I’m assuming the reader has some basic knowledge about Rust. If not, check out this awesome<a href="https://doc.rust-lang.org/book/second-edition/">Rust book</a>. Done? Let’s dive straight into the details:</p>
+<h3 id="HTML-Parser"><a href="#HTML-Parser" class="headerlink" title="HTML Parser"></a>HTML Parser</h3><p>Servo’s HTML (and XML) parsing code live in<a href="https://github.com/servo/html5ever">html5ever</a>. Since this project concerns HTML parsing, I will only be talking about that. The first component we need to know about is the<code>Tokenizer</code>. This component is responsible for taking in raw input from a buffer and creating tokens, eventually sending them to its Sink, which we will call<code>TokenSink</code>. This could be any type which implements the<code>TokenSink</code>trait.</p>
+<p>html5ever has a type called<code>TreeBuilder</code>, which implements this trait. The TreeBuilder’s job is to create tree operations based on the tokens it receives. TreeBuilder contains its own Sink, calledTreeSink, which details the methods corresponding to these tree ops. The TreeBuilder calls these<code>TreeSink</code>methods under appropriate conditions, and these ‘action methods’ are responsible for constructing the DOM tree.</p>
+<p>With me so far? Good. The key to parallelizing HTML parsing is realizing that the task of creating tree ops is independent from the task of_actually_executing them to construct the DOM tree. Therefore, tokenization and tree op creation can happen on a separate thread, while the tree construction can be done on the main thread itself.</p>
+<p><img src="http://img2.tuicool.com/AzuuMby.png!web" alt=""></p>
+<h3 id="The-Process"><a href="#The-Process" class="headerlink" title="The Process"></a>The Process</h3><p>The first step I took was to decouple tree op creation from tree construction. Previously, tree ops were executed as soon as they were created. This involved the creation of a new<a href="https://github.com/servo/servo/blob/270d445f27631ee6388f837545a5440f50e0cafb/components/script/dom/servoparser/async_html.rs#L512">TreeSink</a>, which instead of executing them directly, created a<a href="https://blog.servo.org/2017/08/24/gsoc-parsing/hhttps://github.com/servo/servo/blob/270d445f27631ee6388f837545a5440f50e0cafb/components/script/dom/servoparser/async_html.rs#L59-L105">representation</a>of a tree op, containing all relevant data. For the time being, I sent the tree op to a<code>process_op</code>function as soon as it was created, whereupon it was executed.</p>
+<p>Now that these two processes were independent, my next task consisted of creating a new thread, where the Tokenizer+TreeBuilder pair would live, to generate these tree ops. Now, when a tree op was created, it would be sent to the main thread, and control would return back to the TreeBuilder. The TreeBuilder does not have to wait for the execution of the tree op anymore, thus speeding up the entire process.</p>
+<p>So far so good. The final task in this project was to implement speculative parsing, by building on top of these recent changes.</p>
+<h3 id="Speculative-Parsing"><a href="#Speculative-Parsing" class="headerlink" title="Speculative Parsing"></a>Speculative Parsing</h3><p>The HTML spec dictates that at any point during parsing, if we encounter a script tag, then the script must be executed immediately (if it is an inline script), or must be fetched and then executed (note that this rule does not apply to<code>async</code>or<code>defer</code>scripts). Why, you might ask, must this be done so? Why can’t we mark these scripts and execute them all at the end, after the parsing is done? This is because of an old, ill-thought out<code>Document</code>API function called<code>document.write()</code>. This function is a pain point for many developers who work on browsers, as it is a real headache implementing it well enough, while working around the many idiosyncrasies which surround it. I won’t dive into the details here, as they are not relevant. All we need to know is what<code>document.write()</code>does: it takes a string argument, which is generally markup, and inserts this string as part of the document’s HTML content. It is suffice to say that using this function might break your page, and should not be used.</p>
+<p>Returning to the parsing task, we can’t commit any DOM manipulations until the script finishes executing, because<code>document.write()</code>could make them redundant. What speculative parsing aims to do is to continue parsing the content after the script tag in the parser thread, while the script is being executed in the main thread. Note that we are only speculatively creating tree ops here, not the actual tree construction. After the script finishes executing, we analyze the actions of the<code>document.write()</code>calls (if any) to determine whether to use the tree ops, or to throw them away.</p>
+<h3 id="Roadblock"><a href="#Roadblock" class="headerlink" title="Roadblock!"></a>Roadblock!</h3><p>Remember when I said the process of creating tree ops is independent from tree construction? Well, I lied a little. Until a week ago, we need access to some DOM nodes for the creation of a couple of tree actions (one method needed to know if a node had a parent, and the other needed to know whether two nodes existed in the same tree). When I moved the task of creating tree ops to a separate thread, I could no longer access the DOM tree, which lived on the main thread. So I used a<code>Sender</code>on the TreeSink to create and send<a href="https://github.com/servo/servo/pull/17565/files#diff-10b46cb1e26142d2058e291de25bd4c7R133">queries</a>to the main thread, which would access the DOM and send the results back. Then only would the TreeSink method return, with the data it received from the main thread. Additionally, this meant that these couple of methods were synchronous in nature. No biggie.</p>
+<p>I realized the problem when I sat down to think about how I would implement speculative parsing. Since the main thread is busy executing scripts, it won’t be listening to the queries these synchronous methods will be sending, and therefore the task of creating tree ops cannot progress further!</p>
+<p>This turned out to be a bigger problem than I’d imagined, and I also had to sift through the equivalent Gecko code to understand how this situation was handled. I eventually came up with a good solution, but I won’t bore you with the details. If you want to know more, here’s a<a href="https://gist.github.com/cynicaldevil/09fb8a6dd1db58852d2085ac59ca0f9b">gist</a>explaining the solution.</p>
+<p>With these changes landed in html5ever, I can finally implement speculative parsing. Unfortunately, there’s not much time to implement it as a part of the GSoC project, so I will be landing this feature in Servo some time later. I hope to publish another blog post describing it thoroughly, along with details on the performance improvements this feature would bring.</p>
+<h4 id="Links-to-important-PRs"><a href="#Links-to-important-PRs" class="headerlink" title="Links to important PRs:"></a>Links to important PRs:</h4><p>Added Async HTML Tokenizer:<a href="https://github.com/servo/servo/pull/17037">https://github.com/servo/servo/pull/17037</a></p>
+<p>Run the async HTML Tokenizer on a new thread:<a href="https://github.com/servo/servo/pull/17914">https://github.com/servo/servo/pull/17914</a></p>
+<p>TreeBuilder no longer relies on<code>same_tree</code>and<code>has_parent_node</code>:<a href="https://github.com/servo/html5ever/pull/300">https://github.com/servo/html5ever/pull/300</a></p>
+<p>End TreeBuilder’s reliance on DOM:<a href="https://github.com/servo/servo/pull/18056">https://github.com/servo/servo/pull/18056</a></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>This was a really fun project; I got solve lots of cool problems, and also learnt a lot more about how a modern, spec-compliant rendering engine works.</p>
+<p>I would like to thank my mentor<a href="https://twitter.com/nokusu">Anthony Ramine</a>, who was absolutely amazing to work with, and<a href="https://twitter.com/lastontheboat">Josh Matthews</a>, who helped me a lot when I was still a rookie looking to contribute to the project.</p>
+<p>Source: <a href="http://www.tuicool.com/articles/hit/ZnEBzy">https://blog.servo.org/2017/08/24/gsoc-parsing/</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/08/25/off-main-thread-html-parsing-in-servo/index.html';
+  var disqus_title = "Off main thread HTML parsing in Servo";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-Parser"><span class="toc-text">HTML Parser</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Process"><span class="toc-text">The Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Speculative-Parsing"><span class="toc-text">Speculative Parsing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Roadblock"><span class="toc-text">Roadblock!</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Links-to-important-PRs"><span class="toc-text">Links to important PRs:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

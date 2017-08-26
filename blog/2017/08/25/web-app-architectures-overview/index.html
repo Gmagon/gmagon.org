@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Building Web Applications From the Ground Up（Part 2） - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Building Web Applications From the Ground Up（Part 2）" />
+  <meta name="description" content="Building Web Applications From the Ground Up（Part 2）" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Building Web Applications From the Ground Up（Part 2） - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Building Web Applications From the Ground Up（Part 2） - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/08/25/web-app-architectures-overview/index.html">
+<meta property="og:site_name" content="Building Web Applications From the Ground Up（Part 2） - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Building Web Applications From the Ground Up（Part 2） - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://michaelwashburnjr.com/wp-content/uploads/2017/08/github-new-repo.jpg">
+<meta property="og:image" content="https://michaelwashburnjr.com/wp-content/uploads/2017/08/github-repo-form.jpg">
+<meta property="og:image" content="https://michaelwashburnjr.com/wp-content/uploads/2017/08/test_view-1.jpg">
+<meta property="og:updated_time" content="2017-08-25T08:28:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building Web Applications From the Ground Up（Part 2） - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Building Web Applications From the Ground Up（Part 2） - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="https://michaelwashburnjr.com/wp-content/uploads/2017/08/github-new-repo.jpg">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/08/25/web-app-architectures-overview/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/08/25/web-app-architectures-overview/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-6ac2b4c9e5.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Building Web Applications From the Ground Up（Part 2） </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Building Web Applications From the Ground Up（Part 2）</h1>
+    
+    <a href="/blog/2017/08/25/web-app-architectures-overview/" class="article-date"><time datetime="2017-08-25T00:00:00.000Z">2017-08-25</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p><em>This post is part of a series of mine on building web applications from the ground up. It covers everything you need to know to completely finish a web application. If you haven’t been following the series, please go back and </em><a href="https://michaelwashburnjr.com/building-webapp-tutorial-p1/"><em>read part 1</em></a><em>. </em></p>
+<p>In this part, I’ll show you how to start building an API using the Django REST Framework. Furthermore, this section will cover proper project setup as well as structure.</p>
+<p><a href="https://github.com/mdw7326/DjangoRestApiExample"><strong>The GitHub repository for this example API project can be found here.</strong></a></p>
+<h3 id="Environment-Setup"><a href="#Environment-Setup" class="headerlink" title="Environment Setup"></a>Environment Setup</h3><p>To start working on your API, you’ll want to make sure you have the following:</p>
+<ul>
+<li><a href="https://git-scm.com/downloads">Git</a></li>
+<li>A command line environment that you’re comfortable using. I prefer using<br><a href="https://git-scm.com/downloads">Git Bash</a><br>, as I prefer a Unix like environment over windows. It’s stable, it’s small, and it’s simple.</li>
+<li>A good text editor or IDE. I like to use<br><a href="https://www.sublimetext.com/3">Sublime Text 3</a><br>for projects like this. I know many people who prefer other environments such as Atom or PyCharm. However, I like the speed and features of Sublime 3 the best.</li>
+<li><a href="https://www.python.org/downloads">The latest (stable) distribution of Python 3</a><br>.</li>
+<li><a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en">Postman</a><br>, a chrome app for easily testing HTTP requests.</li>
+</ul>
+<h3 id="Project-Setup"><a href="#Project-Setup" class="headerlink" title="Project Setup"></a>Project Setup</h3><p>The first thing you should do to setup your project is create your repository. I typically will create a free repository on<a href="https://github.com/">GitHub</a>. However, if you_do _have private repositories, you may want to consider the trade-offs between having an open or closed source project. However, having some kind of source control is crucial for development. If you’re not already familiar with the benefits of using source control,<a href="http://www.codeservedcold.com/version-control-importance/">swing on over to this blog post</a>.</p>
+<h4 id="Setting-up-a-GitHub-Repo"><a href="#Setting-up-a-GitHub-Repo" class="headerlink" title="Setting up a GitHub Repo"></a>Setting up a GitHub Repo</h4><p>If you don’t already have a GitHub account,<a href="https://github.com/join">sign up for one first</a>. If you’re currently a student, I highly recommend signing up for the<a href="https://education.github.com/pack">student developer pack</a>.</p>
+<p>After you’ve logged in, locate the button to create a new repository as shown below.</p>
+<p><img src="https://michaelwashburnjr.com/wp-content/uploads/2017/08/github-new-repo.jpg" alt=""></p>
+<p>This will bring you to a short form as shown below. Fill this out with some basic information for your project. Now, If you have private repositories and want this project to be private, go ahead and click the Private option. Check the box to initialize the project with a ReadMe, select the Python .gitignore file, and select the license you’d like your project to have (if you need help choosing a license, see<a href="https://choosealicense.com/">ChooseALicense.com</a>). Once you’re done on this page, click Create Repository.</p>
+<p><img src="https://michaelwashburnjr.com/wp-content/uploads/2017/08/github-repo-form.jpg" alt=""></p>
+<p>Now, go to your repository page and click the clone or download button. Click the button to “clone with ssh”. If you don’t have a SSH key setup on your laptop, check out <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">this tutorial for creating one</a>. Then, open your command line environment in the folder where you want to store your projects. I typically make a folder named “dev” for all of my programming work. First, open your command line environment in the folder you wish to clone the repository into. After that, clone the repository onto your machine by typing the following in your command line (filling in the URL with the link copied from GitHub).</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">git clone URL</div></pre></td></tr></table></figure>
+<h4 id="Creating-a-Python-Virtual-Environment"><a href="#Creating-a-Python-Virtual-Environment" class="headerlink" title="Creating a Python Virtual Environment"></a>Creating a Python Virtual Environment</h4><p>Using virtual environments in Python allows you to keep packages needed to run this project separate from your system’s Python environment. This may not be a big deal if you’re only using your computer to run one Python project, but as you install different requirements for various projects you could run into issues. It’s considered the best practice to use a separate virtual environment for each project you’re working on. And it’s easy to do in Python.</p>
+<p>To create a new virtual environment, first install the virtualenv Python package:</p>
+<p>pip install virtualenv</p>
+<p>Next, run the following in the command line within the project folder:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">virtualenv venv</div></pre></td></tr></table></figure>
+<p>This will generate a virtual environment directory which is essentially a sandboxed Python environment. Any python packages you install when this virtual environment is activated will only be installed into this folder. Likewise, you will need to use this virtual environment to run your application. Note that the “venv/” directory should already be added to your .gitignore file; virtual environments should never be committed to version control. While we’re on the subject of the ._gitignore_though, you should also add _db.sqlite3 _at the top of your ._gitignore_file. This will make it so the development database is not committed to the repository.</p>
+<p>Anyways, you can use the virtual environment like so:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># activate the virtual environment (windows)</div><div class="line">.\venv\Scripts\activate</div><div class="line"># activate the virtual environment (emulated linux cmd line on windows, e.g. Git Bash)</div><div class="line">source ./venv/Scripts/activate</div><div class="line"># activate the virtual environment (linux)</div><div class="line">source ./venv/bin/activate</div><div class="line"></div><div class="line"># install python packages into this virtual environment</div><div class="line">pip install django</div><div class="line"></div><div class="line"># run python scripts using this environment</div><div class="line">python my-script.py</div><div class="line"></div><div class="line"># deactivate the environment when you&apos;re finished</div><div class="line">deactivate</div></pre></td></tr></table></figure>
+<h4 id="Initialize-this-Project-as-a-Python-Package"><a href="#Initialize-this-Project-as-a-Python-Package" class="headerlink" title="Initialize this Project as a Python Package"></a>Initialize this Project as a Python Package</h4><p>Making your project a pip intallable Python Package has many benefits. The two that sell me on it is that you can use absolute module paths within your application, and that you can package you can leverage a package manager like PIP as a means to manage your app’s versions and dependencies.</p>
+<p>To make your Python project a fully fledged package, you’ll need to create a setup.py file. At the root level of your repository, add a setup.py file like below:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">from distutils.core import setup</div><div class="line"></div><div class="line">setup(</div><div class="line">    name=&apos;todo_api&apos;,</div><div class="line">    version=&apos;0.1&apos;,</div><div class="line">    description=&apos;A ToDo List API built with Django REST Framework&apos;,</div><div class="line">    author=&apos;Michael Washburn Jr&apos;,</div><div class="line">    author_email=&apos;michael@michaelwashburnjr.com&apos;,</div><div class="line">    url=&apos;https://github.com/mdw7326/DjangoRestApiExample&apos;,</div><div class="line">    packages=find_packages(),</div><div class="line">    install_requires=[]</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Once we initialize the Django project, you can do install the package by running the following from the command line in the root folder of your repository:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">pip install -e .</div></pre></td></tr></table></figure>
+<h4 id="Initialize-the-Django-Project"><a href="#Initialize-the-Django-Project" class="headerlink" title="Initialize the Django Project"></a>Initialize the Django Project</h4><p>Now that the basic package structure is there, we can initialize our API project. I like using Django for projects like this. Specifically, I prefer Django REST Framework for API development. It leverages the Django Models that are super simple to work with, and enhances the views in Django to make building RESTful APIs super simple.</p>
+<p>To initialize the Django project, we first have to install some dependencies (remember to activate your virtual environment):</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">pip install django djangorestframework</div></pre></td></tr></table></figure>
+<p>Remember to keep the install_requires section of your _setup.py_file up-to-date with the latest installed dependencies. You can do this by running the following:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&gt; pip freeze</div><div class="line">Django==1.11.4</div><div class="line">djangorestframework==3.6.3</div><div class="line">pytz==2017.2</div></pre></td></tr></table></figure>
+<p>Then, you can put the output into your setup.py file like so:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># setup.py</div><div class="line">setup(</div><div class="line">    # ...other settings</div><div class="line"></div><div class="line">    install_requires = [</div><div class="line">        &apos;Django==1.11.4&apos;,</div><div class="line">        &apos;djangorestframework==3.6.3&apos;,</div><div class="line">        &apos;pytz==2017.2&apos;,</div><div class="line">    ]</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Now, make a new Django app.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">django-admin.py startproject todo_api</div></pre></td></tr></table></figure>
+<p>Now that we have a Django project, we have to enable the Django REST Framework by adding it to the _settings.py_file.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># settings.py</div><div class="line"></div><div class="line">INSTALLED_APPS = (</div><div class="line">    ...</div><div class="line">    &apos;rest_framework&apos;,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>The project itself is now setup. You can start the development server by running:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">python src/manage.py runserver</div></pre></td></tr></table></figure>
+<p>To see it running, go to _localhost:8000 _in your browser.</p>
+<p>However, our project is missing models for storing data , serializers for converting data to JSON, and views for getting and returning the data.</p>
+<p>Inside _src/todo_api, _create 3 new folders named <em>models/</em>, <em>serializers/</em>, and <em>views/</em>. Inside each folder put an empty file named  <em>\</em>_init__.py._This is how Python denotes a folder as a module.</p>
+<h4 id="Create-a-Test-View"><a href="#Create-a-Test-View" class="headerlink" title="Create a Test View"></a>Create a Test View</h4><p>Inside your <em>views</em>/ folder create a new file named <em>test.py</em>. In this file we’re going to make a quick endpoint to make sure everything is functioning correctly.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># todo_api/views/test.py</div><div class="line"></div><div class="line">from django.http import HttpResponse</div><div class="line"></div><div class="line">def test_view(request):</div><div class="line">  html = &quot;&lt;html&gt;&lt;body&gt;Hello, World!&lt;/body&gt;&lt;/html&gt;&quot;</div><div class="line">  return HttpResponse(html)</div></pre></td></tr></table></figure>
+<p>Now, add the view in your _urls.py_file.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># todo_api/urls.py</div><div class="line">from django.conf.urls import url</div><div class="line">from django.contrib import admin</div><div class="line"></div><div class="line"># notice you can use absolute module paths (which you should)</div><div class="line">from todo_api.views.test import test_view</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">  url(r&apos;^$&apos;, test_view),</div><div class="line">  url(r&apos;^admin/&apos;, admin.site.urls),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>After the url has been added, run your development server and navigate to_localhost:8000._You should see the “Hello, World!” text we added.</p>
+<p><img src="https://michaelwashburnjr.com/wp-content/uploads/2017/08/test_view-1.jpg" alt=""></p>
+<p>That’s it! Our project is now all set up. Woohoo!</p>
+<p>In the next section I’ll be covering Django API development and testing. But, if you’re too excited to stop working now, take a look at the <a href="http://www.django-rest-framework.org/#quickstart">Django REST Framework Quickstart guide</a>.</p>
+<p><em><strong>Stuck? Let me know if you have any questions.</strong></em></p>
+<p><em>Part 3 will be available next week on 8/29.</em></p>
+<p>Source: <a href="https://michaelwashburnjr.com/building-webapp-tutorial-part-2/">https://michaelwashburnjr.com/building-webapp-tutorial-part-2/</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/08/25/web-app-architectures-overview/index.html';
+  var disqus_title = "Building Web Applications From the Ground Up（Part 2）";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Environment-Setup"><span class="toc-text">Environment Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Project-Setup"><span class="toc-text">Project Setup</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Setting-up-a-GitHub-Repo"><span class="toc-text">Setting up a GitHub Repo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Creating-a-Python-Virtual-Environment"><span class="toc-text">Creating a Python Virtual Environment</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Initialize-this-Project-as-a-Python-Package"><span class="toc-text">Initialize this Project as a Python Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Initialize-the-Django-Project"><span class="toc-text">Initialize the Django Project</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-Test-View"><span class="toc-text">Create a Test View</span></a></li></ol></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
