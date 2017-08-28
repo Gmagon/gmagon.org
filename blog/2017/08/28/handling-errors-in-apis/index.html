@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Handling errors correctly in APIs - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Handling errors correctly in APIs" />
+  <meta name="description" content="Handling errors correctly in APIs" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Handling errors correctly in APIs - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Handling errors correctly in APIs - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/08/28/handling-errors-in-apis/index.html">
+<meta property="og:site_name" content="Handling errors correctly in APIs - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Handling errors correctly in APIs - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://uploads.toptal.io/blog/image/123907/toptal-blog-image-1503383072401-63f695772c7da29bae73732818252d7d.png">
+<meta property="og:image" content="https://uploads.toptal.io/blog/image/123908/toptal-blog-image-1503383110049-1cd3d10e7706d202ceb2a844d63f7351.png">
+<meta property="og:image" content="https://uploads.toptal.io/blog/image/123909/toptal-blog-image-1503383127121-5b3fb3dc0a77cc9f960bf97609b2fa20.png">
+<meta property="og:updated_time" content="2017-08-28T12:44:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Handling errors correctly in APIs - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Handling errors correctly in APIs - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="https://uploads.toptal.io/blog/image/123907/toptal-blog-image-1503383072401-63f695772c7da29bae73732818252d7d.png">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/08/28/handling-errors-in-apis/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/08/28/handling-errors-in-apis/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-6ac2b4c9e5.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Handling errors correctly in APIs </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Handling errors correctly in APIs</h1>
+    
+    <a href="/blog/2017/08/28/handling-errors-in-apis/" class="article-date"><time datetime="2017-08-28T00:00:00.000Z">2017-08-28</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p>Handling errors correctly in APIs while providing meaningful error messages is a very desirable feature, as it can help the API client properly respond to issues. The default behavior tends to be returning stack traces that are hard to understand and ultimately useless for the API client. Partitioning the error information into fields also enables the API client to parse it and provide better error messages to the user. In this article, we will cover how to do proper error handling when building a REST API with <a href="https://www.toptal.com/spring">Spring Boot</a>.<img src="https://uploads.toptal.io/blog/image/123907/toptal-blog-image-1503383072401-63f695772c7da29bae73732818252d7d.png" alt="">Building REST APIs with Spring became the standard approach for Java developers during the last couple of years. Using Spring Boot helps substantially, as it removes a lot of boilerplate code and enables auto-configuration of various components. We will assume that you’re familiar with the basics of API development with those technologies before applying the knowledge described here. If you are still unsure about how to develop a basic REST API, then you should start with this article about <a href="https://www.toptal.com/spring/beginners-guide-to-mvc-with-spring-framework">Spring MVC</a> or another one about building a <a href="https://spring.io/guides/gs/rest-service/">Spring REST Service</a>.</p>
+<h2 id="Making-Error-Responses-Clearer"><a href="#Making-Error-Responses-Clearer" class="headerlink" title="Making Error Responses Clearer"></a>Making Error Responses Clearer</h2><p>Throughout this article, we’ll be using the <a href="https://github.com/brunocleite/spring-boot-exception-handling">source code hosted on GitHub</a> of an application that implements a REST API for retrieving objects that represent birds. It has the features described in this article and a few more examples of error handling scenarios. Here’s a summary of endpoints implemented in that application:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><code>GET /birds/{birdId}</code></th>
+<th style="text-align:left">Gets information about a bird and throws an exception if not found.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>GET /birds/noexception/{birdId}</code></td>
+<td style="text-align:left">This call also gets information about a bird, except it doesn’t throw an exception in case that the bird is not found.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST /birds</code></td>
+<td style="text-align:left">Creates a bird.</td>
+</tr>
+</tbody>
+</table>
+<p>The Spring framework MVC module comes with some great features to help with error handling. But it is left to the developer to use those features to treat the exceptions and return meaningful responses to the API client.</p>
+<p>Let’s look at an example of the default Spring Boot answer when we issue an HTTP POST to the<code>/birds</code>endpoint with the following JSON object, that has the string “aaa” on the field “mass,” which should be expecting an integer:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line"> &quot;scientificName&quot;: &quot;Common blackbird&quot;,</div><div class="line"> &quot;specie&quot;: &quot;Turdus merula&quot;,</div><div class="line"> &quot;mass&quot;: &quot;aaa&quot;,</div><div class="line"> &quot;length&quot;: 4</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The Spring Boot default answer, without proper error handling:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line"> &quot;timestamp&quot;: 1500597044204,</div><div class="line"> &quot;status&quot;: 400,</div><div class="line"> &quot;error&quot;: &quot;Bad Request&quot;,</div><div class="line"> &quot;exception&quot;: &quot;org.springframework.http.converter.HttpMessageNotReadableException&quot;,</div><div class="line"> &quot;message&quot;: &quot;JSON parse error: Unrecognized token &apos;three&apos;: was expecting (&apos;true&apos;, &apos;false&apos; or &apos;null&apos;); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token &apos;aaa&apos;: was expecting (&apos;true&apos;, &apos;false&apos; or &apos;null&apos;)\n at [Source: java.io.PushbackInputStream@cba7ebc; line: 4, column: 17]&quot;,</div><div class="line"> &quot;path&quot;: &quot;/birds&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Well… the response message has some good fields, but it is focused too much on what the exception was. By the way, this is the class<code>DefaultErrorAttributes</code>from Spring Boot. The<code>timestamp</code>field is an integer number that doesn’t even carry information of what measurement unit the timestamp is in. The<code>exception</code>field is only interesting to Java developers and the message leaves the API consumer lost in all the implementation details that are irrelevant to them. And what if there were more details that we could extract from the exception that the error originated from? So let’s learn how to treat those exceptions properly and wrap them into a nicer JSON representation to make life easier for our API clients.</p>
+<p>As we’ll be using Java 8 date and time classes, we first need to add a Maven dependency for the Jackson JSR310 converters. They take care of converting Java 8 date and time classes to JSON representation using the<code>@JsonFormat</code>annotation:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">   &lt;groupId&gt;com.fasterxml.jackson.datatype&lt;/groupId&gt;</div><div class="line">   &lt;artifactId&gt;jackson-datatype-jsr310&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+<p>Ok, so let’s define a class for representing API errors. We’ll be creating a class called<code>ApiError</code>that has enough fields to hold relevant information about errors that happen during REST calls.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">class ApiError &#123;</div><div class="line"></div><div class="line">   private HttpStatus status;</div><div class="line">   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = &quot;dd-MM-yyyy hh:mm:ss&quot;)</div><div class="line">   private LocalDateTime timestamp;</div><div class="line">   private String message;</div><div class="line">   private String debugMessage;</div><div class="line">   private List&lt;ApiSubError&gt; subErrors;</div><div class="line"></div><div class="line">   private ApiError() &#123;</div><div class="line">       timestamp = LocalDateTime.now();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   ApiError(HttpStatus status) &#123;</div><div class="line">       this();</div><div class="line">       this.status = status;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   ApiError(HttpStatus status, Throwable ex) &#123;</div><div class="line">       this();</div><div class="line">       this.status = status;</div><div class="line">       this.message = &quot;Unexpected error&quot;;</div><div class="line">       this.debugMessage = ex.getLocalizedMessage();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   ApiError(HttpStatus status, String message, Throwable ex) &#123;</div><div class="line">       this();</div><div class="line">       this.status = status;</div><div class="line">       this.message = message;</div><div class="line">       this.debugMessage = ex.getLocalizedMessage();</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>The<code>status</code>property holds the operation call status. It will be anything from 4xx to signalize client errors or 5xx to mean server errors. A common scenario is a http code 400 that means a BAD_REQUEST, when the client, for example, sends an improperly formatted field, like an invalid email address.</p>
+</li>
+<li><p>The<code>timestamp</code>property holds the date-time instance of when the error happened.</p>
+</li>
+<li><p>The<code>message</code>property holds a user-friendly message about the error.</p>
+</li>
+<li><p>The<code>debugMessage</code>property holds a system message describing the error in more detail.</p>
+</li>
+<li><p>The<code>subErrors</code>property holds an array of sub-errors that happened. This is used for representing multiple errors in a single call. An example would be validation errors in which multiple fields have failed the validation. The<code>ApiSubError</code>class is used to encapsulate those.</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">abstract class ApiSubError &#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">@Data</div><div class="line">@EqualsAndHashCode(callSuper = false)</div><div class="line">@AllArgsConstructor</div><div class="line">class ApiValidationError extends ApiSubError &#123;</div><div class="line">   private String object;</div><div class="line">   private String field;</div><div class="line">   private Object rejectedValue;</div><div class="line">   private String message;</div><div class="line"></div><div class="line">   ApiValidationError(String object, String message) &#123;</div><div class="line">       this.object = object;</div><div class="line">       this.message = message;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>So then the<code>ApiValidationError</code>is a class that extends<code>ApiSubError</code>and expresses validation problems encountered during the REST call.</p>
+<p>Below, you’ll see some examples of JSON responses that are being generated after we have implemented the improvements described here, just to get an idea of what we’ll have by the end of this article.</p>
+<p>Here is an example of JSON returned when an entity is not found while calling endpoint<code>GET /birds/2</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line"> &quot;apierror&quot;: &#123;</div><div class="line">   &quot;status&quot;: &quot;NOT_FOUND&quot;,</div><div class="line">   &quot;timestamp&quot;: &quot;18-07-2017 06:20:19&quot;,</div><div class="line">   &quot;message&quot;: &quot;Bird was not found for parameters &#123;id=2&#125;&quot;</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Here is another example of JSON returned when issuing a<code>POST /birds</code>call with an invalid value for the bird’s mass:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line"> &quot;apierror&quot;: &#123;</div><div class="line">   &quot;status&quot;: &quot;BAD_REQUEST&quot;,</div><div class="line">   &quot;timestamp&quot;: &quot;18-07-2017 06:49:25&quot;,</div><div class="line">   &quot;message&quot;: &quot;Validation errors&quot;,</div><div class="line">   &quot;subErrors&quot;: [</div><div class="line">     &#123;</div><div class="line">       &quot;object&quot;: &quot;bird&quot;,</div><div class="line">       &quot;field&quot;: &quot;mass&quot;,</div><div class="line">       &quot;rejectedValue&quot;: 999999,</div><div class="line">       &quot;message&quot;: &quot;must be less or equal to 104000&quot;</div><div class="line">     &#125;</div><div class="line">   ]</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Spring-Boot-Error-Handling"><a href="#Spring-Boot-Error-Handling" class="headerlink" title="Spring Boot Error Handling"></a>Spring Boot Error Handling</h2><p>Let’s explore some of the Spring annotations that will be used to handle exceptions.</p>
+<p><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RestController.html"><code>RestController</code></a>is the base annotation for classes that handle REST operations.</p>
+<p><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/ExceptionHandler.html"><code>ExceptionHandler</code></a>is a Spring annotation that provides a mechanism to treat exceptions that are thrown during execution of handlers (Controller operations). This annotation, if used on methods of controller classes, will serve as the entry point for handling exceptions thrown within this controller only. Altogether, the most common way is to use<code>@ExceptionHandler</code>on methods of<code>@ControllerAdvice</code>classes so that the exception handling will be applied globally or to a subset of controllers.</p>
+<p><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/ControllerAdvice.html"><code>ControllerAdvice</code></a>is an annotation introduced in Spring 3.2, and as the name suggests, is “Advice” for multiple controllers. It is used to enable a single<code>ExceptionHandler</code>to be applied to multiple controllers. This way we can in just one place define how to treat such an exception and this handler will be called when the exception is thrown from classes that are covered by this<code>ControllerAdvice</code>. The subset of controllers affected can defined by using the following selectors on<code>@ControllerAdvice</code>:<code>annotations()</code>,<code>basePackageClasses()</code>, and<code>basePackages()</code>. If no selectors are provided, then the<code>ControllerAdvice</code>is applied globally to all controllers.</p>
+<p>So by using<code>@ExceptionHandler</code>and<code>@ControllerAdvice</code>, we’ll be able to define a central point for treating exceptions and wrapping them up in an<code>ApiError</code>object with better organization than the default Spring Boot error handling mechanism.</p>
+<p>Handling Exceptions<img src="https://uploads.toptal.io/blog/image/123908/toptal-blog-image-1503383110049-1cd3d10e7706d202ceb2a844d63f7351.png" alt="">The next step is to create the class that will handle the exceptions. For simplicity, we are calling it<code>RestExceptionHandler</code>and it must extend from Spring Boot’s<code>ResponseEntityExceptionHandler</code>. We’ll be extending<code>ResponseEntityExceptionHandler</code>as it already provides some basic handling of Spring MVC exceptions, so we’ll be adding handlers for new exceptions while improving the existing ones.</p>
+<p>Overriding Exceptions Handled In ResponseEntityExceptionHandler</p>
+<p>If you take a look into the source code of<code>ResponseEntityExceptionHandler</code>, you’ll see a lot of methods called<code>handle******()</code>like<code>handleHttpMessageNotReadable()</code>or<code>handleHttpMessageNotWritable()</code>. Let’s first see how can we extend<code>handleHttpMessageNotReadable()</code>to handle<code>HttpMessageNotReadableException</code>exceptions. We just have to override the method<code>handleHttpMessageNotReadable()</code>in our<code>RestExceptionHandler</code>class:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@Order(Ordered.HIGHEST_PRECEDENCE)</div><div class="line">@ControllerAdvice</div><div class="line">public class RestExceptionHandler extends ResponseEntityExceptionHandler &#123;</div><div class="line"></div><div class="line">   @Override</div><div class="line">   protected ResponseEntity</div><div class="line">&lt;</div><div class="line">Object</div><div class="line">&gt;</div><div class="line"> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) &#123;</div><div class="line">       String error = &quot;Malformed JSON request&quot;;</div><div class="line">       return buildResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, error, ex));</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   private ResponseEntity</div><div class="line">&lt;</div><div class="line">Object</div><div class="line">&gt;</div><div class="line"> buildResponseEntity(ApiError apiError) &#123;</div><div class="line">       return new ResponseEntity</div><div class="line">&lt;</div><div class="line">&gt;</div><div class="line">(apiError, apiError.getStatus());</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   //other exception handlers below</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>We have declared that in case of a<code>HttpMessageNotReadableException</code>being thrown, the error message will be “Malformed JSON request” and the error will be encapsulated inside the<code>ApiError</code>object. Below we can see the answer of a REST call with this new method overridden:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line"> &quot;apierror&quot;: &#123;</div><div class="line">   &quot;status&quot;: &quot;BAD_REQUEST&quot;,</div><div class="line">   &quot;timestamp&quot;: &quot;21-07-2017 03:53:39&quot;,</div><div class="line">   &quot;message&quot;: &quot;Malformed JSON request&quot;,</div><div class="line">   &quot;debugMessage&quot;: &quot;JSON parse error: Unrecognized token &apos;aaa&apos;: was expecting (&apos;true&apos;, &apos;false&apos; or &apos;null&apos;); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token &apos;aaa&apos;: was expecting (&apos;true&apos;, &apos;false&apos; or &apos;null&apos;)\n at [Source: java.io.PushbackInputStream@7b5e8d8a; line: 4, column: 17]&quot;</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Handling-Custom-Exceptions"><a href="#Handling-Custom-Exceptions" class="headerlink" title="Handling Custom Exceptions"></a>Handling Custom Exceptions</h3><p>Now we’ll see how to create a method that handles an exception that is not yet declared inside Spring Boot’s<code>ResponseEntityExceptionHandler</code>.</p>
+<p>A common scenario for a Spring application that handles database calls is to have a call to find a record by its ID using a repository class. But if we look into the<code>CrudRepository.findOne()</code>method, we’ll see that it returns<code>null</code>if an object is not found. That means that if our service just calls this method and returns directly to the controller, we’ll get an HTTP code 200 (OK) even if the resource isn’t found. In fact, the proper approach is to return a HTTP code 404 (NOT FOUND) as specified in the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1 spec</a>.</p>
+<p>To handle this case, we’ll be creating a custom exception called<code>EntityNotFoundException</code>. This one is a custom created exception and different from<code>javax.persistence.EntityNotFoundException</code>, as it provides some constructors that ease the object creation, and one may choose to handle the<code>javax.persistence</code>exception differently.<br><img src="https://uploads.toptal.io/blog/image/123909/toptal-blog-image-1503383127121-5b3fb3dc0a77cc9f960bf97609b2fa20.png" alt=""></p>
+<p>That said, let’s create an<code>ExceptionHandler</code>for this newly created<code>EntityNotFoundException</code>in our<code>RestExceptionHandler</code>class. To do that, create a method called<code>handleEntityNotFound()</code>and annotate it with<code>@ExceptionHandler</code>, passing the class object<code>EntityNotFoundException.class</code>to it. This signalizes Spring that every time<code>EntityNotFoundException</code>is thrown, Spring should call this method to handle it. When annotating a method with<code>@ExceptionHandler</code>, it will accept a wide range of auto-injected parameters like<code>WebRequest</code>,<code>Locale</code>and others as described <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/ExceptionHandler.html">here</a>. We’ll just provide the exception<code>EntityNotFoundException</code>itself as a parameter for this<code>handleEntityNotFound</code>method.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@Order</div><div class="line">(Ordered.HIGHEST_PRECEDENCE)</div><div class="line"></div><div class="line">@ControllerAdvice</div><div class="line">public</div><div class="line">class</div><div class="line">RestExceptionHandler</div><div class="line">extends</div><div class="line">ResponseEntityExceptionHandler</div><div class="line"> &#123;</div><div class="line">//other exception handlers</div><div class="line">@ExceptionHandler</div><div class="line">(EntityNotFoundException.class)</div><div class="line">   </div><div class="line">protected</div><div class="line"> ResponseEntity</div><div class="line">&lt;</div><div class="line">Object</div><div class="line">&gt;</div><div class="line">handleEntityNotFound</div><div class="line">(</div><div class="line">           EntityNotFoundException ex) &#123;</div><div class="line">       ApiError apiError = </div><div class="line">new</div><div class="line"> ApiError(NOT_FOUND);</div><div class="line">       apiError.setMessage(ex.getMessage());</div><div class="line">       </div><div class="line">return</div><div class="line"> buildResponseEntity(apiError);</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Great! In the<code>handleEntityNotFound()</code>method, we are setting the HTTP status code to<code>NOT_FOUND</code>and using the new exception message. Here is what the response for the<code>GET /birds/2</code>endpoint looks like now:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line"> &quot;apierror&quot;: &#123;</div><div class="line">   &quot;status&quot;: &quot;NOT_FOUND&quot;,</div><div class="line">   &quot;timestamp&quot;: &quot;21-07-2017 04:02:22&quot;,</div><div class="line">   &quot;message&quot;: &quot;Bird was not found for parameters &#123;id=2&#125;&quot;</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>It is important to get in control of the exception handling so we can properly map those exceptions to the<code>ApiError</code>object and provide important information that allows API clients to know what happened. The next step from here would be to create more handler methods (the ones with @ExceptionHandler) for exceptions that are thrown within the application code. There are more examples for some other common exceptions like<code>MethodArgumentTypeMismatchException</code>,<code>ConstraintViolationException</code>and others in the <a href="https://github.com/brunocleite/spring-boot-exception-handling">GitHub code</a>.</p>
+<p>Here are some additional resources that helped in the composition of this article:</p>
+<ul>
+<li><p>Baeldung -<a href="http://www.baeldung.com/exception-handling-for-rest-with-spring">Error handling for REST with Spring</a></p>
+</li>
+<li><p>Spring Blog -<a href="https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc">Exception handling in Spring MVC</a></p>
+</li>
+</ul>
+<p>Source: <a href="https://www.toptal.com/java/spring-boot-rest-api-error-handling">https://www.toptal.com/java/spring-boot-rest-api-error-handling</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/08/28/handling-errors-in-apis/index.html';
+  var disqus_title = "Handling errors correctly in APIs";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Making-Error-Responses-Clearer"><span class="toc-text">Making Error Responses Clearer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot-Error-Handling"><span class="toc-text">Spring Boot Error Handling</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Handling-Custom-Exceptions"><span class="toc-text">Handling Custom Exceptions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
