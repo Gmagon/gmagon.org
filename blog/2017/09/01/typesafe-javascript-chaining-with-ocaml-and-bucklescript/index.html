@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Typesafe JavaScript Chaining with OCaml and BuckleScript - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Typesafe JavaScript Chaining with OCaml and BuckleScript" />
+  <meta name="description" content="Typesafe JavaScript Chaining with OCaml and BuckleScript" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Typesafe JavaScript Chaining with OCaml and BuckleScript - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Typesafe JavaScript Chaining with OCaml and BuckleScript - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/09/01/typesafe-javascript-chaining-with-ocaml-and-bucklescript/index.html">
+<meta property="og:site_name" content="Typesafe JavaScript Chaining with OCaml and BuckleScript - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Typesafe JavaScript Chaining with OCaml and BuckleScript - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*JE53vATHfCSAXLXrXSvgKA.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*4877k4Hq9dPdtmvg9hnGFA.jpeg">
+<meta property="og:updated_time" content="2017-09-01T06:54:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Typesafe JavaScript Chaining with OCaml and BuckleScript - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Typesafe JavaScript Chaining with OCaml and BuckleScript - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1600/1*JE53vATHfCSAXLXrXSvgKA.png">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/09/01/typesafe-javascript-chaining-with-ocaml-and-bucklescript/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/09/01/typesafe-javascript-chaining-with-ocaml-and-bucklescript/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-a395c8a81d.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Typesafe JavaScript Chaining with OCaml and BuckleScript </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Typesafe JavaScript Chaining with OCaml and BuckleScript</h1>
+    
+    <a href="/blog/2017/09/01/typesafe-javascript-chaining-with-ocaml-and-bucklescript/" class="article-date"><time datetime="2017-09-01T00:00:00.000Z">2017-09-01</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p><img src="https://cdn-images-1.medium.com/max/1600/1*JE53vATHfCSAXLXrXSvgKA.png" alt=""></p>
+<p>In my <a href="https://medium.com/dailyjs/how-to-build-disruptive-ocaml-microservices-with-bucklescript-8c2f774f67cd">previous article</a>, we explored how BuckleScript allows you to turn OCaml code into readable JavaScript, and how to interface with other modules in the JavaScript ecosystem.</p>
+<p>Today I’d like to continue on this path and show you the awesome<code>@@bs.send.pipe</code>binding attribute, which enables us to write concise OCaml code to interface with JavaScript libraries that have a chainable API.</p>
+<h3 id="Exhibit-A-Express"><a href="#Exhibit-A-Express" class="headerlink" title="Exhibit A: Express"></a>Exhibit A: Express</h3><p>To interface with the <a href="https://expressjs.com/">express</a> Node.js web framework, we may write the following bindings in<code>src/FFI/Express.ml</code>.<em>(NOTE: Remember to include<code>src/FFI</code>in the<code>sources</code>field of<code>bsconfig.json</code>!)</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">type app</div><div class="line">external express : unit -&gt; app = &quot;&quot; [@@bs.module]</div><div class="line">external listen : app -&gt; int -&gt; unit = &quot;&quot; [@@bs.send]</div><div class="line">type req</div><div class="line">type res</div><div class="line">external get : app -&gt; string -&gt; (req -&gt; res -&gt; res) -&gt; unit = &quot;&quot; [@@bs.send]</div><div class="line">external send : res -&gt; string -&gt; res = &quot;&quot; [@@bs.send]</div></pre></td></tr></table></figure>
+<p>Running<code>bsb</code>results in the following<code>lib/js/src/index.js</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">// Generated by BUCKLESCRIPT VERSION 1.8.2, PLEASE EDIT WITH CARE</div><div class="line">&apos;use strict&apos;;</div><div class="line">var Express = require(&quot;express&quot;);</div><div class="line">var app = Express();</div><div class="line">app.get(&quot;/&quot;, (function (_, res) &#123;</div><div class="line">return res.send(&quot;Hello, world! &lt;a href=&apos;/page&apos;&gt;Page 2&lt;/a&gt;&quot;);</div><div class="line">&#125;));</div><div class="line">app.get(&quot;/page&quot;, (function (_, res) &#123;</div><div class="line">return res.send(&quot;Hey &lt;a href=&apos;/&apos;&gt;Go back&lt;/a&gt;&quot;);</div><div class="line">&#125;));</div><div class="line">app.listen(1337);</div><div class="line">exports.app = app;</div><div class="line">/* app Not a pure module */</div></pre></td></tr></table></figure>
+<p>Nice! We can run<code>node lib/js/src/index.js</code>and get ourselves a running express server.</p>
+<h3 id="The-Chaining-Express-API"><a href="#The-Chaining-Express-API" class="headerlink" title="The Chaining Express API"></a>The Chaining Express API</h3><p>Consider the type we wrote for the<code>Express.get</code>function:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">external get : app -&gt; string -&gt; (req -&gt; res -&gt; res) -&gt; unit = &quot;&quot; [@@bs.send]</div></pre></td></tr></table></figure>
+<p><code>get</code>takes an<code>app</code>representing our express instance, a<code>string</code>for the path, a function (which takes a request and response), and returns a no-op (type<code>unit</code>).</p>
+<p>However — did you know we can_chain_this API like so? In JavaScript:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">app</div><div class="line">.get(&quot;/&quot;, (req, res) =&gt; res.send(&quot;Hello, world!&quot;))</div><div class="line">.get(&quot;/about&quot;, (req, res) =&gt; res.send(&quot;About ...&quot;))</div><div class="line">.listen(1337)</div></pre></td></tr></table></figure>
+<p>This pattern is very common in JS, and works in the following way: instead of<code>get</code>accepting an<code>app</code>and returning a<code>unit</code>(or no-op), we return another<code>app</code>which we can then use on a subsequent<code>get</code>!</p>
+<p>That’s a lot to unpack, so let’s demonstrate how to get from A to B in code.</p>
+<h4 id="Step-1-Take-an-app-return-an-app"><a href="#Step-1-Take-an-app-return-an-app" class="headerlink" title="Step 1: Take an app, return an app"></a>Step 1: Take an app, return an app</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">external get : app -&gt; string -&gt; (req -&gt; res -&gt; res) -&gt; app = &quot;&quot; [@@bs.send]</div><div class="line">let f: app = get (express ()) &quot;/&quot; index;;</div><div class="line">let g: app = get f &quot;/about&quot; about;;</div><div class="line">listen g 1337;;</div></pre></td></tr></table></figure>
+<p>So what’s different here? First, we changed the return type of<code>get</code>from a<code>unit</code>to an<code>app</code>. Next we remove the definition for<code>app</code>and inline<code>express ()</code>in<code>f</code>directly.</p>
+<p>Then, instead of using<code>app</code>as the first argument for our second call to<code>get</code>, we pass in<code>f</code>. This is type-safe (remember:<code>f</code>,<code>g</code>, and<code>express ()</code>all have the same type) and sure enough if we compile this script and run it — we get a working Express app!</p>
+<p>In fact, if we wanted to, we could start combining some of these lines by inlining the definition for<code>f</code>entirely like so:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">let g: app = get (get (express ()) &quot;/&quot; index) &quot;/about&quot; about;;</div><div class="line">listen g 1337;;</div></pre></td></tr></table></figure>
+<p>Or a step further, inlining<code>g</code>as well:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">listen</div><div class="line">(get</div><div class="line">(get (express ()) &quot;/&quot; index)</div><div class="line">&quot;/about&quot;</div><div class="line">about)</div><div class="line">1337</div></pre></td></tr></table></figure>
+<p>These two examples are_identical_to the first, but notice that<code>app</code>is only referenced once in our code. Let’s peek at BuckleScript’s output<code>lib/js/src/index.js</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Express().get(&quot;/&quot;, index).get(&quot;/about&quot;, about).listen(1337);</div></pre></td></tr></table></figure>
+<p>🔗🔗🔗🔗🔗🔗🔗🔗!!!</p>
+<p>See, once we smush together our<code>get</code>and<code>listen</code>calls, there’s no need for temporary variables like<code>f</code>and<code>g</code>. BuckleScript knows this, and merely puts everything inline for us — in a “chained” manner.</p>
+<p>This may start to look a little LISP-y to you, and that’s fair — this syntax is not easier to read than our original example which specifies<code>app</code>multiple times. Let’s move on and see how we can clean up this code a little.</p>
+<h4 id="Step-2-Some-light-plumbing-and-a-leak"><a href="#Step-2-Some-light-plumbing-and-a-leak" class="headerlink" title="Step 2: Some light plumbing, and a leak"></a>Step 2: Some light plumbing, and a leak</h4><p>As we start composing functions (like we did by inlining<code>f</code>and<code>g</code>in the previous section), we’ll start to see quite a bit of parentheses. Consider the following bit of code:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">apply_discount(</div><div class="line">(get_age_group(get_age(user_from_id(id))))</div><div class="line">price)</div></pre></td></tr></table></figure>
+<p>Sure we can dress this up with further indentation, but developers reading this code will still construct a sort of “stack” in their head as they read the subsequent functions from left to right (<em>“Okay apply discount of the age group of the age of the…”</em>)</p>
+<p>To remedy this, OCaml provides the infix<code>|&gt;</code>(or “pipe”) operator. We can inspect its type via<code>utop</code> :</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">utop # (|&gt;);;</div><div class="line">- : &apos;a -&gt; (&apos;a -&gt; &apos;b) -&gt; &apos;b = &lt;fun&gt;</div></pre></td></tr></table></figure>
+<p>We see that we take an item of type<code>a</code>, a function from<code>a</code>to<code>b</code>and return an item of type<code>b</code>._*Exhale*_In code:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">f(x) === x |&gt; f</div></pre></td></tr></table></figure>
+<p>And if we were to use this pipe multiple times:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">f(g(x)) === x |&gt; g |&gt; f</div></pre></td></tr></table></figure>
+<p>We can see here how the pipe operator (<code>|&gt;</code>) allows us to unfold various layers of function composition. It’s quite neat, and leads to some very readable code. Let’s use it with our example above:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">apply_discount(</div><div class="line">(get_age_group(get_age(user_from_id(id))))</div><div class="line">price)</div><div class="line">(* turns into... *)</div><div class="line">apply_discount(</div><div class="line">(id |&gt; user_from_id |&gt; get_age |&gt; get_age_group)</div><div class="line">price)</div></pre></td></tr></table></figure>
+<p>How about that last layer? What if we wanted to unfold<code>apply_discount</code>as well?</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">let f = id |&gt; user_from_id |&gt; get_age |&gt; get_age_group |&gt; apply_discount;;</div><div class="line">f price;;</div></pre></td></tr></table></figure>
+<p>Decent! However we hit a snag.<code>apply_discount</code>takes_two_arguments, the user’s age group, and a price (<code>group -&gt; price -&gt; total</code>). If we were to write our code like so:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">... |&gt; get_age_group |&gt; apply_discount price</div></pre></td></tr></table></figure>
+<p>We would receive a type error because<code>price</code>would be used as the_first_argument to<code>apply_discount</code>. This means we need some parentheses (technically you could use OCaml’s<code>@@</code>, but hold your horses), which we are trying to avoid!</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(... |&gt; get_age_group |&gt; apply_discount) price</div></pre></td></tr></table></figure>
+<p>One way to fix this?<strong>Just make<code>price</code>the first argument!</strong></p>
+<h4 id="Step-3-Save-the-app-for-last"><a href="#Step-3-Save-the-app-for-last" class="headerlink" title="Step 3: Save the app for last"></a>Step 3: Save the app for last</h4><p>If we were to redefine<code>apply_discount</code>from<code>group -&gt; price -&gt; total</code>to<code>price -&gt; group -&gt; total</code>, we could then remove our parentheses entirely:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">... |&gt; get_age_group |&gt; apply_discount price</div></pre></td></tr></table></figure>
+<p>Now price is used as the first argument, and second argument (the age group) makes its way to<code>apply_discount</code>from the pipeline.</p>
+<p>“Jordan this is great but I don’t really care about discounts and age groups, I’m trying to write a web server before my startup goes under.”</p>
+<p>Well fear no more, let’s return to our express example from earlier.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">listen</div><div class="line">(get</div><div class="line">(get (express ()) &quot;/&quot; index)</div><div class="line">&quot;/about&quot;</div><div class="line">about)</div><div class="line">1337</div></pre></td></tr></table></figure>
+<p>If we were to swap in some<code>|&gt;</code>operators, we’ll quickly run into the same exact problem we had with<code>apply_discount</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(((express () |&gt; get) &quot;/&quot; index |&gt; get) &quot;/about&quot; about |&gt; listen) 1337</div></pre></td></tr></table></figure>
+<p>Notice how<code>|&gt;</code>doesn’t really buy us much. Since an<code>app</code>type must be the first argument to<code>get</code>and<code>listen</code>, we’re left with a confusing mix of parentheses and<code>|&gt;</code>operators.</p>
+<p>As we learned in the previous section, our solution is to<strong>move this argument to the end</strong>. Let’s try it with some helper functions:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">let get_ route handler app = get app route handler</div><div class="line">let listen_ port app = listen app port</div></pre></td></tr></table></figure>
+<p>And use ’em like so:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">express () |&gt;</div><div class="line">get_ &quot;/&quot; index |&gt;</div><div class="line">get_ &quot;/about&quot; about |&gt;</div><div class="line">listen_ 1337</div></pre></td></tr></table></figure>
+<p>And voila! An<code>app</code>type makes it way from<code>express ()</code>, through the pipe and onto the end of<code>get_ “/&quot; index</code>. That method also returns an<code>app</code>type, which finds its way at the end of<code>get_ “/about&quot; about</code>, and so on and so forth. We now have ourselves a beautiful, type-safe chain of functions that map to the chainable express API.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Express().get(&quot;/&quot;, index).get(&quot;/about&quot;, about).listen(1337);</div></pre></td></tr></table></figure>
+<h4 id="Step-4-BuckleScript-can-do-this-for-us"><a href="#Step-4-BuckleScript-can-do-this-for-us" class="headerlink" title="Step 4: BuckleScript can do this for us"></a>Step 4: BuckleScript can do this for us</h4><p>Defining a<code>function_</code>for every<code>function</code>you bind to JavaScript-land doesn’t sound all that exciting, though. Wouldn’t it be great if<code>get</code>and<code>listen</code>could work like that for us? Well they can!</p>
+<p>The current bindings for<code>get</code>and<code>listen</code>are defined using the<a href="https://bucklescript.github.io/bucklescript/Manual.html#_binding_to_method_bs_send_bs_send_pipe"><code>@@bs.send</code></a>attribute as follows:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">external listen : app -&gt; int -&gt; unit = &quot;&quot; [@@bs.send]</div><div class="line">external get : app -&gt; string -&gt; (req -&gt; res -&gt; res) -&gt; app = &quot;&quot; [@@bs.send]</div></pre></td></tr></table></figure>
+<p>However, BuckleScript also provides us with a<code>@@bs.send.pipe</code>which, you guessed it, allows us to define functions that work well with the<code>|&gt;</code>operator.<a href="https://bucklescript.github.io/">From the docs</a>:</p>
+<blockquote>
+<p><code>bs.send.pipe</code><br>is similar to<br><code>bs.send</code><br>except that the first argument, i.e, the object, is put in the position of last argument to help user write in a<br><em>chaining style</em><br>:</p>
+</blockquote>
+<p>Here’s a modified binding for<code>get</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">external get : string -&gt; (req -&gt; res -&gt; res) -&gt; app = &quot;&quot; [@@bs.send.pipe: app]</div></pre></td></tr></table></figure>
+<p>The difference here is that the first<code>app</code>in the type definition has been moved into the attribute, right after<code>@@bs.send.pipe:</code> . Here’s our new definition for<code>listen</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">external listen : int -&gt; unit = &quot;&quot; [@@bs.send.pipe: app]</div></pre></td></tr></table></figure>
+<p>Now, we can swap out<code>get_</code>and<code>listen_</code>in favor of their original counterparts.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">express () |&gt;</div><div class="line">get &quot;/&quot; index |&gt;</div><div class="line">get &quot;/about&quot; about |&gt;</div><div class="line">listen 1337</div></pre></td></tr></table></figure>
+<p>🎉🎉🎉🎉🎉🎉</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*4877k4Hq9dPdtmvg9hnGFA.jpeg" alt=""></p>
+<h3 id="Closing-Thoughts"><a href="#Closing-Thoughts" class="headerlink" title="Closing Thoughts"></a>Closing Thoughts</h3><p>Okay so that was a lot of words to tell you how<code>@@bs.send.pipe</code>works, but I hope this post gave you a bit of intuition for why it exists and why you may want to use it. With that, here a few more questions to ponder on:</p>
+<ul>
+<li>You may have noticed that the type of the callback for<code>get</code>is<code>req -&gt; res -&gt; res</code> Why the second<code>res</code> Well, express has<br><a href="https://expressjs.com/en/4x/api.html#res.append">operations</a> on<code>res</code>like<code>send, status,</code> and<code>cookie</code>which are also chainable (they return a<code>res</code>type).<br><strong>Write chainable bindings for these methods.</strong></li>
+<li>Imagine<code>@@bs.send.pipe</code>did not exist and we were stuck with our old definitions of<code>get</code>and<code>listen:</code> could we create a function called<code>make_chainable</code>where<code>make_chainable get === get_</code>and<code>make_chainable listen === listen_</code>?<br><strong>Why or why not? </strong><em>(As a hint: what if<code>get</code>and<code>listen</code>both had three arguments, could we do it then?)</em></li>
+</ul>
+<p>Source: <a href="https://medium.com/dailyjs/typesafe-javascript-chaining-with-ocaml-and-bucklescript-ff489fe287c2">https://medium.com/dailyjs/typesafe-javascript-chaining-with-ocaml-and-bucklescript-ff489fe287c2</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/09/01/typesafe-javascript-chaining-with-ocaml-and-bucklescript/index.html';
+  var disqus_title = "Typesafe JavaScript Chaining with OCaml and BuckleScript";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exhibit-A-Express"><span class="toc-text">Exhibit A: Express</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Chaining-Express-API"><span class="toc-text">The Chaining Express API</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-1-Take-an-app-return-an-app"><span class="toc-text">Step 1: Take an app, return an app</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-2-Some-light-plumbing-and-a-leak"><span class="toc-text">Step 2: Some light plumbing, and a leak</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-3-Save-the-app-for-last"><span class="toc-text">Step 3: Save the app for last</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-4-BuckleScript-can-do-this-for-us"><span class="toc-text">Step 4: BuckleScript can do this for us</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Closing-Thoughts"><span class="toc-text">Closing Thoughts</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div id="footer-security">
+       <p>
+          <img src="/asset/images/security/klogo.png">
+          <img src="/asset/images/security/mcafee.png">
+          <img src="/asset/images/security/cmmodo_scanned.png">
+          <img src="/asset/images/security/softonic_tested.png">
+          <img src="/asset/images/security/tested_by_sucuri.png">
+          <img src="/asset/images/security/norton.png">
+          <img src="/asset/images/security/eset_logo.png">
+       </p>
+    </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

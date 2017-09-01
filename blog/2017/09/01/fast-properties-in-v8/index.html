@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Fast Properties in V8 - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Fast Properties in V8" />
+  <meta name="description" content="Fast Properties in V8" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Fast Properties in V8 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Fast Properties in V8 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/09/01/fast-properties-in-v8/index.html">
+<meta property="og:site_name" content="Fast Properties in V8 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Fast Properties in V8 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://1.bp.blogspot.com/-SbaaALLKZ_k/VazbZ5dbL_I/AAAAAAAAApU/RcYBmrXc8tg/s1600/v8logo.png">
+<meta property="og:image" content="https://2.bp.blogspot.com/-85h60IlpPP0/WaZyqIVb4BI/AAAAAAAABVo/07d2HYCaz8ojd3e6w2mmtls3jYPlzc7SwCEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25281%2529V8%2BBlog%2BPost%2BProperties%2B%25281%2529-opt.png">
+<meta property="og:image" content="https://3.bp.blogspot.com/-DOwcud2emlM/WaZyqD5ijnI/AAAAAAAABVo/qM1VSAAvGb8UdkSDR7voqnsl7PPyP83nwCEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25283%2529V8%2BBlog%2BPost%2BProperties%2B%25283%2529-opt.png">
+<meta property="og:image" content="https://2.bp.blogspot.com/-QryvU5yH54E/WaZypyDcL5I/AAAAAAAABVo/7A7nQTGpHnYh3nj2Z1ycEzKJMzMaASQ0ACEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25282%2529V8%2BBlog%2BPost%2BProperties%2B%25282%2529-opt.png">
+<meta property="og:image" content="https://1.bp.blogspot.com/-Y8RSMfyp4Ns/WaZyqnXfXHI/AAAAAAAABVo/vM3sHRfKYpkPI1X9De_DH0GHuOt4m04rQCEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25284%2529V8%2BBlog%2BPost%2BProperties%2B%25284%2529-opt.png">
+<meta property="og:image" content="https://4.bp.blogspot.com/-d2tpi7Ag4Xc/WaZyrJLvHoI/AAAAAAAABVo/ckwdEeuj0asJWRwVcNfLNX8b_9V5uOdvACEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25285%2529V8%2BBlog%2BPost%2BProperties%2B%25285%2529-opt.png">
+<meta property="og:image" content="https://1.bp.blogspot.com/-5koeeNOIEAA/WaZ1GIxOgcI/AAAAAAAABWE/pVHJMYKV2oAdLVnOH7mJS4CcOnsGr5GngCEwYBhgL/s640/10-opt.png">
+<meta property="og:image" content="https://4.bp.blogspot.com/-IYamXWTAJWc/WaZ0hiBb5VI/AAAAAAAABV8/9BRrrSGMsxkJkjtH2bEqw2qg_UszfNBBACEwYBhgL/s400/9-opt.png">
+<meta property="og:image" content="https://3.bp.blogspot.com/-VZ1f0pKwu9g/WaZyrpJ-2qI/AAAAAAAABVo/UZp0rgWPM_QorIHTDBHJCvYUVhnND8DlQCEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25287%2529V8%2BBlog%2BPost%2BProperties%2B%25287%2529-opt.png">
+<meta property="og:updated_time" content="2017-09-01T06:54:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fast Properties in V8 - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Fast Properties in V8 - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="https://1.bp.blogspot.com/-SbaaALLKZ_k/VazbZ5dbL_I/AAAAAAAAApU/RcYBmrXc8tg/s1600/v8logo.png">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/09/01/fast-properties-in-v8/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/09/01/fast-properties-in-v8/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-a395c8a81d.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Fast Properties in V8 </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Fast Properties in V8</h1>
+    
+    <a href="/blog/2017/09/01/fast-properties-in-v8/" class="article-date"><time datetime="2017-09-01T00:00:00.000Z">2017-09-01</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p><img src="https://1.bp.blogspot.com/-SbaaALLKZ_k/VazbZ5dbL_I/AAAAAAAAApU/RcYBmrXc8tg/s1600/v8logo.png" alt=""></p>
+<p>In this blog post we would like to explain how V8 handles JavaScript properties internally. From a JavaScript point of view there are only a few distinctions necessary for properties. JavaScript objects mostly behave like dictionaries, with string keys and arbitrary objects as values. The specification does however treat integer-indexed properties and other properties differently <a href="https://tc39.github.io/ecma262/#sec-ordinaryownpropertykeys">during iteration</a>. Other than that, the different properties behave mostly the same, independent of whether they are integer indexed or not.</p>
+<p>However, under the hood V8 does rely on several different representations of properties for performance and memory reasons. In this blog post we are going to explain how V8 can provide fast property access while handling dynamically-added properties. Understanding how properties work is essential for explaining how optimizations such as <a href="http://mrale.ph/blog/2012/06/03/explaining-js-vms-in-js-inline-caches.html">inline caches</a> work in V8.</p>
+<p>This post explains the difference in handling integer-indexed and named properties. After that we show how V8 maintains HiddenClasses when adding named properties in order to provide a fast way to identify the shape of an object. We’ll then continue giving insights into how named properties are optimized for fast accesses or fast modification depending on the usage. In the final section we provide details on how V8 handles integer-indexed properties or array indices.</p>
+<h3 id="Named-Properties-vs-Elements"><a href="#Named-Properties-vs-Elements" class="headerlink" title="Named Properties vs. Elements"></a>Named Properties vs. Elements</h3><p>Let’s start by analysing a very simple object such as{a: “foo”, b: “bar”}. This object has two named properties, “a” and “b”. It does not have any integer indices for property names. array-indexed properties, more commonly known as elements, are most prominent on arrays. For instance the array [“foo”, “bar”] has two array-indexed properties: 0, with the value “foo”, and 1, with the value “bar”. This is the first major distinction on how V8 handles properties in general.</p>
+<p>The following diagram shows what a basic JavaScript object looks like in memory.<br><img src="https://2.bp.blogspot.com/-85h60IlpPP0/WaZyqIVb4BI/AAAAAAAABVo/07d2HYCaz8ojd3e6w2mmtls3jYPlzc7SwCEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25281%2529V8%2BBlog%2BPost%2BProperties%2B%25281%2529-opt.png" alt=""></p>
+<p>Elements and properties are stored in two separate data structures which makes adding and accessing properties or elements more efficient for different usage patterns.</p>
+<p>Elements are mainly used for the various</p>
+<p><a href="https://tc39.github.io/ecma262/#sec-properties-of-the-array-prototype-object">Array.prototype methods</a></p>
+<p>such as pop or slice. Given that these functions access properties in consecutive ranges, V8 also represents them as simple arrays internally — most of the time. Later in this post we will explain how we sometimes switch to a sparse dictionary-based representation to save memory.</p>
+<p>Named properties are stored in a similar way in a separate array. However, unlike elements, we cannot simply use the key to deduce their position within the properties array; we need some additional metadata. In V8 every JavaScript object has a HiddenClass associated. The HiddenClass stores information about the shape of an object, and among other things, a mapping from property names to indices into the properties. To complicate things we sometimes use a dictionary for the properties instead of a simple array. We will explain this in more detail in a dedicated section.</p>
+<p><strong>Takeaway from this section:</strong></p>
+<ul>
+<li>Array-indexed properties are stored in a separate elements store.</li>
+<li>Named properties are stored in the properties store.</li>
+<li>Elements and properties can either be arrays or dictionaries.</li>
+<li>Each JavaScript object has a HiddenClass associated that keeps information about the object shape.</li>
+</ul>
+<h3 id="HiddenClasses-and-DescriptorArrays"><a href="#HiddenClasses-and-DescriptorArrays" class="headerlink" title="HiddenClasses and DescriptorArrays"></a>HiddenClasses and DescriptorArrays</h3><p>After explaining the general distinction of elements and named properties we need to have a look at how HiddenClasses work in V8. This HiddenClass stores meta information about an object, including the number of properties on the object and a reference to the object’s prototype. HiddenClasses are conceptually similar to classes in typical object-oriented programming languages. However, in a prototype-based language such as JavaScript it is generally not possible to know classes upfront. Hence, in this case V8, HiddenClasses are created on the fly and updated dynamically as objects change. HiddenClasses serve as an identifier for the shape of an object and as such a very important ingredient for V8’s optimizing compiler and inline caches. The optimizing compiler for instance can directly inline property accesses if it can ensure a compatible objects structure through the HiddenClass.</p>
+<p>Let’s have a look at the important parts of a HiddenClass.<br><img src="https://3.bp.blogspot.com/-DOwcud2emlM/WaZyqD5ijnI/AAAAAAAABVo/qM1VSAAvGb8UdkSDR7voqnsl7PPyP83nwCEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25283%2529V8%2BBlog%2BPost%2BProperties%2B%25283%2529-opt.png" alt=""><br>In V8 the first field of a JavaScript object points to a HiddenClass. (In fact, this is the case for any object that is on the V8 heap and managed by the garbage collector.) In terms of properties, the most important information is the third bit field, which stores the number of properties, and a pointer to the descriptor array. The descriptor array contains information about named properties like the name itself and the position where the value is stored. Note that we do not keep track of integer indexed properties here, hence there is no entry in the descriptor array.</p>
+<p>The basic assumption about HiddenClasses is that objects with the same structure — e.g. the same named properties in the same order — share the same HiddenClass. To achieve that we use a different HiddenClass when a property gets added to an object. In the following example we start from an empty object and add three named properties.<br><img src="https://2.bp.blogspot.com/-QryvU5yH54E/WaZypyDcL5I/AAAAAAAABVo/7A7nQTGpHnYh3nj2Z1ycEzKJMzMaASQ0ACEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25282%2529V8%2BBlog%2BPost%2BProperties%2B%25282%2529-opt.png" alt=""></p>
+<p>Every time a new property is added, the object’s HiddenClass is changed. In the background V8 creates a transition tree that links the HiddenClasses together. V8 knows which HiddenClass to take when you add, for instance, the property “a” to an empty object. This transition tree makes sure you end up with the same final HiddenClass if you add the same properties in the same order. The following example shows that we would follow the same transition tree even if we add simple indexed properties in between.<br><img src="https://1.bp.blogspot.com/-Y8RSMfyp4Ns/WaZyqnXfXHI/AAAAAAAABVo/vM3sHRfKYpkPI1X9De_DH0GHuOt4m04rQCEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25284%2529V8%2BBlog%2BPost%2BProperties%2B%25284%2529-opt.png" alt=""></p>
+<p><strong>Takeway from this section:</strong></p>
+<ul>
+<li>Objects with the same structure (same properties in the same order) have the same HiddenClass</li>
+<li>By default every new named property added causes a new HiddenClass to be created.</li>
+<li>Adding array-indexed properties does not create new HiddenClasses.</li>
+</ul>
+<h3 id="The-Three-Different-Kinds-of-Named-Properties"><a href="#The-Three-Different-Kinds-of-Named-Properties" class="headerlink" title="The Three Different Kinds of Named Properties"></a>The Three Different Kinds of Named Properties</h3><p>After giving an overview on how V8 uses HiddenClasses to track the shape of objects let’s dive into how these properties are actually stored. As explained in the introduction above, there are two fundamental kind of properties: named and indexed. The following section covers named properties.</p>
+<p>A simple object such as{a: 1, b: 2}can have various internal representations in V8. While JavaScript objects behave more or less like simple dictionaries from the outside, V8 tries to avoid dictionaries because they hamper certain optimizations such as <a href="https://en.wikipedia.org/wiki/Inline_caching">inline caches</a> which we will explain in a separate post. </p>
+<p><strong>In-object vs. Normal Properties:</strong></p>
+<p>V8 supports so-called in-object properties which are stored directly on the object themselves. These are the fastest properties available in V8 as they are accessible without any indirection. The number of in-object properties is predetermined by the initial size of the object. If more properties get added than there is space in the object, they are stored in the properties store. The properties store adds one level of indirection but can be grown independently.<br><img src="https://4.bp.blogspot.com/-d2tpi7Ag4Xc/WaZyrJLvHoI/AAAAAAAABVo/ckwdEeuj0asJWRwVcNfLNX8b_9V5uOdvACEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25285%2529V8%2BBlog%2BPost%2BProperties%2B%25285%2529-opt.png" alt=""></p>
+<p><strong>Fast vs. Slow Properties:</strong></p>
+<p>The next important distinction is between fast and slow properties. Typically we define the properties stored in the linear properties store as “fast”.  Fast properties are simply accessed by index in the properties store. To get from the name of the property to the actual position in the properties store, we have to consult the descriptor array on the HiddenClass, as we’ve outlined before.<br><img src="https://1.bp.blogspot.com/-5koeeNOIEAA/WaZ1GIxOgcI/AAAAAAAABWE/pVHJMYKV2oAdLVnOH7mJS4CcOnsGr5GngCEwYBhgL/s640/10-opt.png" alt=""></p>
+<p>However, if many properties get added and deleted from an object, it can generate a lot of time and memory overhead to maintain the descriptor array and HiddenClasses. Hence, V8 also supports so-called slow properties. An object with slow properties has a self-contained dictionary as a properties store. All the properties meta information is no longer stored in the descriptor array on the HiddenClass but directly in the properties dictionary. Hence, properties can be added and removed without updating the HiddenClass. Since inline caches don’t work with dictionary properties, the latter, are typically slower than fast properties.</p>
+<p><strong>Takeaway from this section:</strong></p>
+<ul>
+<li>There are three different named property types: in-object, fast and slow/dictionary.</li>
+<li><ol>
+<li>In-object properties are stored directly on the object itself and provide the fastest access.</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>Fast properties live in the properties store, all the meta information is stored in the descriptor array on the HiddenClass.</li>
+<li>Slow properties live in a self-contained properties dictionary, meta information is no longer shared through the HiddenClass.</li>
+</ol>
+<ul>
+<li>Slow properties allow for efficient property removal and addition but are slower to access than the other two types.</li>
+</ul>
+<h3 id="Elements-or-array-indexed-Properties"><a href="#Elements-or-array-indexed-Properties" class="headerlink" title="Elements or array-indexed Properties"></a>Elements or array-indexed Properties</h3><p>So far we have looked at named properties and ignored integer indexed properties commonly used with arrays. Handling of integer indexed properties is no less complex than named properties. Even though all indexed properties are always kept separately in the elements store, there are <a href="https://cs.chromium.org/chromium/src/v8/src/elements-kind.h?q=elements-kind.h&amp;sq=package:chromium&amp;dr&amp;l=14">20</a> different types of elements!</p>
+<p><strong>Packed or Holey Elements:</strong></p>
+<p>The first major distinction V8 makes is whether the elements backing store is packed or has holes in it. You get holes in a backing store if you delete an indexed element, or for instance, you don’t define it. A simple example is [1,,3] where the second entry is a hole. The following example illustrates this issue:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">const o = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];</div><div class="line">console.log(o[1]); // Prints &quot;b&quot;.</div><div class="line"></div><div class="line">delete o[1]; // Introduces a hole in the elements store.</div><div class="line">console.log(o[1]); // Prints &quot;undefined&quot;; property 1 does not exist.</div><div class="line">o.__proto__ = &#123;1: &quot;B&quot;&#125;; // Define property 1 on the prototype.</div><div class="line"></div><div class="line">console.log(o[0]); // Prints &quot;a&quot;.</div><div class="line">console.log(o[1]); // Prints &quot;B&quot;.</div><div class="line">console.log(o[2]); // Prints &quot;c&quot;.</div><div class="line">console.log(o[3]); // Prints undefined</div></pre></td></tr></table></figure>
+<p><img src="https://4.bp.blogspot.com/-IYamXWTAJWc/WaZ0hiBb5VI/AAAAAAAABV8/9BRrrSGMsxkJkjtH2bEqw2qg_UszfNBBACEwYBhgL/s400/9-opt.png" alt=""></p>
+<p>In short, if a property is not present on the receiver we have to keep on looking on the prototype chain. Given that elements are self-contained, e.g. we don’t store information about present indexed properties on the HiddenClass, we need a special value, called the_hole, to mark properties that are not present. This is crucial for the performance of Array functions. If we know that there are no holes, i.e. the elements store is packed, we can perform local operations without expensive lookups on the prototype chain.</p>
+<p><strong>Fast or Dictionary Elements:</strong></p>
+<p>The second major distinction made on elements is whether they are fast or dictionary-mode. Fast elements are simple VM-internal arrays where the property index maps to the index in the elements store. However, this simple representation is rather wasteful for very large sparse/holey arrays where only few entries are occupied. In this case we used a dictionary-based representation to save memory at the cost of slightly slower access:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">const sparseArray = [];</div><div class="line">sparseArray[1 &lt;&lt; 20] = &quot;foo&quot;; // Creates an array with dictionary elements.</div></pre></td></tr></table></figure>
+<p>In this example, allocating a full array with 10k entries would be rather wasteful. What happens instead is that V8 creates a dictionary where we store a key-value-descriptor triplets. The key in this case would be 10000 and the value “string” and the default descriptor is used. Given that we don’t have a way to store descriptor details on the HiddenClass, V8 resorts to slow elements whenever you define an indexed properties with a custom descriptor:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">const array = [];</div><div class="line">Object.defineProperty(array, 0, &#123;value: &quot;fixed&quot;, configurable: false&#125;);</div><div class="line">console.log(array[0]); // Prints &quot;fixed&quot;.</div><div class="line">array[0] = &quot;other value&quot;; // Cannot override index 0.</div><div class="line">console.log(array[0]); // Still prints &quot;fixed&quot;.</div></pre></td></tr></table></figure>
+<p>In this example we added a non-configurable property on the array. This information is stored in the descriptor part of a slow elements dictionary triplet. It is important to note that Array functions perform considerably slower on objects with slow elements.</p>
+<p><strong>Smi and Double Elements:</strong></p>
+<p>For fast elements there is another important distinction made in V8. For instance if you only store integers in an Array, a common use-case, the GC does not have to look at the array, as integers are directly encoded as so called small integers (Smis) in place. Another special case are Arrays that only contain doubles. Unlike Smis, floating point numbers are usually represented as full objects occupying several words. However, V8 stores raw doubles for pure double arrays to avoid memory and performance overhead. The following example lists 4 examples of Smi and double elements:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">const a1 = [1, 2, 3]; // Smi Packed</div><div class="line">const a2 = [1, , 3]; // Smi Holey, a2[1] reads from the prototype</div><div class="line">const b1 = [1.1, 2, 3]; // Double Packed</div><div class="line">const b2 = [1.1, , 3]; // Double Holey, b2[1] reads from the prototype</div></pre></td></tr></table></figure>
+<p><strong>Special Elements:</strong></p>
+<p>With the information so far we covered 7 out of the 20 different element kinds. For simplicity we excluded 9 element kinds for TypedArrays, two more for String wrappers and last but not least, two more special element kinds for arguments objects.</p>
+<p><strong>The ElementsAccessor:</strong></p>
+<p>As you can imagine we are not exactly keen on writing Array functions 20 times in C++, once for every elements kind. That’s where some C++ magic comes into play. Instead of implementing Array functions over and over again, we built the ElementsAccessor where we mostly have to implement only simple functions that access elements from the backing store. The ElementsAccessor relies on <a href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">CRTP</a> to create specialized versions of each Array function. So if you call something like slice on a array, V8 internally calls a builtin written in C++ and dispatches through the ElementsAccessor to the specialized version of the function:<br><img src="https://3.bp.blogspot.com/-VZ1f0pKwu9g/WaZyrpJ-2qI/AAAAAAAABVo/UZp0rgWPM_QorIHTDBHJCvYUVhnND8DlQCEwYBhgL/s640/V8%2BBlog%2BPost%2BProperties%2B%25287%2529V8%2BBlog%2BPost%2BProperties%2B%25287%2529-opt.png" alt=""></p>
+<p><strong>Takeaway from this section:</strong></p>
+<ul>
+<li>There are fast and dictionary-mode indexed properties and elements.</li>
+<li>Fast properties can be packed or they can can contain holes which indicate that an indexed property has been deleted.</li>
+<li>Elements are specialized on their content to speed up Array functions and reduce GC overhead.</li>
+</ul>
+<p>Understanding how properties work is key to many optimizations in V8. For JavaScript developers many of these internal decisions are not visible directly, but they explain why certain code patterns are faster than others. Changing the property or element type typically causes V8 to create a different HiddenClass which can lead to type pollution which <a href="http://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html">prevents V8 from generating optimal code</a>. Stay tuned for further posts on how the VM-internals of V8 work.</p>
+<p>Posted by Camillo Bruni (@camillobruni), also author of “fast for-in”</p>
+<p>Source: <a href="https://v8project.blogspot.tw/2017/08/fast-properties.html">https://v8project.blogspot.tw/2017/08/fast-properties.html</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/09/01/fast-properties-in-v8/index.html';
+  var disqus_title = "Fast Properties in V8";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Named-Properties-vs-Elements"><span class="toc-text">Named Properties vs. Elements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HiddenClasses-and-DescriptorArrays"><span class="toc-text">HiddenClasses and DescriptorArrays</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Three-Different-Kinds-of-Named-Properties"><span class="toc-text">The Three Different Kinds of Named Properties</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Elements-or-array-indexed-Properties"><span class="toc-text">Elements or array-indexed Properties</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+    <div id="footer-links">
+      
+      <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+      
+      <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+      <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div id="footer-security">
+       <p>
+          <img src="/asset/images/security/klogo.png">
+          <img src="/asset/images/security/mcafee.png">
+          <img src="/asset/images/security/cmmodo_scanned.png">
+          <img src="/asset/images/security/softonic_tested.png">
+          <img src="/asset/images/security/tested_by_sucuri.png">
+          <img src="/asset/images/security/norton.png">
+          <img src="/asset/images/security/eset_logo.png">
+       </p>
+    </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
