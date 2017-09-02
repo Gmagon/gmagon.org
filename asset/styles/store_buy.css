@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+/*store-buy*/
+.store-buy{ 
+	/* background:#f9f9f9; */
+	margin-bottom:30px;
+	width: 1080px;
+    overflow: hidden;
+	margin: 0 auto;
+	margin-top: 4px;
+	padding: 12px;
+}  
+.store-buy .buy-main{  overflow:hidden;border:1px solid #e3e3e3; background:#fff; padding:0 2%; font-size:14px; color:#333}
+.store-buy .buy-main h1{ font-size:25px; line-height:30px; padding:30px 0 10px; color:#444;}
+.store-buy .buy-main .proImg{ float:left; width:24%; margin-top:30px; max-height:338px; overflow:hidden; text-align:center} 
+.store-buy .buy-main .proImg img{ max-width:100%}
+.store-buy .buy-main .proImg .flex-control-paging{ margin:15px 0 10px; text-align:center}
+.store-buy .buy-main .proImg .flex-control-paging li{margin-right:6px;display:inline-block;*display:inline;  }
+.store-buy .buy-main .proImg .flex-control-paging li a{display:inline-block;width:25px; height:6px;cursor:pointer; background:#dcdcdc;}
+.store-buy .buy-main .proImg .flex-control-paging li a.flex-active{ background:#f6772c;} 
+.store-buy .buy-main .proImg-2{ text-align:center; width:23.6%; margin-top:20px; margin-bottom:10px}
+
+
+.store-buy .buy-main .text{ float:left;width:73.5%; min-height:468px; margin-left:1.5%; padding-right:1.5%; padding-bottom:15px; border-right:1px solid #eee;  } 
+.store-buy .buy-main .text .info{ padding-left:26%}
+.store-buy .buy-main .text .item{ margin:20px 0 0 37%;}
+.store-buy .buy-main .text .note{ background:#eee; padding:15px 3%; margin:20px 0;}
+.store-buy .buy-main .text hr{ border-bottom:1px dashed #ddd; margin:20px 0 ; *margin:13px 0;} 
+.store-buy .buy-main .text .select{ float:left; width:35%; margin-bottom:10px}
+.store-buy .buy-main .text .select select{ display:block; border:1px solid #e2e2e2; padding:5px; width:95%; color:#888; vertical-align:middle}
+.store-buy .buy-main .text .price{ float:left;margin:0 2% 10px; width:29%}
+.store-buy .buy-main .text .price del{ font-size:18px; color:#777}
+.store-buy .buy-main .text .payBtn{ float:right; width:220px}
+.store-buy .buy-main .text .price strong{ font-size:32px; line-height:38px; color:#f6772c; font-weight:normal}
+.store-buy .buy-main .text .orangeBtn-b{ width:192px; height:52px; line-height:52px; text-align:center; font-size:26px; color:#fff;} 
+.store-buy .buy-main .text-2 .price strong{ font-size:23px; line-height:30px;}
+.store-buy .buy-main .text-2 .item{
+	border:1px solid #ebebeb;
+	background:#f9f9f9;
+	height:180px;
+	overflow:visible;
+	position:relative;
+	margin-top: 20px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 27%;
+	padding-top: 25px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+.store-buy .buy-main .text-2 .item .span2{
+	min-height:220px;
+	height:auto !important;
+	height:220px;
+	margin-left:0\9;
+	width:78%;
+
+*width:45%; 		margin-right:2%;
+	border-right:1px solid #e4e4e4;
+	text-align:center;
+	padding-top: 0;
+	padding-right: 3%;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+.store-buy .buy-main .text-2 .item .span2 .price{ width:auto !important; float:none !important}
+.store-buy .buy-main .text-2 .item .span2 .price del{ font-size:15px;}
+.store-buy .buy-main .text-2 .item .span2 .name{ font-size:19px; margin-bottom:10px; text-align:center}
+.store-buy .buy-main .text-2 .item .orangebtn{ height:40px; line-height:40px; width:130px}
+.store-buy .buy-main .text-2 .info{ padding-left:27%}
+.store-buy .buy-main .text-2 .item .license{ position:absolute; z-index:1; top:0; right:0; right:-10px\9; background:#fff;padding:0 3%;   border-left:1px solid #ebebeb; width:52%}
+.store-buy .buy-main .text-2 .item .license .name{ padding-top:25px;}
+.store-buy .buy-main .text-2 .item .license .closeBtn{ float:right; color:#666; font-size:14px; font-family:Arial; margin-top:5px; font-weight:bold;}
+.store-buy .buy-main .text-2 .item .license label{ display:block; font-size:12px; letter-spacing:-1px; text-align:left;}
+.store-buy .buy-main .sideArea{ float:right; width:21%; padding:30px 0 40px 1.5%} 
+.store-buy .buy-main .sideArea img{ max-width:100%} 
+@media (min-width: 768px) and (max-width: 979px) {
+	.store-buy .buy-main .text-2 { width:auto;float:none}
+	.store-buy .buy-main .sideArea-2 { width:auto; float:none; text-align:center} 
+	.store-buy .buy-main .sideArea2{ float:none; width:auto; text-align:center}
+}
+
+@media (max-width: 979px) { 
+	.store-buy .buy-main .text .select{ float:none; width:100%;}
+	.store-buy .buy-main .text .price{ width:40%}
+	.store-buy .buy-main .text-2{ border:none}
+	.store-buy .buy-main .text-2{ border:none}
+	.store-buy .buy-main .text{  min-height:inherit !important; }
+}
+@media (max-width: 767px) { 
+	.store-buy .buy-main .text-2 .item{ height:254px; clear:both;}
+	.store-buy .buy-main .text{ border:none}
+	 .store-buy .buy-main .sideArea{ clear:both;border-top:1px solid #eee; padding:20px 0 20px 1.5%;float:none; width:auto; position:static; text-align:center} 
+	 .store-buy .buy-main .text .item{margin:20px 0 0 0;}
+	 .store-buy .buy-main .text{ padding:0 0 20px; width:auto}
+	 
+}
+@media (max-width: 479px) {
+		 .store-buy .buy-main .text-2 .item{ padding-bottom:10px; height:auto }
+		 .store-buy .buy-main .text-2 .item .span2:first-child{ border:none; border-bottom:1px solid #e4e4e4; min-height:auto;height:auto;margin-bottom:10px;}
+		 .store-buy .buy-main .text-2 .item .license{ top:auto; bottom:0}
+		 .store-buy .buy-main .text .price, .store-buy .buy-main .text .payBtn{ float:none; width:100%; margin:0 0 10px;}
+}
+/*Binding*/
+.store-buy h2{ font-size:20px; margin:35px 0 25px; }
+.store-buy .Binding { overflow:hidden; border:1px solid #eee;  background:#fff;  padding:25px 2.5% ;}
+.store-buy .Binding .first{ float:left; width:12%;margin-top:62px;}
+.store-buy .Binding .cross{ float:left; background:url(images/cross.png) no-repeat 50% 100%; width:5%; height:115px;}
+.store-buy .Binding .item{ float:left; width:25.5%;} 
+.store-buy .Binding .item .img{ float:left; width:40%;}
+.store-buy .Binding .item .img img{ max-width:100%;}
+.store-buy .Binding .item .text{ padding-left:41%;}
+.store-buy .Binding .item p{line-height:1.4em;} 
+.store-buy .Binding .item label,.store-buy .Binding .first label{ display:block; line-height:16px; height:32px; padding:5px 2%; background:#ebebeb; margin-bottom:20px; position:relative;}
+.store-buy .Binding .first label{ display:none; text-align:left;}
+.store-buy .Binding .item label .dot{ display:block; position:absolute; z-index:2; background:url(images/binding-dot_07.png) no-repeat; width:19px; height:8px; bottom:-8px; left:30px;}
+.store-buy .Binding .price{ color:#f26522; margin-top:5px; font-size:13px;}
+.store-buy .Binding .price del{ color:#777; font-size:13px;}
+.store-buy .Binding .payArea{ font-size:16px; background:url(images/binding-buyarea_07.png) no-repeat; height:145px; float:left; width:22.8%; padding:10px 0 0 2%; text-align:center; margin-left:2%; margin-bottom:20px;}
+.store-buy .Binding .payArea .price{ font-size:20px; line-height:20px; margin-bottom:5px;}
+.store-buy .Binding .payArea .togetherBtn{ margin:10px auto;}
+
+/*noteArea*/
+.store-buy .noteArea{ margin:35px 0; padding-bottom:15px; overflow:hidden;}
+.store-buy .noteArea .tit{ font-size:14px; display:block; margin-bottom:5px;}
+.store-buy .noteArea .item2{ float:right; width:25%; border:1px solid #eee; background:#fff; padding-bottom:25px;}
+.store-buy .noteArea .item2 .tit{ background:#eee; height:37px; line-height:37px; font-size:16px; padding:0 3%; margin-bottom:20px;}
+.store-buy .noteArea .item2 li{ margin-left:30px; line-height:2em;}
+.store-buy .noteArea .item1{ width:72%; float:left;}
+@media (max-width: 767px) { 
+	.store-buy .Binding{ border:2px solid #f6772c;}
+	.store-buy .Binding .payArea{ clear:both; float:none; width:auto; background:url(images/binding-buyarea_08.png) 50% 10px no-repeat; padding-top:50px; }
+	.store-buy .Binding .first{ width:25%;}
+	.store-buy .Binding .item{ width:31%;}
+	.store-buy .Binding .item .img{ float:left;}
+	.store-buy .noteArea .item1,.store-buy .noteArea .item2{ float:none; width:auto; margin-bottom:20px;}
+}
+@media (max-width: 479px) {
+	.store-buy .Binding .first{ float:none; width:100%; margin-top:10px;}
+	.store-buy .Binding .cross { float:none; width:auto; height:35px; background-position:50% 0;}
+	.store-buy .Binding .item{ float:none; width:auto; overflow:hidden;}  
+	.store-buy .Binding h2{ margin-bottom:0px;}
+	.store-buy .Binding .item label,.store-buy .Binding .first label{ height:auto; margin-bottom:10px;} 
+	.store-buy .Binding .first label{ display:block;}
+}
