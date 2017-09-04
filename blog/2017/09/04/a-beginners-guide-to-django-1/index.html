@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>A Beginners' Guide to Django (1) - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="A Beginners' Guide to Django (1)" />
+  <meta name="description" content="A Beginners' Guide to Django (1)" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="A Beginners&apos; Guide to Django (1) - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="A Beginners&#39; Guide to Django (1) - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/09/04/a-beginners-guide-to-django-1/index.html">
+<meta property="og:site_name" content="A Beginners&#39; Guide to Django (1) - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="A Beginners&apos; Guide to Django (1) - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://img2.tuicool.com/ZnqIR3m.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/YrauMfI.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/vEjaiye.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/QRnqUrE.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/yAvIVnB.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/MfaURb7.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/yiqqQrA.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/ARzAJzi.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/7fe6Bze.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/2m6juqN.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/FjMv2aN.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/mqmeiyV.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/uYV7ni.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/AnY3Ajy.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/jyiYr27.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/Vjaya2y.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/ayuYnuB.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/fmErmej.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/fmm6V3Q.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/bAZVjyf.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/NjQvIji.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/2yEvArf.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/ABzuEb7.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/IRjYjyi.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/FneqUvz.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/JJnE3eQ.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/6RrUzyM.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/26nma2m.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/MNbiYry.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/iqU3iym.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/2em2QvA.png!web">
+<meta property="og:updated_time" content="2017-09-04T08:41:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A Beginners&#39; Guide to Django (1) - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="A Beginners&apos; Guide to Django (1) - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="http://img2.tuicool.com/ZnqIR3m.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/09/04/a-beginners-guide-to-django-1/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/09/04/a-beginners-guide-to-django-1/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-3ff4298f58.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/asset/styles/global.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> A Beginners' Guide to Django (1) </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">A Beginners' Guide to Django (1)</h1>
+    
+    <a href="/blog/2017/09/04/a-beginners-guide-to-django-1/" class="article-date"><time datetime="2017-09-04T00:00:00.000Z">2017-09-04</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="http://img2.tuicool.com/ZnqIR3m.png!web" alt=""></p>
+<p>I’m starting today a new tutorial series about the Django fundamentals. It’s a complete beginner’s guide to start learning Django. The material is divided in 7 parts. We’re going to explore all the basic concepts in great detail, from installation, preparation of the development environment, models, views, templates, urls to more advanced topics such as migrations, testing and deployment.</p>
+<p>I wanted to do something different. A tutorial that would be easy to follow, informative and fun to read. That was when I came up with the idea to create some comics along the text to illustrate some concepts and scenarios. I hope you enjoy the reading!</p>
+<p>But before we start</p>
+<p>Back when I worked as a substitute professor in a university, I used to teach a introduction to web development discipline for the newcomer students in the Computer Science course. And I would always start a new classes with this Confucius quote:</p>
+<p><img src="http://img2.tuicool.com/YrauMfI.png!web" alt=""></p>
+<p>So, hands on! Don’t just read the tutorials. Let’s do it together! You will learn much more by doing and practicing.</p>
+<h4 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h4><p>The first thing we need to do is install some programs in our machine so to be able to start playing with Django. The basic setup consists of installing<strong>Python</strong>,<strong>Virtualenv</strong>and<strong>Django</strong>.</p>
+<p><img src="http://img2.tuicool.com/vEjaiye.png!web" alt=""></p>
+<p>Using virtual environments is not mandatory, but it’s highly recommended. If you are just getting started, it’s better to start with the right foot.</p>
+<p>When developing Web sites or Web projects with Django, it’s very common to have to install external libraries to support the development. Using virtual environments, each project you develop will have its own isolated environment. So the dependencies won’t clash. It also allow you to maintain in your local machine projects that runs on different Django versions.</p>
+<p>It’s very straightforward to use it, you will see!</p>
+<h4 id="Installing-Python-3-6-2"><a href="#Installing-Python-3-6-2" class="headerlink" title="Installing Python 3.6.2"></a>Installing Python 3.6.2</h4><p>First thing we want to do is install the latest Python distribution, which is<strong>Python 3.6.2</strong>. At least it was, by the time I was writing this tutorial. If there’s a newer version out there, go with it. The next steps should remain more or less the same.</p>
+<p>We are going to use Python 3 because the most important Python libraries have already been ported to Python 3 and also the next major Django version (2.x) won’t support Python 2 anymore. So Python 3 is the way to go.</p>
+<p>The best way to go is with<a href="https://brew.sh/">Homebrew</a>. If you don’t have it installed in your Mac yet, run the following command in the<strong>Terminal</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
+<p>If you don’t have the<strong>Command Line Tools</strong>installed, the Homebrew installation might take a little bit longer. But it will take care of everything for you, so no worries. Just sit back and wait until the installation completes.</p>
+<p>You will know when the installation completes when you see the following message:</p>
+<p>==&gt; Installation successful!</p>
+<p>==&gt; Homebrew has enabled anonymous aggregate user behaviour analytics.<br>Read the analytics documentation (and how to opt-out) here:<br><a href="https://docs.brew.sh/Analytics.html">https://docs.brew.sh/Analytics.html</a></p>
+<p>==&gt; Next steps:</p>
+<ul>
+<li>Run <code>brew help</code> to get started</li>
+<li>Further documentation:<br><a href="https://docs.brew.sh">https://docs.brew.sh</a></li>
+</ul>
+<p>To install Python 3, run the command below:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">brew install python3</div></pre></td></tr></table></figure>
+<p>Since macOS already ships with Python 2 installed, after you install Python 3, you will have both versions available.</p>
+<p>To run Python 2, simply execute<code>python</code>in the Terminal. For Python 3, use<code>python3</code>instead.</p>
+<p>We can test the installation by typing in the Terminal:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">python3 --version</div><div class="line">Python 3.6.2</div></pre></td></tr></table></figure>
+<p><img src="http://img1.tuicool.com/QRnqUrE.png!web" alt=""></p>
+<p>Go to<a href="https://python.org/">www.python.org</a>click on the Python 3.6.2 download page, scroll down until you see the download files listed below:</p>
+<p><img src="http://img0.tuicool.com/yAvIVnB.png!web" alt=""></p>
+<p>Pick the right version accordingly to your Windows distribution. If you are not sure which one is the right for you, the chances are you want to download the<strong>Windows x86-64 executable installer</strong>version.</p>
+<p>Go the your Downloads directory, right click on the installer and click on<strong>Run as administrator</strong>.</p>
+<p><img src="http://img2.tuicool.com/MfaURb7.png!web" alt=""></p>
+<p>Make sure you check the option<strong>Add Python 3.6 to PATH</strong>and click on the<strong>Install Now</strong>option.</p>
+<p><img src="http://img2.tuicool.com/yiqqQrA.png!web" alt=""></p>
+<p>After the installation completes, you should see the following screen:</p>
+<p><img src="http://img0.tuicool.com/ARzAJzi.png!web" alt=""></p>
+<p>Now search for the<strong>Command Prompt</strong>program and open it:</p>
+<p><img src="http://img0.tuicool.com/7fe6Bze.png!web" alt=""></p>
+<p>To test if everything is working fine so far, type following command:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">python --version</div></pre></td></tr></table></figure>
+<p>As an output you should see:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Python 3.6.2</div></pre></td></tr></table></figure>
+<p><img src="http://img0.tuicool.com/2m6juqN.png!web" alt=""></p>
+<p>For this tutorial I will be using Ubuntu 16.04 as example. Ubuntu 16.04 already comes with both Python 2 (available as<code>python</code>) and Python 3 (available as<code>python3</code>) installed. We can test the installation by opening the<strong>Terminal</strong>and checking the versions:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">python --version</div><div class="line">Python 2.7.12</div><div class="line"></div><div class="line">python3 --version</div><div class="line">Python 3.5.2</div></pre></td></tr></table></figure>
+<p><img src="http://img0.tuicool.com/FjMv2aN.png!web" alt=""></p>
+<p>So all we have to do is install a newer Python 3 version. But we don’t want to mess with the current Python 3.5.2, as the OS makes use of it. We’re simply going to install Python 3.6.2 under the name<code>python3.6</code>and let the older version be.</p>
+<p>If you are using Ubuntu 16.04 or an older version, first add the following repository:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo add-apt-repository ppa:deadsnakes/ppa</div></pre></td></tr></table></figure>
+<p>If you are using Ubuntu 16.10, 17.04 or 17.10 you don’t need to perform the step above.</p>
+<p>Now everyone execute the following commands to install the latest Python 3 distribution:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install python3.6</div></pre></td></tr></table></figure>
+<p>The new installation will be available under<code>python3.6</code>, which is totally fine:</p>
+<p><img src="http://img2.tuicool.com/mqmeiyV.png!web" alt=""></p>
+<p>Great, Python is up and running. Next step: Virtual Environments!</p>
+<h4 id="Installing-Virtualenv"><a href="#Installing-Virtualenv" class="headerlink" title="Installing Virtualenv"></a>Installing Virtualenv</h4><p>For the next step we are going to use<strong>pip</strong>, a tool to manage and install Python packages, to install<strong>virtualenv</strong>.</p>
+<p>Note that Homebrew already installed<strong>pip</strong>for you under the name<code>pip3</code>for your Python 3.6.2 installation.</p>
+<p>In the Terminal, execute the command below:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo pip3 install virtualenv</div></pre></td></tr></table></figure>
+<p><img src="http://img0.tuicool.com/uYV7ni.png!web" alt=""></p>
+<p>In the Command Prompt, execute the command below:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">pip install virtualenv</div></pre></td></tr></table></figure>
+<p><img src="http://img0.tuicool.com/AnY3Ajy.png!web" alt=""></p>
+<p>First let’s install<strong>pip</strong>for our Python 3.6.2 version:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">wget https://bootstrap.pypa.io/get-pip.py</div><div class="line">sudo python3.6 get-pip.py</div></pre></td></tr></table></figure>
+<p>Now we can install<strong>virtualenv</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo pip3.6 install virtualenv</div></pre></td></tr></table></figure>
+<p><img src="http://img2.tuicool.com/jyiYr27.png!web" alt=""></p>
+<p>So far the installations that we performed was system-wide. From now on, everything we install, including Django itself, will be installed inside a Virtual Environment.</p>
+<p>Think of it like that: for each Django project you start, you will first create a Virtual Environment for it. It’s like having a sandbox for each Django project. So you can play around, install packages, uninstall packages without breaking anything.</p>
+<p>I like to create a folder named<strong>Development</strong>in my personal computer. Then I use it to organize all my projects and websites. But you can follow the next steps creating the directories wherever it feels right for you.</p>
+<p>Usually I start by creating a new folder with the project name inside my<strong>Development</strong>folder. Since this is going to be our very first project, we don’t need to pick a fancy name or anything. For now, we can call it<strong>myproject</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">mkdir myproject</div><div class="line">cd myproject</div></pre></td></tr></table></figure>
+<p><img src="http://img1.tuicool.com/Vjaya2y.png!web" alt=""></p>
+<p><img src="http://img1.tuicool.com/ayuYnuB.png!web" alt=""></p>
+<p><img src="http://img1.tuicool.com/fmErmej.png!web" alt=""></p>
+<p>This folder is the higher level directory that will store all the files and things related to our Django project, including its own virtual environment.</p>
+<p>So let’s start by creating our very first virtual environment and actually installing Django.</p>
+<p>Inside the<strong>myproject</strong>folder:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">virtualenv venv -p python3</div></pre></td></tr></table></figure>
+<p><img src="http://img1.tuicool.com/fmm6V3Q.png!web" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">virtualenv venv</div></pre></td></tr></table></figure>
+<p><img src="http://img2.tuicool.com/bAZVjyf.png!web" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">virtualenv venv -p python3.6</div></pre></td></tr></table></figure>
+<p><img src="http://img1.tuicool.com/NjQvIji.png!web" alt=""></p>
+<p>Our virtual environment is created. Now before we start using it, we need to activate:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">source venv/bin/activate</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">venv\Scripts\activate</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">source venv/bin/activate</div></pre></td></tr></table></figure>
+<p>You will know it worked if you see<strong>(venv)</strong>in front of command line, like this:</p>
+<p><img src="http://img1.tuicool.com/2yEvArf.png!web" alt=""></p>
+<p><img src="http://img2.tuicool.com/ABzuEb7.png!web" alt=""></p>
+<p><img src="http://img2.tuicool.com/IRjYjyi.png!web" alt=""></p>
+<p>Let’s try to understand what happened here. We created a special folder named<strong>venv</strong>. It basically contains a copy of Python inside this folder. After we activated the<strong>venv</strong>environment, when we run the<code>python</code>command, it will use our local copy, stored inside<strong>venv</strong>, instead of the other one we installed earlier.</p>
+<p>Another important thing is that the<strong>pip</strong>program is already installed as well, and when we use it to install a Python package, like Django, it will be installed_inside_the<strong>venv</strong>environment.</p>
+<p>Note that when we have the<strong>venv</strong>activated, we will use the command<code>python</code>(instead of<code>python3</code>) to refer to Python 3.6.2, and just<code>pip</code>(instead of<code>pip3</code>) to install packages.</p>
+<p>Note that when we have the<strong>venv</strong>activated, we will use the command<code>python</code>(instead of<code>python3.6</code>) to refer to Python 3.6.2, and just<code>pip</code>(instead of<code>pip3.6</code>) to install packages.</p>
+<p>By the way, to deactivate the<strong>venv</strong>simply run the command below:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">deactivate</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">venv\Scritpts\deactivate.bat</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">deactivate</div></pre></td></tr></table></figure>
+<p>But let’s keep it activated for the next steps.</p>
+<h4 id="Installing-Django-1-11-4"><a href="#Installing-Django-1-11-4" class="headerlink" title="Installing Django 1.11.4"></a>Installing Django 1.11.4</h4><p>It’s very straightforward. Now that we have the<strong>venv</strong>activated, run the following command to install Django:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">pip install django</div></pre></td></tr></table></figure>
+<p><img src="http://img2.tuicool.com/FneqUvz.png!web" alt=""></p>
+<p><img src="http://img1.tuicool.com/JJnE3eQ.png!web" alt=""></p>
+<p><img src="http://img0.tuicool.com/6RrUzyM.png!web" alt=""></p>
+<p>We are all set up now!</p>
+<p><img src="http://img0.tuicool.com/26nma2m.png!web" alt=""></p>
+<h4 id="Starting-a-New-Project"><a href="#Starting-a-New-Project" class="headerlink" title="Starting a New Project"></a>Starting a New Project</h4><p>To start a new Django project, run the command below:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ddjango-admin startproject myproject</div></pre></td></tr></table></figure>
+<p>The command-line utility<strong>django-admin</strong>is automatically installed with Django.</p>
+<p>After we run the command above, it will generate the base folder structure for a Django project.</p>
+<p>Right now, our<strong>myproject</strong>directory looks like this:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">myproject/ &lt;-- higher level folder</div><div class="line">|-- myproject/ &lt;-- django project folder</div><div class="line">| |-- myproject/</div><div class="line">| | |-- __init__.py</div><div class="line">| | |-- settings.py</div><div class="line">| | |-- urls.py</div><div class="line">| | |-- wsgi.py</div><div class="line">| +-- manage.py</div><div class="line">+-- venv/ &lt;-- virtual environment folder</div></pre></td></tr></table></figure>
+<p>Our initial project structure is composed by five files:</p>
+<ul>
+<li><strong>manage.py</strong><br>: a shortcut to use the<br><strong>django-admin</strong><br>command-line utility. It’s used to run management commands related to our project. We will use it to run the development server, run tests, create migrations and much more.</li>
+<li><strong>__init__.py</strong><br>: this empty file tells Python that this folder is a Python package.</li>
+<li><strong>settings.py</strong><br>: this file contains all the project’s configuration. We will refer to this file all the time!</li>
+<li><strong>urls.py</strong><br>: this file is responsible for mapping the routes and paths in our project. For example, if you want to show something in the url<br><code>/about/</code><br>, you have to map it here first.</li>
+<li><strong>wsgi.py</strong><br>: this file is a simple gateway interface used for deployment. You don’t have to bother about it. Just let it be for now.</li>
+</ul>
+<p>Django comes with a simple web server installed. It’s very convenient during the development, so we don’t have to install anything else to run the project locally. We can test it by executing the command:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">python manage.py runserver</div></pre></td></tr></table></figure>
+<p>For now you can ignore the migration errors, we will get to that later.</p>
+<p>Now open the following url in a Web browser:<strong><a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></strong>and you should see the following page:</p>
+<p><img src="http://img1.tuicool.com/MNbiYry.png!web" alt=""></p>
+<p>Hit Control + C to stop the development server.</p>
+<p>Hit CTRL + BREAK to stop the development server.</p>
+<p>Hit Control + C to stop the development server.</p>
+<h4 id="Django-Apps"><a href="#Django-Apps" class="headerlink" title="Django Apps"></a>Django Apps</h4><p>In the Django philosophy we have two important concepts:</p>
+<ul>
+<li><strong>app</strong><br>: is a Web application that does something. An app usually is composed by a set of models (database tables), views, templates, tests.</li>
+<li><strong>project</strong><br>: is a collection of configurations and apps. One project can be composed by multiple apps, or a single app.</li>
+</ul>
+<p>It’s important to note that you can’t run a Django<strong>app</strong>without a<strong>project</strong>. Simple websites like a blog can be written entirely inside a single app, which could be named<strong>blog</strong>or<strong>weblog</strong>for example.</p>
+<p><img src="http://img0.tuicool.com/iqU3iym.png!web" alt=""></p>
+<p>It’s a way to organize the source code. In the beginning it’s not very trivial to determine what is an app or what is not. How to organize the code and so on. But don’t worry much about that right now! Let’s first get comfortable with Django’s API and the fundamentals.</p>
+<p>Alright! So, to illustrate let’s create a simple Web Forum or Discussion Board. To create our first app, go to the directory where the<strong>manage.py</strong>file is and execute the following command:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">django-admin startapp boards</div></pre></td></tr></table></figure>
+<p>Notice that we used the command<strong>startapp</strong>this time.</p>
+<p>This will give us the following directory structure:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">myproject/</div><div class="line">|-- boards/ &lt;-- our new django app!</div><div class="line">| |-- migrations/</div><div class="line">| | +-- __init__.py</div><div class="line">| |-- __init__.py</div><div class="line">| |-- admin.py</div><div class="line">| |-- apps.py</div><div class="line">| |-- models.py</div><div class="line">| |-- tests.py</div><div class="line">| +-- views.py</div><div class="line">|-- myproject/</div><div class="line">| |-- myproject/</div><div class="line">| | |-- __init__.py</div><div class="line">| | |-- settings.py</div><div class="line">| | |-- urls.py</div><div class="line">| | |-- wsgi.py</div><div class="line">| +-- manage.py</div><div class="line">+-- venv/</div></pre></td></tr></table></figure>
+<p>So, let’s first explore what each file does:</p>
+<ul>
+<li><strong>migrations/</strong><br>: here Django store some files to keep track of the changes you create in the<br><strong>models.py</strong><br>file, so to keep the database and the<br><strong>models.py</strong><br>synchronized.</li>
+<li><strong>admin.py</strong><br>: this is a configuration file for a built-in Django app called<br><strong>Django Admin</strong><br>.</li>
+<li><strong>apps.py</strong><br>: this is a configuration file of the app itself.</li>
+<li><strong>models.py</strong><br>: here is where we define the entities of our Web application. The models are translated automatically by Django into database tables.</li>
+<li><strong>tests.py</strong><br>: this file is used to write unit tests for the app.</li>
+<li><strong>views.py</strong><br>: this is the file where we handle the request/response cycle of our Web application.</li>
+</ul>
+<p>Now that we created our first app, let’s configure our project to actually_use_it.</p>
+<p>To do that, open the<strong>settings.py</strong>and try to find the<code>INSTALLED_APPS</code>variable:</p>
+<h4 id="settings-py"><a href="#settings-py" class="headerlink" title="settings.py"></a>settings.py</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">INSTALLED_APPS = [</div><div class="line">&apos;django.contrib.admin&apos;,</div><div class="line">&apos;django.contrib.auth&apos;,</div><div class="line">&apos;django.contrib.contenttypes&apos;,</div><div class="line">&apos;django.contrib.sessions&apos;,</div><div class="line">&apos;django.contrib.messages&apos;,</div><div class="line">&apos;django.contrib.staticfiles&apos;,</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>As you can see, Django already come with 6 built-in apps installed. They offer common functionalities that most Web applications need, like authentication, sessions, static files management (images, javascripts, css, etc.) and so on.</p>
+<p>We will explore those apps as we progress in this tutorial series. But for now, let them be and just add our<strong>boards</strong>app to the list of<code>INSTALLED_APPS</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">INSTALLED_APPS = [</div><div class="line">&apos;django.contrib.admin&apos;,</div><div class="line">&apos;django.contrib.auth&apos;,</div><div class="line">&apos;django.contrib.contenttypes&apos;,</div><div class="line">&apos;django.contrib.sessions&apos;,</div><div class="line">&apos;django.contrib.messages&apos;,</div><div class="line">&apos;django.contrib.staticfiles&apos;,</div><div class="line"></div><div class="line">&apos;boards&apos;,</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>Using the analogy of the square and circles from the previous comic, the yellow circle would be our<strong>boards</strong>app, and the<strong>django.contrib.admin</strong>,<strong>django.contrib.auth</strong>, etc, would be the red circles.</p>
+<h4 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello, World!"></a>Hello, World!</h4><p>Let’s write our first<strong>view</strong>. We will explore it in great detail on the next tutorial. But for now, let’s just experiment how it looks like to create a new page with Django.</p>
+<p>Open the<strong>views.py</strong>file inside the<strong>boards</strong>app, and add the following code:</p>
+<h4 id="views-py"><a href="#views-py" class="headerlink" title="views.py"></a>views.py</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">from django.http import HttpResponse</div><div class="line"></div><div class="line">def home(request):</div><div class="line">return HttpResponse(&apos;Hello, World!&apos;)</div></pre></td></tr></table></figure>
+<p>Basically views are Python functions that receive an<code>HttpRequest</code>object, and returns an<code>HttpResponse</code>object. Receive a_request_as parameter, returns a_response_as result. That’s the flow you have to keep in mind!</p>
+<p>So, here we defined a simple view called<strong>home</strong>which simply returns a message saying<strong>Hello, World!</strong>.</p>
+<p>Now we have to tell Django_when_to serve this view. It’s done inside the<strong>urls.py</strong>file:</p>
+<h4 id="urls-py"><a href="#urls-py" class="headerlink" title="urls.py"></a>urls.py</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">from django.conf.urls import url</div><div class="line">from django.contrib import admin</div><div class="line"></div><div class="line">from boards import views</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">url(r&apos;^$&apos;, views.home),</div><div class="line">url(r&apos;^admin/&apos;, admin.site.urls),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>If you compare the snippet above with your own<strong>urls.py</strong>file, you will notice I added the following new line:<code>url(r&#39;^$&#39;, views.home)</code>and important the<strong>views</strong>module from our app<strong>boards</strong>using<code>from boards import views</code>.</p>
+<p>As I mentioned before, we will explore those concepts in great detail later on.</p>
+<p>But for now, Django works with<strong>regex</strong>to match the requested URL. For our<strong>home</strong>view, I’m using the<code>^$</code>regex, which will match an empty path, which is the homepage (this url:<strong><a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></strong>). If I wanted to match the URL<strong><a href="http://127.0.0.1:8000/homepage/">http://127.0.0.1:8000/homepage/</a></strong>, my url would be:<code>url(r&#39;^homepage/$&#39;, views.home)</code>.</p>
+<p>Let’s see what happen:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">python manage.py runserver</div></pre></td></tr></table></figure>
+<p>In a Web browser, open the <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> URL:</p>
+<p><img src="http://img2.tuicool.com/2em2QvA.png!web" alt=""></p>
+<p>That’s it! You just created your very first view.</p>
+<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p>This was the first part of this tutorial series. In this tutorial we learned how to install the latest Python version and how to setup the development environment. We also had a introduction to virtual environments and started our very first Django project and already created our initial app.</p>
+<p>I hope you enjoyed the first part! The second part is coming out next week, on Sep 11, 2017. It’s going to be about models, views, templates and urls. We will explore together all the Django fundamentals! If you would like to get notified when the second part is out, you can<a href="http://eepurl.com/b0gR51">subscribe to our mailing list</a>.</p>
+<p>Just so we can stay on the same page, I made the source code available on GitHub.</p>
+<p>GitHub repository:<a href="https://github.com/sibtc/django-beginners-guide">sibtc/django-beginners-guide</a></p>
+<p>The code is inside the folder<strong>part-1</strong>.</p>
+<p>Source:  <a href="https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html">https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/09/04/a-beginners-guide-to-django-1/index.html';
+  var disqus_title = "A Beginners' Guide to Django (1)";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Installation"><span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Installing-Python-3-6-2"><span class="toc-text">Installing Python 3.6.2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Installing-Virtualenv"><span class="toc-text">Installing Virtualenv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Installing-Django-1-11-4"><span class="toc-text">Installing Django 1.11.4</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Starting-a-New-Project"><span class="toc-text">Starting a New Project</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Django-Apps"><span class="toc-text">Django Apps</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#settings-py"><span class="toc-text">settings.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hello-World"><span class="toc-text">Hello, World!</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#views-py"><span class="toc-text">views.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#urls-py"><span class="toc-text">urls.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Conclusions"><span class="toc-text">Conclusions</span></a></li></ol></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div id="footer-links">
+        
+        <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+        
+        <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+        <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+
+  <div class="inner">
+    <div id="footer-security">
+       <p>
+          <img src="/asset/images/security/klogo.png">
+          <img src="/asset/images/security/mcafee.png">
+          <img src="/asset/images/security/cmmodo_scanned.png">
+          <img src="/asset/images/security/softonic_tested.png">
+          <img src="/asset/images/security/tested_by_sucuri.png">
+          <img src="/asset/images/security/norton.png">
+          <img src="/asset/images/security/eset_logo.png">
+       </p>
+    </div>
+  </div>
+
+
+
+
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
