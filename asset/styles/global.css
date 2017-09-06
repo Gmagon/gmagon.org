@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-@import url(http://fonts.googleapis.com/css?family=Cutive);
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,img {margin:0;padding:0; -webkit-text-size-adjust:none;}
 table {border-collapse:collapse;border-spacing:0;}
 fieldset,img {border:0;}
@@ -331,7 +330,7 @@ body{font:13px/1.6em Helvetica,Arial,  sans-serif; color:#555;background:#fff; }
 }
 /*sidebar1*/
 .sidebar{float:right;width:23%; margin-bottom:20px;}
-.sidebar .title{font-family: 'Cutive', Arial; font-size:18px;color:#555;}
+.sidebar .title{font-size:18px;color:#555;}
 .sidebar .box{ background:#fff;border:1px solid #eee;padding:10px 15px; overflow:hidden}
 .sidebar .item{padding:10px 0; overflow:hidden}
 .sidebar .item .text{padding-left:75px;}
