@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Query Minio datastore with Apache Drill - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Query Minio datastore with Apache Drill" />
+  <meta name="description" content="Query Minio datastore with Apache Drill" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Query Minio datastore with Apache Drill - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Query Minio datastore with Apache Drill - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/09/07/query-minio-datastore-with-apache-drill/index.html">
+<meta property="og:site_name" content="Query Minio datastore with Apache Drill - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Query Minio datastore with Apache Drill - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://businessintelligence.com/wp-content/themes/bi/assets/images/vendor/apachedrill-logo.png">
+<meta property="og:updated_time" content="2017-09-07T05:13:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Query Minio datastore with Apache Drill - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Query Minio datastore with Apache Drill - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="https://businessintelligence.com/wp-content/themes/bi/assets/images/vendor/apachedrill-logo.png">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/09/07/query-minio-datastore-with-apache-drill/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/09/07/query-minio-datastore-with-apache-drill/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-17be1eb1e2.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/asset/styles/global.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none ">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Query Minio datastore with Apache Drill </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Query Minio datastore with Apache Drill</h1>
+    
+    <a href="/blog/2017/09/07/query-minio-datastore-with-apache-drill/" class="article-date"><time datetime="2017-09-07T00:00:00.000Z">2017-09-07</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p>Minio object storage server is perfect home for all your unstructured data. However, historically, one of the major pain points of unstructured data is the inability to query it easily, just like a database, or other structured data formats.<br><img src="https://businessintelligence.com/wp-content/themes/bi/assets/images/vendor/apachedrill-logo.png" alt=""><br>Apache Drill is one of the leading query engines for various data backends like, Hadoop, NoSQL and Cloud Storage. In this post, we’ll see how to setup Apache Drill to query data from your Minio cloud storage instance.</p>
+<h4 id="Apache-Drill"><a href="#Apache-Drill" class="headerlink" title="Apache Drill"></a>Apache Drill</h4><p>Drill can be install in <a href="https://drill.apache.org/docs/installing-drill-in-embedded-mode/">embedded mode</a> or <a href="https://drill.apache.org/docs/installing-drill-in-distributed-mode/">distributed mode</a>. Embedded mode lets you use Drill on a single node, while distributed mode is used for clustered deployments involving more than one Drill node. We’ll use the embedded mode in this post, but configuring Drill in distributed mode to talk to Minio is not different.</p>
+<p>To install Apache Drill download the latest version by</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">curl -o apache-drill-1.11.0.tar.gz</div><div class="line">http://www.apache.org/dyn/closer.cgi/drill/drill-1.11.0/apache-drill-1.11.0.tar.gz</div></pre></td></tr></table></figure>
+<p>extract the contents using</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">tar -xvzf &lt;.tar.gz file name&gt;</div></pre></td></tr></table></figure>
+<p>change to the installation directory and run</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">bin/drill-embedded</div></pre></td></tr></table></figure>
+<p>You’ll get the Drill prompt in the form</p>
+<p>$ bin/drill-embedded<br>OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0<br>Aug 30, 2017 8:17:11 AM org.glassfish.jersey.server.ApplicationHandler initialize<br>INFO: Initiating Jersey application, version Jersey: 2.8 2014-04-29 01:25:26…<br>apache drill 1.11.0<br>“the only truly happy people are children, the creative minority and drill users”<br>0: jdbc:drill:zk=local&gt;</p>
+<p>This is where you can run queries. Let us now see how to setup the Minio data source for your Apache Drill installation.</p>
+<h4 id="Connect-Drill-to-Minio"><a href="#Connect-Drill-to-Minio" class="headerlink" title="Connect Drill to Minio"></a>Connect Drill to Minio</h4><p>Before you do this, you’ll need to have a Minio instance up and running on an IP accessible from the node running Drill. Once you have the Minio instance and credentials ready, navigate to the<code>conf</code>directory inside Drill installation directory and create<code>conf-site.xml</code> . Here are the contents of the<code>conf-site.xml</code>directory</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</div><div class="line"><span class="comment">&lt;!--</span></div><div class="line"><span class="comment"> Licensed to the Apache Software Foundation (ASF) under one or more</span></div><div class="line"><span class="comment"> contributor license agreements.  See the NOTICE file distributed with</span></div><div class="line"><span class="comment"> this work for additional information regarding copyright ownership.</span></div><div class="line"><span class="comment"> The ASF licenses this file to You under the Apache License, Version 2.0</span></div><div class="line"><span class="comment"> (the "License"); you may not use this file except in compliance with</span></div><div class="line"><span class="comment"> the License.  You may obtain a copy of the License at</span></div><div class="line"><span class="comment">     http://www.apache.org/licenses/LICENSE-2.0</span></div><div class="line"><span class="comment"> Unless required by applicable law or agreed to in writing, software</span></div><div class="line"><span class="comment"> distributed under the License is distributed on an "AS IS" BASIS,</span></div><div class="line"><span class="comment"> WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div><div class="line"><span class="comment"> See the License for the specific language governing permissions and</span></div><div class="line"><span class="comment"> limitations under the License.</span></div><div class="line"><span class="comment">--&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.s3a.access.key<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>RSHVQ2MD3MM60XGJYG15<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.s3a.secret.key<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>OSVqLLdmomirMj9mXSF2TTcBDLDtaSGJwr9chRPG<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.s3a.endpoint<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">value</span>&gt;</span>http://127.0.0.1:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.s3a.connection.ssl.enabled<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.s3a.path.style.access<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    </div><div class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Change the<code>access.key</code> ,<code>secret.key</code> , and<code>endpoint</code>with relevant Minio instance values. Also, if you have TLS enabled for your Minio instance, change the field<code>ssl.enabled</code>to<code>true</code> .</p>
+<p>Now lets setup the S3 storage plugin to talk to the Minio instance.</p>
+<h4 id="Configure-S3-storage-plugin"><a href="#Configure-S3-storage-plugin" class="headerlink" title="Configure S3 storage plugin"></a>Configure S3 storage plugin</h4><p>To enable the S3 plugin, point your browser to <a href="http://\[Drill-Node-IP\]:8047">http://\[Drill-Node-IP\]:8047</a> and select the ‘Storage’ tab. (you should have drill-embedded running before you can access the web console site).</p>
+<p>Create a new plugin named<code>s3-lake</code>and add the below <code>.json</code>contents in<code>configuration</code>window. Note that<code>connection:s3a://lake</code>refers to the Minio bucket you want to query data from. Change this appropriately to reflect your bucket name.</p>
+<p>{<br>  “type”: “file”,<br>  “enabled”: true,<br>  “connection”: “s3a://lake”,<br>  “config”: null,<br>  “workspaces”: {<br>    “root”: {<br>      “location”: “/“,<br>      “writable”: false,<br>      “defaultInputFormat”: null<br>    },<br>    “tmp”: {<br>      “location”: “/tmp”,<br>      “writable”: true,<br>      “defaultInputFormat”: null<br>    }<br>  },<br>  “formats”: {<br>    “psv”: {<br>      “type”: “text”,<br>      “extensions”: [<br>        “tbl”<br>      ],<br>      “delimiter”: “|”<br>    },<br>    “csv”: {<br>      “type”: “text”,<br>      “extensions”: [<br>        “csv”<br>      ],<br>      “delimiter”: “,”<br>    },<br>    “tsv”: {<br>      “type”: “text”,<br>      “extensions”: [<br>        “tsv”<br>      ],<br>      “delimiter”: “\t”<br>    },<br>    “httpd”: {<br>      “type”: “httpd”,<br>      “logFormat”: “%h %t \”%r\” %&gt;s %b \”%{Referer}i\””,<br>      “timestampFormat”: null<br>    },<br>    “parquet”: {<br>      “type”: “parquet”<br>    },<br>    “json”: {<br>      “type”: “json”,<br>      “extensions”: [<br>        “json”<br>      ]<br>    },<br>    “avro”: {<br>      “type”: “avro”<br>    },<br>    “sequencefile”: {<br>      “type”: “sequencefile”,<br>      “extensions”: [<br>        “seq”<br>      ]<br>    },<br>    “csvh”: {<br>      “type”: “text”,<br>      “extensions”: [<br>        “csvh”<br>      ],<br>      “extractHeader”: true,<br>      “delimiter”: “,”<br>    }<br>  }<br>}</p>
+<p>Finally, click<code>update</code>and go back to the Drill prompt we saw earlier.</p>
+<h4 id="Test-the-setup"><a href="#Test-the-setup" class="headerlink" title="Test the setup"></a>Test the setup</h4><p>Setup Drill to use Minio storage as data source:</p>
+<p>0: jdbc:drill:zk=local&gt; USE <code>s3-lake</code>.<code>root</code>;<br>+——-+——————————————-+<br>|  ok   |                  summary                  |<br>+——-+——————————————-+<br>| true  | Default schema changed to [s3-lake.root]  |<br>+——-+——————————————-+<br>1 row selected (1.182 seconds)<br>0: jdbc:drill:zk=local&gt;</p>
+<p>Next, download<a href="https://www.sciencebase.gov/catalog/item/56951c63e4b039675d005ed9">Lake Erie Fishing Data</a>and upload to<code>lake</code>bucket in your Minio instance using<a href="https://github.com/minio/mc"><code>mc</code></a> . Now query the data in<code>lake</code>bucket using Drill:</p>
+<p>0: jdbc:drill:zk=local&gt; SELECT * FROM <code>WB_Catch.csv</code>;<br>………..<br>………..<br>[“541”,”1312”,”17”,”9”,”2015”,”Autumn”,”10.9728”,”7.8”,”923.0932326”,”7200.127214”,”0.720012721”,”Yellow Perch”,”YAO”,”0”,”0”,”0”,”0”,”41.46292”,”-82.24912\r”] |<br>| [“541”,”1312”,”17”,”9”,”2015”,”Autumn”,”10.9728”,”7.8”,”923.0932326”,”7200.127214”,”0.720012721”,”Yellow Perch”,”YOY”,”5.136012696”,”0.020919384”,”7.133224933”,”0.029054186”,”41.46292”,”-82.24912\r”] |<br>+———+<br>36,901 rows selected (2.32 seconds)</p>
+<p>Source: <a href="https://blog.minio.io/query-minio-datastore-with-apache-drill-dcaf71d0cee5">https://blog.minio.io/query-minio-datastore-with-apache-drill-dcaf71d0cee5</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/09/07/query-minio-datastore-with-apache-drill/index.html';
+  var disqus_title = "Query Minio datastore with Apache Drill";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Apache-Drill"><span class="toc-text">Apache Drill</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Connect-Drill-to-Minio"><span class="toc-text">Connect Drill to Minio</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Configure-S3-storage-plugin"><span class="toc-text">Configure S3 storage plugin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Test-the-setup"><span class="toc-text">Test the setup</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div id="footer-links">
+        
+        <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+        
+        <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+        <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+
+  <div class="inner">
+    <div id="footer-security">
+       <p>
+          <img src="/asset/images/security/klogo.png">
+          <img src="/asset/images/security/mcafee.png">
+          <img src="/asset/images/security/cmmodo_scanned.png">
+          <img src="/asset/images/security/softonic_tested.png">
+          <img src="/asset/images/security/tested_by_sucuri.png">
+          <img src="/asset/images/security/norton.png">
+          <img src="/asset/images/security/eset_logo.png">
+       </p>
+    </div>
+  </div>
+
+
+
+
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99314951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
