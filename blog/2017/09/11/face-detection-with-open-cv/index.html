@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>How does face detection with Open CV work? - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="How does face detection with Open CV work?" />
+  <meta name="description" content="How does face detection with Open CV work?" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="How does face detection with Open CV work? - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="How does face detection with Open CV work? - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/09/11/face-detection-with-open-cv/index.html">
+<meta property="og:site_name" content="How does face detection with Open CV work? - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="How does face detection with Open CV work? - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://ravindranaik.com/wp-content/uploads/2017/05/opencv_hor_900_1-300x100.jpg">
+<meta property="og:updated_time" content="2017-09-11T10:50:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How does face detection with Open CV work? - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="How does face detection with Open CV work? - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="http://ravindranaik.com/wp-content/uploads/2017/05/opencv_hor_900_1-300x100.jpg">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/09/11/face-detection-with-open-cv/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/09/11/face-detection-with-open-cv/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-17be1eb1e2.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/asset/styles/global.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none ">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> How does face detection with Open CV work? </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">How does face detection with Open CV work?</h1>
+    
+    <a href="/blog/2017/09/11/face-detection-with-open-cv/" class="article-date"><time datetime="2017-09-11T00:00:00.000Z">2017-09-11</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p><img src="http://ravindranaik.com/wp-content/uploads/2017/05/opencv_hor_900_1-300x100.jpg" alt=""></p>
+<p>OpenCV is the most popular library for computer vision. Originally written in C/C++, it now provides bindings for Python.</p>
+<p>OpenCV uses machine learning algorithms to search for faces within a picture. For something as complicated as a face, there isn’t one simple test that will tell you if it found a face or not. Instead, there are thousands of small patterns/features that must be matched. The algorithms break the task of identifying the face into thousands of smaller, bite-sized tasks, each of which is easy to solve. These tasks are also called <a href="http://en.wikipedia.org/wiki/Statistical_classification">classifiers</a>.</p>
+<p>For something like a face, you might have 6,000 or more classifiers, all of which must match for a face to be detected (within error limits, of course). But therein lies the problem: For face detection, the algorithm starts at the top left of a picture and moves down across small blocks of data, looking at each block, constantly asking, “<em>Is this a face? … Is this a face? … Is this a face</em>?” Since there are 6,000 or more tests per block, you might have millions of calculations to do, which will grind your computer to a halt.</p>
+<p>To make this work, OpenCV uses <a href="http://docs.opencv.org/modules/objdetect/doc/cascade_classification.html">cascades</a>. What’s a cascade? The best answer can be found from the <a href="http://dictionary.reference.com/browse/cascade">dictionary</a>:<em>A waterfall or series of waterfalls.</em></p>
+<p>Like a series of waterfalls, the OpenCV cascade breaks the problem of detecting faces into multiple stages. For each block, it does a very rough and quick test. If that passes, it does a slightly more detailed test, and so on. The algorithm may have 30-50 of these stages or cascades, and it will only detect a face if all stages pass. The advantage is that the majority of the pictures will return negative during the first few stages, which means the algorithm won’t waste time testing all 6,000 features on it. Instead of taking hours, face detection can now be done in real time.</p>
+<h3 id="Cascades-in-practice"><a href="#Cascades-in-practice" class="headerlink" title="Cascades in practice"></a>Cascades in practice</h3><p>Though the theory may sound complicated, in practice it is quite easy. The cascades themselves are just a bunch of XML files that contain OpenCV data used to detect objects. You initialize your code with the cascade you want, and then it does the work for you.</p>
+<p>Since face detection is such a common case, OpenCV comes with a number of built-in cascades for detecting everything from faces to eyes to hands and legs. There are even cascades for non-human things.</p>
+<p>Here is how face detection with OpenCV works.</p>
+<p>Source: <a href="http://ravindranaik.com/face-detection-opencv/">http://ravindranaik.com/face-detection-opencv/</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/09/11/face-detection-with-open-cv/index.html';
+  var disqus_title = "How does face detection with Open CV work?";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cascades-in-practice"><span class="toc-text">Cascades in practice</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div id="footer-links">
+        
+        <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+        
+        <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+        <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+
+  <div class="inner">
+    <div id="footer-security">
+       <p>
+          <img src="/asset/images/security/klogo.png">
+          <img src="/asset/images/security/mcafee.png">
+          <img src="/asset/images/security/cmmodo_scanned.png">
+          <img src="/asset/images/security/softonic_tested.png">
+          <img src="/asset/images/security/tested_by_sucuri.png">
+          <img src="/asset/images/security/norton.png">
+          <img src="/asset/images/security/eset_logo.png">
+       </p>
+    </div>
+  </div>
+
+
+
+
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/09/11/face-detection-with-open-cv/index.html');
+    ga('send', 'How does face detection with Open CV work?')
+  }catch(e){}
+
+</script>
+
+
+</body>
+</html>

@@ -324,8 +324,13 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-99314951-1', 'auto');
-  ga('send', 'pageview');
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/09/05/bitcoin-price-drops-200-because-of-chinese-new-ruling/index.html');
+    ga('send', 'Bitcoin Price Drops $200 Because of Chinese New Ruling')
+  }catch(e){}
+
 </script>
 
 

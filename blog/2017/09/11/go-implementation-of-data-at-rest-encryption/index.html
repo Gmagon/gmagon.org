@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Go implementation of Data At Rest Encryption - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Go implementation of Data At Rest Encryption" />
+  <meta name="description" content="Go implementation of Data At Rest Encryption" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Go implementation of Data At Rest Encryption - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Go implementation of Data At Rest Encryption - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/09/11/go-implementation-of-data-at-rest-encryption/index.html">
+<meta property="og:site_name" content="Go implementation of Data At Rest Encryption - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Go implementation of Data At Rest Encryption - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-09-11T10:50:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Go implementation of Data At Rest Encryption - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Go implementation of Data At Rest Encryption - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/09/11/go-implementation-of-data-at-rest-encryption/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/09/11/go-implementation-of-data-at-rest-encryption/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-17be1eb1e2.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/asset/styles/global.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none ">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Go implementation of Data At Rest Encryption </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Go implementation of Data At Rest Encryption</h1>
+    
+    <a href="/blog/2017/09/11/go-implementation-of-data-at-rest-encryption/" class="article-date"><time datetime="2017-09-11T00:00:00.000Z">2017-09-11</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <p>!<br><a href="http://www.mckinsey.com/~/media/McKinsey/Business Functions/McKinsey Digital/Our Insights/How companies are using big data and analytics/How-companies-data-1536x1536-300_Standard.ashx?mw=605&amp;car=211:119"></a></p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Encrypting network traffic is becoming the default. There are standardized protocols like SSH and TLS as well as projects like Let’s Encrypt to protect data sent over the network. TLS for example takes a data stream, chunks the stream into messages and encrypts every message before sending it through the network. TLS ensures that each message is encrypted and authenticated to prevent an attacker from reading or modifying any data sent over a TLS connection.</p>
+<p>Surprisingly there are no comparable standards or solutions when it comes to file encryption — or more precisely data at rest encryption. Whenever data should be stored securely on untrusted storage you are more or less on your own. As a consequence many projects and products were invented to provide some sort of file or data encryption. Unfortunately these solutions are islands and incompatibility problems are the default. Even worse file encryption is done wrong frequently. GPG, as just one example, is shown at <a href="https://www.imperialviolet.org/2014/06/27/streamingencryption.html">Adam Langley’s blog post</a>.</p>
+<h3 id="DARE-Format"><a href="#DARE-Format" class="headerlink" title="DARE Format"></a>DARE Format</h3><p>At <a href="https://minio.io/">Minio</a> we want to give our users the ability to store their data encrypted. But instead of inventing yet another island solution which can be used by nobody else, we want to provide a general solution for data at rest encryption. Therefore we came up with a <a href="https://github.com/minio/sio/blob/master/DARE.md">format</a> for encrypting arbitrary data streams in a secure way. The format should:</p>
+<ul>
+<li>provide confidentiality and integrity of the encrypted data.</li>
+<li>fit many use cases — not just solve our specific issue.</li>
+<li>be as simple as possible.</li>
+<li>keep the overhead small.</li>
+</ul>
+<p>Providing confidentiality and integrity of the encrypted data is the most important property. We combined all primitives in a very simple way to keep the attack surface small and implementation complexity low. Therefore the data stream is split into a sequence of packages and every package is encrypted separately. The encryption is done in a way that it is not possible to read or modify the encrypted packages without breaking the used cipher. An encrypted package looks like this:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">header (16 bytes) | payload (1 byte - 64 KB) | tag (16 bytes)</div></pre></td></tr></table></figure>
+<p>The header contains some meta data of the package like a version, cipher suite, payload length, sequence number and nonce. The tag is a checksum computed while encrypting the payload and depends on every byte of the header and payload. The 16 byte header contains the following fields:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">version | cipher | payload length | sequence number | nonce</div><div class="line"></div><div class="line"></div><div class="line">1 byte 1 byte 2 bytes 4 bytes 8 bytes</div></pre></td></tr></table></figure>
+<p>Each package is encrypted with an <a href="https://en.wikipedia.org/wiki/Authenticated_encryption">AEAD cipher</a> — either AES-256-GCM or ChaCha20Poly1305. The sequence number is basically a counter incremented after every encrypted package to prevent reordering of packages. The purpose of the nonce is to reduce the damage of key reuse. If an encryption key is ever reused (and there would be no nonce) an attacker would be able to XOR two payloads of packages with the same sequence number resulting into the XOR of both plaintexts. The nonce is randomly generated and mitigates such attacks caused by accidental key reuse. Instead of generating a new nonce per package we generate the nonce once at the beginning of the encryption process and repeat it in every package header. The reason is that generating a separate nonce per package has no advantages. Even worse the probability of using the same nonce twice within two different data streams encrypted with the same key is much higher if the nonce is generated randomly per package instead of per data stream.</p>
+<p>The DARE format combines authenticated cipher schemes and a very simple reorder protection mechanism to achieve a tamper-proof property. However, this tamper-proof property is lost as soon as an encryption key is used twice. Therefore DARE requires an unique encryption key. Within the DARE specification we give some <a href="https://github.com/minio/sio/blob/master/DARE.md#appendix-a---key-derivation-from-a-master-key">recommendations</a>on how to do this correctly.</p>
+<p>Minio — as an object storage — deals with large amounts of data. Therefore DARE is designed to handle large data streams while keeping the overhead low. Every encrypted package contains a header and an authentication tag which increases the size of the encrypted data stream about ~0.05%. To illustrate this: The overhead for a 5 GB data stream is about 2.5 MB. Further DARE supports large data streams up to 256 TB which should be sufficient for any current use case. However, if larger streams must be encrypted in the future DARE can be tweaked in newer versions to support larger streams by making different trade-offs.</p>
+<h3 id="Secure-IO"><a href="#Secure-IO" class="headerlink" title="Secure-IO"></a>Secure-IO</h3><p>Minio also provides a reference Go <a href="https://github.com/minio/sio">implementation</a> of the DARE format. It exports an easy-to-use API to encrypt/decrypt arbitrary data streams securely. The following example shows how to encrypt a file with a 32 byte master key.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">masterkey := []byte(&quot;my-secret-32-byte-master-enc-key&quot;)</div><div class="line">// this nonce must be unique (should generated randomly)</div><div class="line">// It must be remembered but needn&apos;t be secret.</div><div class="line">nonce := []byte&#123;</div><div class="line">0, 1, 2, 3, 4, 5 ,6 ,7, 8, 9, 10, 11, 12, 13, 14, 15,</div><div class="line">&#125;</div><div class="line">plaintext, err := os.Open(&quot;my-unencrypted-file&quot;)</div><div class="line">if err != nil &#123;</div><div class="line">fmt.Printf(&quot;Failed open &apos;my-unencrypted-file&apos;: %v&quot;, err)</div><div class="line">return</div><div class="line">&#125;</div><div class="line">defer plaintext.Close()</div><div class="line">ciphertext, err := os.Create(&quot;my-encrypted-file&quot;)</div><div class="line">if err != nil &#123;</div><div class="line">fmt.Printf(&quot;Failed create &apos;my-encrypted-file&apos;: %v&quot;, err)</div><div class="line">return</div><div class="line">&#125;</div><div class="line">defer ciphertext.Close()</div><div class="line">// derive an unique encryption key</div><div class="line">kdf := hmac.New(sha256.New, masterkey)</div><div class="line">kdf.Write(nonce)</div><div class="line">config := sio.Config &#123;</div><div class="line">Key: kdf.Sum(nil),</div><div class="line">CipherSuites: []byte&#123;sio.AES_256_GCM&#125;,</div><div class="line">&#125;</div><div class="line">_, err = sio.Encrypt(ciphertext, plaintext, config)</div><div class="line">if err != nil &#123;</div><div class="line">fmt.Printf(&quot;Failed to encrypt data: %v&quot;, err)</div><div class="line">return</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Additional examples and the package documentation can be found at <a href="https://godoc.org/github.com/minio/sio">godoc.org</a>. Further if you want to play with the DARE format and en/decrypt data streams on your machine you can check out this <a href="https://github.com/aead/ee">demo tool</a>.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Minio will use DARE for server-side and client-side-encryption. This will give our users the ability to encrypt their data with client-side-encryption and decrypt the data with server-side-encryption or vice versa. We hope that DARE will be a useful solution not just for our users but also for the wider developer community. If you have any questions or suggestions join our <a href="https://minio.slack.com/">slack channel</a>. Feedback is always welcome!</p>
+<p>Source: <a href="https://blog.minio.io/data-at-rest-encryption-done-right-7446c644ddb6">https://blog.minio.io/data-at-rest-encryption-done-right-7446c644ddb6</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/09/11/go-implementation-of-data-at-rest-encryption/index.html';
+  var disqus_title = "Go implementation of Data At Rest Encryption";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DARE-Format"><span class="toc-text">DARE Format</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Secure-IO"><span class="toc-text">Secure-IO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap landing-bunting">
+      <div class="intro-sub-content-wrap">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="landing-bunting font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div id="footer-links">
+        
+        <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+        
+        <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+        <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+
+  <div class="inner">
+    <div id="footer-security">
+       <p>
+          <img src="/asset/images/security/klogo.png">
+          <img src="/asset/images/security/mcafee.png">
+          <img src="/asset/images/security/cmmodo_scanned.png">
+          <img src="/asset/images/security/softonic_tested.png">
+          <img src="/asset/images/security/tested_by_sucuri.png">
+          <img src="/asset/images/security/norton.png">
+          <img src="/asset/images/security/eset_logo.png">
+       </p>
+    </div>
+  </div>
+
+
+
+
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/09/11/go-implementation-of-data-at-rest-encryption/index.html');
+    ga('send', 'Go implementation of Data At Rest Encryption')
+  }catch(e){}
+
+</script>
+
+
+</body>
+</html>

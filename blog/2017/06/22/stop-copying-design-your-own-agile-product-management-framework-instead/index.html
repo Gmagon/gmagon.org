@@ -375,8 +375,13 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-99314951-1', 'auto');
-  ga('send', 'pageview');
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/06/22/stop-copying-design-your-own-agile-product-management-framework-instead/index.html');
+    ga('send', 'Stop Copying, Design Your Own Agile Product Management Framework Instead')
+  }catch(e){}
+
 </script>
 
 

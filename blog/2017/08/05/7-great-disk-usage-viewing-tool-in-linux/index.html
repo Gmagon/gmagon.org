@@ -390,8 +390,13 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-99314951-1', 'auto');
-  ga('send', 'pageview');
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/08/05/7-great-disk-usage-viewing-tool-in-linux/index.html');
+    ga('send', '7 Great Disk Usage Viewing Tool in Linux')
+  }catch(e){}
+
 </script>
 
 

@@ -308,8 +308,13 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-99314951-1', 'auto');
-  ga('send', 'pageview');
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/09/01/microsoft-release-a-large-windows-10-update-this-fall/index.html');
+    ga('send', 'Microsoft planned to release a large Windows 10 update this fall')
+  }catch(e){}
+
 </script>
 
 

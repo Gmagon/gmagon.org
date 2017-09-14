@@ -10,33 +10,33 @@
     <Company_UIN>CMP-0117127C7F2</Company_UIN>
     <Company_Description>Gmagon aims to provide amazing simple and powerful solutions for you.</Company_Description>
     <Product_UIN>APP-01171AAD8EA</Product_UIN>
-    <Publish_on_CD>FALSE</Publish_on_CD>
     <Search_String>Gmagon CSS Maker</Search_String>
     <Press_Release_Search_String>Gmagon CSS Maker</Press_Release_Search_String>
     <NewsFeed_Search_String>Gmagon CSS Maker</NewsFeed_Search_String>
     <Search_Engine_Search_String>Gmagon CSS Maker</Search_Engine_Search_String>
     <Web_Directories_Search_String>Gmagon CSS Maker</Web_Directories_Search_String>
     <Search_String_Unique>Gmagon CSS Maker</Search_String_Unique>
+    <Publish_on_CD>FALSE</Publish_on_CD>
     <RSProductType></RSProductType>
     <Comments_For_Reviewer></Comments_For_Reviewer>
     <Backlink></Backlink>
   </RoboSoft>
-  <Company_Info>
+   <Company_Info>
     <Company_Name>Gmagon</Company_Name>
-    <Address_1>No.501, Zhujiang South Road</Address_1>
+    <Address_1>25 Whiston Rd, London E2 8EX, UK</Address_1>
     <Address_2></Address_2>
-    <City_Town>Yushan town, Kunshan, Suzhou</City_Town>
-    <State_Province>Jiangsu</State_Province>
-    <Zip_Postal_Code>215300</Zip_Postal_Code>
-    <Country>China</Country>
+    <City_Town>London</City_Town>
+    <State_Province>England</State_Province>
+    <Zip_Postal_Code>WC2N 5DU</Zip_Postal_Code>
+    <Country>United Kingdom</Country>
     <Company_WebSite_URL>https://gmagon.com/</Company_WebSite_URL>
     <Contact_Info>
       <Contact_First_Name>Ian</Contact_First_Name>
       <Contact_Last_Name>Sun</Contact_Last_Name>
       <Contact_Email>support@gmagon.com</Contact_Email>
-      <Author_Email>support@gmagon.com</Author_Email>
       <Author_First_Name>Ian</Author_First_Name>
       <Author_Last_Name>Sun</Author_Last_Name>
+      <Author_Email>support@gmagon.com</Author_Email>
     </Contact_Info>
     <Support_Info>
       <Sales_Email>support@gmagon.com</Sales_Email>
@@ -89,31 +89,31 @@
   <PAD_Certification_Promotion>
     <Apply_For_Certification>N</Apply_For_Certification>
   </PAD_Certification_Promotion>
-  <Dynamic_PAD>
-    <Dynamic_Distributive>N</Dynamic_Distributive>
-    <General>
-      <DP_Pad_Mask>Gmagon_C_pad.xml</DP_Pad_Mask>
-      <DP_Script_Base_URL>http://hosted.dynamicpad.org/</DP_Script_Base_URL>
-      <DP_Pad_Enabled>TRUE</DP_Pad_Enabled>
-      <DP_Distributive_Enabled>FALSE</DP_Distributive_Enabled>
-      <DP_AtFormFill_Enabled>TRUE</DP_AtFormFill_Enabled>
-      <DP_ControlPanel_Hosted>B0C77320936332F32DB1DE44F5FB8847</DP_ControlPanel_Hosted>
-    </General>
-  </Dynamic_PAD>
   <Program_Info>
+    <Program_Target_Platform>OS X</Program_Target_Platform>
     <Program_Name>Gmagon CSS Maker</Program_Name>
-    <Program_Version>1.0.0</Program_Version>
-    <Program_Release_Month>07</Program_Release_Month>
-    <Program_Release_Day>24</Program_Release_Day>
+    <Program_Version>2.0.0</Program_Version>
+    <Program_Release_Month>09</Program_Release_Month>
+    <Program_Release_Day>07</Program_Release_Day>
     <Program_Release_Year>2017</Program_Release_Year>
-    <Program_Cost_Dollars>24.99</Program_Cost_Dollars>
+    <Program_Cost_Dollars>35.99</Program_Cost_Dollars>
     <Program_Type>Shareware</Program_Type>
-    <Program_Release_Status>New Release</Program_Release_Status>
+    <Program_Release_Status>Major Update</Program_Release_Status>
     <Program_Install_Support>Install and Uninstall</Program_Install_Support>
     <Program_OS_Support>Mac OS X 10.7,Mac OS X 10.8</Program_OS_Support>
     <Program_Language>English</Program_Language>
+    <Program_Change_Info>Updated SDK to version 1.2. Fixed some bugs.</Program_Change_Info>
     <Program_System_Requirements>Mac OS X 10.7(64-bit) or above</Program_System_Requirements>
     <Program_Category_Class>Web Development::XML/CSS Tools</Program_Category_Class>
+    <File_Info>
+      <File_Size_Bytes>4278272</File_Size_Bytes>
+      <File_Size_K>4178</File_Size_K>
+      <File_Size_MB>4.08</File_Size_MB>
+      <Filename_Versioned></Filename_Versioned>
+      <Filename_Previous></Filename_Previous>
+      <Filename_Generic></Filename_Generic>
+      <Filename_Long></Filename_Long>
+    </File_Info>
     <Expire_Info>
       <Has_Expire_Info>N</Has_Expire_Info>
       <Expire_Based_On>Days</Expire_Based_On>
@@ -125,19 +125,8 @@
     </Expire_Info>
     <Program_Categories>XML/CSS,Tools,Web,Development</Program_Categories>
     <Limitations>Stops working after 30 days. Saving is only available in the registered version.</Limitations>
-    <Program_Target_Platform>OS X</Program_Target_Platform>
-    <File_Info>
-      <File_Size_K>3397</File_Size_K>
-      <File_Size_Bytes>3478528</File_Size_Bytes>
-      <File_Size_MB>3.32</File_Size_MB>
-      <Filename_Versioned></Filename_Versioned>
-      <Filename_Previous></Filename_Previous>
-      <Filename_Generic></Filename_Generic>
-      <Filename_Long></Filename_Long>
-    </File_Info>
     <Program_Cost_Other_Code></Program_Cost_Other_Code>
     <Program_Cost_Other></Program_Cost_Other>
-    <Program_Change_Info></Program_Change_Info>
     <Awards></Awards>
     <Program_Specific_Category></Program_Specific_Category>
     <Includes_JAVA_VM></Includes_JAVA_VM>
@@ -146,17 +135,20 @@
     <FacebookProductPage></FacebookProductPage>
     <GooglePlusProductPage></GooglePlusProductPage>
   </Program_Info>
+  <ASBMPlannerID1stRound>7</ASBMPlannerID1stRound>
+  <ASBMPlannerID2ndRound>8</ASBMPlannerID2ndRound>
+  <Issues>10</Issues>
   <Web_Info>
     <Application_URLs>
       <Application_Info_URL>https://gmagon.com/products/store/gmagon_css_maker/</Application_Info_URL>
       <Application_Order_URL>https://gmagon.com/products/store/gmagon_css_maker/buy.html</Application_Order_URL>
-      <Application_XML_File_URL>https://gmagon.com/products/store/gmagon_css_maker/pads/gmagoncssmaker_mac_pad.xml</Application_XML_File_URL>
       <Application_Screenshot_URL>https://gmagon.com/products/store/gmagon_css_maker/images/padimg/gmagoncssmaker.png</Application_Screenshot_URL>
       <Application_Icon_URL>https://gmagon.com/products/store/gmagon_css_maker/images/padimg/cssmaker_icon.gif</Application_Icon_URL>
+      <Application_XML_File_URL>http://hosted.dynamicpad.org/info/app-01171aad8ea/Gmagon_C_pad.xml</Application_XML_File_URL>
     </Application_URLs>
     <Download_URLs>
-      <Primary_Download_URL>https://www.filefactory.com/file/3vujax9y07a5/Gmagon%20CSS%20Maker-1.0.0.zip</Primary_Download_URL>
-      <Secondary_Download_URL>https://www.filefactory.com/file/2afab3xgbln1/Gmagon-CSS-Maker-1.0.0.dmg</Secondary_Download_URL>
+      <Primary_Download_URL>http://downloads.gmagon.com/gmagoncssmaker/2.0/Gmagon-CSS-Maker-2.0.dmg</Primary_Download_URL>
+      <Secondary_Download_URL>http://downloads.gmagon.com/gmagoncssmaker/2.0/Gmagon%20CSS%20Maker-2.0.zip</Secondary_Download_URL>
       <Additional_Download_URL_1></Additional_Download_URL_1>
       <Additional_Download_URL_2></Additional_Download_URL_2>
     </Download_URLs>
@@ -188,4 +180,15 @@
       <Char_Desc_2000>Gmagon CSS Maker is a powerful and advanced CSS2/CSS3 generator on Mac that allows you creating a nice look web page without writing a code. As a powerful and easy-to-use CSS designer, Gmagon CSS Maker minimizes your time and efforts spent on creating complex CSS styles. With this handy generator, you can easily create numerous graphic styles and immediately get your code or code of separate elements within seconds. Gmagon CSS Maker fits into any budget and grows with your needs. Try the Gmagon CSS Maker now and see how it can make your job easier. Everything you need is contained in one simple installer, no additional downloads or plug-ins are required. We make it simple for you, now and later!</Char_Desc_2000>
     </English>
   </Program_Descriptions>
+  <Dynamic_PAD>
+    <Dynamic_Distributive>N</Dynamic_Distributive>
+    <General>
+      <DP_Pad_Mask>Gmagon_C_pad.xml</DP_Pad_Mask>
+      <DP_Script_Base_URL>http://hosted.dynamicpad.org/</DP_Script_Base_URL>
+      <DP_Pad_Enabled>TRUE</DP_Pad_Enabled>
+      <DP_Distributive_Enabled>FALSE</DP_Distributive_Enabled>
+      <DP_AtFormFill_Enabled>TRUE</DP_AtFormFill_Enabled>
+      <DP_ControlPanel_Hosted>B0C77320936332F32DB1DE44F5FB8847</DP_ControlPanel_Hosted>
+    </General>
+  </Dynamic_PAD>
 </XML_DIZ_INFO>

@@ -10,8 +10,8 @@
     <Company_UIN>CMP-0117127C7F2</Company_UIN>
     <Company_Description>Gmagon aims to provide amazing simple and powerful solutions for you.</Company_Description>
     <Product_UIN>APP-011712E5196</Product_UIN>
-    <Publish_on_CD>FALSE</Publish_on_CD>
     <Search_String>XLS2csv</Search_String>
+    <Publish_on_CD>FALSE</Publish_on_CD>
     <RSProductType></RSProductType>
     <Press_Release_Search_String></Press_Release_Search_String>
     <NewsFeed_Search_String></NewsFeed_Search_String>
@@ -21,14 +21,14 @@
     <Comments_For_Reviewer></Comments_For_Reviewer>
     <Backlink></Backlink>
   </RoboSoft>
-  <Company_Info>
+   <Company_Info>
     <Company_Name>Gmagon</Company_Name>
-    <Address_1>No.501, Zhujiang South Road</Address_1>
+    <Address_1>25 Whiston Rd, London E2 8EX, UK</Address_1>
     <Address_2></Address_2>
-    <City_Town>Yushan town, Kunshan, Suzhou</City_Town>
-    <State_Province>Jiangsu</State_Province>
-    <Zip_Postal_Code>215300</Zip_Postal_Code>
-    <Country>China</Country>
+    <City_Town>London</City_Town>
+    <State_Province>England</State_Province>
+    <Zip_Postal_Code>WC2N 5DU</Zip_Postal_Code>
+    <Country>United Kingdom</Country>
     <Company_WebSite_URL>https://gmagon.com/</Company_WebSite_URL>
     <Contact_Info>
       <Contact_First_Name>Ian</Contact_First_Name>
@@ -89,25 +89,31 @@
   <PAD_Certification_Promotion>
     <Apply_For_Certification>N</Apply_For_Certification>
   </PAD_Certification_Promotion>
-  <Dynamic_PAD>
-    <Dynamic_Distributive>N</Dynamic_Distributive>
-  </Dynamic_PAD>
   <Program_Info>
+    <Program_Target_Platform>OS X</Program_Target_Platform>
     <Program_Name>XLS2csv</Program_Name>
-    <Program_Version>4.22</Program_Version>
-    <Program_Release_Month>07</Program_Release_Month>
+    <Program_Version>5.2</Program_Version>
+    <Program_Release_Month>09</Program_Release_Month>
     <Program_Release_Day>13</Program_Release_Day>
     <Program_Release_Year>2017</Program_Release_Year>
-    <Program_Cost_Dollars>7.99</Program_Cost_Dollars>
+    <Program_Cost_Dollars>24.99</Program_Cost_Dollars>
     <Program_Type>Shareware</Program_Type>
     <Program_Release_Status>Major Update</Program_Release_Status>
     <Program_Install_Support>Install and Uninstall</Program_Install_Support>
-    <Program_OS_Support>Mac OS X 10.7,Mac OS X 10.8</Program_OS_Support>
+    <Program_OS_Support>Mac OS X,Mac OS X 10.1,Mac OS X 10.2,Mac OS X 10.3,Mac OS X 10.4,Mac OS X 10.5,Mac OS X 10.6,Mac OS X 10.7,Mac OS X 10.8</Program_OS_Support>
     <Program_Language>English</Program_Language>
-    <Program_Change_Info>Upgrade core API.
-Logo redesign.</Program_Change_Info>
+    <Program_Change_Info>Updated SDK to Version 1.2.</Program_Change_Info>
     <Program_System_Requirements>MacOSX 10.7 (64-bit) or above is required.</Program_System_Requirements>
     <Program_Category_Class>Audio &amp; Multimedia::Rippers &amp; Converters</Program_Category_Class>
+    <File_Info>
+      <File_Size_Bytes>11284480</File_Size_Bytes>
+      <File_Size_K>11020</File_Size_K>
+      <File_Size_MB>10.76</File_Size_MB>
+      <Filename_Versioned></Filename_Versioned>
+      <Filename_Previous></Filename_Previous>
+      <Filename_Generic></Filename_Generic>
+      <Filename_Long></Filename_Long>
+    </File_Info>
     <Expire_Info>
       <Has_Expire_Info>N</Has_Expire_Info>
       <Expire_Based_On>Days</Expire_Based_On>
@@ -118,17 +124,7 @@ Logo redesign.</Program_Change_Info>
       <Expire_Year></Expire_Year>
     </Expire_Info>
     <Program_Categories>Rippers,Converters,Audio,Multimedia</Program_Categories>
-    <Limitations>Stops working after running 3 times.</Limitations>
-    <Program_Target_Platform>OS X</Program_Target_Platform>
-    <File_Info>
-      <File_Size_K>10827</File_Size_K>
-      <File_Size_Bytes>11086848</File_Size_Bytes>
-      <File_Size_MB>10.57</File_Size_MB>
-      <Filename_Versioned></Filename_Versioned>
-      <Filename_Previous></Filename_Previous>
-      <Filename_Generic></Filename_Generic>
-      <Filename_Long></Filename_Long>
-    </File_Info>
+    <Limitations>Stops working after 30 days.</Limitations>
     <Program_Cost_Other_Code></Program_Cost_Other_Code>
     <Program_Cost_Other></Program_Cost_Other>
     <Awards></Awards>
@@ -139,6 +135,9 @@ Logo redesign.</Program_Change_Info>
     <FacebookProductPage></FacebookProductPage>
     <GooglePlusProductPage></GooglePlusProductPage>
   </Program_Info>
+  <ASBMPlannerID1stRound>1</ASBMPlannerID1stRound>
+  <ASBMPlannerID2ndRound>2</ASBMPlannerID2ndRound>
+  <Issues>11</Issues>
   <Web_Info>
     <Application_URLs>
       <Application_Info_URL>https://gmagon.com/products/store/xls2csv/index.html</Application_Info_URL>
@@ -148,8 +147,8 @@ Logo redesign.</Program_Change_Info>
       <Application_XML_File_URL>https://gmagon.com/products/store/xls2csv/pads/xls2csv_mac_pad.xml</Application_XML_File_URL>
     </Application_URLs>
     <Download_URLs>
-      <Primary_Download_URL>https://www.filefactory.com/file/2yfxt1z2zdkh/XLS2csv-4.22.zip</Primary_Download_URL>
-      <Secondary_Download_URL>https://www.filefactory.com/file/5fv7u561omq9/XLS2csv-4.22.dmg</Secondary_Download_URL>
+      <Primary_Download_URL>http://downloads.gmagon.com/xls2csv/5.2/XLS2csv-5.2.zip</Primary_Download_URL>
+      <Secondary_Download_URL>http://downloads.gmagon.com/xls2csv/5.2/XLS2csv-5.2.dmg</Secondary_Download_URL>
       <Additional_Download_URL_1></Additional_Download_URL_1>
       <Additional_Download_URL_2></Additional_Download_URL_2>
     </Download_URLs>
@@ -158,9 +157,9 @@ Logo redesign.</Program_Change_Info>
     <Distribution_Permissions>The Trial version of my software can be freely distributed over the internet in an unchanged form.</Distribution_Permissions>
     <EULA>http://gmagon.com/end-user-license-agreement.html</EULA>
   </Permissions>
-  <ASBMPlannerID1stRound>1</ASBMPlannerID1stRound>
-  <ASBMPlannerID2ndRound>2</ASBMPlannerID2ndRound>
-  <Issues>11</Issues>
+  <Dynamic_PAD>
+    <Dynamic_Distributive>N</Dynamic_Distributive>
+  </Dynamic_PAD>
   <AppStore>
     <AppStore_AppID></AppStore_AppID>
     <AppStore_Category></AppStore_Category>
@@ -176,14 +175,16 @@ Logo redesign.</Program_Change_Info>
   </AppStore>
   <Program_Descriptions>
     <English>
-      <Keywords>xls to csv converter for mac, convert excel files to csv on mac, convert xls to csv on mac, mac xls 2 csv converter, excel to csv converter for mac</Keywords>
-      <Char_Desc_45>convert XLS files to CSV on Mac</Char_Desc_45>
-      <Char_Desc_80>XLS2csv is an easy-to-use XLS to CSV converter for Mac.</Char_Desc_80>
-      <Char_Desc_250>XLS2csv is an easy-to-use XLS to CSV converter for Mac. It helps those who are looking for a gadget to convert XLS files to CSV format on Mac OS.</Char_Desc_250>
-      <Char_Desc_450>XLS2csv is a streamlined file converter that easily converts the XLS format out there to the CSV. The software can intelligently recognize XLS files or directory and transform them to CSV files quickly. Users are allowed to drag and drop a file or directory to the interface of XLS2csv, and preview the conversion results before the conversion finished.</Char_Desc_450>
-      <Char_Desc_2000>XLS2csv is a streamlined file converter that easily converts the XLS format out there to the CSV. The software can intelligently recognize XLS files or directory and transform them to CSV files quickly. Users are allowed to drag and drop a file or directory to the interface of XLS2csv, and preview the conversion results before the conversion finished. By clicking Setting button, users can set up their preferable language of the tool. Besides, there are Feedback, FAQ and Help choices for users' convenience in case any problems occurred during users' experience.
+      <Keywords>xls2csv, xlsx to csv converter, xls to csv converter mac, mac xlsx to csv converter, excel to csv converter for mac</Keywords>
+      <Char_Desc_45>convert XLS/XLSX files to CSV on Mac</Char_Desc_45>
+      <Char_Desc_80>XLS2csv is an easy-to-use XLS/XLSX to CSV converter for Mac.</Char_Desc_80>
+      <Char_Desc_250>XLS2csv is an easy-to-use XLS/XLSX to CSV converter for Mac. It helps users to batch convert XLS/XLSX files to CSV format on Mac OS X.</Char_Desc_250>
+      <Char_Desc_450>XLS2csv is a simple and intuitive XLS/XLSX to CSV Converter for Mac. It handles .xls/.xlsx files from Microsoft Excel, Apple Numbers, Open Offices Excel and converts them to .csv text file format on Mac platform. This app can intelligently recognize large XLS/XLSX files as well as a group of XLS/XLSX files and batch convert them to CSV format quickly.</Char_Desc_450>
+      <Char_Desc_2000>XLS2csv is a simple and intuitive XLS/XLSX to CSV Converter for Mac. It handles .xls/.xlsx files from Microsoft Excel, Apple Numbers, Open Offices Excel and converts them to .csv text file format on Mac platform.
 
-XLS2csv fits into any budget and grows with your needs. Try the XLS2csv now and see how it can make your job easier. Everything you need is contained in one simple installer, no additional downloads or plug-ins are required. We make it simple for you, now and later!</Char_Desc_2000>
+This Mac XLS2csv converter app can intelligently recognize large XLS/XLSX files as well as a group of XLS/XLSX files and batch convert them to CSV format quickly. Users are allowed to drag-and-drop a file or directory to the interface of XLS2csv, and preview the loaded Excel spreadsheets before conversion. Plus, you can customize delimiters in the CSV as comma, semicolon, space, tab, etc.
+
+XLS2csv converter fits into any budget and grows with your needs. Try the app now and see how it can make your job easier. Everything you need is contained in one simple installer, no additional downloads or plug-ins are required. We make it simple for you, now and later!</Char_Desc_2000>
     </English>
   </Program_Descriptions>
 </XML_DIZ_INFO>

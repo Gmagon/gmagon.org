@@ -469,8 +469,13 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-99314951-1', 'auto');
-  ga('send', 'pageview');
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/09/06/handwritten-hash-codes-are-faster-in-java-9/index.html');
+    ga('send', 'Handwritten Hash Codes are Faster in Java 9')
+  }catch(e){}
+
 </script>
 
 

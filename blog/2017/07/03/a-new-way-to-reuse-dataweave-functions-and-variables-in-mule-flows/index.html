@@ -349,8 +349,13 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-99314951-1', 'auto');
-  ga('send', 'pageview');
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/07/03/a-new-way-to-reuse-dataweave-functions-and-variables-in-mule-flows/index.html');
+    ga('send', 'A New Way to Reuse DataWeave Functions and Variables in Mule Flows')
+  }catch(e){}
+
 </script>
 
 

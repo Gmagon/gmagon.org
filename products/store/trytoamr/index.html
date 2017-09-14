@@ -309,8 +309,13 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-99314951-1', 'auto');
-  ga('send', 'pageview');
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/products/store/trytoamr/index.html');
+    ga('send', 'TryToAMR-a streamlined AMR audio file converter on Mac')
+  }catch(e){}
+
 </script>
 
 

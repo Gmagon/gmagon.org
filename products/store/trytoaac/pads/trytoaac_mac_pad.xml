@@ -7,36 +7,36 @@
     <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
   </MASTER_PAD_VERSION_INFO>
   <RoboSoft>
-    <Company_UIN>CMP-011518792F7</Company_UIN>
+    <Company_UIN>CMP-0117127C7F2</Company_UIN>
     <Company_Description>Gmagon aims to provide amazing simple and powerful solutions for you.</Company_Description>
-    <Product_UIN>APP-01160244277</Product_UIN>
-    <Publish_on_CD>FALSE</Publish_on_CD>
+    <Product_UIN>APP-01190D88D09</Product_UIN>
     <Search_String>TryToAAC</Search_String>
     <Press_Release_Search_String>TryToAAC</Press_Release_Search_String>
     <NewsFeed_Search_String>TryToAAC</NewsFeed_Search_String>
     <Search_Engine_Search_String>TryToAAC</Search_Engine_Search_String>
     <Web_Directories_Search_String>TryToAAC</Web_Directories_Search_String>
     <Search_String_Unique>TryToAAC</Search_String_Unique>
+    <Publish_on_CD>FALSE</Publish_on_CD>
     <RSProductType></RSProductType>
     <Comments_For_Reviewer></Comments_For_Reviewer>
     <Backlink></Backlink>
   </RoboSoft>
-  <Company_Info>
+   <Company_Info>
     <Company_Name>Gmagon</Company_Name>
-    <Address_1>No.501, Zhujiang South Road</Address_1>
+    <Address_1>25 Whiston Rd, London E2 8EX, UK</Address_1>
     <Address_2></Address_2>
-    <City_Town>Yushan town, Kunshan, Suzhou</City_Town>
-    <State_Province>Jiangsu</State_Province>
-    <Zip_Postal_Code>215300</Zip_Postal_Code>
-    <Country>China</Country>
+    <City_Town>London</City_Town>
+    <State_Province>England</State_Province>
+    <Zip_Postal_Code>WC2N 5DU</Zip_Postal_Code>
+    <Country>United Kingdom</Country>
     <Company_WebSite_URL>https://gmagon.com/</Company_WebSite_URL>
     <Contact_Info>
       <Contact_First_Name>Ian</Contact_First_Name>
       <Contact_Last_Name>Sun</Contact_Last_Name>
       <Contact_Email>support@gmagon.com</Contact_Email>
-      <Author_Email>support@gmagon.com</Author_Email>
       <Author_First_Name>Ian</Author_First_Name>
       <Author_Last_Name>Sun</Author_Last_Name>
+      <Author_Email>support@gmagon.com</Author_Email>
     </Contact_Info>
     <Support_Info>
       <Sales_Email>support@gmagon.com</Sales_Email>
@@ -89,17 +89,6 @@
   <PAD_Certification_Promotion>
     <Apply_For_Certification>N</Apply_For_Certification>
   </PAD_Certification_Promotion>
-  <Dynamic_PAD>
-    <Dynamic_Distributive>N</Dynamic_Distributive>
-    <General>
-      <DP_Pad_Mask>TryToAAC_pad.xml</DP_Pad_Mask>
-      <DP_Script_Base_URL>http://hosted.dynamicpad.org/</DP_Script_Base_URL>
-      <DP_Pad_Enabled>TRUE</DP_Pad_Enabled>
-      <DP_Distributive_Enabled>FALSE</DP_Distributive_Enabled>
-      <DP_AtFormFill_Enabled>TRUE</DP_AtFormFill_Enabled>
-      <DP_ControlPanel_Hosted>0D981DB3E5A0ACF1474295A0E3BBB8FA</DP_ControlPanel_Hosted>
-    </General>
-  </Dynamic_PAD>
   <Program_Info>
     <File_Info>
       <Automatically_Detect_File_Size>Y</Automatically_Detect_File_Size>
@@ -114,16 +103,18 @@
     <Program_Target_Platform>OS X</Program_Target_Platform>
     <FacebookProductPage>https://www.facebook.com/gmagonshare</FacebookProductPage>
     <Program_Name>TryToAAC</Program_Name>
-    <Program_Release_Month>05</Program_Release_Month>
-    <Program_Release_Day>31</Program_Release_Day>
+    <Program_Version>4.1</Program_Version>
+    <Program_Release_Month>09</Program_Release_Month>
+    <Program_Release_Day>06</Program_Release_Day>
     <Program_Release_Year>2017</Program_Release_Year>
-    <Program_Cost_Dollars>4.99</Program_Cost_Dollars>
+    <Program_Cost_Dollars>14.99</Program_Cost_Dollars>
+    <Program_Type>Shareware</Program_Type>
     <Program_Release_Status>Major Update</Program_Release_Status>
     <Program_Install_Support>Install and Uninstall</Program_Install_Support>
-    <Program_OS_Support>Mac OS X,Mac OS X 10.1,Mac OS X 10.2,Mac OS X 10.3,Mac OS X 10.4,Mac OS X 10.5,Mac OS X 10.6,Mac OS X 10.7,Mac OS X 10.8,Mac OS X 10.9</Program_OS_Support>
+    <Program_OS_Support>Mac OS X 10.7,Mac OS X 10.8</Program_OS_Support>
     <Program_Language>English</Program_Language>
     <Program_Change_Info>UI update and code rewriting.</Program_Change_Info>
-    <Program_System_Requirements>1.MacOSX 10.7 mac OS (64-bit) or newer is required； 2.Admin privileges for the Installation</Program_System_Requirements>
+    <Program_System_Requirements>1.Mac OSX 10.7 (64-bit) or above is required； 2.Admin privileges for the Installation</Program_System_Requirements>
     <Program_Category_Class>Audio &amp; Multimedia::Rippers &amp; Converters</Program_Category_Class>
     <Expire_Info>
       <Has_Expire_Info>N</Has_Expire_Info>
@@ -135,9 +126,7 @@
       <Expire_Year></Expire_Year>
     </Expire_Info>
     <Program_Categories>Rippers,Converters,Audio,Multimedia</Program_Categories>
-    <Limitations>4.0</Limitations>
-    <Program_Version>4.0</Program_Version>
-    <Program_Type>Shareware</Program_Type>
+    <Limitations>Stops working after 30 days.</Limitations>
     <Program_Cost_Other_Code></Program_Cost_Other_Code>
     <Program_Cost_Other></Program_Cost_Other>
     <Awards></Awards>
@@ -152,13 +141,13 @@
       <Application_Info_URL>https://gmagon.com/products/store/trytoaac/index.html</Application_Info_URL>
       <Application_Order_URL>https://gmagon.com/products/store/trytoaac/buy.html</Application_Order_URL>
       <Application_Screenshot_URL>https://gmagon.com/products/store/trytoaac/images/screens/trail version_800x500.png</Application_Screenshot_URL>
-      <Application_Icon_URL>https://gmagon.com/products/store/trytoaac/images/logo/logo_32x32.png</Application_Icon_URL>
+      <Application_Icon_URL>https://gmagon.com/products/store/trytoaac/images/logo/logo_32x32.gif</Application_Icon_URL>
       <Application_XML_File_URL>https://gmagon.com/products/store/trytoaac/pads/trytoaac_mac_pad.xml</Application_XML_File_URL>
     </Application_URLs>
     <Download_URLs>
-      <Primary_Download_URL>https://www.filefactory.com/file/5vrdbybrnf3l/TryToAAC-4.0.dmg</Primary_Download_URL>
-      <Secondary_Download_URL>https://www.filefactory.com/file/c4z8ppop6r5/TryToAAC-4.0.zip</Secondary_Download_URL>
-      <Additional_Download_URL_1>https://www.filefactory.com/file/8vihd2l1ond/TryToAAC-4.0.pkg.zip</Additional_Download_URL_1>
+      <Primary_Download_URL>http://downloads.gmagon.com/trytoaac/4.1/TryToAAC-4.1.0.zip</Primary_Download_URL>
+      <Secondary_Download_URL>http://downloads.gmagon.com/trytoaac/4.1/TryToAAC-4.1.0.dmg</Secondary_Download_URL>
+      <Additional_Download_URL_1></Additional_Download_URL_1>
       <Additional_Download_URL_2></Additional_Download_URL_2>
     </Download_URLs>
   </Web_Info>
@@ -181,15 +170,23 @@
   </AppStore>
   <Program_Descriptions>
     <English>
-      <Keywords>TryToAAC is a converter</Keywords>
-      <Char_Desc_45>TryToAAC is a minimum and streamlined convert</Char_Desc_45>
-      <Char_Desc_80>TryToAAC can intelligently recognize and transform audio formats to AAC files</Char_Desc_80>
-      <Char_Desc_250>TryToAAC is a minimum and streamlined tool that easily convert some of the most popular audio standards out there to the AAC format. The software can intelligently recognize an extensive number of audio formats and transform them to AAC files</Char_Desc_250>
-      <Char_Desc_450>TryToAAC is a minimum and streamlined tool that easily convert some of the most popular audio standards out there to the AAC format. The software can intelligently recognize an extensive number of audio formats and transform them to AAC files quickly, regardless of the model, manufacture, or operating system. Without log in and registration, or any plug-in, you can enjoy simple, swift and free listening experience anytime and everywhere.</Char_Desc_450>
-      <Char_Desc_2000>TryToAAC aims to satisfy various requirements for different users. Fans of Apple products must be familiar with AAC audio format, for Apple pioneered its development. Later, more and more devices support AAC format, and it is recognized as the successor of MP3. Besides, AAC enjoys its popularity in streaming TV and radio broadcast, because its high-quality and less bandwidth. Through this converter, users are able to convert any other audio files to AAC format, and thus enjoy a better listening quality.
-1.Apple Fans: Apple has long been the main supporter of AAC format. AAC has been used by iTunes store since its inception, and is currently used by Apple Music. It is also the native file format for iTunes. Compared to MP3, AAC is generally slightly smaller, and sounds slightly better. It is compatible with iPad, iPhone, Macbooks and of course, tiny iPod. It is undoubted that a true Apple fan favor AAC for their digital music.
-2.Users for Non-Apple Devices: In fact, AAC was not created by Apple and is not a proprietary Apple format. While AAC is slightly less widely supported than MP3, virtually any modern media device can use it. For example, Sony Walkman, Amazon Music, Unlimited, Nintento, Deezer, Microsoft Zune, and mobile phones running Google's Android OS, etc.
-3.Users for Streaming TV or Radio Broadcast: AAC is the hottest format whichs was widely applied in the streaming TV and also radio broadcast. As a more advanced audio file, AAC is actually much more efficient as it takes up even less bandwidth than the MP3 while doing less harm to the audio quality. For example, iHeartRadio, YouTube, etc.</Char_Desc_2000>
+      <Keywords>aac converter on mac, aac converter software mac, mac mp3 to aac converter, mac mp4 to aac converter, convert flac to aac on mac, convert mp3 to aac mac</Keywords>
+      <Char_Desc_45>TryToAAC is an AAC audio creator.</Char_Desc_45>
+      <Char_Desc_80>TryToAAC can easily convert various video/audio files to AAC on Mac.</Char_Desc_80>
+      <Char_Desc_250>TryToAAC is a simple AAC converter for Mac. It can easily convert almost all video and audio files out there to the AAC format, for example, convert MKV to AAC, MP3 to AAC, MP4 to AAC, and FLAC to AAC, etc.</Char_Desc_250>
+      <Char_Desc_450>TryToAAC is a simple AAC converter for Mac. It can easily convert almost all video and audio files out there to the AAC format, for example, convert MKV to AAC, MP3 to AAC, MP4 to AAC, and FLAC to AAC, etc. The software can intelligently recognize an extensive number of audio/video files and convert them to AAC files quickly in a batch.</Char_Desc_450>
+      <Char_Desc_2000>TryToAAC is a simple AAC converter for Mac. It can easily convert almost all video and audio files out there to the AAC format, for example, convert MKV to AAC, MP3 to AAC, MP4 to AAC, and FLAC to AAC, etc. The software can intelligently recognize an extensive number of audio/video files and convert them to AAC files quickly in a batch.</Char_Desc_2000>
     </English>
   </Program_Descriptions>
+  <Dynamic_PAD>
+    <Dynamic_Distributive>N</Dynamic_Distributive>
+    <General>
+      <DP_Pad_Mask>TryToAAC_pad.xml</DP_Pad_Mask>
+      <DP_Script_Base_URL>http://hosted.dynamicpad.org/</DP_Script_Base_URL>
+      <DP_Pad_Enabled>TRUE</DP_Pad_Enabled>
+      <DP_Distributive_Enabled>FALSE</DP_Distributive_Enabled>
+      <DP_AtFormFill_Enabled>TRUE</DP_AtFormFill_Enabled>
+      <DP_ControlPanel_Hosted>0D981DB3E5A0ACF1474295A0E3BBB8FA</DP_ControlPanel_Hosted>
+    </General>
+  </Dynamic_PAD>
 </XML_DIZ_INFO>
