@@ -71,7 +71,7 @@
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/navy-17be1eb1e2.css">
+  <link rel="stylesheet" href="/build/css/navy-7722a083b2.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/asset/styles/global.css">
@@ -161,6 +161,27 @@
     <a href="/blog/2017/07/06/creating-a-simple-game-with-core-ml-in-swift-4/" class="article-date"><time datetime="2017-07-06T00:00:00.000Z">2017-07-06</time></a>
   </header>
   <div class="article-content" itemprop="articleBody">
+    
+    <div class="post-authors">
+      <table class="app-download-table"> 
+      <thead> 
+        <tr> 
+        <th>Article Media</th> 
+        <th>Links</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr> 
+        <td class="app-download-version">FaceBook</td> 
+        <td class="on elevation1"><a href="https://www.facebook.com/groups/winandmac">https://www.facebook.com/groups/winandmac </a></td> 
+        </tr> 
+        <tr> 
+        <td class="app-download-version">Twitter</td> 
+        <td class="on elevation1"><a href="https://twitter.com/gmagonshare">https://twitter.com/gmagonshare </a></td> 
+        </tr> 
+      </tbody> 
+      </table>
+    </div>
     <p>WWDC 2017 brought many amazing and powerful APIs to iOS. Among the most popular is<a href="https://developer.apple.com/documentation/coreml">Core ML</a>(of course, ARKit is hot too!). Core ML allows developers to use machine learning models in their apps without the knowledge of neural networks or machine learning algorithms. Today, I will show you how simple it is to create a game using Core ML. We will be creating a simple scavenger hunt game which will have the player running around the room looking for objects. We have already covered<a href="http://www.appcoda.com/coreml-introduction">the basics of Core ML in our tutorial</a>which I suggest you read over before continuing.</p>
 <p>Note:You will need Xcode 9 beta to for this tutorial. You will also need a device that is running iOS 11 beta in order to test out the app. This app will NOT run in the simulator. The also might run slow on older devices such as the iPhone 5s. While Xcode 9 beta supports both Swift 3.2 and 4.0, all the code in this tutorial is written in Swift 4.</p>
 <h2 id="App-Overview"><a href="#App-Overview" class="headerlink" title="App Overview"></a>App Overview</h2><p>The game that we are making today is simple to create and play. After the user taps the Start button, the name of a random object will appear at the top of the screen. It is the player’s job to find that object. Once the player does, they will point the phone at it. Using the machine learning algorithm, the iPhone will recognize the object and then ask for another one. Every object found adds a point to the score. The player also has the option to skip an object if they cannot find it.</p>
@@ -354,18 +375,9 @@
   </div>
 </div>
 
-<div class="class-content-wrap">
-  <div class="inner">
-    <div class="inner-wrap landing-bunting">
-      <div class="intro-sub-content-wrap">
-      </div>
-    </div>
-  </div>
-</div>
 
 
-
-    <footer id="footer" class="landing-bunting font-e3">
+    <footer id="footer" class="font-e3">
   <div class="inner">
     <div id="footer-some-docs">
         <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>

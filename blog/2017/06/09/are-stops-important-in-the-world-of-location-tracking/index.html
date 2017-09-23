@@ -68,7 +68,7 @@
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/navy-17be1eb1e2.css">
+  <link rel="stylesheet" href="/build/css/navy-7722a083b2.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/asset/styles/global.css">
@@ -158,6 +158,27 @@
     <a href="/blog/2017/06/09/are-stops-important-in-the-world-of-location-tracking/" class="article-date"><time datetime="2017-06-09T00:00:00.000Z">2017-06-09</time></a>
   </header>
   <div class="article-content" itemprop="articleBody">
+    
+    <div class="post-authors">
+      <table class="app-download-table"> 
+      <thead> 
+        <tr> 
+        <th>Article Media</th> 
+        <th>Links</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr> 
+        <td class="app-download-version">FaceBook</td> 
+        <td class="on elevation1"><a href="https://www.facebook.com/groups/winandmac">https://www.facebook.com/groups/winandmac </a></td> 
+        </tr> 
+        <tr> 
+        <td class="app-download-version">Twitter</td> 
+        <td class="on elevation1"><a href="https://twitter.com/gmagonshare">https://twitter.com/gmagonshare </a></td> 
+        </tr> 
+      </tbody> 
+      </table>
+    </div>
     <h1 id="Are-stops-important-in-the-world-of-location-tracking"><a href="#Are-stops-important-in-the-world-of-location-tracking" class="headerlink" title="Are stops important in the world of location tracking?"></a>Are stops important in the world of location tracking?</h1><p>We had trips on our mind when we first built HyperTrack. We assumed that developers would start tracking a user when they expected the user to be on their way to get some place and stop when they had reached. The assumption failed. Obvious in hindsight, developers expected us to tell them (and not the other way around) when the user was on the way and when they had stopped. All they wanted to do was switch us on or off, and hand over control to HyperTrack to automatically figure out trips and stops in the life of the user. They would keep HyperTrack on through the day, through the week, or just switch it on and leave it on forever. HyperTrack was expected to notify developers about the start and end of these trips and stops, besides other useful events along the way. This led to a re-architecture of our stack that we rolled out with HyperTrack v3 in March.</p>
 <p>All you need to do now is plug in SDK into your app and call our startTracking method, say when the user logs in. That’s it. You would now get all the trips and stops that your user makes, arranged in a<em><strong>placeline</strong></em>. For every stop your user makes, you would get to know the place and duration of the stop.</p>
 <p><img src="http://img0.tuicool.com/IvUrUzr.png!web" alt=""></p>
@@ -242,18 +263,9 @@
   </div>
 </div>
 
-<div class="class-content-wrap">
-  <div class="inner">
-    <div class="inner-wrap landing-bunting">
-      <div class="intro-sub-content-wrap">
-      </div>
-    </div>
-  </div>
-</div>
 
 
-
-    <footer id="footer" class="landing-bunting font-e3">
+    <footer id="footer" class="font-e3">
   <div class="inner">
     <div id="footer-some-docs">
         <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>

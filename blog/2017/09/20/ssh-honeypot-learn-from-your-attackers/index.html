@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>SSH HoneyPot-Learn from your attackers - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="SSH HoneyPot-Learn from your attackers" />
+  <meta name="description" content="SSH HoneyPot-Learn from your attackers" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="SSH HoneyPot-Learn from your attackers - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="SSH HoneyPot-Learn from your attackers - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/09/20/ssh-honeypot-learn-from-your-attackers/index.html">
+<meta property="og:site_name" content="SSH HoneyPot-Learn from your attackers - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="SSH HoneyPot-Learn from your attackers - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://img1.tuicool.com/vaAbY3B.png!web">
+<meta property="og:updated_time" content="2017-09-22T09:22:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSH HoneyPot-Learn from your attackers - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="SSH HoneyPot-Learn from your attackers - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="http://img1.tuicool.com/vaAbY3B.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/09/20/ssh-honeypot-learn-from-your-attackers/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/09/20/ssh-honeypot-learn-from-your-attackers/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-7722a083b2.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/asset/styles/global.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none ">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> SSH HoneyPot-Learn from your attackers </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">SSH HoneyPot-Learn from your attackers</h1>
+    
+    <a href="/blog/2017/09/20/ssh-honeypot-learn-from-your-attackers/" class="article-date"><time datetime="2017-09-20T00:00:00.000Z">2017-09-20</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    
+    <div class="post-authors">
+      <table class="app-download-table"> 
+      <thead> 
+        <tr> 
+        <th>Article Media</th> 
+        <th>Links</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr> 
+        <td class="app-download-version">FaceBook</td> 
+        <td class="on elevation1"><a href="https://www.facebook.com/groups/winandmac">https://www.facebook.com/groups/winandmac </a></td> 
+        </tr> 
+        <tr> 
+        <td class="app-download-version">Twitter</td> 
+        <td class="on elevation1"><a href="https://twitter.com/gmagonshare">https://twitter.com/gmagonshare </a></td> 
+        </tr> 
+      </tbody> 
+      </table>
+    </div>
+    <h3 id="Safety-Advice"><a href="#Safety-Advice" class="headerlink" title="Safety Advice"></a>Safety Advice</h3><p>Remember running a Honey Pot is all about letting the bad guys in, therefore you’ll want to take steps to ensure the Honey Pot has no way of accessing your other systems. Remember it is solely your responsibility to ensure you secure your data and systems properly, and the author of this guide cannot be held responsible for any data loss or compromises you receive as a result of running a Honey Pot. Also bear in mind the attacker is likely to try and access stuff in the outside world or could try to use your Honey Pot to host content with legal implications, ensure you suitably firewall the front door to your Honey Pot also to just allow SSH access.</p>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>In a world of evolving and targeted cyber threats understanding your attacker’s intentions and tools has never been more crucial. By deliberately maintaining vulnerable systems, or Honey Pots, and letting the attackers in you can analyse their activity and gather intelligence so you can be ahead of the game if you ever have a compromise. When running an SSH Honey Pot you can gain a full log of the commands an attacker attempts to run on your system and any files which they attempt to download and can be a great way to obtain samples of malicious software for analysis or understand the techniques used by an attacker to scour your data.</p>
+<h4 id="Selecting-a-HoneyPot"><a href="#Selecting-a-HoneyPot" class="headerlink" title="Selecting a HoneyPot"></a>Selecting a HoneyPot</h4><p>There are several different SSH Honey Pots out there which offer a variety of different features. These can be split in to low and high interactivity Honey Pots.</p>
+<p>Low interactivity Honey Pots are fake SSH daemons which emulate an SSH shell, these are very easy to setup, and provides an SSH like experience however the system does not behave like a normal host and hence the attackers are normally very quick to identify and subsequently disconnect from low interactivity Honey Pots. Some low interactivity Honey Pots you can try out include Kippo (<a href="https://github.com/desaster/kippo">https://github.com/desaster/kippo</a>) and Cowrie (<a href="https://github.com/micheloosterhof/cowrie">https://github.com/micheloosterhof/cowrie</a>), both Honey Pots provide binary logs of the attackers SSH session which you can play back at a later date and also collection of any files the attacker fetches from the internet via wget or curl commands. You can graph interesting metrics in relation to the attackers sessions using the KippoGraph Web UI (<a href="https://bruteforce.gr/kippo-graph">https://bruteforce.gr/kippo-graph</a>).</p>
+<p>High interactivity Honey Pots are normally fully-fledged hosts that allow the attacker to do everything a user can do on any normal host via SSH. Because of this these hosts generally need a lot of TLC to keep them up and running as they soon get infected with malware, root kits and a variety of other tools of the trade. You also need to keep a close eye on them to ensure they are not able to access the outside world and become part of a bot net or perform any other illicit activities. These hosts are accessed via another host which acts as a gateway, essentially allowing you to perform a man in the middle attack on the SSH connection and obtain valuable data. The gateway host keeps binary logs of the attacker’s sessions for playback along with other stats about the Honey Pot. Although high interactivity Honey Pots sound a lot more complex to run they are generally not spotted by attackers and can collect much more meaningful data than low interactivity equivalents. The most widely used high interactivity Honey Pot is HonSSH by Thomas Nicholson (<a href="https://github.com/tnich/honssh">https://github.com/tnich/honssh</a>).</p>
+<p>This guide covers the installation of a high interactivity Honey Pot based on HonSSH and also shows you how to track and extract basic data from attacker’s sessions.</p>
+<h4 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h4><p>First you’re going to need a couple of hosts, one to act as the HonSSH gateway and the other for the hacker to abuse, the hosts can be relatively modest as long as they are capable of running a Linux distribution and Python 2.7. For this guide I have chosen 2 cloud based virtual machines, if you go down the cloud route make sure you use a provider that allows private networks so you can setup the network accordingly. First arrange your physical hosts, or virtual hosts and virtual networks as follows…</p>
+<p><img src="http://img1.tuicool.com/vaAbY3B.png!web" alt=""></p>
+<p>Remember, the internal network between HonSSH and the Honey Pot should be used solely for the purpose of communication between the gateway and the Honey Pot, do not use your usual internal network else the attacker will have access to your internal hosts. Likewise, the HonSSH server should be connected directly to the internet, any private ranges in front of the HonSSH server prior to being natted to the internet will be accessible to the attacker. Once you have your hosts arranged in the topology as shown above install Linux. In the case of this guide Debian 8 has been used with its “minimal” flavour of install.</p>
+<h4 id="Configure-HoneyPot"><a href="#Configure-HoneyPot" class="headerlink" title="Configure HoneyPot"></a>Configure HoneyPot</h4><p>Please remember to substitute configuration values such as IP addresses with your own IPs. Using the IP address of my Honey Pot given below will not work.</p>
+<p>First we will configure the HonSSH Gateway. SSH to the external IP of the host and login with the root user and the password you specified during installation, once logged in we will configure key based authentication for security and move the SSH server to a different port so the Honey Pot may listen on the usual SSH port.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ ssh root@104.120.12.96</div><div class="line">root@104.130.12.96&apos;s password:</div><div class="line">root@honssh:~# ssh-keygen</div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/root/.ssh/id_rsa): Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div><div class="line">Your identification has been saved in /root/.ssh/id_rsa. Your public key has been saved in /root/.ssh/id_rsa.pub. The key fingerprint is: 59:be:ad:ca:48:71:5a:76:29:16:93:c1:cb:ba:37:3d root@honssh</div><div class="line">root@honssh:~# cat /root/.ssh/id_rsa.pub &gt;&gt; /root/.ssh/authorized_keys root@honssh:~# cat /root/.ssh/id_rsa</div><div class="line">-----BEGIN RSA PRIVATE KEY-----</div><div class="line">MIIEpQIBAAKCAQEAz8YFtJOtoRT0cjA1HKcjnRIh8AkfSYW1X1lQ90H6dKjUws8o VgwkbZcnd44r2Ot+gcs9LmboHwYdVSMk</div><div class="line">4ibooQgZj5N+42IlimoiTS89g+9T1ZIv yj7Bv2pm1c7nUU0RR+Sq2rBYMMHfPfaC+Uu+iIPfR+TH5uXaqdP3YYk6jj5ZfoE+ ZdQckSwHHNmGsHDie7crJbCemQjYCQ+</div><div class="line">sWHiSd1m3zFPoW2aeLWNYGTV5w1IkNvt3 ............+ziNzJg+lKHsWeVy3yOghOuI6BqUgdX5ZvfWS3U5EOuxGtoBibd4CQfxYoKQ gmZh8nAXYAaVumVZ62u+e</div><div class="line">erDAWcLp5gusyBh2jJdRoTZVbipNERBDF4=</div><div class="line">-----END RSA PRIVATE KEY-----</div></pre></td></tr></table></figure>
+<p>Take a copy of the private key block and logout of the SSH session. Paste the private key into a file on your local workstation and then reconnect to the HonSSH server using the private key.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ ssh –i ~/honssh_privatekey root@104.120.12.96</div><div class="line">root@honssh:~#</div></pre></td></tr></table></figure>
+<p>This time you should end up with a root shell on the host without entering any password. If this didn’t work repeat the steps from earlier to configure key based authentication. This is an important security step as password based authentication is inherently weak. Once you can login using your private key we should disable password based authentication and move the administrative SSH server to a different port.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">root@honssh:~# sed -i &apos;s/PasswordAuthentication yes/PasswordAuthentication no/g&apos; /etc/ssh/sshd_config</div><div class="line">root@honssh:~# sed -i &apos;s/Port 22/Port 2222/g&apos; /etc/ssh/sshd_config root@honssh:~# service sshd restart</div></pre></td></tr></table></figure>
+<p>Now disconnect from the SSH session and reconnect on port 2222. Then we will update the package manager cache and upgrade any outdated system packages. If this includes kernel packages make sure you perform a reboot after.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ ssh –i ~/honssh_privatekey root@104.130.12.96 -p2222</div><div class="line">root@honssh:~# apt-get update; apt-get upgrade</div><div class="line">root@honssh:~# reboot</div></pre></td></tr></table></figure>
+<p>Once the host has rebooted we can get to work configuring the HonSSH software. Install git, some essential Python packages and some required dependencies from the package manager, and then create and become a non-root user for HonSSH.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">root@honssh:~# apt-get install git python python-dev python-pip libffi-dev libssl- dev libgeoip-dev mysql-client</div><div class="line">root@honssh:~# pip install virtualenv</div><div class="line">root@honssh:~# mkdir /home/honssh</div><div class="line">root@honssh:~# useradd honssh</div><div class="line">root@honssh:~# chown honssh:honssh /home/honssh root@honssh:~# su - honssh</div><div class="line">$ bash</div><div class="line">honssh@honssh:~$</div></pre></td></tr></table></figure>
+<p>Check out that latest HonSSH code from the GitHub repository and create a Python virtual environment to run the HonSSH daemon, enter the virtual environment and install HonSSH’s requirements.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">honssh@honssh:~$ git clone https://github.com/tnich/honssh.git</div><div class="line">honssh@honssh:~$ virtualenv honssh_env</div><div class="line">honssh@honssh:~$ source ~/honssh_env/bin/activate</div><div class="line">(honssh_env) honssh@honssh:~$ pip install -r ~/honssh/requirements</div></pre></td></tr></table></figure>
+<p>Copy the sample configuration files into position.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(honssh_env) honssh@honssh:~$ cp ~/honssh/honssh.cfg.default ~/honssh/honssh.cfg</div><div class="line">(honssh_env) honssh@honssh:~$ cp ~/honssh/users.cfg.default ~/honssh/users.cfg</div></pre></td></tr></table></figure>
+<p>Edit the honssh.cfg file using your favourite editor, update the variables below accordingly.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(honssh_env) honssh@honssh</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">honeypot / ssh_addr</td>
+<td style="text-align:left">104.130.12.96</td>
+<td style="text-align:left">Internet facing IP address of HonSSH Gateway server.</td>
+</tr>
+<tr>
+<td style="text-align:left">honeypot / ssh_port</td>
+<td style="text-align:left">2220</td>
+<td style="text-align:left">SSH Port for running the HonSSH server.</td>
+</tr>
+<tr>
+<td style="text-align:left">honeypot / client_addr</td>
+<td style="text-align:left">0.0.0.0</td>
+<td style="text-align:left">Instructs HonSSH server to use default route to contact the Honey Pot</td>
+</tr>
+<tr>
+<td style="text-align:left">honey-static / sensor_name</td>
+<td style="text-align:left">my_honeypot</td>
+<td style="text-align:left">Defines a friendly name for your Honey Pot.</td>
+</tr>
+<tr>
+<td style="text-align:left">honey-static / honey_ip</td>
+<td style="text-align:left">172.20.0.1</td>
+<td style="text-align:left">The internal network IP for the Honey Pot.</td>
+</tr>
+<tr>
+<td style="text-align:left">honey-static / honey_port</td>
+<td style="text-align:left">22</td>
+<td style="text-align:left">The port the Honey Pot’s SSH service listens on the internal network.</td>
+</tr>
+</tbody>
+</table>
+<p>Leave all other variables blank or with their default value. If you want to use the extended functionality of HonSSH feel free to customise as required later.</p>
+<p>Next SSH from the HonSSH server to the HoneyPot as root using the password you previously set when configuring the host. Next set the password to some value which is easy to guess for example ‘p455w0rd’ this will allow the attacker to gain access without trying too hard and then we can watch what they are up to.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(honssh_env) honssh@honssh:~$ ssh root@172.20.0.1</div><div class="line">The authenticity of host &apos;172.20.0.1 (172.20.0.1)&apos; can&apos;t be established. ECDSA key fingerprint is 91:fb:67:8e:5d:68:76:67:23:30:bc:1e:59:78:92:77. Are you sure you want to continue connecting (yes/no)? yes</div><div class="line">Warning: Permanently added &apos;172.20.0.1&apos; (ECDSA) to the list of known hosts. root@172.20.0.1&apos;s password:</div><div class="line">root@honeypot:~# passwd</div><div class="line">Enter new UNIX password:</div><div class="line">Retype new UNIX password:</div><div class="line">passwd: password updated successfully</div><div class="line">root@honeypot:~#</div></pre></td></tr></table></figure>
+<p>Once completed disconnect from the HoneyPot SSH session to return to the HonSSH host. Change directory into the HonSSH folder and generate some keys for HonSSH to use for cryptography. Note when using ssh-keygen we override the default path with a relative file “id_rsa” / “id_dsa”.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(honssh_env) honssh@honssh:~$ cd honssh</div><div class="line">(honssh_env) honssh@honssh:~/honssh$ ssh-keygen</div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/home/honssh/.ssh/id_rsa): id_rsa id_rsa already exists.</div><div class="line">Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div><div class="line">Your identification has been saved in id_rsa.</div><div class="line">Your public key has been saved in id_rsa.pub.</div><div class="line">The key fingerprint is: 85:11:45:f4:00:83:b6:d9:fb:d5:8a:56:23:a3:f9:81 honssh@honssh</div><div class="line">(honssh_env) honssh@honssh:~/honssh$ ssh-keygen -t dsa Generating public/private dsa key pair.</div><div class="line">Enter file in which to save the key (/home/honssh/.ssh/id_dsa): id_dsa Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div><div class="line">Your identification has been saved in id_dsa.</div><div class="line">Your public key has been saved in id_dsa.pub.</div><div class="line">The key fingerprint is: 64:5c:8f:3c:6d:fd:a9:b8:26:83:75:4c:f9:cb:af:16 honssh@honssh</div></pre></td></tr></table></figure>
+<p>Next start up the HonSSH server, this will start the server up and give a very verbose output, hopefully you should see something similar to the below…:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(honssh_env) honssh@honssh:~/honssh$ twistd -y honssh.tac -p honssh.pid –n &amp; 2016-05-10 19:53:01+0000 [-] Log opened.</div><div class="line">2016-05-10 19:53:01+0000 [-] twistd 16.1.1 (/home/honssh/honssh_env/bin/python 2.7.9) starting up.</div><div class="line">2016-05-10 19:53:01+0000 [-] reactor class: twisted.internet.epollreactor.EPollReactor.</div><div class="line">2016-05-10 19:53:01+0000 [-] HonsshServerFactory starting on 2220</div><div class="line">2016-05-10 19:53:01+0000 [-] Starting factory</div><div class="line">2016-05-10 19:53:01+0000 [HonsshSlimClientTransport,client] [CLIENT] - Got SSH Version String: SSH-2.0-OpenSSH_6.7p1 Debian-5</div><div class="line">2016-05-10 19:53:01+0000 [HonsshSlimClientTransport,client] Disconnecting with error, code 10</div><div class="line">reason: user closed connection</div><div class="line">2016-05-10 19:53:01+0000 [HonsshSlimClientTransport,client] connection lost 2016-05-10 19:53:01+0000 [HonsshSlimClientTransport,client] [HONSSH] - HonSSH Boot Sequence Complete - Ready for attacks!</div><div class="line">2016-05-10 19:53:01+0000 [-] Stopping factory</div></pre></td></tr></table></figure>
+<p>Open a new terminal window and try SSHing to the HonSSH Gateway server on the listening port of HonSSH, hopefully you should get a connection, try logging in with the password you previously set on the Honey Pot host.:: Open a new terminal window and try SSHing to the HonSSH Gateway server on the listening port of HonSSH, hopefully you should get a connection, try logging in with the password you previously set on the Honey Pot host.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ ssh root@104.130.12.96 -p2220</div><div class="line">Warning: Permanently added &apos;[104.130.12.96]:2220&apos; (RSA) to the list of known hosts. root@104.130.12.96&apos;s password:</div><div class="line">The programs included with the Debian GNU/Linux system are free software; the exact distribution terms for each program are described in the individual files in /usr/share/doc/*/copyright.</div><div class="line">Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.</div><div class="line">Last login: Tue May 10 19:45:56 2016 from 172.20.0.3 root@honeypot:~#</div><div class="line">$ ssh root@104.130.12.96 -p2220</div><div class="line">Warning: Permanently added &apos;[104.130.12.96]:2220&apos; (RSA) to the list of known hosts. root@104.130.12.96&apos;s password:</div><div class="line">The programs included with the Debian GNU/Linux system are free software; the exact distribution terms for each program are described in the individual files in /usr/share/doc/*/copyright.</div><div class="line">Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.</div></pre></td></tr></table></figure>
+<p>Congratulations, this is your first connection to your Honey Pot, this is the same as what would happen with an attacker. Go back to your previous terminal window and issue an ls command, you should see a sessions directory, in here should be another directory with your sensor name as set in the configuration file. Within this directory are for each client IP which has connected and has a session on the Honey Pot, these directories contain log files for each session. Try catting out one of the logs so we can see what the user got up to…:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(honssh_env) honssh@honssh:~/honssh$ cat sessions/my_honeypot/109.159.108.13/20160510_195912_678718.log 20160510_195912_678718 - [POT ] my_honeypot - 172.20.0.1:22 20160510_195912_678718 - [SSH ] Incoming Connection from 109.159.108.13:52630 - United Kingdom</div><div class="line">20160510_195914_325358 - [SSH ] Login Successful: root:p455w0rd 20160510_195914_503284 - [TERM0] Opened Channel 20160510_195915_262392 - [TERM0] Command Executed: ls 20160510_195918_048578 - [TERM0] Command Executed: cd / 20160510_195918_368344 - [TERM0] Command Executed: ls 20160510_195919_461375 - [TERM0] Closed Channel 20160510_195919_466126 - [SSH ] Lost Connection with 109.159.108.13</div><div class="line">(honssh_env) honssh@honssh:~/honssh$</div></pre></td></tr></table></figure>
+<p>However, configuration is sadly not complete, unfortunately SSH servers do not usually listen on port 2220 and you may have noticed that when you are connected to the Honey Pot you are unable to do anything with the internet, try a ping to a website. Also in the case of the Honey Pot above you may have noticed it’s host name is set to ‘honeypot’. It is likely with these tell-tale signs and strange configuration not many hackers will stumble across the host, and if they do they’ll probably quit our right away. Let’s get to work on fixing these items, leave the honssh user’s account on the HonSSH Gateway server and ensure you have a root shell.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(honssh_env) honssh@honssh:~/honssh$ exit</div><div class="line">root@honssh:~# whoami</div><div class="line">root</div></pre></td></tr></table></figure>
+<p>Next lets configure iptables to forward port 22 to 2220 on the host and also allow outbound nat for the Honey Pot to gain internet access, we also install the iptables persistence package to ensure the rules survive a reboot.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">root@honssh:~# sed -i &apos;s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g&apos; /etc/sysctl.conf</div><div class="line">root@honssh:~# sysctl –p</div><div class="line">root@honssh:~# echo 1 &gt; /proc/sys/net/ipv4/ip_forward</div><div class="line">root@honssh:~# iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE</div><div class="line">root@honssh:~# iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 22 -j REDIRECT --to-port 2220</div><div class="line">root@honssh:~# apt-get install iptables-persistent</div></pre></td></tr></table></figure>
+<p>When asked if you’d like to save the current rules reply with “yes”. Your configuration is now complete. Remember if you want to login to the Honey Pot connect via Port 22, if you want to administer the gateway connect on port 2222, su to the honssh user and checkout the sessions directory if you want to see whats been going on on the Honey Pot.</p>
+<p>You probably need to update a few items on the Honey Pot server to get the internet connectivity working and to set a more reasonable hostname. SSH to the Honey Pot and edit the /etc/network/interfaces file, add the default gateway to the eth0 block of the Honey Pot server.:: When asked if you’d like to save the current rules reply with “yes”. Your configuration is now complete. Remember if you want to login to the Honey Pot connect via Port 22, if you want to administer the gateway connect on port 2222, su to the honssh user and checkout the sessions directory if you want to see whats been going on on the Honey Pot.</p>
+<p>You probably need to update a few items on the Honey Pot server to get the internet connectivity working and to set a more reasonable hostname. SSH to the Honey Pot and edit the /etc/network/interfaces file, add the default gateway to the eth0 block of the Honey Pot server.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">root@honeypot:~# vi /etc/network/interfaces auto eth0</div><div class="line">iface eth0 inet static</div><div class="line">address 172.20.0.1</div><div class="line">gateway 172.20.0.3</div><div class="line">netmask 255.255.255.0</div></pre></td></tr></table></figure>
+<p>Next edit the /etc/resolv.conf file to have some valid name servers and set the hostname to something more appropriate.:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">root@honeypot:~# vi /etc/resolv.conf</div><div class="line">nameserver 8.8.4.4</div><div class="line">nameserver 8.8.8.8</div><div class="line">root@honeypot:~# hostname web01.mywebsite.com</div><div class="line">root@honeypot:~# echo &quot;web01.mywebsite.com&quot; &gt; /etc/hostname</div><div class="line">root@honeypot:~# ping -c 3 8.8.8.8</div><div class="line">PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.</div><div class="line">64 bytes from 8.8.8.8: icmp_seq=1 ttl=45 time=9.71 ms 64 bytes from 8.8.8.8: icmp_seq=2 ttl=45 time=9.70 ms 64 bytes from 8.8.8.8: icmp_seq=3 ttl=45 time=9.79 ms</div><div class="line">--- 8.8.8.8 ping statistics ---</div><div class="line">3 packets transmitted, 3 received, 0% packet loss, time 2003ms rtt min/avg/max/mdev = 9.702/9.738/9.798/0.091 ms</div></pre></td></tr></table></figure>
+<h4 id="What-Now"><a href="#What-Now" class="headerlink" title="What Now?"></a>What Now?</h4><p>Congratulations you now have an SSH Honey Pot listening on the internet, soon some attackers should start scanning your IP range and perform dictionary attacks as soon as they realise your running an SSH server with password authentication enabled. You should check back periodically and see if there were any active sessions and see what they have been up to, remember be highly suspicious of anything an attacker places on your Honey Pot host and take care when handling these files. It is likely from time to time you will need to rebuild the Honey Pot host as attackers are usually quite brutal with them, and you may also receive complaints from your ISP if an attacker starts doing bad stuff from your Honey Pot. In this case you should proactively manage all of these events. You can always put IPTables rules in place on the HonSSH server to ensure commonly abused outbound ports are limited, it’s also nice to run tcpdump on the HonSSH server so you can capture network traffic for analysis.</p>
+<p>You may have noticed its rather cumbersome to collate and manage logs and session data via SSH to the HonSSH Gateway, you can make life a little easier by installing MySQL and configuring MySQL logging within the honssh.cfg file. You can then make some clever queries to make sense of the data.</p>
+<p>Reply in the comments if you have any exciting findings from running your own Honey Pot, in the future I may publish another article covering more advanced analysis techniques for the Honey Pot.</p>
+<h4 id="Further-Help"><a href="#Further-Help" class="headerlink" title="Further Help"></a>Further Help</h4><p>If you require any further assistance checkout the HonSSH Docs at<a href="https://docs.honssh.com/">https://docs.honssh.com</a>, if you discover a bug or have a feature request please raise an issue on the HonSSH Github repo<a href="https://github.com/tnich/honssh/issues">https://github.com/tnich/honssh/issues</a>.</p>
+<p>Source:  <a href="https://www.robertputt.co.uk/learn-from-your-attackers-ssh-honeypot.html">https://www.robertputt.co.uk/learn-from-your-attackers-ssh-honeypot.html</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/09/20/ssh-honeypot-learn-from-your-attackers/index.html';
+  var disqus_title = "SSH HoneyPot-Learn from your attackers";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Safety-Advice"><span class="toc-text">Safety Advice</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Selecting-a-HoneyPot"><span class="toc-text">Selecting a HoneyPot</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Getting-Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Configure-HoneyPot"><span class="toc-text">Configure HoneyPot</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#What-Now"><span class="toc-text">What Now?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Further-Help"><span class="toc-text">Further Help</span></a></li></ol></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div id="footer-links">
+        
+        <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+        
+        <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+        <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+
+  <div class="inner">
+    <div id="footer-security">
+       <p>
+          <img src="/asset/images/security/klogo.png">
+          <img src="/asset/images/security/mcafee.png">
+          <img src="/asset/images/security/cmmodo_scanned.png">
+          <img src="/asset/images/security/softonic_tested.png">
+          <img src="/asset/images/security/tested_by_sucuri.png">
+          <img src="/asset/images/security/norton.png">
+          <img src="/asset/images/security/eset_logo.png">
+       </p>
+    </div>
+  </div>
+
+
+
+
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/09/20/ssh-honeypot-learn-from-your-attackers/index.html');
+    ga('send', 'SSH HoneyPot-Learn from your attackers')
+  }catch(e){}
+
+</script>
+
+
+</body>
+</html>

@@ -62,7 +62,7 @@
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/navy-17be1eb1e2.css">
+  <link rel="stylesheet" href="/build/css/navy-7722a083b2.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/asset/styles/global.css">
@@ -152,6 +152,27 @@
     <a href="/blog/2017/08/21/may-your-makefiles-be-portable/" class="article-date"><time datetime="2017-08-21T00:00:00.000Z">2017-08-21</time></a>
   </header>
   <div class="article-content" itemprop="articleBody">
+    
+    <div class="post-authors">
+      <table class="app-download-table"> 
+      <thead> 
+        <tr> 
+        <th>Article Media</th> 
+        <th>Links</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr> 
+        <td class="app-download-version">FaceBook</td> 
+        <td class="on elevation1"><a href="https://www.facebook.com/groups/winandmac">https://www.facebook.com/groups/winandmac </a></td> 
+        </tr> 
+        <tr> 
+        <td class="app-download-version">Twitter</td> 
+        <td class="on elevation1"><a href="https://twitter.com/gmagonshare">https://twitter.com/gmagonshare </a></td> 
+        </tr> 
+      </tbody> 
+      </table>
+    </div>
     <p>In my first decade writing Makefiles, I developed the bad habit of liberally using GNU Make’s extensions. I didn’t know the line between GNU Make and the portable features guaranteed by POSIX. Usually it didn’t matter much, but it would become an annoyance when building on non-Linux systems, such as on the various BSDs. I’d have to specifically install GNU Make, then remember to invoke it (i.e. as<code>gmake</code>) instead of the system’s make.</p>
 <p>I’ve since become familiar and comfortable with<a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/make.html">make’s official specification</a>, and I’ve spend the last year writing strictly portable Makefiles. Not only has are my builds now portable across all unix-like systems, my Makefiles are cleaner and more robust. Many of the common make extensions — conditionals in particular — lead to fragile, complicated Makefiles and are best avoided anyway. It’s important to be able to trust your build system to do its job correctly.</p>
 <p>This tutorial should be suitable for make beginners who have never written their own Makefiles before, as well as experienced developers who want to learn how to write portable Makefiles.Regardless, in order to understand the examples you must be familiar with the usual steps for building programs on the command line (compiler, linker, object files, etc.). I’m not going to suggest any fancy tricks nor provide any sort of standard starting template. Makefiles should be dead simple when the project is small, and grow in a predictable, clean fashion alongside the project.</p>
@@ -289,18 +310,9 @@
   </div>
 </div>
 
-<div class="class-content-wrap">
-  <div class="inner">
-    <div class="inner-wrap landing-bunting">
-      <div class="intro-sub-content-wrap">
-      </div>
-    </div>
-  </div>
-</div>
 
 
-
-    <footer id="footer" class="landing-bunting font-e3">
+    <footer id="footer" class="font-e3">
   <div class="inner">
     <div id="footer-some-docs">
         <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>

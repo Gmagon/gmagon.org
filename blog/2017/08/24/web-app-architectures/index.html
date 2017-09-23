@@ -65,7 +65,7 @@
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/navy-17be1eb1e2.css">
+  <link rel="stylesheet" href="/build/css/navy-7722a083b2.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/asset/styles/global.css">
@@ -155,6 +155,27 @@
     <a href="/blog/2017/08/24/web-app-architectures/" class="article-date"><time datetime="2017-08-24T00:00:00.000Z">2017-08-24</time></a>
   </header>
   <div class="article-content" itemprop="articleBody">
+    
+    <div class="post-authors">
+      <table class="app-download-table"> 
+      <thead> 
+        <tr> 
+        <th>Article Media</th> 
+        <th>Links</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr> 
+        <td class="app-download-version">FaceBook</td> 
+        <td class="on elevation1"><a href="https://www.facebook.com/groups/winandmac">https://www.facebook.com/groups/winandmac </a></td> 
+        </tr> 
+        <tr> 
+        <td class="app-download-version">Twitter</td> 
+        <td class="on elevation1"><a href="https://twitter.com/gmagonshare">https://twitter.com/gmagonshare </a></td> 
+        </tr> 
+      </tbody> 
+      </table>
+    </div>
     <p>In the modern world of web app architecture it’s truly _too easy_to become lost in the variety of options available to us. When it comes to building web applications, a few stand out. But the task of deciding which architecture to use is still daunting. We’re all probably familiar with the classic Model View Controller pattern (MVC). But then there’s MVVM, MVP, Flux, and a variety of others. _What are the differences?Which is right for me? How do they compare to each other?_These are the questions I’ll try to answer. I will make general recommendations regarding the use of certain architectures, but these cannot be applied to all projects, as every project is unique.</p>
 <h3 id="Model-View-Controller-MVC"><a href="#Model-View-Controller-MVC" class="headerlink" title="Model-View-Controller (MVC)"></a>Model-View-Controller (MVC)</h3><p>Let’s start with the classic MVC pattern. This is easily the most well known architectural pattern, but is sometimes misunderstood. Often times, developers will segment their application into a Model, View, and Controller, and call that good enough. But MVC defines a clear path of communication that can sometimes be overlooked by someone just learning about the architecture. Let’s check out the diagram below.<br><img src="https://michaelwashburnjr.com/wp-content/uploads/2017/08/mvc-2.jpg" alt=""></p>
 <p>The part of MVC that is overlooked is the unidirectional interactions that it specifies the modules should have. This means that each module should only interact with a module if there is an error connecting the two in the correct direction. Typically, people will implement this in such a way where there is bidirectional communication, and/or an additional relationship between the controller and view modules (without going through the user). I just want to highlight that while the 3 layers are important, we should also pay attention to how they communicate.</p>
@@ -239,18 +260,9 @@
   </div>
 </div>
 
-<div class="class-content-wrap">
-  <div class="inner">
-    <div class="inner-wrap landing-bunting">
-      <div class="intro-sub-content-wrap">
-      </div>
-    </div>
-  </div>
-</div>
 
 
-
-    <footer id="footer" class="landing-bunting font-e3">
+    <footer id="footer" class="font-e3">
   <div class="inner">
     <div id="footer-some-docs">
         <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>

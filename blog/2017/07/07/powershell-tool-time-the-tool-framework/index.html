@@ -64,7 +64,7 @@
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/navy-17be1eb1e2.css">
+  <link rel="stylesheet" href="/build/css/navy-7722a083b2.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/asset/styles/global.css">
@@ -154,6 +154,27 @@
     <a href="/blog/2017/07/07/powershell-tool-time-the-tool-framework/" class="article-date"><time datetime="2017-07-07T00:00:00.000Z">2017-07-07</time></a>
   </header>
   <div class="article-content" itemprop="articleBody">
+    
+    <div class="post-authors">
+      <table class="app-download-table"> 
+      <thead> 
+        <tr> 
+        <th>Article Media</th> 
+        <th>Links</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr> 
+        <td class="app-download-version">FaceBook</td> 
+        <td class="on elevation1"><a href="https://www.facebook.com/groups/winandmac">https://www.facebook.com/groups/winandmac </a></td> 
+        </tr> 
+        <tr> 
+        <td class="app-download-version">Twitter</td> 
+        <td class="on elevation1"><a href="https://twitter.com/gmagonshare">https://twitter.com/gmagonshare </a></td> 
+        </tr> 
+      </tbody> 
+      </table>
+    </div>
     <p>Welcome to a new blog series here on SQL Server Central, Powershell Tool Time. Over the next few articles I will serve a SQL Server/Powershell blend here, helping readers make more effective use of Powershell. This series will focus on helping you build a Powershell Toolbox that you can use to ease the administration of your SQL Server environment.</p>
 <p>This series is intended for an audience that already has some familiarity with Powershell and its syntax. If you are brand new to the language, I do not want to chase you away, but you could easily become intimidated without some knowledge of the basics. If this is your first exposure to Powershell, I highly recommend<a href="http://www.amazon.com/Learn-Windows-PowerShell-Month-Lunches/dp/1617291080">Powershell in a Month of Lunches</a>along with<a href="https://www.microsoftvirtualacademy.com/en-us/training-courses/getting-started-with-powershell-3-0-jump-start-8276">Powershell Courses from the Microsoft Virtual Academy</a>. These two resources will give you a solid foundation for using and writing Powershell.</p>
 <h2 id="How-to-build-a-tool"><a href="#How-to-build-a-tool" class="headerlink" title="How to build a tool"></a>How to build a tool</h2><p>Before we start talking about specific tools we can build, we first need to set the table by covering how we actually build a tool. In T-SQL, you are probably used to writing scripts that eventually become stored procedures. In Powershell, we have the same approach, but instead of using stored procedures we use functions.</p>
@@ -293,18 +314,9 @@ $_
   </div>
 </div>
 
-<div class="class-content-wrap">
-  <div class="inner">
-    <div class="inner-wrap landing-bunting">
-      <div class="intro-sub-content-wrap">
-      </div>
-    </div>
-  </div>
-</div>
 
 
-
-    <footer id="footer" class="landing-bunting font-e3">
+    <footer id="footer" class="font-e3">
   <div class="inner">
     <div id="footer-some-docs">
         <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>

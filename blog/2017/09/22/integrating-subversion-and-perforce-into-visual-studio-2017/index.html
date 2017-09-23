@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+
+  <title>Integrating Subversion and Perforce into Visual Studio 2017 - Gmagon Software - handy and professional Mac apps.</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="robots" content="noodp" />
+  <meta name="keywords" content="Integrating Subversion and Perforce into Visual Studio 2017" />
+  <meta name="description" content="Integrating Subversion and Perforce into Visual Studio 2017" />
+
+  <!-- Custom config og:image -->
+
+
+  <!-- Open Graph -->
+<meta name="description" content="Integrating Subversion and Perforce into Visual Studio 2017 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:type" content="apps">
+<meta property="og:title" content="Integrating Subversion and Perforce into Visual Studio 2017 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:url" content="https://gmagon.com/blog/2017/09/22/integrating-subversion-and-perforce-into-visual-studio-2017/index.html">
+<meta property="og:site_name" content="Integrating Subversion and Perforce into Visual Studio 2017 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:description" content="Integrating Subversion and Perforce into Visual Studio 2017 - Gmagon Software - handy and professional Mac apps.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://img0.tuicool.com/eUF3Azr.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/F7BBj26.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/ABRNnyV.png!web">
+<meta property="og:image" content="http://img1.tuicool.com/MrAv6fB.png!web">
+<meta property="og:image" content="http://img2.tuicool.com/zEV32yY.png!web">
+<meta property="og:image" content="http://img0.tuicool.com/naiyMbz.png!web">
+<meta property="og:updated_time" content="2017-09-22T09:22:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Integrating Subversion and Perforce into Visual Studio 2017 - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:description" content="Integrating Subversion and Perforce into Visual Studio 2017 - Gmagon Software - handy and professional Mac apps.">
+<meta name="twitter:image" content="http://img0.tuicool.com/eUF3Azr.png!web">
+<meta name="twitter:site" content="gmagonshare">
+<meta property="fb:admins" content="432634277117208">
+<meat name="twitter:url" content="https://gmagon.com/blog/2017/09/22/integrating-subversion-and-perforce-into-visual-studio-2017/index.html">
+
+
+
+  <!-- algolia_config -->
+  
+  
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://gmagon.com/blog/2017/09/22/integrating-subversion-and-perforce-into-visual-studio-2017/index.html">
+
+  <!-- Alternative links -->
+  
+
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/navy-7722a083b2.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/asset/styles/global.css">
+  
+  <!-- jQuery -->
+  <script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+
+
+  <!-- ForPostLayout -->
+  
+    
+    
+  
+  <!-- endForPostLayout -->
+
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Gmagon Software - handy and professional Mac apps.">
+
+  <!-- algolia_search -->
+  <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+
+  <!-- Utils -->
+<script src="/js/utils.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div class="wrapper">
+    <div id="header-inner" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gmagon Software - handy and professional Mac apps.</a>
+        <span>gmagon </span>
+      </h1>
+      <nav id="main-nav">
+        <a href="/" class="main-nav-link ">Home</a><a href="/products/" class="main-nav-link ">Products</a><a href="/guide/" class="main-nav-link ">Guide</a><a href="/support/" class="main-nav-link ">Support</a><a href="/blog/" class="main-nav-link ">Blog</a>
+        <div id="search-input-wrap">
+          <a href="/search/" class="text-decoration-none ">
+            <div id="search-input-icon">
+              <i class="fa fa-search"></i>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+        <select id="lang-select" data-canonical="">
+          
+            <option value="en" selected>English</option>
+          
+        </select>
+      </div>
+      <a id="mobile-nav-toggle">
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+        <span class="mobile-nav-toggle-bar"></span>
+      </a>
+    </div>
+  </div>  
+</header>
+<div class="hide-wrap-head-top"></div>
+    <div class="class-content-wrap">
+  <div class="inner">
+    <div class="inner-wrap fill-bunting font-e3">
+      <h2 id="banner-title"> Integrating Subversion and Perforce into Visual Studio 2017 </h2>
+      <div id="banner-start">
+        <a class="btn btn-static-secondary btn-shadow" href="https://gitter.im/Gmagon/support" ttarget="_blank" rel="nofollow me noopener noreferrer" >Need help?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="class-content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+          <div class="hide-wrap-head-top"></div>
+<article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Integrating Subversion and Perforce into Visual Studio 2017</h1>
+    
+    <a href="/blog/2017/09/22/integrating-subversion-and-perforce-into-visual-studio-2017/" class="article-date"><time datetime="2017-09-22T00:00:00.000Z">2017-09-22</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    
+    <div class="post-authors">
+      <table class="app-download-table"> 
+      <thead> 
+        <tr> 
+        <th>Article Media</th> 
+        <th>Links</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr> 
+        <td class="app-download-version">FaceBook</td> 
+        <td class="on elevation1"><a href="https://www.facebook.com/groups/winandmac">https://www.facebook.com/groups/winandmac </a></td> 
+        </tr> 
+        <tr> 
+        <td class="app-download-version">Twitter</td> 
+        <td class="on elevation1"><a href="https://twitter.com/gmagonshare">https://twitter.com/gmagonshare </a></td> 
+        </tr> 
+      </tbody> 
+      </table>
+    </div>
+    <p>Last year, we highlighted the new extensibility points for our source control providers. These hooks allowed them to take advantage of our start page and status bar to provide their users a more integrated experience in Visual Studio. Two of our partners, VisualSVN and Perforce, have taken advantage of this opportunity and we’re excited to be able to showcase the work they’ve done!</p>
+<h2 id="VisualSVN"><a href="#VisualSVN" class="headerlink" title="VisualSVN"></a>VisualSVN</h2><p>With over 400,000 installs, VisualSVN is one of our most popular source control extensions.  In their current extension for Visual Studio 2017, you can now quickly add Subversion source control to your solution via the “Add to Source Control” button in the status bar.</p>
+<p><img src="http://img0.tuicool.com/eUF3Azr.png!web" alt=""></p>
+<p>Once you’re in a Subversion-controlled solution, you’ll be able to quickly manage your branches as VisualSVN offers the options to create, switch, or merge branches right from the status bar.</p>
+<p><img src="http://img0.tuicool.com/F7BBj26.png!web" alt=""></p>
+<p>Keep an eye out for their future updates, which will include integration with the Visual Studio start page!</p>
+<h2 id="Perforce"><a href="#Perforce" class="headerlink" title="Perforce"></a>Perforce</h2><p>Perforce is a leading source control provider for organizations with scalability and performance needs. While you can’t get your hands on the updated Perforce extension just yet, we’re giving you a sneak peek at what will be available for download at the end of September. You’ll be able to use the status bar to add your solution to source control and leverage the Helix versioning engine. Once in a Helix-controlled solution, you will be able to see and access your pending changes through the status bar.</p>
+<p><img src="http://img2.tuicool.com/ABRNnyV.png!web" alt=""></p>
+<p><img src="http://img1.tuicool.com/MrAv6fB.png!web" alt=""></p>
+<p>If you’d like to open an existing project, you can use the Helix provider on the start page. Simply click on the provider and it will lead you through the steps to add a connection to your depot and select the project you’d like to open.</p>
+<p><img src="http://img2.tuicool.com/zEV32yY.png!web" alt=""></p>
+<p>As well, if you open this project later from the start page Recents list, it will automatically prompt you to restore the connection so that you can open the project and get back to work quickly.</p>
+<p><img src="http://img0.tuicool.com/naiyMbz.png!web" alt=""></p>
+<h2 id="Try-it-out"><a href="#Try-it-out" class="headerlink" title="Try it out"></a>Try it out</h2><p>We strive to make our source control integration flexible to allow our various partners to address their customers’ needs and it’s been great to see how VisualSVN and Perforce utilized different features to create the best flow for their users.</p>
+<p>We encourage anyone interested in source control to try out our extensibility points for themselves and encourage your favorite source control extensions to take advantage of these features. Check out our status bar and start page integration samples to get started!</p>
+<p>We love hearing your feedback so please let us know if there’s anything else we can do to better support source control integration within Visual Studio. For any suggestions or issues, please go to DeveloperCommunity.</p>
+<p>Source:  <a href="https://blogs.msdn.microsoft.com/visualstudio/2017/09/21/source-control-showcase-integrating-subversion-and-perforce-into-visual-studio-2017/">https://blogs.msdn.microsoft.com/visualstudio/2017/09/21/source-control-showcase-integrating-subversion-and-perforce-into-visual-studio-2017/</a></p>
+
+  </div>
+  
+
+ <!-- jsSocials -->
+<script src="/jssocials-1.4.0/jssocials.min.js"></script>
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials.css">
+<link rel="stylesheet" href="/jssocials-1.4.0/jssocials-theme-flat.css">
+
+<div class="socials-share-btn"></div>
+<script>
+  if ($) {
+    $(document).ready(function(){
+      $(".socials-share-btn").jsSocials({
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      });
+    })
+  }
+</script>
+
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'gmagon';
+  var disqus_url = 'https://gmagon.com/blog/2017/09/22/integrating-subversion-and-perforce-into-visual-studio-2017/index.html';
+  var disqus_title = "Integrating Subversion and Perforce into Visual Studio 2017";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+  <script src="/js/audios.js"></script>
+</article>
+
+          </div>
+      
+          <aside id="article-toc" role="navigation">
+                <div id="article-toc-inner">
+                  <strong class="sidebar-title">Contents</strong>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VisualSVN"><span class="toc-text">VisualSVN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Perforce"><span class="toc-text">Perforce</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Try-it-out"><span class="toc-text">Try it out</span></a></li></ol>
+                  <a href="#" id="article-toc-top">Back to Top</a>
+                </div>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+
+    <footer id="footer" class="font-e3">
+  <div class="inner">
+    <div id="footer-some-docs">
+        <a href="/terms_conditions.html" class="footer-doc-link" >Terms & Conditions</a>
+        <a href="/privacy.html" class="footer-doc-link" >Privacy</a>
+        <a href="/end-user-license-agreement.html" class="footer-doc-link" >License Agreement</a>
+    </div>
+    <div id="footer-copyright">
+       <a href="" > Copyright &copy; 2017 Gmagon,Inc. All rights reserved. </a>
+    </div>
+  </div>
+
+  <div class="inner">
+    <div id="footer-links">
+        
+        <a href="https://twitter.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-twitter"></i></a>
+        
+        <a href="https://www.facebook.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-youtube"></i></a>
+        <a href="https://www.instagram.com/gmagonshare" class="footer-link" target="_blank" rel="nofollow me noopener noreferrer" ><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+
+
+  <div class="inner">
+    <div id="footer-security">
+       <p>
+          <img src="/asset/images/security/klogo.png">
+          <img src="/asset/images/security/mcafee.png">
+          <img src="/asset/images/security/cmmodo_scanned.png">
+          <img src="/asset/images/security/softonic_tested.png">
+          <img src="/asset/images/security/tested_by_sucuri.png">
+          <img src="/asset/images/security/norton.png">
+          <img src="/asset/images/security/eset_logo.png">
+       </p>
+    </div>
+  </div>
+
+
+
+
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link ">Home</a><a href="/products/" class="mobile-nav-link ">Products</a><a href="/guide/" class="mobile-nav-link ">Guide</a><a href="/support/" class="mobile-nav-link ">Support</a><a href="/blog/" class="mobile-nav-link ">Blog</a>
+      
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<script src="/build/js/main-8277743eaa.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script> -->
+
+<!-- totop -->
+<div id="gmagon_totop" style="position:fixed;bottom:150px;right:30px;cursor: pointer;">
+  <a title="Back to top"><img src="/asset/images/scroll-up.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+
+
+<!-- Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  try{
+    ga('create', 'UA-99314951-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'https://gmagon.com/blog/2017/09/22/integrating-subversion-and-perforce-into-visual-studio-2017/index.html');
+    ga('send', 'Integrating Subversion and Perforce into Visual Studio 2017')
+  }catch(e){}
+
+</script>
+
+
+</body>
+</html>
